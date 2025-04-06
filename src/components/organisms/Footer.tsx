@@ -1,8 +1,8 @@
-import Heart from '../../assets/heart.png';
-import iconeEmail from '../../assets/email.png';
-import iconeLinkedIn from '../../assets/linkedin.png';
-import iconeGithub from '../../assets/github.png';
-import decorativeEl from '../../assets/elementFooter.png';
+import Heart from '../../assets/png/heart.png';
+import iconeEmail from '../../assets/png/email.png';
+import iconeLinkedIn from '../../assets/png/linkedin.png';
+import iconeGithub from '../../assets/png/github.png';
+import decorativeEl from '../../assets/png/elementFooter.png';
 
 function Footer() {
   
@@ -16,10 +16,10 @@ function Footer() {
           <div className="sm:flex sm:flex-wrap text-colorWhite w-full lg:w-4/5">
             <div className="sm:w-1/2 lg:w-1/3 mb-10">
               <h3 className="font-sans text-lg font-regular mb-4 opacity-50">Featured project</h3>
-              <ul className="font-figtree space-y-4 text-[15px] font-medium pr-10 ">
+              <ul className="font-figtree space-y-4 text-[15px] font-medium pr-10 sm:max-w-[220px]">
                 <li className="cursor-pointer hover:text-colorQuaternary transition-all duration-300 ease-in-out whitespace-nowrap">This project portfolio</li>
                 <li className="cursor-pointer hover:text-colorQuaternary transition-all duration-300 ease-in-out">BAnQ dans ta classe</li>
-                <li className="leading-[1.2] cursor-pointer hover:text-colorQuaternary transition-all duration-300 ease-in-out">Société Québécoise des Infrastructures</li>
+                <li className="leading-[1.4] cursor-pointer hover:text-colorQuaternary transition-all duration-300 ease-in-out">Société Québécoise des Infrastructures</li>
               </ul>
             </div>
             <div className="sm:w-1/2 lg:w-1/3 mb-10">

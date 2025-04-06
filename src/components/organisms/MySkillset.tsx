@@ -1,0 +1,78 @@
+import html from '../../assets/logos-skill/html.png';
+import css from '../../assets/logos-skill/css.png';
+import wp from '../../assets/logos-skill/wp.png';
+import react from '../../assets/logos-skill/react.png';
+import node from '../../assets/logos-skill/nodeJS.png';
+import adobe from '../../assets/logos-skill/adobe.png';
+import php from '../../assets/logos-skill/php.png';
+import git from '../../assets/logos-skill/git.png';
+import docker from '../../assets/logos-skill/docker.png';
+import openai from '../../assets/logos-skill/openai.png';
+import npm from '../../assets/logos-skill/npm.png';
+import sql from '../../assets/logos-skill/sql.png';
+
+
+function MySkillset() {
+    return (
+        <div className="py-[100px] sm:py-[200px]">
+            <div className="w-full text-center">
+                <h2 className="font-sans font-medium text-2xl sm:text-4xl text-colorWhite/80 leading-[1.2]">My skillset</h2>
+                <p className="text-colorWhite font-figtree text-base mt-6 pb-8 md:max-w-[50%] md:mx-auto">My skillset includes a wide range of technologies and frameworks, allowing me to build dynamic and responsive web applications.</p>
+            </div>
+            <div className="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-y-8 mt-8">
+                <div className='flex justify-center items-center opacity-70 hover:opacity-100'>
+                    <img src={html} alt="SQL Icon" className="w-25 h-20" />
+                </div>
+                <div className='flex justify-center items-center opacity-70 hover:opacity-100'>
+                    <img src={css} alt="CSS Icon" className="w-25 h-20" />
+                </div>
+                <div className='flex justify-center items-center opacity-70 hover:opacity-100'>
+                    <img src={wp} alt="WP Icon" className="w-25 h-20" />
+                </div>
+                <div className='flex justify-center items-center opacity-70 hover:opacity-100'>
+                    <img src={react} alt="React Icon" className="w-25 h-20" />
+                </div>
+                <div className='flex justify-center items-center opacity-70 hover:opacity-100'>
+                    <img src={node} alt="Node Icon" className="w-25 h-20" />
+                </div>
+                <div className='flex justify-center items-center opacity-70 hover:opacity-100'>
+                    <img src={adobe} alt="SQL Icon" className="w-25 h-20" />
+                </div>
+                <div className='flex justify-center items-center opacity-70 hover:opacity-100'>
+                    <img src={php} alt="PHP Icon" className="w-25 h-20" />
+                </div>
+                <div className='flex justify-center items-center opacity-70 hover:opacity-100'>
+                    <img src={git} alt="Git Icon" className="w-25 h-20" />
+                </div>
+                <div className='flex justify-center items-center opacity-70 hover:opacity-100'>
+                    <img src={docker} alt="Docker Icon" className="w-25 h-20" />
+                </div>
+                <div className='flex justify-center items-center opacity-70 hover:opacity-100'>
+                    <img src={openai} alt="OpenAI Icon" className="w-25 h-20" />
+                </div>
+                <div className='flex justify-center items-center opacity-70 hover:opacity-100'>
+                    <img src={npm} alt="npm Icon" className="w-25 h-20" />
+                </div>
+                <div className='flex justify-center items-center opacity-70 hover:opacity-100'>
+                    <img src={sql} alt="SQL Icon" className="w-25 h-20" />
+                </div>  
+            </div>
+            <div className="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-y-8 bg-[#121F2E] border border-colorWhite/60 rounded-lg text-colorWhite/80 hover:text-colorWhite text-center font-sans text-sm p-6 mt-8" >
+                <p>JavaScript</p>
+                <p>Langchain</p>
+                <p>Next.js</p>
+                <p>Angular</p>
+                <p>Laravel</p>
+                <p>Bootstrap</p>
+                <p>User experience</p>
+                <p>Responsive design</p>
+                <p>Figma</p>
+                <p>Shopify</p>
+                <p>Blender</p>
+                <p>Ableton</p>
+            </div>
+        </div>
+    );
+}
+
+export default MySkillset;

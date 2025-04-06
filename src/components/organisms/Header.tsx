@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import lightMode from '../../assets/lightMode.svg';
+import lightMode from '../../assets/svg/lightMode.svg';
 
 interface HeaderProps {
   toggleMenu: () => void;
@@ -10,11 +10,11 @@ interface HeaderProps {
 function Header({ toggleMenu, menuSrc, isScrolled }: HeaderProps) {
   return (
     <div className="flex">
-      <div className={`w-full bg-transparent backdrop-blur-xl flex items-center justify-between h-[80px] px-4 md:px-10 transition-all duration-300 ease-in-out ${isScrolled ? 'h-[60px]' : 'h-[80px]'}`}>
+      <div className={`w-full bg-transparent backdrop-blur-xl flex items-center justify-between h-[80px] px-4 md:px-10 transition-all duration-300 ease-in-out fixed top-0 z-50 ${isScrolled ? 'h-[60px]' : 'h-[80px]'}`}>
         {/* Left section */}
         <div className="flex items-center gap-8">
           {/* Logo */}
-          <p className={`text-colorWhite transition-all duration-300 ease-in-out text-md ${isScrolled ? 'text-sm' : 'text-md'} font-sans font-medium`}>eloemery~</p>
+          <p className={`text-colorWhite transition-all duration-300 ease-in-out text-md ${isScrolled ? 'text-sm' : 'text-md'} font-sans font-medium`}><a href="./">eloemery~</a></p>
           {/* Menu mobile */}
           <div className="hidden md:block cursor-pointer min-w-[35px] hover:opacity-70 transition-all duration-300 ease-in-out" onClick={toggleMenu}>
             <img
