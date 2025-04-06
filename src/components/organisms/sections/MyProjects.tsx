@@ -1,11 +1,15 @@
 
-import Button from '../atoms/Button';
-import iconExternLink from '../../assets/svg/iconExternLink.svg';
-import project2 from '../../assets/projects/project2.png';
+import Button from '../../atoms/Button';
+import iconExternLink from '../../../assets/svg/iconExternLink.svg';
+import project2 from '../../../assets/projects/project2.png';
+import decorativeEl from '../../../assets/png/decorativeCube.png';
 
 function MyProjects() {
     return (
-        <div className="py-[100px] sm:py-[200px]">  
+        <div className="relative">  
+            <div className="absolute -right-[170px] sm:-right-[275px] z-1">
+                <img src={decorativeEl} alt="Decorative Element" className="w-full h-[350px] opacity-70" />
+            </div>
             <div className="lg:flex">
                 <div className="sm:pr-[50px] lg:w-[65%] flex">
                     <div>

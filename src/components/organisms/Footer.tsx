@@ -7,7 +7,7 @@ import decorativeEl from '../../assets/png/elementFooter.png';
 function Footer() {
   
       return (
-        <div className="relative w-full overflow-x-hidden px-4 md:px-10 xl:px-[125px] 2xl:px-[200px]  ">
+        <div className="relative w-full overflow-x-hidden px-4 md:px-10 xl:px-[125px] 2xl:px-[200px]">
           {/* Decorative element */}
           <div className="absolute -right-[100px] bottom-[100px]">
             <img src={decorativeEl} alt="Decorative Element" className="w-full h-[190px] opacity-70" />
@@ -16,7 +16,7 @@ function Footer() {
           <div className="sm:flex sm:flex-wrap text-colorWhite w-full lg:w-4/5">
             <div className="sm:w-1/2 lg:w-1/3 mb-10">
               <h3 className="font-sans text-lg font-regular mb-4 opacity-50">Featured project</h3>
-              <ul className="font-figtree space-y-4 text-[15px] font-medium pr-10 sm:max-w-[220px]">
+              <ul className="tracking-wider font-figtree space-y-4 text-[15px] font-medium pr-10 sm:max-w-[250px]">
                 <li className="cursor-pointer hover:text-colorQuaternary transition-all duration-300 ease-in-out whitespace-nowrap">This project portfolio</li>
                 <li className="cursor-pointer hover:text-colorQuaternary transition-all duration-300 ease-in-out">BAnQ dans ta classe</li>
                 <li className="leading-[1.4] cursor-pointer hover:text-colorQuaternary transition-all duration-300 ease-in-out">Société Québécoise des Infrastructures</li>
@@ -24,7 +24,7 @@ function Footer() {
             </div>
             <div className="sm:w-1/2 lg:w-1/3 mb-10">
               <h3 className="font-sans text-lg font-regular mb-4 opacity-50">Quick access</h3>
-              <ul className="font-figtree space-y-4 text-[15px] font-medium">
+              <ul className="tracking-wider font-figtree space-y-4 text-[15px] font-medium">
                 <li className="cursor-pointer hover:text-colorQuaternary transition-all duration-300 ease-in-out">Ask me something</li>
                 <li className="cursor-pointer hover:text-colorQuaternary transition-all duration-300 ease-in-out">My skillset</li>
               </ul>

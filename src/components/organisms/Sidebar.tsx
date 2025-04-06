@@ -6,9 +6,9 @@ interface SidebarProps {
 
 const Sidebar: React.FC<SidebarProps> = ({ closeSidebar }) => {
   const handleLinkClick = () => {
-    if (window.innerWidth < 768) {
-      closeSidebar();
-    }
+    // if (window.innerWidth < 768) {
+    // closeSidebar();
+    // }  
   };
 
   return (

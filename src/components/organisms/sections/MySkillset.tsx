@@ -1,24 +1,25 @@
-import html from '../../assets/logos-skills/html.png';
-import css from '../../assets/logos-skills/css.png';
-import wp from '../../assets/logos-skills/wp.png';
-import react from '../../assets/logos-skills/react.png';
-import node from '../../assets/logos-skills/nodeJS.png';
-import adobe from '../../assets/logos-skills/adobe.png';
-import php from '../../assets/logos-skills/php.png';
-import git from '../../assets/logos-skills/git.png';
-import docker from '../../assets/logos-skills/docker.png';
-import openai from '../../assets/logos-skills/openai.png';
-import npm from '../../assets/logos-skills/npm.png';
-import sql from '../../assets/logos-skills/sql.png';
+import html from '../../../assets/logos-skills/html.png';
+import css from '../../../assets/logos-skills/css.png';
+import wp from '../../../assets/logos-skills/wp.png';
+import react from '../../../assets/logos-skills/react.png';
+import node from '../../../assets/logos-skills/nodeJS.png';
+import adobe from '../../../assets/logos-skills/adobe.png';
+import php from '../../../assets/logos-skills/php.png';
+import git from '../../../assets/logos-skills/git.png';
+import docker from '../../../assets/logos-skills/docker.png';
+import openai from '../../../assets/logos-skills/openai.png';
+import npm from '../../../assets/logos-skills/npm.png';
+import sql from '../../../assets/logos-skills/sql.png';
 
 
 function MySkillset() {
     return (
-        <div className="py-[100px] sm:py-[200px]">
+        <div className="">
             <div className="w-full text-center">
                 <h2 className="font-sans font-medium text-2xl sm:text-4xl text-colorWhite/80 leading-[1.2]">My skillset</h2>
                 <p className="text-colorWhite font-figtree text-base mt-6 pb-8 md:max-w-[50%] md:mx-auto">My skillset includes a wide range of technologies and frameworks, allowing me to build dynamic and responsive web applications.</p>
             </div>
+            {/* Skillset grid */}
             <div className="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-y-8 mt-8">
                 <div className='flex justify-center items-center opacity-70 hover:opacity-100'>
                     <img src={html} alt="SQL Icon" className="w-25 h-20" />
@@ -57,7 +58,8 @@ function MySkillset() {
                     <img src={sql} alt="SQL Icon" className="w-25 h-20" />
                 </div>  
             </div>
-            <div className="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-y-8 bg-[#121F2E] border border-colorWhite/60 rounded-lg text-colorWhite/80 hover:text-colorWhite text-center font-sans text-sm p-6 mt-8" >
+            {/* Section Bottom */}
+            <div className="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-y-8 bg-[#121F2E] border border-colorWhite/60 rounded-lg text-colorWhite/80 hover:text-colorWhite text-center font-sans text-sm p-10 mt-8" >
                 <p>JavaScript</p>
                 <p>Langchain</p>
                 <p>Next.js</p>

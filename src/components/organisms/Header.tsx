@@ -4,13 +4,24 @@ import lightMode from '../../assets/svg/lightMode.svg';
 interface HeaderProps {
   toggleMenu: () => void;
   menuSrc: string;
-  isScrolled: boolean;
 }
 
-function Header({ toggleMenu, menuSrc, isScrolled }: HeaderProps) {
+function Header({ toggleMenu, menuSrc }: HeaderProps) {
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  // Detect scroll for header height change
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 50);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   return (
     <div className="flex">
-      <div className={`w-full bg-transparent backdrop-blur-xl flex items-center justify-between h-[80px] px-4 md:px-10 transition-all duration-300 ease-in-out fixed top-0 z-50 ${isScrolled ? 'h-[60px]' : 'h-[80px]'}`}>
+      <div className={`w-full bg-transparent backdrop-blur-md flex items-center justify-between h-[80px] px-4 md:px-10 transition-all duration-300 ease-in-out fixed top-0 z-50 ${isScrolled ? 'h-[50px] bg-colorSecondary/70' : 'h-[80px]' }`}>
         {/* Left section */}
         <div className="flex items-center gap-8">
           {/* Logo */}
