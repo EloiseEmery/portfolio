@@ -22,16 +22,21 @@ function App() {
 
   return (
     <div className="app-container bg-gradient-main-secondary-main from-colorMain via-colorSecondary to-colorMain flex">
-        {isSidebarOpen && <Sidebar />}
+      {/* Sidebar */}
+      {isSidebarOpen && <Sidebar />}
+      {/* App content */}
       <div className="flex w-full">
         <div className="flex-1 transition-all duration-300 ease-in-out">
+          {/* Header */}
           <header className="">
             <Header toggleMenu={toggleMenu} menuSrc={menuSrc} isScrolled={isScrolled} />
           </header>
-          <div className={`app-main-content transition-all duration-300 ease-in-out  ${isSidebarOpen ? 'ml-[250px] xl:ml-[150px] blur md:blur-0 ' : ''}`}>
+          {/* Main content */}
+          <div className={`app-main-content transition-all duration-300 ease-in-out  ${isSidebarOpen ? 'translate-x-[300px] md:translate-x-0 md:ml-[250px] xl:ml-[150px] blur md:blur-0 ' : ''}`}>
             <main className="px-4 md:px-10 xl:px-[125px] 2xl:px-[200px]">
-            <Hero />
+              <Hero />
             </main>
+            {/* Footer */}
             <footer>
               <Footer />
             </footer>

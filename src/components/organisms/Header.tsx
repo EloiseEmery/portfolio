@@ -14,7 +14,7 @@ function Header({ toggleMenu, menuSrc, isScrolled }: HeaderProps) {
         {/* Left section */}
         <div className="flex items-center gap-8">
           {/* Logo */}
-          <p className={`text-colorWhite transition-all duration-300 ease-in-out text-md ${isScrolled ? 'text-sm' : 'text-md'} font-sans font-medium`}>ELOEMERY~</p>
+          <p className={`text-colorWhite transition-all duration-300 ease-in-out text-md ${isScrolled ? 'text-sm' : 'text-md'} font-sans font-medium`}>eloemery~</p>
           {/* Menu mobile */}
           <div className="hidden md:block cursor-pointer min-w-[35px] hover:opacity-70 transition-all duration-300 ease-in-out" onClick={toggleMenu}>
             <img
