@@ -21,7 +21,7 @@ code {
   .app-container {
     position: relative;
     height: 100vh;
-    overflow-y: auto;
+    /* overflow-y: visible; */
   }
 
   .sidebar {
@@ -35,7 +35,7 @@ code {
     overflow-y: auto;
   }
 
-  .main-content {
+  .app-main-content {
     position: relative;
     z-index: 1;
   }

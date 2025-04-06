@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import Header from './components/organisms/Header';
 import Footer from './components/organisms/Footer';
 import Sidebar from './components/organisms/Sidebar';
+import Hero from './components/molecules/Hero';
 import menuSidebarClosed from './assets/menuSidebar.svg'; 
 import menuSidebarOpen from './assets/menuSidebarOpen.svg'; 
 import './index.css';
@@ -27,11 +28,11 @@ function App() {
           <header className="">
             <Header toggleMenu={toggleMenu} menuSrc={menuSrc} isScrolled={isScrolled} />
           </header>
-          <div className='main-content'>
-            <main className="h-screen">
-              {/* Main content goes here */}
+          <div className={`app-main-content transition-all duration-300 ease-in-out  ${isSidebarOpen ? 'ml-[250px] xl:ml-[150px] blur md:blur-0 ' : ''}`}>
+            <main className="px-4 md:px-10 xl:px-[125px] 2xl:px-[200px]">
+            <Hero />
             </main>
-            <footer className={`${isSidebarOpen ? 'ml-[300px] md:ml-[250px]' : ''}`}>
+            <footer>
               <Footer />
             </footer>
           </div>
