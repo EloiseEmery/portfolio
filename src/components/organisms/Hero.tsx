@@ -7,7 +7,7 @@ function Hero() {
     return (
         <div className="py-[250px] relative">
             <h1 className="font-sans text-4xl md:text-5xl text-colorWhite/80 leading-[1.2]">Hello, I'm Éloïse Emery</h1>
-            <p className="text-colorWhite font-figtree mt-6 pb-8 text-lg">I'm a full stack web developer from Montreal, Canada</p>
+            <p className="text-colorWhite font-figtree mt-6 pb-8 text-lg">I'm a full stack web developer from Montreal, Canada.</p>
             <Button
               children="Connect with me"
               className="relative z-10"

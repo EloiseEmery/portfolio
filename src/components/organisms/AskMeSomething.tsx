@@ -1,5 +1,6 @@
 import Button from '../atoms/Button';
 import Chatbot from '../molecules/Chatbot';
+import downloadIcon from '../../assets/svg/downloadIcon.svg';
 
 function AskMeSomething() {
     return (
@@ -9,11 +10,12 @@ function AskMeSomething() {
                 <p className="text-colorWhite font-figtree text-base mt-6 pb-8">Use my chatbot to ask me anything you'd like to know about me or my work. This chatbot is powered by OpenAI's GPT-4 model and use LangChain to interface with it. </p>
                 <Button 
                 children="Download my full resume"
-                className="relative z-10"
+                aria-label="Download my full resume"
+                className="relative z-10 group"
                 href=""
                 blank={true}
                 type="secondary"
-                // icon={<img src={iconExternLink} alt="External Link Icon" className="w-3 h-3" />}
+                icon={<img src={downloadIcon} alt="Download Icon" className="w-4 h-4 filter-brightness-0 invert group-hover:filter-none" />}
                 />
             </div>
             <div className="lg:w-[50%]">

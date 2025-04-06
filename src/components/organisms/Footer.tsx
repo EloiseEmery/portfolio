@@ -30,7 +30,7 @@ function Footer() {
               </ul>
             </div>
             <div className="sm:w-1/2 lg:w-1/3 mb-10">
-              <h3 className="font-sans text-lg font-regular mb-4 opacity-50">Contact me</h3>
+              <h3 className="font-sans text-lg font-regular mb-4 opacity-50">Connect with me</h3>
               <div className="flex gap-4">
                 <a href="https://www.linkedin.com/in/eloise-emery/" target="_blank" rel="noopener noreferrer" className="relative group">
                   <div className="cursor-pointer border border-colorWhite/30 rounded-full p-2 hover:border-colorWhite/100 transition-all duration-300 ease-in-out ">
@@ -62,7 +62,7 @@ function Footer() {
           {/* Bottom section */}
           <div className="border-t border-colorWhite/10 py-10">
             <div className="text-colorWhite font-sans text-[11px] md:flex md:justify-between">
-              <p className="mb-2 md:mb-0">Copyright © 2025 eloisemery.com. All rights reserved.</p>
+              <p className="mb-2 md:mb-0">Copyright © 2025 eloemery.io / All rights reserved.</p>
               <p className="flex whitespace-nowrap">Made with <img src={Heart} alt="Heart" className="h-[10px] px-2 mt-1" /> by Éloïse Emery</p>
             </div>
           </div>

@@ -1,15 +1,15 @@
-import html from '../../assets/logos-skill/html.png';
-import css from '../../assets/logos-skill/css.png';
-import wp from '../../assets/logos-skill/wp.png';
-import react from '../../assets/logos-skill/react.png';
-import node from '../../assets/logos-skill/nodeJS.png';
-import adobe from '../../assets/logos-skill/adobe.png';
-import php from '../../assets/logos-skill/php.png';
-import git from '../../assets/logos-skill/git.png';
-import docker from '../../assets/logos-skill/docker.png';
-import openai from '../../assets/logos-skill/openai.png';
-import npm from '../../assets/logos-skill/npm.png';
-import sql from '../../assets/logos-skill/sql.png';
+import html from '../../assets/logos-skills/html.png';
+import css from '../../assets/logos-skills/css.png';
+import wp from '../../assets/logos-skills/wp.png';
+import react from '../../assets/logos-skills/react.png';
+import node from '../../assets/logos-skills/nodeJS.png';
+import adobe from '../../assets/logos-skills/adobe.png';
+import php from '../../assets/logos-skills/php.png';
+import git from '../../assets/logos-skills/git.png';
+import docker from '../../assets/logos-skills/docker.png';
+import openai from '../../assets/logos-skills/openai.png';
+import npm from '../../assets/logos-skills/npm.png';
+import sql from '../../assets/logos-skills/sql.png';
 
 
 function MySkillset() {

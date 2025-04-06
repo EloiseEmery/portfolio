@@ -10,7 +10,7 @@ interface ButtonProps {
 }
 
 const Button: React.FC<ButtonProps> = ({ children, className, href, blank, type = 'primary', icon }) => {
-  const baseStyle = 'max-w-fit py-4 px-8 rounded-lg text-sm font-bold tracking-wider whitespace-nowrap flex items-center justify-center transition-all duration-300 ease-in-out';
+  const baseStyle = 'max-w-fit py-4 px-8 rounded-lg text-sm font-medium tracking-wider whitespace-nowrap flex items-center justify-center transition-all duration-300 ease-in-out';
   const primaryStyle = 'bg-colorQuaternary/90 text-colorMain hover:bg-colorQuaternary';
   const secondaryStyle = 'border border-colorQuaternary text-colorWhite hover:bg-colorQuaternary hover:text-colorMain';
 
