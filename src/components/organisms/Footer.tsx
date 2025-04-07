@@ -53,7 +53,7 @@ function Footer() {
                     <img src={iconeEmail} alt="Email" className="max-w-[22px] opacity-70" />
                   </div>
                   <span className="absolute font-sans bottom-full left-1/2 transform -translate-x-1/2 mb-2 w-max bg-black text-white text-xs rounded-md px-2 py-1 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                    Send me an email
+                    Send me a email
                   </span>
                 </a>
               </div>

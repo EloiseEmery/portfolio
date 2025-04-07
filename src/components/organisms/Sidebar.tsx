@@ -18,7 +18,7 @@ const Sidebar: React.FC<SidebarProps> = ({ closeSidebar }) => {
         <a href="#ask-me-something" onClick={handleLinkClick} className="cursor-pointer hover:text-colorQuaternary transition-all duration-300 ease-in-out whitespace-nowrap">Ask me something</a>
         <a href="#my-skillset" onClick={handleLinkClick} className="cursor-pointer hover:text-colorQuaternary transition-all duration-300 ease-in-out whitespace-nowrap">My skillset</a>
         <a href="#my-projects" onClick={handleLinkClick} className="cursor-pointer hover:text-colorQuaternary transition-all duration-300 ease-in-out whitespace-nowrap">My projects</a>
-        <a href="#contact-me" onClick={handleLinkClick} className="cursor-pointer hover:text-colorQuaternary transition-all duration-300 ease-in-out whitespace-nowrap">Contact me</a>
+        <a href="#get-in-touch" onClick={handleLinkClick} className="cursor-pointer hover:text-colorQuaternary transition-all duration-300 ease-in-out whitespace-nowrap">Get in touch</a>
       </div>
     </div>
   );

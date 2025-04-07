@@ -14,10 +14,10 @@ function GetInTouch() {
                     <h2 className="font-sans font-medium text-2xl sm:text-4xl text-colorWhite/80 leading-[1.2]">Get in touch</h2>
                     <p className="text-colorWhite/80 font-figtree text-base mt-6 pb-8">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Suspendisse ut magna vel arcu tincidunt pretium.</p>
                     <Button 
-                        children="Send me a message"
-                        aria-label="Send me a message"
+                        children="Send me a email"
+                        aria-label="Send me a email"
                         className="relative z-10 group"
-                        href="https://github.com/eloiseemery"
+                        href="mailto:eloise@eloiseemery.com"
                         blank={true}
                         type="secondary"
                     />

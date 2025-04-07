@@ -7,6 +7,7 @@ import AskMeSomething from './components/organisms/sections/AskMeSomething';
 import MySkillset from './components/organisms/sections/MySkillset';
 import MyProjects from './components/organisms/sections/MyProjects';
 import ContactMe from './components/organisms/sections/GetInTouch';
+import ToTop from './components/atoms/ToTop';
 import menuSidebarClosed from './assets/svg/menuSidebar.svg'; 
 import menuSidebarOpen from './assets/svg/menuSidebarOpen.svg'; 
 import './index.css';
@@ -28,6 +29,7 @@ function App() {
     <div className="app-container bg-gradient-main-secondary-main from-colorMain via-colorSecondary to-colorMain flex">
       {/* Sidebar */}
       {isSidebarOpen && <Sidebar closeSidebar={() => setIsSidebarOpen(false)} />}
+      {/* To top button */}
       {/* App content */}
       <div className="flex w-full overflow-x-hidden">
         <div className="flex-1 transition-all duration-300 ease-in-out">
@@ -36,6 +38,7 @@ function App() {
             <Header toggleMenu={toggleMenu} menuSrc={menuSrc} />
           </header>
           {/* Main content */}
+      <ToTop />
           <div className={`app-main-content relative z-10 transition-all duration-300 ease-in-out ${isSidebarOpen ? 'translate-x-[350px] md:translate-x-0 md:ml-[250px] xl:ml-[150px] blur md:blur-0 ' : 'px-2'}`}>
             <main className="px-4 md:px-10 xl:px-[125px] 2xl:px-[200px]">
               <section id="hero" className="py-[250px]">
@@ -50,7 +53,7 @@ function App() {
               <section id="my-projects" className="py-[100px] sm:py-[200px]">
                 <MyProjects />
               </section>
-              <section id="contact-me" className="mb-[100px] sm:mb-[200px]">
+              <section id="get-in-touch" className="mb-[100px] sm:mb-[200px] mt-[100px]">
                 <ContactMe />
               </section>
             </main>
