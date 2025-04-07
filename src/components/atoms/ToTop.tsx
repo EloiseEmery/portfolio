@@ -7,7 +7,7 @@ function ToTop() {
     };
 
     return (
-        <div className="fixed bottom-20 right-4 z-50">
+        <div className="fixed bottom-20 right-4 md:left-4 z-50">
         <button onClick={scrollToTop} className="cursor-pointer bg-colorWhite/15 text-white py-4 px-6 rounded-full shadow-lg hover:bg-colorQuaternary/25 transition-all">
                 ↑
             </button>
