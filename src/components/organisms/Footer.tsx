@@ -25,8 +25,8 @@ function Footer() {
             <div className="sm:w-1/2 lg:w-1/3 mb-10">
               <h3 className="font-sans text-lg font-regular mb-4 opacity-50">Quick access</h3>
               <ul className="tracking-wider font-figtree space-y-4 text-[15px] font-medium">
-                <li className="cursor-pointer hover:text-colorQuaternary transition-all duration-300 ease-in-out">Ask me something</li>
-                <li className="cursor-pointer hover:text-colorQuaternary transition-all duration-300 ease-in-out">My skillset</li>
+                <li className="cursor-pointer hover:text-colorQuaternary transition-all duration-300 ease-in-out"><a href="#ask-me-something">Ask me something</a></li>
+                <li className="cursor-pointer hover:text-colorQuaternary transition-all duration-300 ease-in-out"><a href="#my-skillset">My skillset</a></li>
               </ul>
             </div>
             <div className="sm:w-1/2 lg:w-1/3 mb-10">
@@ -62,7 +62,7 @@ function Footer() {
           {/* Bottom section */}
           <div className="border-t border-colorWhite/10 py-10">
             <div className="text-colorWhite font-sans text-[11px] md:flex md:justify-between">
-              <p className="mb-2 md:mb-0">Copyright © 2025 eloemery.io / All rights reserved.</p>
+              <p className="mb-2 md:mb-0">© 2025 eloemery.com | All rights reserved.</p>
               <p className="flex whitespace-nowrap">Made with <img src={Heart} alt="Heart" className="h-[10px] px-2 mt-1" /> by Éloïse Emery</p>
             </div>
           </div>
