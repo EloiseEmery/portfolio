@@ -10,7 +10,7 @@ function Footer() {
         <div className="relative w-full overflow-x-hidden px-4 md:px-10 xl:px-[125px] 2xl:px-[200px]">
           {/* Decorative element */}
           <div className="absolute -right-[100px] bottom-[100px]">
-            <img src={decorativeEl} alt="Decorative Element" className="w-full h-[190px] opacity-70" />
+            <img src={decorativeEl} alt="Decorative Element" className="w-full h-[150px] opacity-70" />
           </div>
           {/* Top section */}
           <div className="sm:flex sm:flex-wrap text-colorWhite w-full lg:w-4/5">
@@ -36,7 +36,7 @@ function Footer() {
                   <div className="cursor-pointer border border-colorWhite/30 rounded-full p-2 hover:border-colorWhite/100 transition-all duration-300 ease-in-out ">
                     <img src={iconeLinkedIn} alt="LinkedIn" className="max-w-[22px]" />
                   </div>
-                  <span className="hidden sm:block sm:absolute font-sans bottom-full left-1/2 transform -translate-x-1/2 mb-2 w-max bg-black text-white text-xs rounded-md px-2 py-1 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <span className="hidden md:block md:absolute font-sans bottom-full left-1/2 transform -translate-x-1/2 mb-2 w-max bg-black text-white text-xs rounded-md px-2 py-1 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                     Visit my LinkedIn
                   </span>
                 </a>
@@ -44,7 +44,7 @@ function Footer() {
                   <div className="cursor-pointer border border-colorWhite/30 rounded-full p-2 hover:border-colorWhite/100 transition-all duration-300 ease-in-out ">
                     <img src={iconeGithub} alt="Github" className=" max-w-[22px]" />
                   </div>
-                  <span className="hidden sm:block sm:absolute font-sans bottom-full left-1/2 transform -translate-x-1/2 mb-2 w-max bg-black text-white text-xs rounded-md px-2 py-1 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <span className="hidden md:block md:absolute font-sans bottom-full left-1/2 transform -translate-x-1/2 mb-2 w-max bg-black text-white text-xs rounded-md px-2 py-1 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                     Visit my GitHub
                   </span>
                 </a>
@@ -52,7 +52,7 @@ function Footer() {
                   <div className="cursor-pointer border border-colorWhite/30 rounded-full p-2 hover:border-colorWhite/100 transition-all duration-300 ease-in-out ">
                     <img src={iconeEmail} alt="Email" className="max-w-[22px] opacity-70" />
                   </div>
-                  <span className="hidden sm:block sm:absolute font-sans bottom-full left-1/2 transform -translate-x-1/2 mb-2 w-max bg-black text-white text-xs rounded-md px-2 py-1 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <span className="hidden md:block md:absolute font-sans bottom-full left-1/2 transform -translate-x-1/2 mb-2 w-max bg-black text-white text-xs rounded-md px-2 py-1 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                     Send me a email
                   </span>
                 </a>

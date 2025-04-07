@@ -4,6 +4,7 @@ module.exports = {
   content: [
     "./src/**/*.{js,jsx,ts,tsx}",
   ],
+  darkMode: 'class',
   theme: {
     extend: {
       fontFamily: {
@@ -21,6 +22,7 @@ module.exports = {
       },
       backgroundImage: {
         'gradient-main-secondary-main': 'linear-gradient(to bottom, #0D1115, #001427, #0D1115)',
+        'gradient-main-secondary-dark': 'linear-gradient(to bottom, #4468FD, #cdd7fe, #4468FD)',
       },
     },
   },

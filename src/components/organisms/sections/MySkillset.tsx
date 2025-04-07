@@ -59,16 +59,16 @@ function MySkillset() {
             </div>
             {/* Section Bottom */}
             <div className="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-y-8 bg-[#121F2E] border border-colorWhite/60 rounded-lg text-colorWhite/80 hover:text-colorWhite text-center font-sans text-sm p-6 sm:p-10 mt-8" >
-                <p>Node.js</p>
+                <p>Tailwind</p>
                 <p>Figma</p>
                 <p>Langchain</p>
                 <p>User experience</p>
                 <p>Responsive design</p>
                 <p>Shopify</p>
                 <p>Next.js</p>
+                <p>Node.js</p>
                 <p>Angular</p>
                 <p>Laravel</p>
-                <p>Bootstrap</p>
                 <p>Blender</p>
                 <p>Ableton</p>
             </div>
