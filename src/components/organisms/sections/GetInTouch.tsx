@@ -11,7 +11,7 @@ function GetInTouch() {
                     <img src={decorativeForms} className="max-h-[200px]" alt="decorative forms" />
                 </div>
                 <div className="md:w-1/2 py-8">
-                    <h2 className="font-sans font-medium text-2xl sm:text-4xl text-colorWhite/80 leading-[1.2]">Get in touch</h2>
+                    <h2 className="font-sans font-medium text-2xl sm:text-3xl text-colorWhite/80 leading-[1.2]">Get in touch</h2>
                     <p className="text-colorWhite/80 font-figtree text-base mt-6 pb-8">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Suspendisse ut magna vel arcu tincidunt pretium.</p>
                     <Button 
                         children="Send me a email"

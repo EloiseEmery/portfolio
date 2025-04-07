@@ -16,19 +16,28 @@ import './index.css';
 function App() {
   const [menuSrc, setMenuSrc] = useState(menuSidebarClosed);
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
-  const [isScrolled, setIsScrolled] = useState(false);
+  // const [isScrolled, setIsScrolled] = useState(false);
 
+  // Manage sidebar
   const toggleMenu = () => {
+    // change menu icon
     setMenuSrc((prevSrc: string) =>
       prevSrc === menuSidebarClosed ? menuSidebarOpen : menuSidebarClosed
     );
+    // open or close sidebar
     setIsSidebarOpen((prevOpen) => !prevOpen);
+  };
+
+  const closeSidebar = () => {
+    setMenuSrc(menuSidebarClosed);
+    setIsSidebarOpen(false);
+
   };
 
   return (
     <div className="app-container bg-gradient-main-secondary-main from-colorMain via-colorSecondary to-colorMain flex">
       {/* Sidebar */}
-      {isSidebarOpen && <Sidebar closeSidebar={() => setIsSidebarOpen(false)} />}
+      {isSidebarOpen && <Sidebar closeSidebar={closeSidebar} />}
       {/* To top button */}
       {/* App content */}
       <div className="flex w-full overflow-x-hidden">
@@ -39,21 +48,21 @@ function App() {
           </header>
           {/* Main content */}
       <ToTop />
-          <div className={`app-main-content relative z-10 transition-all duration-300 ease-in-out ${isSidebarOpen ? 'translate-x-[350px] md:translate-x-0 md:ml-[250px] xl:ml-[150px] blur md:blur-0 ' : 'px-2'}`}>
+          <div className={`app-main-content relative z-10 transition-all duration-300 ease-in-out ${isSidebarOpen ? 'md:ml-[250px] xl:ml-[150px] blur-xl md:blur-0 ' : ''}`}>
             <main className="px-4 md:px-10 xl:px-[125px] 2xl:px-[200px]">
               <section id="hero" className="py-[250px]">
                 <Hero />
               </section>
-              <section id="ask-me-something" className="py-[100px] sm:py-[200px]">
+              <section id="ask-me-something" className="py-[75px] md:py-[100px]">
                 <AskMeSomething />
               </section>
-              <section id="my-skillset" className="py-[100px] sm:py-[200px]">
+              <section id="my-skillset" className="py-[75px] md:py-[100px]">
                 <MySkillset />
               </section>
-              <section id="my-projects" className="py-[100px] sm:py-[200px]">
+              <section id="my-projects" className="py-[75px] md:py-[100px]">
                 <MyProjects />
               </section>
-              <section id="get-in-touch" className="mb-[100px] sm:mb-[200px] mt-[100px]">
+              <section id="get-in-touch" className="mb-[100px] sm:mb-[100px] mt-[100px]">
                 <ContactMe />
               </section>
             </main>

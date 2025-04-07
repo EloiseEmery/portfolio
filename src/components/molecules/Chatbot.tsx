@@ -2,11 +2,11 @@ import chatLogos from '../../assets/png/chatLogos.png';
 function Chatbot() {
     return (
        <div className="">
-            <form className="relative bg-darkBlue p-4 rounded-lg shadow-lg bg-[#121F2E] rounded-t-lg border border-colorWhite/60">
+            <form className="relative bg-darkBlue p-4 rounded-lg shadow-lg bg-[#121F2E] rounded-t-lg border border-colorWhite/20">
                 <div className="">
                     <div className="h-64 bg-darkBlueDarker rounded-lg"></div>
                 </div>
-                <div className="flex items-center p-2 border border-colorWhite rounded-lg">
+                <div className="flex items-center p-2 border border-colorWhite/40 rounded-lg">
                     <input 
                         type="text" 
                         placeholder="Ask me something..." 
@@ -19,8 +19,8 @@ function Chatbot() {
                     </button>
                 </div>
             </form>
-            <div className="absolute -bottom-[50px] right-0">
-                <img src={chatLogos} width={200} height={200} />
+            <div className="absolute  right-0 -top-14 sm:-bottom-10 sm:top-auto ">
+                <img src={chatLogos} className='h-[20px] sm:h-[25px]'/>
             </div>
         </div>
     );

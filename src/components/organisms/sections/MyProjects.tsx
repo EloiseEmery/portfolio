@@ -13,7 +13,7 @@ function MyProjects() {
             <div className="lg:flex">
                 <div className="sm:pr-[50px] lg:w-[65%] flex">
                     <div>
-                        <h2 className="font-sans font-medium text-2xl sm:text-4xl text-colorWhite/80 leading-[1.2]">My projects</h2>
+                        <h2 className="font-sans font-medium text-2xl sm:text-3xl text-colorWhite/80 leading-[1.2]">My projects</h2>
                         <p className="text-colorWhite font-figtree text-base mt-6 pb-8 ">With a robust foundation in graphic design and programming, I have effectively harmonized my technical expertise with my creative sensibilities. I love bringing concepts to life by creating intuitive designs, while ensuring that accessibility and user experience are always at the forefront of my concerns. Below are some of the projects I've worked on:</p>
                     </div>
                 </div>
