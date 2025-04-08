@@ -19,7 +19,7 @@ function MyProjects({ language }: { language: Language }) {
                 <div className="sm:pr-[50px] lg:w-[65%] flex">
                     <div>
                         <h2 className="font-sans font-medium text-2xl sm:text-3xl text-colorWhite/80 leading-[1.2]">{title}</h2>
-                        <p className="text-colorWhite font-figtree text-base mt-6 pb-8 ">{paragraph}</p>
+                        <p className="text-colorWhite font-figtree text-base mt-6 pb-8 lg:pb-0 ">{paragraph}</p>
                     </div>
                 </div>
                 <div className="lg:w-[35%]">
@@ -36,7 +36,7 @@ function MyProjects({ language }: { language: Language }) {
                     </div>
                 </div>
             </div>
-            <div className="lg:w-[50%] pt-8">
+            <div className="lg:w-[50%] pt-6">
                 <div className="rounded-lg overflow-hidden">
                     <div className="h-[400px] opacity-80 hover:opacity-100">
                         <img src={project2} alt="" className="w-full h-full object-cover" />

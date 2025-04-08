@@ -94,8 +94,8 @@ const translations = {
     fr: "Mes compétences"
   },
   mySkillsetParagraph: {
-    en: "With a robust foundation in graphic design and programming, I have effectively harmonized my technical expertise with my creative sensibilities. My skillset includes a wide range of technologies and frameworks.",
-    fr: "Grâce à mes formations en design graphique et en programmation, j'ai su créer une belle synergie entre mes compétences techniques et ma sensibilité personnelle. Mes compétences comprennent une large gamme de technologies et frameworks."
+    en: "With a robust foundation in programming and graphic design, I have effectively harmonized my technical expertise with my creative sensibilities. My skillset includes a wide range of technologies and frameworks.",
+    fr: "Grâce à mes formations en  programmation et en design graphique, j'ai su créer une belle synergie entre mes compétences techniques et ma sensibilité personnelle. Mes compétences comprennent une large gamme de technologies et frameworks."
   },
   // My projects
   myProjectsTitle: {
@@ -103,8 +103,8 @@ const translations = {
     fr: "Mes projets"
   },
   myProjectsParagraph: {
-    en: "I love bringing concepts to life by creating intuitive designs, while ensuring that accessibility and user experience are always at the forefront of my concerns. Below are some of the projects I've worked on.",
-    fr: "J'adore concrétiser des concepts en créant des designs intuitifs, tout en veillant à ce que l'accessibilité et l'expérience utilisateur soient toujours au centre de mes préoccupations. Voici quelques-uns des projets sur lesquels j'ai travaillé."
+    en: "I love bringing concepts to life by creating intuitive, creative and responsive designs, while ensuring that accessibility and user experience are always at the forefront of my concerns. Below are some of the projects I've worked on.",
+    fr: "J'adore donner vie à des idées en créant des designs intuitifs, créatifs et responsive, tout en veillant à ce que l'accessibilité et l'expérience utilisateur soient toujours au centre de mes préoccupations. Voici quelques-uns des projets sur lesquels j'ai travaillé."
   },
   myProjectsButton: {
     en: "See more projects",
