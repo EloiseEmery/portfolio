@@ -10,13 +10,18 @@ import openai from '../../../assets/logos-skills/openai.png';
 import npm from '../../../assets/logos-skills/npm.png';
 import sql from '../../../assets/logos-skills/sql.png';
 import js from '../../../assets/logos-skills/js.png';
+import { getTranslation, Language } from '../../../translations';
 
-function MySkillset() {
+function MySkillset({ language }: { language: Language }) {
+    // Translations
+    const title = getTranslation('mySkillsetTitle', language);
+    const paragraph = getTranslation('mySkillsetParagraph', language);
+    
     return (
         <div className="">
             <div className="w-full text-center">
-                <h2 className="font-sans font-medium text-2xl sm:text-3xl text-colorWhite/80 leading-[1.2]">My skillset</h2>
-                <p className="text-colorWhite font-figtree text-base mt-6 pb-8 md:max-w-[50%] md:mx-auto">My skillset includes a wide range of technologies and frameworks, allowing me to build dynamic and responsive web applications.</p>
+                <h2 className="font-sans font-medium text-2xl sm:text-3xl text-colorWhite/80 leading-[1.2]">{title}</h2>
+                <p className="text-colorWhite font-figtree text-base mt-6 pb-8 md:max-w-[50%] md:mx-auto">{paragraph}</p>
             </div>
             {/* Skillset grid */}
             <div className="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-y-8 mt-6">

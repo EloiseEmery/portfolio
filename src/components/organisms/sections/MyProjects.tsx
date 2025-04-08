@@ -3,8 +3,13 @@ import Button from '../../atoms/Button';
 import iconExternLink from '../../../assets/svg/iconExternLink.svg';
 import project2 from '../../../assets/projects/project2.png';
 import decorativeEl from '../../../assets/png/decorativeCube.png';
+import { getTranslation, Language } from '../../../translations';
 
-function MyProjects() {
+function MyProjects({ language }: { language: Language }) {
+    // Translations
+    const title = getTranslation('myProjectsTitle', language);
+    const paragraph = getTranslation('myProjectsParagraph', language);
+    const button = getTranslation('myProjectsButton', language);
     return (
         <div className="relative">  
             <div className="absolute -right-[170px] sm:-right-[275px] z-1">
@@ -13,14 +18,14 @@ function MyProjects() {
             <div className="lg:flex">
                 <div className="sm:pr-[50px] lg:w-[65%] flex">
                     <div>
-                        <h2 className="font-sans font-medium text-2xl sm:text-3xl text-colorWhite/80 leading-[1.2]">My projects</h2>
-                        <p className="text-colorWhite font-figtree text-base mt-6 pb-8 ">With a robust foundation in graphic design and programming, I have effectively harmonized my technical expertise with my creative sensibilities. I love bringing concepts to life by creating intuitive designs, while ensuring that accessibility and user experience are always at the forefront of my concerns. Below are some of the projects I've worked on:</p>
+                        <h2 className="font-sans font-medium text-2xl sm:text-3xl text-colorWhite/80 leading-[1.2]">{title}</h2>
+                        <p className="text-colorWhite font-figtree text-base mt-6 pb-8 ">{paragraph}</p>
                     </div>
                 </div>
                 <div className="lg:w-[35%]">
                 <div className="flex lg:justify-end">
                         <Button 
-                            children="See more projects"
+                            children={button}
                             aria-label="See more projects on my Github"
                             className="relative z-10 group"
                             href="https://github.com/eloiseemery"

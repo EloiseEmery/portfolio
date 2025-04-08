@@ -1,5 +1,8 @@
 import chatLogos from '../../assets/png/chatLogos.png';
-function Chatbot() {
+import { getTranslation, Language } from '../../translations';
+
+function Chatbot({ language }: { language: Language }) {
+    const title = getTranslation('askMeInput', language);
     return (
        <div className="">
             <form className="relative bg-darkBlue p-4 rounded-lg shadow-lg bg-[#121F2E] rounded-t-lg border border-colorWhite/20">
@@ -9,7 +12,7 @@ function Chatbot() {
                 <div className="flex items-center p-2 border border-colorWhite/40 rounded-lg">
                     <input 
                         type="text" 
-                        placeholder="Ask me something..." 
+                        placeholder={title} 
                         className="flex-grow bg-transparent p-1 text-white placeholder-gray-400 focus:outline-none"
                     />
                     <button type="submit" className="ml-2 bg-gray-700 p-2 rounded-full">
