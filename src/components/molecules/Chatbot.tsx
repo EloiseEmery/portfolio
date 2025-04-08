@@ -5,7 +5,7 @@ function Chatbot({ language }: { language: Language }) {
     const title = getTranslation('askMeInput', language);
     return (
        <div className="">
-            <form className="relative bg-darkBlue dark:bg-[#ebeffd] p-4 rounded-lg shadow-md bg-[#121F2E] rounded-t-lg border border-colorWhite/20 dark:border-colorMain/10">
+            <form className="relative bg-darkBlue dark:bg-[#F3f3f3] p-4 rounded-lg bg-[#121F2E] rounded-t-lg border border-colorWhite/20 dark:border-colorMain/10">
                 <div className="">
                     <div className="h-64 bg-darkBlueDarker rounded-lg"></div>
                 </div>

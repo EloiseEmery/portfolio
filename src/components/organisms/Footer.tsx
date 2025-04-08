@@ -23,30 +23,30 @@ function Footer({ language }: { language: Language }) {
         <div className="relative w-full overflow-x-hidden px-4 md:px-10 xl:px-[125px] 2xl:px-[200px]">
           {/* Decorative element */}
           <div className="absolute -right-[100px] bottom-[130px] dark:filter-brightness-0 dark:invert">
-            <img src={decorativeEl} alt="Decorative Element" className="w-full h-[150px] opacity-100 dark:opacity-60" />
+            <img src={decorativeEl} alt="Decorative Element" className="w-full h-[150px] opacity-50 dark:opacity-40 dark:sm:opacity-60" />
           </div>
           {/* Top section */}
           <div className="sm:flex sm:flex-wrap text-colorWhite dark:text-colorBlack w-full lg:w-4/5">
             <div className="sm:w-1/2 lg:w-1/3 mb-10">
               <h3 className="font-sans text-lg font-regular mb-4 opacity-50">{footerTitle1}</h3>
               <ul className="tracking-wider font-figtree space-y-4 text-[15px] font-medium pr-10 sm:max-w-[250px]">
-                <li className="cursor-pointer hover:text-colorQuaternary dark:hover:opacity-50 dark:hover:text-colorBlack transition-all duration-300 ease-in-out whitespace-nowrap">{linkText3}</li>
-                <li className="cursor-pointer hover:text-colorQuaternary dark:hover:opacity-50 dark:hover:text-colorBlack transition-all duration-300 ease-in-out">BAnQ dans ta classe</li>
-                <li className="leading-[1.4] cursor-pointer hover:text-colorQuaternary dark:hover:opacity-50 dark:hover:text-colorBlack transition-all duration-300 ease-in-out">Société Québécoise des Infrastructures</li>
+                <li className="cursor-pointer hover:text-colorQuaternary dark:hover:text-colorTertiary transition-all duration-300 ease-in-out whitespace-nowrap">{linkText3}</li>
+                <li className="cursor-pointer hover:text-colorQuaternary dark:hover:text-colorTertiary transition-all duration-300 ease-in-out">BAnQ dans ta classe</li>
+                <li className="leading-[1.4] cursor-pointer hover:text-colorQuaternary dark:hover:text-colorTertiary transition-all duration-300 ease-in-out">Société Québécoise des Infrastructures</li>
               </ul>
             </div>
             <div className="sm:w-1/2 lg:w-1/3 mb-10">
               <h3 className="font-sans text-lg font-regular mb-4 opacity-50">{footerTitle2}</h3>
               <ul className="tracking-wider font-figtree space-y-4 text-[15px] font-medium">
-                <li className="cursor-pointer hover:text-colorQuaternary dark:hover:opacity-50 dark:hover:text-colorBlack transition-all duration-300 ease-in-out"><a href="#ask-me-something">{linkText1}</a></li>
-                <li className="cursor-pointer hover:text-colorQuaternary dark:hover:opacity-50 dark:hover:text-colorBlack transition-all duration-300 ease-in-out"><a href="#my-skillset">{linkText2}</a></li>
+                <li className="cursor-pointer hover:text-colorQuaternary dark:hover:text-colorTertiary transition-all duration-300 ease-in-out"><a href="#ask-me-something">{linkText1}</a></li>
+                <li className="cursor-pointer hover:text-colorQuaternary dark:hover:text-colorTertiary transition-all duration-300 ease-in-out"><a href="#my-skillset">{linkText2}</a></li>
               </ul>
             </div>
             <div className="sm:w-1/2 lg:w-1/3 mb-10">
               <h3 className="font-sans text-lg font-regular mb-4 opacity-50">{footerTitle3}</h3>
               <div className="flex gap-4">
                 <a href="https://www.linkedin.com/in/eloise-emery/" target="_blank" rel="noopener noreferrer" className="relative group">
-                  <div className="cursor-pointer border border-colorWhite/30 dark:border-colorMain/10 rounded-full p-2 hover:border-colorWhite/100 transition-all duration-300 ease-in-out ">
+                  <div className="cursor-pointer border border-colorWhite/30 dark:border-colorMain/10 rounded-full p-2 hover:border-colorWhite/100 dark:hover:border-colorTertiary/50 transition-all duration-300 ease-in-out ">
                     <img src={iconeLinkedIn} alt="LinkedIn" className="max-w-[22px] dark:brightness-0 dark:invert(1)" />
                   </div>
                   <span className="hidden md:block md:absolute font-sans bottom-full left-1/2 transform -translate-x-1/2 mb-2 w-max bg-black text-white text-xs rounded-md px-2 py-1 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
@@ -54,7 +54,7 @@ function Footer({ language }: { language: Language }) {
                   </span>
                 </a>
                 <a href="https://github.com/eloiseemery" target="_blank" rel="noopener noreferrer" className="relative group">
-                  <div className="cursor-pointer border border-colorWhite/30 dark:border-colorMain/10 rounded-full p-2 hover:border-colorWhite/100 transition-all duration-300 ease-in-out ">
+                  <div className="cursor-pointer border border-colorWhite/30 dark:border-colorMain/10 rounded-full p-2 hover:border-colorWhite/100 dark:hover:border-colorTertiary/50 transition-all duration-300 ease-in-out ">
                     <img src={iconeGithub} alt="Github" className=" max-w-[22px] dark:brightness-0 dark:invert(1)" />
                   </div>
                   <span className="hidden md:block md:absolute font-sans bottom-full left-1/2 transform -translate-x-1/2 mb-2 w-max bg-black text-white text-xs rounded-md px-2 py-1 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
@@ -62,7 +62,7 @@ function Footer({ language }: { language: Language }) {
                   </span>
                 </a>
                 <a href="mailto:eloise.emery@gmail.com" target="_blank" rel="noopener noreferrer" className="relative group">
-                  <div className="cursor-pointer border border-colorWhite/30 dark:border-colorMain/10 rounded-full p-2 hover:border-colorWhite/100 transition-all duration-300 ease-in-out ">
+                  <div className="cursor-pointer border border-colorWhite/30 dark:border-colorMain/10 rounded-full p-2 hover:border-colorWhite/100 dark:hover:border-colorTertiary/50 transition-all duration-300 ease-in-out ">
                     <img src={iconeEmail} alt="Email" className="max-w-[22px] opacity-70 dark:brightness-0 dark:invert(1)" />
                   </div>
                   <span className="hidden md:block md:absolute font-sans bottom-full left-1/2 transform -translate-x-1/2 mb-2 w-max bg-black text-white text-xs rounded-md px-2 py-1 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
