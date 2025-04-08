@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Header from './components/organisms/Header';
 import Footer from './components/organisms/Footer';
 import Sidebar from './components/organisms/Sidebar';
@@ -17,19 +17,35 @@ import { Language, getTranslation } from './translations';
 
 function App() {
   const [menuSrc, setMenuSrc] = useState(menuSidebarClosed);
-  const [darkModeSrc, setDarkModeSrc] = useState(lightMode);
+  const [colorModeSrc, setColorModeSrc] = useState(lightMode);
   const [language, setLanguage] = useState<Language>(() => {
     const savedLanguage = localStorage.getItem('language');
     return savedLanguage ? (savedLanguage as Language) : 'en';
   });
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
-  // Manage dark mode
-  const toggleDarkMode = () => {
+  // Manage color mode when page is loaded
+  useEffect(() => {
+    // Check saved color mode
+    const savedColorMode = localStorage.getItem('colorMode');
+    // Set initial color mode
+    const isDarkMode = savedColorMode === 'Light';
+    // Add or remove dark class
+    if (isDarkMode) {
+      document.documentElement.classList.add('dark');
+      setColorModeSrc(darkMode);
+    } else {
+      document.documentElement.classList.remove('dark');
+      setColorModeSrc(lightMode);
+    }
+  }, []);
+
+  // Manage color mode when Button is clicked
+  const toggleColorMode = () => {
     document.documentElement.classList.toggle('dark');
-    setDarkModeSrc((prevSrc: string) =>
-      prevSrc === lightMode ? darkMode : lightMode
-    );
+    const isDarkMode = document.documentElement.classList.contains('dark');
+    setColorModeSrc(isDarkMode ? darkMode : lightMode);
+    localStorage.setItem('colorMode', isDarkMode ? 'Light' : 'Dark');
   };
 
   // Manage language
@@ -56,7 +72,7 @@ function App() {
   };
 
   return (
-    <div className="app-container bg-gradient-main-secondary-main from-colorMain via-colorSecondary dark:bg-gradient-main-secondary-dark  flex">
+    <div className="app-container bg-gradient-main-secondary-main from-colorMain via-colorSecondary dark:bg-gradient-main-secondary-light-mode  flex">
       {/* Sidebar */}
       {isSidebarOpen && <Sidebar closeSidebar={closeSidebar} language={language} />}
       {/* To top button */}
@@ -66,7 +82,7 @@ function App() {
         <div className="flex-1 transition-all duration-300 ease-in-out">
           {/* Header */}
           <header className="">
-            <Header toggleMenu={toggleMenu} menuSrc={menuSrc} darkModeSrc={darkModeSrc} toggleDarkMode={toggleDarkMode} toggleLanguage={toggleLanguage} language={language} />
+            <Header toggleMenu={toggleMenu} menuSrc={menuSrc} colorModeSrc={colorModeSrc} toggleColorMode={toggleColorMode} toggleLanguage={toggleLanguage} language={language} />
           </header>
           {/* Main content */}
           <div className={`app-main-content relative z-10 transition-all duration-300 ease-in-out ${isSidebarOpen ? 'md:ml-[250px] xl:ml-[150px] blur-xl md:blur-0 ' : ''}`}>

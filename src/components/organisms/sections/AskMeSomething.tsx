@@ -43,7 +43,7 @@ function AskMeSomething({ language }: { language: Language }) {
                         viewBox="0 0 50 50"
                         xmlns="http://www.w3.org/2000/svg"
                         fill="currentColor"
-                        className="w-5 h-5 text-current group-hover:text-colorTertiary dark:group-hover:text-colorWhite"
+                        className="w-5 h-5 text-current group-hover:text-colorMain dark:group-hover:text-colorWhite"
                     >
                         <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
                         <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>

@@ -3,37 +3,36 @@ import { useState, useEffect } from 'react';
 interface HeaderProps {
   toggleMenu: () => void;
   menuSrc: string;
-  darkModeSrc: string;
-  toggleDarkMode: () => void;
+  toggleColorMode: () => void;
+  colorModeSrc: string;
   toggleLanguage: () => void;
   language: string;
 }
 
-function Header({ toggleMenu, menuSrc, darkModeSrc, toggleDarkMode, toggleLanguage, language }: HeaderProps) {
+function Header({ toggleMenu, menuSrc,toggleColorMode, colorModeSrc, toggleLanguage, language }: HeaderProps) {
   const [isScrolled, setIsScrolled] = useState(false);
-
 
   // Detect scroll for header height change
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
     };
-
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
   return (
       <div className={`w-full backdrop-blur-md flex items-center justify-between px-4 md:px-10 transition-all duration-300 ease-in-out fixed top-0 z-50 ${isScrolled ? 'h-[50px] bg-gradient-to-tl from-colorBlack to-colorSecondary dark:from-colorTertiary/10 dark:to-colorWhite dark:sm:from-colorTertiary/0 dark:sm:to-colorWhite/0 sm:from-colorMain/0 sm:to-colorSecondary/0' : 'h-[80px]' }`}>
-        {/* Left section */}
+        {/* Left section header */}
         <div className="flex items-center gap-8">
           {/* Logo */}
           <p className={`text-colorWhite dark:text-colorBlack transition-all duration-300 ease-in-out text-md ${isScrolled ? 'text-sm' : 'text-md'} font-sans font-medium`}><a href="./" onClick={(e) => {
           e.preventDefault();
             const language = localStorage.getItem('language');
-            window.location.href = `./?lang=${language}`;
+            const colorMode = localStorage.getItem('colorMode') || 'Light';
+            window.location.href = `./?lang=${language}&colorMode=${colorMode}`;
           }}>eloemery~</a></p>
-          {/* Menu Desktop */}
+          {/* Sidebar icone Desktop */}
           <div className="hidden md:block cursor-pointer min-w-[35px] hover:opacity-70 transition-all duration-300 ease-in-out" onClick={toggleMenu}>
             <img
               className="h-[16px] dark:filter-brightness-0 dark:invert"
@@ -42,7 +41,7 @@ function Header({ toggleMenu, menuSrc, darkModeSrc, toggleDarkMode, toggleLangua
             />
           </div>
         </div>
-        {/* Right section */}
+        {/* Right section header */}
         <div className="flex items-center gap-8">
           {/* Language */}
           <div className="cursor-pointer">
@@ -54,11 +53,17 @@ function Header({ toggleMenu, menuSrc, darkModeSrc, toggleDarkMode, toggleLangua
               window.history.replaceState(null, '', url.toString());
             }}>{language === 'fr' ? 'EN' : 'FR'}</p>
           </div>
-          {/* Light/Dark Mode */}
-          <div className="cursor-pointer hover:opacity-70 transition-all duration-300 ease-in-out" onClick={toggleDarkMode}>
-            <img src={darkModeSrc} alt="Light/Dark Mode" className="h-[18px] dark:filter-brightness-0 dark:invert" />
+          {/* Color mode */}
+          <div className="cursor-pointer hover:opacity-70 transition-all duration-300 ease-in-out" onClick={() => {
+            toggleColorMode();
+            const colorMode = localStorage.getItem('colorMode') || 'Light';
+            const url = new URL(window.location.href);
+            url.searchParams.set('colorMode', colorMode);
+            window.history.replaceState(null, '', url.toString());
+          }}>
+            <img src={colorModeSrc} alt="Light/Dark Mode" className="h-[18px] dark:filter-brightness-0 dark:invert" />
           </div>
-          {/* Menu Mobile */}
+          {/* Sidebar icone Mobile */}
           <div className="md:hidden cursor-pointer min-w-[35px] hover:opacity-70 transition-all duration-300 ease-in-out" onClick={toggleMenu}>
             <img
               className="h-[16px] dark:filter-brightness-0 dark:invert"

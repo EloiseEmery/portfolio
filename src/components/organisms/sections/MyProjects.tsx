@@ -15,7 +15,7 @@ function MyProjects({ language }: { language: Language }) {
                 <img src={decorativeEl} alt="Decorative Element" className="w-full h-[350px] opacity-70 dark:filter-brightness-0 dark:invert" />
             </div>
             <div className="lg:flex">
-                <div className="sm:pr-[50px] lg:w-[65%] flex">
+                <div className="sm:pr-[50px] lg:w-[60%] flex">
                     <div>
                         <h2 className="font-sans font-medium text-2xl sm:text-3xl text-colorWhite/80 dark:text-colorMain/80 leading-[1.2]">{title}</h2>
                         <p className="text-colorWhite dark:text-colorMain font-figtree text-base mt-6 pb-8 lg:pb-0 ">{paragraph}</p>
