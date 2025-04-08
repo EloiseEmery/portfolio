@@ -20,50 +20,50 @@ function MySkillset({ language }: { language: Language }) {
     return (
         <div className="">
             <div className="w-full text-center">
-                <h2 className="font-sans font-medium text-2xl sm:text-3xl text-colorWhite/80 leading-[1.2]">{title}</h2>
-                <p className="text-colorWhite font-figtree text-base mt-6 pb-8 md:max-w-[50%] md:mx-auto">{paragraph}</p>
+                <h2 className="font-sans font-medium text-2xl sm:text-3xl text-colorWhite/80 dark:text-colorMain/80 leading-[1.2]">{title}</h2>
+                <p className="text-colorWhite dark:text-colorMain font-figtree text-base mt-6 pb-8 md:max-w-[50%] md:mx-auto">{paragraph}</p>
             </div>
             {/* Skillset grid */}
             <div className="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-y-8 mt-6">
-                <div className='flex justify-center items-center opacity-70 hover:opacity-100'>
+                <div className='flex justify-center items-center opacity-70 hover:opacity-100 dark:filter-brightness-0 dark:invert'>
                     <img src={html} alt="SQL Icon" className="w-25 h-20" />
                 </div>
-                <div className='flex justify-center items-center opacity-70 hover:opacity-100'>
+                <div className='flex justify-center items-center opacity-70 hover:opacity-100 dark:filter-brightness-0 dark:invert'>
                     <img src={css} alt="CSS Icon" className="w-25 h-20" />
                 </div>
-                <div className='flex justify-center items-center opacity-70 hover:opacity-100'>
+                <div className='flex justify-center items-center opacity-70 hover:opacity-100 dark:filter-brightness-0 dark:invert'>
                     <img src={js} alt="Node Icon" className="w-25 h-20" />
                 </div>
-                <div className='flex justify-center items-center opacity-70 hover:opacity-100'>
+                <div className='flex justify-center items-center opacity-70 hover:opacity-100 dark:filter-brightness-0 dark:invert'>
                     <img src={sql} alt="SQL Icon" className="w-25 h-20" />
                 </div>  
-                <div className='flex justify-center items-center opacity-70 hover:opacity-100'>
+                <div className='flex justify-center items-center opacity-70 hover:opacity-100 dark:filter-brightness-0 dark:invert'>
                     <img src={docker} alt="Docker Icon" className="w-25 h-20" />
                 </div>
-                <div className='flex justify-center items-center opacity-70 hover:opacity-100'>
+                <div className='flex justify-center items-center opacity-70 hover:opacity-100 dark:filter-brightness-0 dark:invert'>
                     <img src={openai} alt="OpenAI Icon" className="w-25 h-20" />
                 </div>
-                <div className='flex justify-center items-center opacity-70 hover:opacity-100'>
+                <div className='flex justify-center items-center opacity-70 hover:opacity-100 dark:filter-brightness-0 dark:invert'>
                     <img src={react} alt="React Icon" className="w-25 h-20" />
                 </div>
-                <div className='flex justify-center items-center opacity-70 hover:opacity-100'>
+                <div className='flex justify-center items-center opacity-70 hover:opacity-100 dark:filter-brightness-0 dark:invert'>
                     <img src={git} alt="Git Icon" className="w-25 h-20" />
                 </div>
-                <div className='flex justify-center items-center opacity-70 hover:opacity-100'>
+                <div className='flex justify-center items-center opacity-70 hover:opacity-100 dark:filter-brightness-0 dark:invert'>
                     <img src={wp} alt="WP Icon" className="w-25 h-20" />
                 </div>
-                <div className='flex justify-center items-center opacity-70 hover:opacity-100'>
+                <div className='flex justify-center items-center opacity-70 hover:opacity-100 dark:filter-brightness-0 dark:invert'>
                     <img src={adobe} alt="SQL Icon" className="w-25 h-20" />
                 </div>
-                <div className='flex justify-center items-center opacity-70 hover:opacity-100'>
+                <div className='flex justify-center items-center opacity-70 hover:opacity-100 dark:filter-brightness-0 dark:invert'>
                     <img src={php} alt="PHP Icon" className="w-25 h-20" />
                 </div>
-                <div className='flex justify-center items-center opacity-70 hover:opacity-100'>
+                <div className='flex justify-center items-center opacity-70 hover:opacity-100 dark:filter-brightness-0 dark:invert'>
                     <img src={npm} alt="npm Icon" className="w-25 h-20" />
                 </div>
             </div>
             {/* Section Bottom */}
-            <div className="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-y-8 bg-[#121F2E] border border-colorWhite/60 rounded-lg text-colorWhite/80 hover:text-colorWhite text-center font-sans text-sm p-6 sm:p-10 mt-8" >
+            <div className="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-y-8 rounded-lg text-center font-sans text-sm mt-8 p-6 sm:p-10 bg-[#121F2E] dark:bg-transparent text-colorWhite/80 hover:text-colorWhite dark:text-colorMain border border-colorWhite/60 dark:border-[#c5d438] opacity-90 hover:opacity-100 dark:opacity-70 dark:hover:opacity-100" >
                 <p>Tailwind</p>
                 <p>Figma</p>
                 <p>Langchain</p>

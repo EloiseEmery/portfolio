@@ -24,7 +24,7 @@ function Header({ toggleMenu, menuSrc, darkModeSrc, toggleDarkMode, toggleLangua
   }, []);
 
   return (
-      <div className={`w-full backdrop-blur-md flex items-center justify-between px-4 md:px-10 transition-all duration-300 ease-in-out fixed top-0 z-50 ${isScrolled ? 'h-[50px] bg-gradient-to-tl from-colorMain to-colorSecondary sm:from-colorMain/0 sm:to-colorSecondary/0' : 'h-[80px]' }`}>
+      <div className={`w-full backdrop-blur-md flex items-center justify-between px-4 md:px-10 transition-all duration-300 ease-in-out fixed top-0 z-50 ${isScrolled ? 'h-[50px] bg-gradient-to-tl from-colorBlack to-colorSecondary dark:from-colorTertiary/10 dark:to-colorWhite dark:sm:from-colorTertiary/0 dark:sm:to-colorWhite/0 sm:from-colorMain/0 sm:to-colorSecondary/0' : 'h-[80px]' }`}>
         {/* Left section */}
         <div className="flex items-center gap-8">
           {/* Logo */}
@@ -33,10 +33,10 @@ function Header({ toggleMenu, menuSrc, darkModeSrc, toggleDarkMode, toggleLangua
             const language = localStorage.getItem('language');
             window.location.href = `./?lang=${language}`;
           }}>eloemery~</a></p>
-          {/* Menu mobile */}
+          {/* Menu Desktop */}
           <div className="hidden md:block cursor-pointer min-w-[35px] hover:opacity-70 transition-all duration-300 ease-in-out" onClick={toggleMenu}>
             <img
-              className="h-[16px]"
+              className="h-[16px] dark:filter-brightness-0 dark:invert"
               src={menuSrc}
               alt="Menu"
             />
@@ -46,7 +46,7 @@ function Header({ toggleMenu, menuSrc, darkModeSrc, toggleDarkMode, toggleLangua
         <div className="flex items-center gap-8">
           {/* Language */}
           <div className="cursor-pointer">
-            <p className="text-colorWhite text-sm font-sans hover:opacity-70 transition-all duration-300 ease-in-out" onClick={() => {
+            <p className="text-colorWhite dark:text-colorBlack text-sm font-sans hover:opacity-70 transition-all duration-300 ease-in-out" onClick={() => {
               toggleLanguage();
               const newLanguage = language === 'fr' ? 'en' : 'fr';
               const url = new URL(window.location.href);
@@ -56,12 +56,12 @@ function Header({ toggleMenu, menuSrc, darkModeSrc, toggleDarkMode, toggleLangua
           </div>
           {/* Light/Dark Mode */}
           <div className="cursor-pointer hover:opacity-70 transition-all duration-300 ease-in-out" onClick={toggleDarkMode}>
-            <img src={darkModeSrc} alt="Light/Dark Mode" className="h-[18px]" />
+            <img src={darkModeSrc} alt="Light/Dark Mode" className="h-[18px] dark:filter-brightness-0 dark:invert" />
           </div>
-          {/* Menu Tablet/Desktop */}
+          {/* Menu Mobile */}
           <div className="md:hidden cursor-pointer min-w-[35px] hover:opacity-70 transition-all duration-300 ease-in-out" onClick={toggleMenu}>
             <img
-              className="h-[16px]"
+              className="h-[16px] dark:filter-brightness-0 dark:invert"
               src={menuSrc}
               alt="Menu"
             />

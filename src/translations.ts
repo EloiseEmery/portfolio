@@ -103,8 +103,8 @@ const translations = {
     fr: "Mes projets"
   },
   myProjectsParagraph: {
-    en: "I love bringing concepts to life by creating intuitive, creative and responsive designs, while ensuring that accessibility and user experience are always at the forefront of my concerns. Below are some of the projects I've worked on.",
-    fr: "J'adore donner vie à des idées en créant des designs intuitifs, créatifs et responsive, tout en veillant à ce que l'accessibilité et l'expérience utilisateur soient toujours au centre de mes préoccupations. Voici quelques-uns des projets sur lesquels j'ai travaillé."
+    en: "I love bringing concepts to life by creating intuitive and responsive designs, while ensuring that accessibility and user experience are always at the forefront of my concerns. Below are some of the projects I've worked on.",
+    fr: "J'adore donner vie à des idées en créant des designs intuitifs et responsive, tout en veillant à ce que l'accessibilité et l'expérience utilisateur soient toujours au centre de mes préoccupations. Voici quelques-uns des projets sur lesquels j'ai travaillé."
   },
   myProjectsButton: {
     en: "See more projects",

@@ -5,15 +5,15 @@ function Chatbot({ language }: { language: Language }) {
     const title = getTranslation('askMeInput', language);
     return (
        <div className="">
-            <form className="relative bg-darkBlue p-4 rounded-lg shadow-lg bg-[#121F2E] rounded-t-lg border border-colorWhite/20">
+            <form className="relative bg-darkBlue dark:bg-[#D9DFF7] p-4 rounded-lg shadow-md bg-[#121F2E] rounded-t-lg border border-colorWhite/20 dark:border-colorWhite/50">
                 <div className="">
                     <div className="h-64 bg-darkBlueDarker rounded-lg"></div>
                 </div>
-                <div className="flex items-center p-2 border border-colorWhite/40 rounded-lg">
+                <div className="flex items-center p-2 border border-colorWhite/40 dark:border-colorWhite/50 rounded-lg">
                     <input 
                         type="text" 
                         placeholder={title} 
-                        className="flex-grow bg-transparent p-1 text-white placeholder-gray-400 focus:outline-none"
+                        className="flex-grow bg-transparent p-1 text-white dark:text-colorMain focus:outline-none"
                     />
                     <button type="submit" className="ml-2 bg-gray-700 p-2 rounded-full">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" className="w-4 h-4 text-white">
@@ -22,7 +22,7 @@ function Chatbot({ language }: { language: Language }) {
                     </button>
                 </div>
             </form>
-            <div className="absolute  right-0 -top-14 sm:-bottom-10 sm:top-auto ">
+            <div className="absolute  right-0 -top-14 sm:-bottom-10 sm:top-auto dark:filter-brightness-0 dark:invert">
                 <img src={chatLogos} className='h-[20px] sm:h-[25px]'/>
             </div>
         </div>
