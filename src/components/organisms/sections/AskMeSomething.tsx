@@ -13,7 +13,7 @@ function AskMeSomething({ language }: { language: Language }) {
             <div className="lg:w-[50%]">
                 {/* Mobile text */}
                 <div className="block lg:hidden pb-8">
-                    <h2 className="font-sans font-medium text-2xl sm:text-3xl text-colorWhite/80 dark:text-colorMain/80 leading-[1.2]">{title} <span className="-ml-2 font-figtree">...</span></h2>
+                    <h2 className="font-sans font-medium text-2xl sm:text-3xl leading-[1.2] text-colorWhite/80 dark:bg-gradient-to-r dark:from-colorTertiary dark:to-colorMain/80 dark:bg-clip-text dark:text-transparent">{title} <span className="-ml-2 font-figtree">...</span></h2>
                     <p className="text-colorWhite dark:text-colorMain font-figtree text-base mt-6 pb-8">{paragraph}</p>
                 </div>
                 <div className="relative opacity-80 hover:opacity-100 mb-16 lg:mb-0">
@@ -26,7 +26,7 @@ function AskMeSomething({ language }: { language: Language }) {
             <div className="sm:pl-[50px] lg:w-[50%] xl:pl-[200px]">
                 {/* Desktop text */}
                 <div className="hidden lg:block">
-                    <h2 className="font-sans font-medium text-2xl sm:text-3xl text-colorWhite/80 dark:text-colorMain/80 leading-[1.2]">{title}<span className="pl-1 font-figtree">...</span></h2>
+                    <h2 className="font-sans font-medium text-2xl sm:text-3xl leading-[1.2] text-colorWhite/80 dark:bg-gradient-to-r dark:from-colorTertiary dark:to-colorMain/80 dark:bg-clip-text dark:text-transparent">{title}<span className="pl-1 font-figtree">...</span></h2>
                     <p className="text-colorWhite dark:text-colorMain font-figtree text-base mt-6 pb-8">{paragraph}</p>
                 </div>
                 <Button 

@@ -15,13 +15,13 @@ function MyProjects({ language }: { language: Language }) {
                 <img src={decorativeEl} alt="Decorative Element" className="w-full h-[350px] opacity-70 dark:filter-brightness-0 dark:invert" />
             </div>
             <div className="lg:flex">
-                <div className="sm:pr-[50px] lg:w-[60%] flex">
+                <div className="sm:pr-[50px] lg:w-[55%] flex">
                     <div>
-                        <h2 className="font-sans font-medium text-2xl sm:text-3xl text-colorWhite/80 dark:text-colorMain/80 leading-[1.2]">{title}</h2>
+                        <h2 className="font-sans font-medium text-2xl sm:text-3xl leading-[1.2] text-colorWhite/80 dark:bg-gradient-to-r dark:from-colorTertiary dark:to-colorMain/80 dark:bg-clip-text dark:text-transparent">{title}</h2>
                         <p className="text-colorWhite dark:text-colorMain font-figtree text-base mt-6 pb-8 lg:pb-0 ">{paragraph}</p>
                     </div>
                 </div>
-                <div className="lg:w-[35%]">
+                <div className="lg:w-[45%]">
                     <div className="flex lg:justify-end">
                         <Button 
                             children={button}

@@ -12,7 +12,7 @@ function Hero({ language }: { language: Language }) {
 
   return (
     <div className="relative">
-    <h1 className="relative z-10 font-sans text-4xl md:text-5xl bg-gradient-to-br from-colorWhite to-colorWhite dark:from-colorMain/80 dark:to-colorTertiary bg-clip-text text-transparent leading-[1.2] ">{h1Text}</h1>
+    <h1 className="relative z-10 font-sans text-4xl md:text-5xl bg-gradient-to-r from-colorWhite to-colorWhite dark:from-colorTertiary dark:to-colorMain/80 bg-clip-text text-transparent leading-[1.2] ">{h1Text}</h1>
       <p className=" relative z-10 text-colorWhite font-figtree mt-6 pb-8 text-lg dark:text-colorMain">{pText}</p>
       <Button
         children={buttonLabel}
@@ -39,7 +39,7 @@ function Hero({ language }: { language: Language }) {
         }
       />
       <div className="absolute sm:right-0 top-0 z-0">
-        <img src={decorativeEl} alt="Decorative Element" className="w-full h-[350px] opacity-70 dark:opacity-40 dark:filter-brightness-0 dark:invert" />
+        <img src={decorativeEl} alt="Decorative Element" className="w-full h-[350px] opacity-70 dark:opacity-30 dark:filter-brightness-0 dark:invert" />
       </div>
     </div>
   );

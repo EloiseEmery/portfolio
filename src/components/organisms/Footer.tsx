@@ -23,7 +23,7 @@ function Footer({ language }: { language: Language }) {
         <div className="relative w-full overflow-x-hidden px-4 md:px-10 xl:px-[125px] 2xl:px-[200px]">
           {/* Decorative element */}
           <div className="absolute -right-[100px] bottom-[130px] dark:filter-brightness-0 dark:invert">
-            <img src={decorativeEl} alt="Decorative Element" className="w-full h-[150px] opacity-70" />
+            <img src={decorativeEl} alt="Decorative Element" className="w-full h-[150px] opacity-100 dark:opacity-60" />
           </div>
           {/* Top section */}
           <div className="sm:flex sm:flex-wrap text-colorWhite dark:text-colorBlack w-full lg:w-4/5">
