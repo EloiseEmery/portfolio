@@ -28,9 +28,7 @@ function Header({ toggleMenu, menuSrc,toggleColorMode, colorModeSrc, toggleLangu
           {/* Logo */}
           <p className={`text-colorWhite dark:text-colorBlack transition-all duration-300 ease-in-out text-md ${isScrolled ? 'text-sm' : 'text-md'} font-sans font-medium`}><a href="./" onClick={(e) => {
           e.preventDefault();
-            const language = localStorage.getItem('language');
-            const colorMode = localStorage.getItem('colorMode') || 'Light';
-            window.location.href = `./?lang=${language}&colorMode=${colorMode}`;
+          window.location.href = `./`;
           }}>eloemery~</a></p>
           {/* Sidebar icone Desktop */}
           <div className="hidden md:block cursor-pointer min-w-[35px] hover:opacity-70 transition-all duration-300 ease-in-out" onClick={toggleMenu}>
@@ -47,19 +45,11 @@ function Header({ toggleMenu, menuSrc,toggleColorMode, colorModeSrc, toggleLangu
           <div className="cursor-pointer">
             <p className="text-colorWhite dark:text-colorBlack text-sm font-sans hover:opacity-70 transition-all duration-300 ease-in-out" onClick={() => {
               toggleLanguage();
-              const newLanguage = language === 'fr' ? 'en' : 'fr';
-              const url = new URL(window.location.href);
-              url.searchParams.set('lang', newLanguage);
-              window.history.replaceState(null, '', url.toString());
             }}>{language === 'fr' ? 'EN' : 'FR'}</p>
           </div>
           {/* Color mode */}
           <div className="cursor-pointer hover:opacity-70 transition-all duration-300 ease-in-out" onClick={() => {
             toggleColorMode();
-            const colorMode = localStorage.getItem('colorMode') || 'Light';
-            const url = new URL(window.location.href);
-            url.searchParams.set('colorMode', colorMode);
-            window.history.replaceState(null, '', url.toString());
           }}>
             <img src={colorModeSrc} alt="Light/Dark Mode" className="h-[18px] dark:filter-brightness-0 dark:invert" />
           </div>

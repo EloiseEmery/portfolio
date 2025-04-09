@@ -15,7 +15,7 @@ function Chatbot({ language }: { language: Language }) {
                         placeholder={title} 
                         className="flex-grow bg-transparent p-1 text-white dark:text-colorMain focus:outline-none"
                     />
-                    <button type="submit" className="ml-2 bg-colorQuaternary dark:bg-colorTertiary/50 p-2 rounded-full">
+                    <button type="submit" className="ml-2 bg-colorWhite/40 dark:bg-colorTertiary/30 p-2 rounded-full">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" className="w-4 h-4 text-white">
                             <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" className="text-colorMain dark:text-colorWhite" />
                         </svg>

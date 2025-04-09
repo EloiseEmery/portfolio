@@ -1,7 +1,7 @@
 import Button from '../../atoms/Button';
 import decorativeEl from '../../../assets/png/elementHero.png';
-import iconExternLink from '../../../assets/svg/iconExternLink.svg';
 import { getTranslation, Language } from '../../../translations';
+import '../../../index.css';
  
 function Hero({ language }: { language: Language }) {
   
@@ -19,7 +19,7 @@ function Hero({ language }: { language: Language }) {
         <p className=" relative z-10 text-colorWhite font-figtree mt-6 pb-8 text-lg dark:text-colorMain">{pText}</p>
         <Button
           children={buttonLabel}
-          className="relative z-10"
+          className="relative z-10 glow-on-hover bg-colorQuaternary after:bg-colorQuaternary dark:after:bg-colorTertiary hover:bg-colorMain hover:after:bg-colorMain dark:hover:after:bg-colorMain hover:text-colorWhite"
           href="https://www.linkedin.com/in/eloise-emery/"
           aria-label="See my LinkedIn profile"
           blank={true}

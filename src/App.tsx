@@ -13,16 +13,16 @@ import menuSidebarOpen from './assets/svg/menuSidebarOpen.svg';
 import lightMode from './assets/svg/lightMode.svg';
 import darkMode from './assets/svg/darkMode.svg';
 import './index.css';
-import { Language, getTranslation } from './translations';
+import { Language } from './translations';
 
 function App() {
-  const [menuSrc, setMenuSrc] = useState(menuSidebarClosed);
   const [colorModeSrc, setColorModeSrc] = useState(lightMode);
   const [language, setLanguage] = useState<Language>(() => {
     const savedLanguage = localStorage.getItem('language');
     return savedLanguage ? (savedLanguage as Language) : 'en';
   });
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+  const [menuSrc, setMenuSrc] = useState(menuSidebarClosed);
 
   // Manage color mode when page is loaded
   useEffect(() => {

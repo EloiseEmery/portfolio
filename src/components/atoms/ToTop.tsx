@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 
 function ToTop() {
     const [isVisible, setIsVisible] = useState(false);
