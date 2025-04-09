@@ -18,7 +18,7 @@
             "title": "BanQ dans ta classe",
             "descriptionKey": "projectBanqDescription", 
             "technologies": ["React", "Tailwind", "TypeScript", "MCD", "Educational Tech"],
-            "githubLink": "https://github.com/eloiseemery/banq-project",
+            "websiteLink": "https://www.banqdanstaclasse.gouv.qc.ca/",
             "highlights": [
                 "Interactive educational platform",
                 "User-friendly interface", 

@@ -30,9 +30,9 @@ function Footer({ language }: { language: Language }) {
             <div className="sm:w-1/2 lg:w-1/3 mb-10">
               <h3 className="font-sans text-lg font-regular mb-4 opacity-50">{footerTitle1}</h3>
               <ul className="tracking-wider font-figtree space-y-4 text-[15px] font-medium pr-10 sm:max-w-[250px]">
-                <li className="cursor-pointer hover:text-colorQuaternary dark:hover:text-colorTertiary transition-all duration-300 ease-in-out whitespace-nowrap">{linkText3}</li>
-                <li className="cursor-pointer hover:text-colorQuaternary dark:hover:text-colorTertiary transition-all duration-300 ease-in-out">BAnQ dans ta classe</li>
-                <li className="leading-[1.4] cursor-pointer hover:text-colorQuaternary dark:hover:text-colorTertiary transition-all duration-300 ease-in-out">Société Québécoise des Infrastructures</li>
+                <li className="cursor-pointer hover:text-colorQuaternary dark:hover:text-colorTertiary transition-all duration-300 ease-in-out whitespace-nowrap"><a href="/project/portfolio">{linkText3}</a></li>
+                <li className="cursor-pointer hover:text-colorQuaternary dark:hover:text-colorTertiary transition-all duration-300 ease-in-out"><a href="/project/banq">BanQ dans ta classe</a></li>
+                <li className="leading-[1.4] cursor-pointer hover:text-colorQuaternary dark:hover:text-colorTertiary transition-all duration-300 ease-in-out"><a href="/project/sqi">Société Québécoise des Infrastructures</a></li>
               </ul>
             </div>
             <div className="sm:w-1/2 lg:w-1/3 mb-10">

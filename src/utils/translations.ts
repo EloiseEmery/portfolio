@@ -139,7 +139,7 @@ const translations = {
     en: 'Return to home page',
     fr: 'Retour à l\'accueil'
   },
-  // Existing translations
+  // Projects template
   technologies: {
     en: 'Technologies',
     fr: 'Technologies'

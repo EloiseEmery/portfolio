@@ -6,10 +6,13 @@ function Chatbot({ language }: { language: Language }) {
     const title = getTranslation('askMeInput', language);
     const [displayedPlaceholder, setDisplayedPlaceholder] = useState('');
     const [isComplete, setIsComplete] = useState(false);
+    const [showCursor, setShowCursor] = useState(true);
+    const [isFocused, setIsFocused] = useState(false);
 
     // Animated placeholder letters
     useEffect(() => {
         let timeoutId: NodeJS.Timeout;
+        let cursorTimeoutId: NodeJS.Timeout;
         
         if (!isComplete && displayedPlaceholder.length < title.length) {
             timeoutId = setTimeout(() => {
@@ -26,15 +29,24 @@ function Chatbot({ language }: { language: Language }) {
             }, 2000); // Wait 2 seconds before starting over
         }
 
+        // Cursor blinking animation only when not focused
+        if (!isFocused) {
+            cursorTimeoutId = setInterval(() => {
+                setShowCursor(prev => !prev);
+            }, 500);
+        }
+
         return () => {
             if (timeoutId) clearTimeout(timeoutId);
+            if (cursorTimeoutId) clearInterval(cursorTimeoutId);
         };
-    }, [displayedPlaceholder, isComplete, title]);
+    }, [displayedPlaceholder, isComplete, title, isFocused]);
 
     // Reset animation when language changes
     useEffect(() => {
         setDisplayedPlaceholder('');
         setIsComplete(false);
+        setShowCursor(true);
     }, [language]);
 
     return (
@@ -46,7 +58,9 @@ function Chatbot({ language }: { language: Language }) {
                 <div className="flex items-center p-2 border border-colorWhite/40 dark:border-colorMain/20 bg-colorWhite/20 dark:bg-colorWhite/60 rounded-lg">
                     <input 
                         type="text" 
-                        placeholder={displayedPlaceholder}
+                        placeholder={`${displayedPlaceholder}${!isFocused && showCursor ? '│' : ''}`}
+                        onFocus={() => setIsFocused(true)}
+                        onBlur={() => setIsFocused(false)}
                         className="flex-grow bg-transparent p-1 text-white dark:text-colorMain focus:outline-none 
                             placeholder:text-white/80 dark:placeholder:text-colorMain/80"
                     />
