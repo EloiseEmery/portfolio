@@ -11,6 +11,7 @@ function MyProjects({ language }: { language: Language }) {
     const title = getTranslation('myProjectsTitle', language);
     const paragraph = getTranslation('myProjectsParagraph', language);
     const button = getTranslation('myProjectsButton', language);
+    const tags = getTranslation('myProjectsTag', language);
 
     const [hoveredProject, setHoveredProject] = useState<number | null>(null);
     const projectImages = [project1, project2, project3];
@@ -20,17 +21,17 @@ function MyProjects({ language }: { language: Language }) {
         {
             id: 1,
             title: "This project portfolio",
-            tags: ["UI/UX", "React", "Tailwind", "OpenAI"]
+            tags: ["UI/UX", "React", "Tailwind", "OpenAI", "Docker"]
         },
         {
             id: 2,
             title: "BanQ dans ta classe",
-            tags: ["UI/UX", "Refonte", "MCD", "React", "Tailwind"]
+            tags: ["UI/UX", tags, "MCD", "React", "Tailwind"]
         },
         {
             id: 3,
             title: "Société Québécoise des Infrastructures",
-            tags: ["UI/UX", "Refonte", "CMS"]
+            tags: ["UI/UX", tags, "CMS"]
         }
     ];
 
@@ -89,13 +90,13 @@ function MyProjects({ language }: { language: Language }) {
                     </div>
                 </div>
                 {/* Projects Templating */}
-                <div className="mt-8 lg:w-[50%] pl-6">
+                <div className="mt-8 lg:w-[50%] lg:pl-6">
                     {projects.map(project => (
                         <div key={project.id} className={`project-${project.id} group sm:flex hover:bg-white/10 dark:hover:bg-colorTertiary/10 justify-center items-center p-4 rounded-lg`}
                              onMouseEnter={() => setHoveredProject(project.id)}
                              onMouseLeave={() => setHoveredProject(null)}>
-                            <h3 className="w-[70%] text-colorWhite dark:text-colorMain pb-4 sm:pb-0">{project.title}</h3>
-                            <div className="flex sm:justify-end w-full text-xs gap-x-2 text-colorWhite dark:text-colorMain">
+                            <h3 className="w-[70%] text-colorWhite dark:text-colorMain pb-4 sm:pb-0 pr-4">{project.title}</h3>
+                            <div className="flex sm:justify-end w-full text-xs gap-x-2 text-colorWhite dark:text-colorMain/70">
                                 {project.tags.map(tag => (
                                     <p key={tag} className="p-1.5 rounded-lg border border-colorQuaternary/60 dark:border-colorTertiary/40 bg-colorQuaternary/20 dark:bg-colorTertiary/20 group-hover:bg-colorQuaternary dark:group-hover:bg-colorTertiary group-hover:text-colorMain dark:group-hover:text-colorWhite">{tag}</p>
                                 ))}

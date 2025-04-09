@@ -22,7 +22,7 @@ function Header({ toggleMenu, menuSrc,toggleColorMode, colorModeSrc, toggleLangu
   }, []);
 
   return (
-      <div className={`w-full backdrop-blur-md flex items-center justify-between px-4 md:px-10 transition-all duration-300 ease-in-out fixed top-0 z-50 ${isScrolled ? 'h-[50px] bg-gradient-to-tl from-colorBlack to-colorSecondary dark:from-[#dbe2ff] dark:via-colorWhite/100 dark:to-colorWhite dark:sm:from-colorTertiary/0 dark:sm:to-colorWhite/0 sm:from-colorMain/0 sm:to-colorSecondary/0' : 'h-[80px]' }`}>
+      <div className={`w-full backdrop-blur-md flex items-center justify-between px-4 md:px-10 transition-all duration-300 ease-in-out fixed top-0 z-50 ${isScrolled ? 'h-[50px] shadow-md bg-gradient-to-tl from-colorBlack to-colorSecondary dark:from-[#dbe2ff] dark:via-colorWhite/100 dark:to-colorWhite dark:sm:from-colorTertiary/0 dark:sm:to-colorWhite/0 sm:from-colorMain/0 sm:to-colorSecondary/0' : 'h-[80px]' }`}>
         {/* Left section header */}
         <div className="flex items-center gap-8">
           {/* Logo */}

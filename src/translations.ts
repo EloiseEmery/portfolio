@@ -77,8 +77,8 @@ const translations = {
     fr: "Posez-moi une question"  
   },
   askMeParagraph: {
-    en: "Being an introvert, I've made this chatbot available for you to chat with me. It has an in-depth understanding of my professional experience and the project's source code. Feel free to ask it questions about me or my work. It uses OpenAI's GPT-4 and LangChain. Enjoy!",
-    fr: "Étant introvertie, j'ai mis ce chatbot à votre disposition pour discuter avec moi. Il bénéficie d'une connaissance approfondie de mon expérience professionnelle et du code source de ce projet. Posez-lui vos questions sur moi ou mon travail. Il utilise GPT-4 d'OpenAI et LangChain. Amusez-vous!"
+    en: "Being an introvert, I've made this chatbot for you to chat with me. It has an in-depth understanding of my professional experience and the project's source code. Feel free to ask it questions about me or my work. It uses OpenAI's GPT-4 and LangChain. Enjoy!",
+    fr: "Étant introvertie, j'ai conçu ce chatbot pour vous permettre de discuter avec moi. Il bénéficie d'une connaissance approfondie de mon expérience professionnelle et du code source de ce projet. Posez-lui vos questions sur moi ou mon travail. Il utilise GPT-4 d'OpenAI et LangChain. Amusez-vous!"
   },
   askMeButton: {
     en: "Download my full resume",
@@ -109,6 +109,10 @@ const translations = {
   myProjectsButton: {
     en: "See more projects",
     fr: "Voir plus de projets"
+  },
+  myProjectsTag: {
+    en: "Redesign",
+    fr: "Refonte"
   },
   // Get in touch
   getInTouchTitle: {
