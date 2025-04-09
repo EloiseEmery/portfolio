@@ -90,7 +90,7 @@ function App() {
               <section id="hero" className="py-[250px]">
                 <Hero language={language} />
               </section>
-              <section id="ask-me-something" className="py-[75px] md:py-[100px]">
+              <section id="ask-me-something" className="py-[75px] md:py-[200px]">
                 <AskMeSomething language={language} />
               </section>
               <section id="my-skillset" className="py-[75px] md:py-[100px]">

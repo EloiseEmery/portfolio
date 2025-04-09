@@ -16,8 +16,8 @@ function GetInTouch({ language }: { language: Language }) {
                     <img src={document.documentElement.classList.contains('dark') ? decorativeFormLight : decorativeForms} className="max-h-[200px] " alt="decorative forms" />
                 </div>
                 <div className="md:w-1/2 py-8">
-                    <h2 className="font-sans font-medium text-2xl sm:text-3xl leading-[1.2] bg-gradient-to-r from-colorWhite to-colorWhite dark:from-colorTertiary dark:to-colorMain/80 bg-clip-text text-transparent">{title}</h2>
-                    <p className="text-colorWhite/80 dark:text-colorMain font-figtree text-base mt-6 pb-8">{paragraph}</p>
+                    <h2 className="font-sans font-medium text-2xl sm:text-3xl leading-[1.2] bg-gradient-to-r from-colorWhite/80 to-colorWhite/80 dark:from-colorTertiary dark:to-colorMain/80 bg-clip-text text-transparent">{title}</h2>
+                    <p className="text-colorWhite dark:text-colorMain font-figtree text-base mt-6 pb-8">{paragraph}</p>
                     <Button 
                         children={button}
                         aria-label={button}
