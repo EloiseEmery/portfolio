@@ -29,7 +29,7 @@ const App: React.FC = () => {
     // Check saved color mode
     const savedColorMode = localStorage.getItem('colorMode');
     // Set initial color mode
-    const isDarkMode = savedColorMode === 'Light';
+    const isDarkMode = savedColorMode === 'light';
     // Add or remove dark class
     if (isDarkMode) {
       document.documentElement.classList.add('dark');
@@ -58,9 +58,13 @@ const App: React.FC = () => {
   // Manage color mode
   const toggleColorMode = () => {
     const newColorMode = colorModeSrc === lightMode ? darkMode : lightMode;
+    const isDarkModeActive = document.documentElement.classList.toggle('dark');
+    
+    // Set localStorage based on the current state of dark class
+    localStorage.setItem('colorMode', isDarkModeActive ? 'light' : 'dark');
+    
+    // Update color mode source
     setColorModeSrc(newColorMode);
-    localStorage.setItem('colorMode', newColorMode === darkMode ? 'dark' : 'light');
-    document.documentElement.classList.toggle('dark');
   };
 
   // Manage language
