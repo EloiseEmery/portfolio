@@ -38,8 +38,8 @@ function Footer({ language }: { language: Language }) {
             <div className="sm:w-1/2 lg:w-1/3 mb-10">
               <h3 className="font-sans text-lg font-regular mb-4 opacity-50">{footerTitle2}</h3>
               <ul className="tracking-wider font-figtree space-y-4 text-[15px] font-medium">
-                <li className="cursor-pointer hover:text-colorQuaternary dark:hover:text-colorTertiary transition-all duration-300 ease-in-out"><a href="#ask-me-something">{linkText1}</a></li>
-                <li className="cursor-pointer hover:text-colorQuaternary dark:hover:text-colorTertiary transition-all duration-300 ease-in-out"><a href="#my-skillset">{linkText2}</a></li>
+                <li className="cursor-pointer hover:text-colorQuaternary dark:hover:text-colorTertiary transition-all duration-300 ease-in-out"><a href="/#ask-me-something">{linkText1}</a></li>
+                <li className="cursor-pointer hover:text-colorQuaternary dark:hover:text-colorTertiary transition-all duration-300 ease-in-out"><a href="/#my-skillset">{linkText2}</a></li>
               </ul>
             </div>
             <div className="sm:w-1/2 lg:w-1/3 mb-10">

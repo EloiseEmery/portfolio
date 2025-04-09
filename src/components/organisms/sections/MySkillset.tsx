@@ -95,7 +95,7 @@ function MySkillset({ language }: { language: Language }) {
                 <p>Ableton</p>
             </div>
             <div className="mt-3">
-                <small className='flex cursor-pointer text-colorWhite/80 dark:text-colorMain/70 underline hover:text-colorQuaternary dark:hover:text-colorTertiary'><a href="https://www.linkedin.com/in/eloise-emery/details/skills/" target="_blank" rel="noopener noreferrer">see all my skills on my LinkedIn</a> 
+                <small className='flex justify-end cursor-pointer text-colorWhite/80 dark:text-colorMain/70 underline hover:text-colorQuaternary dark:hover:text-colorTertiary'><a href="https://www.linkedin.com/in/eloise-emery/details/skills/" target="_blank" rel="noopener noreferrer">see all my skills on my LinkedIn</a> 
                     <svg
                         fill="currentColor"
                         viewBox="0 0 50 50"
