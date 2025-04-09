@@ -1,5 +1,5 @@
 import chatLogos from '../../assets/png/chatLogos.png';
-import { getTranslation, Language } from '../../translations';
+import { getTranslation, Language } from '../../utils/translations';
 import { useState, useEffect } from 'react';
 
 function Chatbot({ language }: { language: Language }) {
@@ -39,7 +39,7 @@ function Chatbot({ language }: { language: Language }) {
 
     return (
        <div className="">
-            <form className="relative bg-darkBlue dark:bg-[#e6e6e6] p-4 rounded-lg bg-[#121F2E] rounded-t-lg border border-colorWhite/20 dark:border-colorMain/10">
+            <form className="relative bg-darkBlue dark:bg-[#B6B6B9] p-4 rounded-lg bg-[#121F2E] rounded-t-lg border border-colorWhite/20 dark:border-colorMain/10">
                 <div className="">
                     <div className="h-64 bg-darkBlueDarker rounded-lg"></div>
                 </div>

@@ -1,4 +1,3 @@
-// Define translations
 const translations = {
   // Footer
   footerTitle1: {
@@ -14,8 +13,8 @@ const translations = {
     fr: "Connectez avec moi"
   }, 
   footerCopyright: {
-    en: "Copyright © 2025 Éloïse Emery. All rights reserved.",
-    fr: "Copyright © 2025 Éloïse Emery. Tous droits réservés."
+    en: "Copyright 2025 Éloïse Emery. All rights reserved.",
+    fr: "Copyright 2025 Éloïse Emery. Tous droits réservés."
   },
   footerText1: {
     en: "Created with",
@@ -126,6 +125,36 @@ const translations = {
   getInTouchButton: {
     en: "Send me an email",
     fr: "Envoyez-moi un courriel"
+  },
+  // 404 Page
+  notFoundTitle: {
+    en: 'Oops! Page Not Found',
+    fr: 'Oups ! Page non trouvée'
+  },
+  notFoundDescription: {
+    en: 'The page you are looking for does not exist.',
+    fr: 'La page que vous recherchez n\'existe pas.'
+  },
+  notFoundButtonText: {
+    en: 'Return to home page',
+    fr: 'Retour à l\'accueil'
+  },
+  // Existing translations
+  technologies: {
+    en: 'Technologies',
+    fr: 'Technologies'
+  },
+  highlights: {
+    en: 'Highlights',
+    fr: 'Points Clés'
+  },
+  viewOnGithub: {
+    en: 'View on GitHub',
+    fr: 'Voir sur GitHub'
+  },
+  visitWebsite: {
+    en: 'Visit Website',
+    fr: 'Visiter le Site'
   }
 };
 
@@ -142,4 +171,3 @@ export const getTranslation = (key: TranslationKey, language: Language) => {
 
 // Export translations and types
 export { translations };
-

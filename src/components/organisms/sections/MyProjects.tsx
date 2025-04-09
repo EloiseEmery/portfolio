@@ -1,10 +1,11 @@
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import Button from '../../atoms/Button';
 import project1 from '../../../assets/projects/project1.png';
 import project2 from '../../../assets/projects/project2.png';
 import project3 from '../../../assets/projects/project3.png';
 import decorativeEl from '../../../assets/png/decorativeCube.png';
-import { getTranslation, Language } from '../../../translations';
+import { getTranslation, Language } from '../../../utils/translations';
 
 function MyProjects({ language }: { language: Language }) {
     // Translations
@@ -13,23 +14,29 @@ function MyProjects({ language }: { language: Language }) {
     const button = getTranslation('myProjectsButton', language);
     const tags = getTranslation('myProjectsTag', language);
 
-    const [hoveredProject, setHoveredProject] = useState<number | null>(1);
+    const [hoveredProject, setHoveredProject] = useState<string | null>("portfolio");
+    const navigate = useNavigate();
+
+    const handleProjectClick = (projectId: string) => {
+        navigate(`/project/${projectId}`);
+    };
+
     const projectImages = [project1, project2, project3];
 
     // Projects data
     const projects = [
         {
-            id: 1,
+            id: "portfolio",
             title: "This project portfolio",
             tags: ["UI/UX", "React", "Tailwind", "OpenAI", "Docker"]
         },
         {
-            id: 2,
+            id: "banq",
             title: "BanQ dans ta classe",
             tags: ["UI/UX", tags, "MCD", "React", "Tailwind"]
         },
         {
-            id: 3,
+            id: "sqi",
             title: "Société Québécoise des Infrastructures",
             tags: ["UI/UX", tags, "CMS"]
         }
@@ -66,8 +73,8 @@ function MyProjects({ language }: { language: Language }) {
                                     xmlns="http://www.w3.org/2000/svg"
                                     className="w-5 h-5 text-current group-hover:text-colorMain dark:group-hover:text-colorWhite"
                                 >
-                                    <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                                    <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
+                                    <g id="SVGRepo_tracerCarrier" strokeLinecap="round" strokeLinejoin="round"></g>
                                     <g id="SVGRepo_iconCarrier">
                                         <path d="M38.288 10.297l1.414 1.415-14.99 14.99-1.414-1.414z"></path>
                                         <path d="M40 20h-2v-8h-8v-2h10z"></path>
@@ -85,7 +92,7 @@ function MyProjects({ language }: { language: Language }) {
                 <div className="lg:w-[50%] pt-6 text-colorWhite dark:text-colorMain flex">
                     <div className="rounded-lg overflow-hidden w-full">
                         <div className="h-[400px]">
-                            <img src={hoveredProject !== null ? projectImages[hoveredProject - 1] : project1} alt="" className="w-full h-full object-cover" />
+                            <img src={hoveredProject !== null ? projectImages[projects.findIndex(project => project.id === hoveredProject)] : project1} alt="" className="w-full h-full object-cover" />
                         </div>
                     </div>
                 </div>
@@ -98,7 +105,8 @@ function MyProjects({ language }: { language: Language }) {
                                 ${hoveredProject === project.id ? 'bg-white/10 dark:bg-colorTertiary/10' : ''} 
                                 justify-center items-center p-4 rounded-lg cursor-pointer`}
                             onMouseEnter={() => setHoveredProject(project.id)}
-                            onMouseLeave={() => setHoveredProject(1)}
+                            onMouseLeave={() => setHoveredProject("portfolio")}
+                            onClick={() => handleProjectClick(project.id)}
                         >
                             <h3 className="w-[70%] text-colorWhite dark:text-colorMain pb-4 sm:pb-0 pr-4">{project.title}</h3>
                             <div className="flex sm:justify-end w-full text-xs gap-x-2">

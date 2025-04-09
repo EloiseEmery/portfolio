@@ -1,7 +1,7 @@
 import decorativeForms from '../../../assets/png/decorativeForms.png';
 import decorativeFormLight from '../../../assets/png/decorativeFormsLight.png';
 import Button from '../../atoms/Button';
-import { getTranslation, Language } from '../../../translations';
+import { getTranslation, Language } from '../../../utils/translations';
 
 function GetInTouch({ language }: { language: Language }) {
     // Translations
@@ -25,12 +25,12 @@ function GetInTouch({ language }: { language: Language }) {
                         href="mailto:eloise@eloiseemery.com"
                         blank={true}
                         type="secondary"
-                        icon={<svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" stroke-width="3" stroke="currentColor" fill="none" className="w-4 h-4 text-colorWhite dark:text-colorTertiary group-hover:text-colorMain dark:group-hover:text-colorWhite">
-                            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                        icon={<svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" strokeWidth="3" stroke="currentColor" fill="none" className="w-4 h-4 text-colorWhite dark:text-colorTertiary group-hover:text-colorMain dark:group-hover:text-colorWhite">
+                            <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
+                            <g id="SVGRepo_tracerCarrier" strokeLinecap="round" strokeLinejoin="round"></g>
                             <g id="SVGRepo_iconCarrier">
                                 <path d="M38.61,54.93,27.94,35.57,9.08,25.38a1,1,0,0,1,.2-1.8L54.08,8.64a1,1,0,0,1,1.27,1.27L40.41,54.73A1,1,0,0,1,38.61,54.93Z"></path>
-                                <line x1="55.13" y1="8.91" x2="27.94" y2="35.57" stroke-linecap="round"></line>
+                                <line x1="55.13" y1="8.91" x2="27.94" y2="35.57" strokeLinecap="round"></line>
                             </g>
                         </svg>}
                     />

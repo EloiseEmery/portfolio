@@ -1,4 +1,5 @@
-import { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 
 interface HeaderProps {
   toggleMenu: () => void;
@@ -26,10 +27,9 @@ function Header({ toggleMenu, menuSrc,toggleColorMode, colorModeSrc, toggleLangu
         {/* Left section header */}
         <div className="flex items-center gap-8">
           {/* Logo */}
-          <p className={`text-colorWhite dark:text-colorBlack transition-all duration-300 ease-in-out text-md ${isScrolled ? 'text-sm' : 'text-md'} font-sans font-medium`}><a href="./" onClick={(e) => {
-          e.preventDefault();
-          window.location.href = `./`;
-          }}>eloemery~</a></p>
+          <p className={`text-colorWhite dark:text-colorBlack transition-all duration-300 ease-in-out text-md ${isScrolled ? 'text-sm' : 'text-md'} font-sans font-medium`}>
+            <Link to="/">eloemery~</Link>
+          </p>
           {/* Sidebar icone Desktop */}
           <div className="hidden md:block cursor-pointer min-w-[35px] hover:opacity-70 transition-all duration-300 ease-in-out" onClick={toggleMenu}>
             <img

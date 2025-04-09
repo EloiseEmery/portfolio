@@ -2,7 +2,7 @@ import iconeEmail from '../../assets/png/email.png';
 import iconeLinkedIn from '../../assets/png/linkedin.png';
 import iconeGithub from '../../assets/png/github.png';
 import decorativeEl from '../../assets/png/elementFooter.png';
-import { getTranslation, Language } from '../../translations';
+import { getTranslation, Language } from '../../utils/translations';
 
 function Footer({ language }: { language: Language }) {
   // Translations

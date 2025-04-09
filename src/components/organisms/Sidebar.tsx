@@ -1,6 +1,5 @@
 import React from 'react';
-import { Language } from '../../translations';
-import { getTranslation } from '../../translations';
+import { Language, getTranslation } from '../../utils/translations';
 
 interface SidebarProps {
   closeSidebar: () => void;

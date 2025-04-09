@@ -1,0 +1,43 @@
+{
+    "projects": [
+        {
+            "id": "portfolio",
+            "title": "Project Portfolio",
+            "descriptionKey": "projectPortfolioDescription",
+            "technologies": ["React", "Tailwind", "TypeScript", "OpenAI", "Docker"],
+            "githubLink": "https://github.com/eloiseemery/portfolio",
+            "highlights": [
+                "Responsive and modern portfolio design",
+                "AI-powered interactions",
+                "Dark mode support", 
+                "Multilingual translations"
+            ]
+        },
+        {
+            "id": "banq",
+            "title": "BanQ dans ta classe",
+            "descriptionKey": "projectBanqDescription", 
+            "technologies": ["React", "Tailwind", "TypeScript", "MCD", "Educational Tech"],
+            "githubLink": "https://github.com/eloiseemery/banq-project",
+            "highlights": [
+                "Interactive educational platform",
+                "User-friendly interface", 
+                "Responsive design",
+                "Tailored for classroom learning"
+            ]
+        },
+        {
+            "id": "sqi",
+            "title": "Société Québécoise des Infrastructures",
+            "descriptionKey": "projectSQIDescription",
+            "technologies": ["CMS", "UI/UX", "Web Design", "Responsive Layout"],
+            "websiteLink": "https://www.sqi.gouv.qc.ca/",
+            "highlights": [
+                "Professional government website design",
+                "Clean and intuitive user interface",
+                "Responsive across devices", 
+                "Accessibility-focused design"
+            ]
+        }
+    ]
+}
