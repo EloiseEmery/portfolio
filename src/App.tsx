@@ -21,8 +21,11 @@ const App: React.FC = () => {
     const savedLanguage = localStorage.getItem('language');
     return savedLanguage ? (savedLanguage as Language) : 'en';
   });
-  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
-  const [menuSrc, setMenuSrc] = useState(menuSidebarClosed);
+  const [isSidebarOpen, setIsSidebarOpen] = useState(() => {
+    // Only open sidebar by default on desktop (md breakpoint and above)
+    return window.innerWidth >= 768;
+  });
+  const [menuSrc, setMenuSrc] = useState(isSidebarOpen ? menuSidebarOpen : menuSidebarClosed);
 
   // Manage color mode when page is loaded
   useEffect(() => {
