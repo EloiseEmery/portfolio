@@ -33,8 +33,8 @@ function MySkillset({ language }: { language: Language }) {
     return (
         <div className="relative">
             {/* Decorative element */}
-            <div className="absolute -top-[50px] -left-[150px] xl:-left-[225px] 2xl:-left-[300px] z-0">
-                <img src={decorativeEl} alt="Decorative Element" className="w-full max-h-[300px] sm:max-h-[290px] object-contain opacity-15 dark:opacity-10 dark:sm:opacity-15 dark:filter-brightness-0 dark:invert" />
+            <div className="absolute -top-[50px] -left-[150px] md:-bottom-[100px] xl:-left-[225px] 2xl:-left-[300px] z-0">
+                <img src={decorativeEl} alt="Decorative Element" className="w-full max-h-[300px] sm:max-h-[290px] object-contain opacity-30 dark:opacity-10 dark:sm:opacity-15 dark:filter-brightness-0 dark:invert" />
             </div>
             <div className="relative">
                 <h2 className="mx-auto text-center w-[350px] font-sans font-medium text-2xl sm:text-3xl leading-[1.2] text-colorWhite/80 dark:bg-gradient-to-r dark:from-colorTertiary dark:to-colorMain/80 dark:bg-clip-text dark:text-transparent">{title}</h2>

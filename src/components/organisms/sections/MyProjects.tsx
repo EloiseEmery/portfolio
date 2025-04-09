@@ -13,7 +13,7 @@ function MyProjects({ language }: { language: Language }) {
     const button = getTranslation('myProjectsButton', language);
     const tags = getTranslation('myProjectsTag', language);
 
-    const [hoveredProject, setHoveredProject] = useState<number | null>(null);
+    const [hoveredProject, setHoveredProject] = useState<number | null>(1);
     const projectImages = [project1, project2, project3];
 
     // Projects data
@@ -40,7 +40,7 @@ function MyProjects({ language }: { language: Language }) {
         <div className="relative">  
             {/* Decorative element */}
             <div className="absolute -right-[170px] sm:-right-[275px] z-1">
-                <img src={decorativeEl} alt="Decorative Element" className="w-full max-h-[300px] sm:max-h-[340px] object-contain opacity-70 dark:opacity-50 dark:filter-brightness-0 dark:invert" />
+                <img src={decorativeEl} alt="Decorative Element" className="w-full max-h-[300px] sm:max-h-[340px] object-contain opacity-100 dark:filter-brightness-0 dark:invert" />
             </div>
             {/* Top section */}
             <div className="lg:flex z-10 relative">
@@ -80,7 +80,7 @@ function MyProjects({ language }: { language: Language }) {
                 </div>
             </div>
             {/* Bottom section */}
-            <div className="lg:flex relative">
+            <div className="lg:flex z-10 relative">
                 {/* Projects Image */}
                 <div className="lg:w-[50%] pt-6 text-colorWhite dark:text-colorMain flex">
                     <div className="rounded-lg overflow-hidden w-full">
@@ -92,13 +92,26 @@ function MyProjects({ language }: { language: Language }) {
                 {/* Projects Templating */}
                 <div className="mt-8 lg:w-[50%] lg:pl-6">
                     {projects.map(project => (
-                        <div key={project.id} className={`project-${project.id} group sm:flex hover:bg-white/10 dark:hover:bg-colorTertiary/10 justify-center items-center p-4 rounded-lg`}
-                             onMouseEnter={() => setHoveredProject(project.id)}
-                             onMouseLeave={() => setHoveredProject(null)}>
+                        <div 
+                            key={project.id} 
+                            className={`project-${project.id} group sm:flex 
+                                ${hoveredProject === project.id ? 'bg-white/10 dark:bg-colorTertiary/10' : ''} 
+                                justify-center items-center p-4 rounded-lg cursor-pointer`}
+                            onMouseEnter={() => setHoveredProject(project.id)}
+                            onMouseLeave={() => setHoveredProject(1)}
+                        >
                             <h3 className="w-[70%] text-colorWhite dark:text-colorMain pb-4 sm:pb-0 pr-4">{project.title}</h3>
-                            <div className="flex sm:justify-end w-full text-xs gap-x-2 text-colorWhite dark:text-colorMain/70">
+                            <div className="flex sm:justify-end w-full text-xs gap-x-2">
                                 {project.tags.map(tag => (
-                                    <p key={tag} className="p-1.5 rounded-lg border border-colorQuaternary/60 dark:border-colorTertiary/40 bg-colorQuaternary/20 dark:bg-colorTertiary/20 group-hover:bg-colorQuaternary dark:group-hover:bg-colorTertiary group-hover:text-colorMain dark:group-hover:text-colorWhite">{tag}</p>
+                                    <p 
+                                        key={tag} 
+                                        className={`p-1.5 rounded-lg border 
+                                            ${hoveredProject === project.id 
+                                                ? 'bg-colorQuaternary border-colorQuaternary dark:bg-colorTertiary dark:border-colorTertiary text-colorMain dark:text-colorWhite' 
+                                                : 'border-colorQuaternary/60 text-colorWhite dark:text-colorMain/70 dark:border-colorTertiary/40 bg-colorQuaternary/20 dark:bg-colorTertiary/20'}`}
+                                    >
+                                        {tag}
+                                    </p>
                                 ))}
                             </div>
                         </div>
