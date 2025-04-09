@@ -21,8 +21,8 @@ const TemplateProject: React.FC<TemplateProjectProps> = ({ language }) => {
     const navigate = useNavigate();
     const project: ProjectDataItem | undefined = projectData.projects.find((p: ProjectDataItem) => p.id === projectId);
 
+    // If project is not found, redirect to 404
     useEffect(() => {
-        // If project is not found, redirect to 404
         if (!project) {
             navigate('/404', { replace: true });
         }
@@ -34,7 +34,7 @@ const TemplateProject: React.FC<TemplateProjectProps> = ({ language }) => {
     }
 
     return (
-        <div className="container mx-auto px-4">
+        <div className="container mx-auto px-4 py-[200px]">
             <h1 className="text-3xl font-bold mb-6">{project.title}</h1>
             <div className="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6">
                 <div className="mb-4">

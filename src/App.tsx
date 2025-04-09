@@ -12,6 +12,7 @@ import lightMode from './assets/svg/lightMode.svg';
 import darkMode from './assets/svg/darkMode.svg';
 import './index.css';
 import { Language } from './utils/translations';
+import { setupHashChangeListener } from './utils/urlUtils';
 import AppRoutes from './routes';
 
 const App: React.FC = () => {
@@ -37,6 +38,10 @@ const App: React.FC = () => {
       document.documentElement.classList.remove('dark');
       setColorModeSrc(lightMode);
     }
+
+    // Setup hash change listener for scrolling
+    const cleanup = setupHashChangeListener();
+    return cleanup;
   }, []);
 
   // Manage sidebar
