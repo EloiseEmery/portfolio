@@ -49,7 +49,7 @@ const TemplateProject: React.FC<TemplateProjectProps> = ({ language }) => {
     }
 
     return (
-        <div className="container flex mx-auto w-full px-4 md:px-10 xl:px-[150px] py-[200px]">
+        <div className="container flex mx-auto px-4 md:px-10 xl:px-[150px] py-[200px]">
             <div className="w-[50%]">
                 <h1 className="text-4xl mb-6 font-sans text-colorWhite/80 dark:bg-gradient-to-r dark:from-colorTertiary dark:to-colorMain/80 dark:bg-clip-text dark:text-transparent">{project.title}</h1>
                 <div className="font-figtree text-colorWhite dark:text-colorMain">
@@ -71,7 +71,7 @@ const TemplateProject: React.FC<TemplateProjectProps> = ({ language }) => {
                             ))}
                         </ul>
                     </div>
-                    <div className="font-figtree text-colorWhite dark:text-colorMain mt-8">
+                    <div className="font-figtree text-base leading-7 text-colorWhite dark:text-colorMain mt-8 pr-[120px]">
                         {project.descriptionMain}
                     </div>
                 </div>
