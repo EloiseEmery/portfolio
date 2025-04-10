@@ -9,7 +9,7 @@ import AskMeSomething from './components/organisms/sections/AskMeSomething';
 import MySkillset from './components/organisms/sections/MySkillset';
 import MyProjects from './components/organisms/sections/MyProjects';
 import NotFound from './components/pages/NotFound';
-import projectData from './datas/dataProject.json';
+import projectData from './datas/datasProjects.json';
 
 interface RoutesProps {
   language: 'en' | 'fr';

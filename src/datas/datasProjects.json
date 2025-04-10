@@ -11,7 +11,9 @@
                 "AI-powered interactions",
                 "Dark mode support", 
                 "Multilingual translations"
-            ]
+            ],
+            "descriptionMain": "This project is a uniquely designed portfolio, with a responsive interface, developed from scratch by me."
+
         },
         {
             "id": "banq",
@@ -24,7 +26,8 @@
                 "User-friendly interface", 
                 "Responsive design",
                 "Tailored for classroom learning"
-            ]
+            ],
+            "descriptionMain": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Elit eget metus, dignissim sit amet. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Elit eget metus, dignissim sit amet."
         },
         {
             "id": "sqi",
@@ -37,7 +40,8 @@
                 "Clean and intuitive user interface",
                 "Responsive across devices", 
                 "Accessibility-focused design"
-            ]
+            ],
+            "descriptionMain": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Elit eget metus, dignissim sit amet. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Elit eget metus, dignissim sit amet."
         }
     ]
 }

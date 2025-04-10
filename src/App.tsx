@@ -94,7 +94,7 @@ const App: React.FC = () => {
             {/* Main content */}
             <div className={`app-main-content relative z-10 transition-all duration-300 ease-in-out ${isSidebarOpen ? 'md:ml-[250px] xl:ml-[150px] blur-xl md:blur-0 ' : ''}`}>
               <Routes>
-                <Route path="/" element={<AppRoutes language={language} />} />
+                <Route path="/*" element={<AppRoutes language={language} />} />
                 <Route path="/project/:projectId" element={<TemplateProject language={language} />} />
                 <Route path="*" element={<NotFound language={language} />} />
               </Routes>

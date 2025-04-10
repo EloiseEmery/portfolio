@@ -1,8 +1,17 @@
 import React, { useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
-import projectData from '../../datas/dataProject.json';
+import projectData from '../../datas/datasProjects.json';
 import { getTranslation } from '../../utils/translations';
 import Button from '../atoms/Button';
+import project1 from '../../assets/projects/project1.png';
+import project2 from '../../assets/projects/project2.png';
+import project3 from '../../assets/projects/project3.png';
+
+const projectImages = {
+    'portfolio': project1,
+    'banq': project2,
+    'sqi': project3
+};
 
 interface TemplateProjectProps {
     language: 'en' | 'fr';
@@ -15,6 +24,11 @@ interface ProjectDataItem {
     highlights: string[];
     githubLink?: string;
     websiteLink?: string;
+    descriptionKey: string;
+    descriptionMain: string;
+    image1?: string;
+    image2?: string;
+    image3?: string;
 }
 
 const TemplateProject: React.FC<TemplateProjectProps> = ({ language }) => {
@@ -35,29 +49,41 @@ const TemplateProject: React.FC<TemplateProjectProps> = ({ language }) => {
     }
 
     return (
-        <div className="container px-4 md:px-10 xl:px-[125px] 2xl:px-[200px] py-[200px]">
-            <h1 className="text-4xl mb-6 font-sans text-colorWhite/80 dark:bg-gradient-to-r dark:from-colorTertiary dark:to-colorMain/80 dark:bg-clip-text dark:text-transparent">{project.title}</h1>
-            <div className="font-figtree text-colorWhite dark:text-colorMain">
-                <div className="mb-4">
-                    <strong>{getTranslation('technologies', language)}:</strong>
-                    <div className="flex flex-wrap gap-2 mt-2">
-                        {project.technologies.map((tech) => (
-                            <span key={tech} className="text-colorMain bg-colorQuaternary border-colorQuaternary dark:bg-colorTertiary dark:border-colorTertiary dark:text-colorWhite px-2 py-1 rounded text-sm">
-                                {tech}
-                            </span>
-                        ))}
+        <div className="container flex mx-auto w-full px-4 md:px-10 xl:px-[150px] py-[200px]">
+            <div className="w-[50%]">
+                <h1 className="text-4xl mb-6 font-sans text-colorWhite/80 dark:bg-gradient-to-r dark:from-colorTertiary dark:to-colorMain/80 dark:bg-clip-text dark:text-transparent">{project.title}</h1>
+                <div className="font-figtree text-colorWhite dark:text-colorMain">
+                    <div className="mb-4">
+                        <strong>{getTranslation('technologies', language)}:</strong>
+                        <div className="flex flex-wrap gap-2 mt-2">
+                            {project.technologies.map((tech) => (
+                                <span key={tech} className="text-colorMain bg-colorQuaternary border-colorQuaternary dark:bg-colorTertiary dark:border-colorTertiary dark:text-colorWhite px-2 py-1 rounded text-sm">
+                                    {tech}
+                                </span>
+                            ))}
+                        </div>
+                    </div>
+                    <div className="mb-4">
+                        <strong>{getTranslation('highlights', language)}:</strong>
+                        <ul className="list-disc list-inside text-sm">
+                            {project.highlights.map((highlight) => (
+                                <li key={highlight}>{highlight}</li>
+                            ))}
+                        </ul>
+                    </div>
+                    <div className="font-figtree text-colorWhite dark:text-colorMain mt-8">
+                        {project.descriptionMain}
                     </div>
                 </div>
-                <div className="mb-4">
-                    <strong>{getTranslation('highlights', language)}:</strong>
-                    <ul className="list-disc list-inside text-sm">
-                        {project.highlights.map((highlight) => (
-                            <li key={highlight}>{highlight}</li>
-                        ))}
-                    </ul>
-                </div>
+            </div>
+            <div className="w-[50%]">
+                <img 
+                    src={projectImages[project.id as keyof typeof projectImages]} 
+                    alt={project.title} 
+                    className="w-full h-auto object-cover rounded-lg mb-4"
+                />
                 {/* Buttons external links */}
-                <div className="flex gap-4 pt-2">
+                <div className="flex gap-4 pt-2 justify-end">
                     {project.githubLink && (
                         <Button 
                         children={getTranslation('viewOnGithub', language)}
