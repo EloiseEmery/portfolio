@@ -52,7 +52,7 @@ const Sidebar: React.FC<SidebarProps> = ({ closeSidebar, language }) => {
               <a 
                 key={project.id} 
                 href={`/project/${project.id}`} 
-                className="block text-base text-colorWhite/80 dark:text-colorBlack/80 md:text-sm hover:text-colorQuaternary dark:hover:text-colorTertiary transition-all duration-300 ease-in-out relative pl-4 before:content-['•'] before:absolute before:left-0 before:text-colorQuaternary dark:before:text-colorTertiary"
+                className="block text-base text-colorWhite/80 dark:text-colorBlack/80 md:text-xs hover:text-colorQuaternary dark:hover:text-colorTertiary transition-all duration-300 ease-in-out relative pl-4 before:content-['•'] before:absolute before:left-0 before:text-colorQuaternary dark:before:text-colorTertiary"
               >
                 {project.title}
               </a>

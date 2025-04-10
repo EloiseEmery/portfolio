@@ -48,7 +48,7 @@ function MyProjects({ language }: { language: Language }) {
         {
             id: "21 game",
             title: "21 game",
-            tags: ["UI/UX", "JavaScript", "POO"]
+            tags: ["UI/UX", "JavaScript", "OOP"]
         },
         {
             id: "Mon Vino web app",

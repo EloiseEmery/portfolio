@@ -33,28 +33,26 @@ function Header({ toggleMenu, menuSrc, toggleColorMode, colorModeSrc, toggleLang
         {/* Sidebar icone Desktop */}
         <div className="hidden md:block cursor-pointer min-w-[35px] hover:opacity-70 transition-all duration-300 ease-in-out" onClick={toggleMenu}>
           <img
-            className="h-[16px] dark:filter-brightness-0 dark:invert"
+            className="h-[16px] opacity-70 dark:filter-brightness-0 dark:invert"
             src={menuSrc}
             alt="Menu"
           />
         </div>
       </div>
       {/* Right section header */}
-      <div className="flex items-center gap-8">
+      <div className="flex items-center">
         {/* Language */}
-        <div className="cursor-pointer">
-          <p className="text-colorWhite dark:text-colorBlack text-sm font-sans hover:opacity-70 transition-all duration-300 ease-in-out" onClick={() => {
-            toggleLanguage();
-          }}>{language === 'fr' ? 'EN' : 'FR'}</p>
-        </div>
+        <p className="p-4 cursor-pointer text-colorWhite dark:text-colorBlack text-sm font-sans hover:opacity-70 transition-all duration-300 ease-in-out" onClick={() => {
+          toggleLanguage();
+        }}>{language === 'fr' ? 'EN' : 'FR'}</p>
         {/* Color mode */}
-        <div className="cursor-pointer hover:opacity-70 transition-all duration-300 ease-in-out" onClick={() => {
+        <div className="p-4 cursor-pointer hover:opacity-70 transition-all duration-300 ease-in-out" onClick={() => {
           toggleColorMode();
         }}>
           <img src={colorModeSrc} alt="Light/Dark Mode" className="h-[18px] dark:filter-brightness-0 dark:invert" />
         </div>
         {/* Sidebar icone Mobile */}
-        <div className="md:hidden cursor-pointer min-w-[35px] hover:opacity-70 transition-all duration-300 ease-in-out" onClick={toggleMenu}>
+        <div className="p-4 md:hidden cursor-pointer min-w-[35px] hover:opacity-70 transition-all duration-300 ease-in-out" onClick={toggleMenu}>
           <img
             className="h-[16px] dark:filter-brightness-0 dark:invert"
             src={menuSrc}

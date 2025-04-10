@@ -12,12 +12,12 @@
                 "Dark mode support", 
                 "Multilingual translations"
             ],
-            "descriptionMain": "This project is a uniquely designed portfolio, with a responsive interface, developed from scratch by me. It regroup all my projects and skills and allow you to go through my work easily. It even help you to interact with me through a chatbot powered by OpenAI. This chatbot is taking in input my professional experience and the source code of this project."
-
+            "intro": "This project is a uniquely designed portfolio, with a responsive interface, developed from scratch by me.",
+            "descriptionMain": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Elit eget metus, dignissim sit amet. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Elit eget metus, dignissim sit amet."
         },
         {
             "id": "banq",
-            "title": "BanQ dans ta classe",
+            "title": "BAnQ dans ta classe",
             "descriptionKey": "projectBanqDescription", 
             "technologies": ["React", "Tailwind", "TypeScript", "MCD", "Educational Tech"],
             "websiteLink": "https://www.banqdanstaclasse.gouv.qc.ca/",
@@ -27,21 +27,62 @@
                 "Responsive design",
                 "Tailored for classroom learning"
             ],
-            "descriptionMain": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Elit eget metus, dignissim sit amet. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Elit eget metus, dignissim sit amet."
+            "intro": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Elit eget metus, dignissim sit amet. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Elit eget metus, dignissim sit amet."
         },
         {
             "id": "sqi",
             "title": "Société Québécoise des Infrastructures",
             "descriptionKey": "projectSQIDescription",
-            "technologies": ["CMS", "UI/UX", "Web Design", "Responsive Layout"],
+            "technologies": ["AdobeXD", "TYPO3", "CSS", "HTML"],
             "websiteLink": "https://www.sqi.gouv.qc.ca/",
             "highlights": [
                 "Professional government website design",
                 "Clean and intuitive user interface",
+                "Usage of a design system",
                 "Responsive across devices", 
                 "Accessibility-focused design"
             ],
-            "descriptionMain": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Elit eget metus, dignissim sit amet. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Elit eget metus, dignissim sit amet."
+            "intro": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Elit eget metus, dignissim sit amet. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Elit eget metus, dignissim sit amet."
+        },
+        {
+            "id": "stampee",
+            "title": "Stampee Auction website",
+            "descriptionKey": "projectStampeeDescription",
+            "technologies": ["UI/UX","JavaScript", "MVC", "PHP", "SQL"],
+            "githubLink": "https://github.com/eloiseemery/stampee",
+            "highlights": [
+                "MVC architecture",
+                "User-friendly interface",
+                "SQL database",
+                "User login"
+            ],
+            "intro": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Elit eget metus, dignissim sit amet. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Elit eget metus, dignissim sit amet."
+        },
+        {
+            "id": "21 game",
+            "title": "21 game",
+            "descriptionKey": "project21GameDescription",
+            "technologies": ["UI/UX", "JavaScript", "POO"],
+            "githubLink": "https://github.com/eloiseemery/21-game",
+            "highlights": [
+                "Object-Oriented Programming",
+                "Game Logic",
+                "State Management"
+            ],
+            "intro": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Elit eget metus, dignissim sit amet. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Elit eget metus, dignissim sit amet."
+        },
+        {
+            "id": "Mon Vino web app",
+            "title": "Mon Vino web app",
+            "descriptionKey": "projectMonVinoDescription",
+            "technologies": ["UI/UX", "React", "API REST", "AWS"],
+            "highlights": [
+                "AWS login management",
+                "Responsive design",
+                "API REST integration",
+                "AWS deployment"
+            ],
+            "intro": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Elit eget metus, dignissim sit amet. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Elit eget metus, dignissim sit amet."
         }
     ]
 }

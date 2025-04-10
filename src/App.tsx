@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import Header from './components/organisms/Header';
 import Footer from './components/organisms/Footer';
 import Sidebar from './components/organisms/Sidebar';
@@ -14,6 +14,8 @@ import './index.css';
 import { Language } from './utils/translations';
 import { setupHashChangeListener } from './utils/urlUtils';
 import AppRoutes from './routes';
+
+
 
 const App: React.FC = () => {
   const [colorModeSrc, setColorModeSrc] = useState(lightMode);
@@ -31,16 +33,10 @@ const App: React.FC = () => {
   useEffect(() => {
     // Check saved color mode
     const savedColorMode = localStorage.getItem('colorMode');
-    // Set initial color mode
-    const isDarkMode = savedColorMode === 'light';
-    // Add or remove dark class
-    if (isDarkMode) {
-      document.documentElement.classList.add('dark');
-      setColorModeSrc(darkMode);
-    } else {
-      document.documentElement.classList.remove('dark');
-      setColorModeSrc(lightMode);
-    }
+    const isDarkMode = savedColorMode === 'dark';
+    
+    // Set color mode source based on saved mode
+    setColorModeSrc(isDarkMode ? darkMode : lightMode);
 
     // Setup hash change listener for scrolling
     const cleanup = setupHashChangeListener();
@@ -61,10 +57,12 @@ const App: React.FC = () => {
   // Manage color mode
   const toggleColorMode = () => {
     const newColorMode = colorModeSrc === lightMode ? darkMode : lightMode;
+    
+    // Toggle dark class on html element
     const isDarkModeActive = document.documentElement.classList.toggle('dark');
     
     // Set localStorage based on the current state of dark class
-    localStorage.setItem('colorMode', isDarkModeActive ? 'light' : 'dark');
+    localStorage.setItem('colorMode', isDarkModeActive ? 'dark' : 'light');
     
     // Update color mode source
     setColorModeSrc(newColorMode);

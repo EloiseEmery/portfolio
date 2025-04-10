@@ -59,7 +59,7 @@ const translations = {
   },
   // Hero
   heroTitle: {
-    en: "Full Stack Web Developer",
+    en: "Full stack web developer",
     fr: "Développeuse web full stack"
   },
   heroParagraph: {
