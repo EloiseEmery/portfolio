@@ -20,12 +20,12 @@ const NotFound: React.FC<NotFoundProps> = ({ language }) => {
   }, [location, params]);
 
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen dark:bg-transparent text-center px-4">
-      <h1 className="text-6xl font-bold text-colorQuaternary/80 dark:text-colorTertiary/80 mb-4">404</h1>
-      <p className="text-2xl text-colorWhite dark:text-colorMain mb-8">
+    <div className="flex flex-col items-center justify-center min-h-screen bg-transparent text-center px-4">
+      <h1 className="text-6xl font-bold dark:text-colorQuaternary/80 text-colorTertiary/80 mb-4">404</h1>
+      <p className="text-2xl text-colorMain dark:text-colorWhite mb-8">
         {getTranslation('notFoundTitle', language)}
       </p>
-      <p className="text-lg text-colorWhite dark:text-colorMain mb-8">
+      <p className="text-lg text-colorMain dark:text-colorWhite mb-8">
         {getTranslation('notFoundDescription', language)}
       </p>
       <Button 

@@ -62,14 +62,14 @@ function MyProjects({ language }: { language: Language }) {
         <div className="relative">  
             {/* Decorative element */}
             <div className="absolute -right-[300px] sm:-right-[275px] z-1">
-                <img src={decorativeEl} alt="Decorative Element" className="w-full max-h-[300px] sm:max-h-[340px] object-contain opacity-100 dark:filter-brightness-0 dark:invert" />
+                <img src={decorativeEl} alt="Decorative Element" className="w-full max-h-[300px] sm:max-h-[340px] object-contain opacity-100 filter-brightness-0 invert dark:filter-none" />
             </div>
             {/* Top section */}
             <div className="lg:flex z-10 relative">
                 <div className="sm:pr-[50px] lg:w-[55%] flex">
                     <div>
-                        <h2 className="font-sans font-medium text-2xl sm:text-3xl leading-[1.2] text-colorWhite/80 dark:bg-gradient-to-r dark:from-colorTertiary dark:to-colorMain/80 dark:bg-clip-text dark:text-transparent">{title}</h2>
-                        <p className="text-colorWhite dark:text-colorMain font-figtree text-base mt-6 pb-8 lg:pb-0 ">{paragraph}</p>
+                        <h2 className="font-sans font-medium text-2xl sm:text-3xl leading-[1.2] dark:text-colorWhite/80 bg-gradient-to-r from-colorTertiary to-colorMain/80 bg-clip-text text-transparent">{title}</h2>
+                        <p className="dark:text-colorWhite text-colorMain font-figtree text-base mt-6 pb-8 lg:pb-0 ">{paragraph}</p>
                     </div>
                 </div>
                 <div className="lg:w-[45%]">
@@ -86,7 +86,7 @@ function MyProjects({ language }: { language: Language }) {
                                     fill="currentColor"
                                     viewBox="0 0 50 50"
                                     xmlns="http://www.w3.org/2000/svg"
-                                    className="w-5 h-5 text-current group-hover:text-colorMain dark:group-hover:text-colorWhite"
+                                    className="w-5 h-5 text-current dark:group-hover:text-colorMain group-hover:text-colorWhite"
                                 >
                                     <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
                                     <g id="SVGRepo_tracerCarrier" strokeLinecap="round" strokeLinejoin="round"></g>
@@ -104,7 +104,7 @@ function MyProjects({ language }: { language: Language }) {
             {/* Bottom section */}
             <div className="lg:flex z-10 relative">
                 {/* Projects Image */}
-                <div className="lg:w-[50%] pt-6 text-colorWhite dark:text-colorMain flex">
+                <div className="lg:w-[50%] pt-6 dark:text-colorWhite text-colorMain flex">
                     <div className="rounded-lg overflow-hidden w-full">
                         <div className="h-[285px] sm:h-[400px]">
                             <img src={hoveredProject !== null ? projectImages[projects.findIndex(project => project.id === hoveredProject)] : project1} alt="" className="w-full h-full object-cover" />
@@ -117,21 +117,21 @@ function MyProjects({ language }: { language: Language }) {
                         <div 
                             key={project.id} 
                             className={`project-${project.id} group sm:flex 
-                                ${hoveredProject === project.id ? 'bg-white/10 dark:bg-colorTertiary/10' : ''} 
+                                ${hoveredProject === project.id ? 'dark:bg-white/10 bg-colorTertiary/10' : ''} 
                                 justify-center items-center p-4 rounded-lg cursor-pointer`}
                             onMouseEnter={() => setHoveredProject(project.id)}
                             onMouseLeave={() => setHoveredProject("portfolio")}
                             onClick={() => handleProjectClick(project.id)}
                         >
-                            <h3 className="w-full text-base text-colorWhite dark:text-colorMain pb-4 sm:pb-0 pr-4">{project.title}</h3>
+                            <h3 className="w-full text-base dark:text-colorWhite text-colorMain pb-4 sm:pb-0 pr-4">{project.title}</h3>
                             <div className="flex sm:justify-end w-full text-xs gap-x-2">
                                 {project.tags.map(tag => (
                                     <p 
                                         key={tag} 
                                         className={`p-1.5 rounded-lg border 
                                             ${hoveredProject === project.id 
-                                                ? 'bg-colorQuaternary border-colorQuaternary dark:bg-colorTertiary dark:border-colorTertiary text-colorMain dark:text-colorWhite' 
-                                                : 'border-colorQuaternary/60 text-colorWhite dark:text-colorMain/70 dark:border-colorTertiary/40 bg-colorQuaternary/20 dark:bg-colorTertiary/20'}`}
+                                                ? 'dark:bg-colorQuaternary dark:border-colorQuaternary bg-colorTertiary border-colorTertiary dark:text-colorMain text-colorWhite' 
+                                                : 'dark:border-colorQuaternary/60 dark:text-colorWhite text-colorMain/70 border-colorTertiary/40 dark:bg-colorQuaternary/20 bg-colorTertiary/20'}`}
                                     >
                                         {tag}
                                     </p>

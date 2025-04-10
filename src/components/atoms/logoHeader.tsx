@@ -68,7 +68,7 @@ function LogoHeader({ isScrolled }: LogoHeaderProps) {
   return (
     <div>
       {/* Logo */}
-      <p className={`text-colorWhite dark:text-colorBlack transition-all duration-300 ease-in-out text-md ${isScrolled ? 'text-sm' : 'text-md'} font-sans font-medium`}>
+      <p className={`text-colorBlack dark:text-colorWhite transition-all duration-300 ease-in-out text-md ${isScrolled ? 'text-sm' : 'text-md'} font-sans font-medium`}>
         <Link to="/" onClick={() => window.scrollTo(0, 0)}>
           {displayText}
         </Link>

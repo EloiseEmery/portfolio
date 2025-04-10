@@ -12,12 +12,12 @@ function AskMeSomething({ language }: { language: Language }) {
         <div className="lg:flex">
             <div className="lg:w-[50%]">
                 {/* Mobile text */}
-                <div className="block lg:hidden pb-8">
-                    <h2 className="font-sans font-medium text-2xl sm:text-3xl leading-[1.2] text-colorWhite/80 dark:bg-gradient-to-r dark:from-colorTertiary dark:to-colorMain/80 dark:bg-clip-text dark:text-transparent">{title} <span className="-ml-2 font-figtree">...</span></h2>
-                    <p className="text-colorWhite dark:text-colorMain font-figtree text-base mt-6 pb-8">{paragraph}</p>
+                <div className="block lg:hidden">
+                    <h2 className="font-sans font-medium text-2xl sm:text-3xl leading-[1.2]  bg-gradient-to-r from-colorTertiary to-colorMain/80 dark:from-colorWhite dark:to-colorWhite bg-clip-text text-transparent">{title} <span className="-ml-2 font-figtree">...</span></h2>
+                    <p className="text-colorMain dark:text-colorWhite font-figtree text-base mt-6 pb-8">{paragraph}</p>
                 </div>
                 <div className="relative opacity-80 hover:opacity-100 mb-16 lg:mb-0">
-                    <div className="absolute -top-6 -right-10 md:-right-6 w-full h-[300px] border border-colorQuinary/20 dark:border-[#c5d438] z-0"></div>
+                    <div className="absolute -top-6 -right-10 md:-right-6 w-full h-[300px] border border-[#c5d438] dark:border-colorQuinary/20 z-0"></div>
                     <div className="relative z-10">
                         <Chatbot language={language} />
                     </div>
@@ -26,8 +26,8 @@ function AskMeSomething({ language }: { language: Language }) {
             <div className="sm:pl-[50px] lg:w-[50%] lg:pl-[100px] 2xl:pl-[200px]">
                 {/* Desktop text */}
                 <div className="hidden lg:block">
-                    <h2 className="font-sans font-medium text-2xl sm:text-3xl leading-[1.2] text-colorWhite/80 dark:bg-gradient-to-r dark:from-colorTertiary dark:to-colorMain/80 dark:bg-clip-text dark:text-transparent">{title}<span className="pl-1 font-figtree">...</span></h2>
-                    <p className="text-colorWhite dark:text-colorMain font-figtree text-base mt-6 pb-8">{paragraph}</p>
+                    <h2 className="font-sans font-medium text-2xl sm:text-3xl leading-[1.2] bg-gradient-to-r from-colorTertiary to-colorMain/80 dark:from-colorWhite dark:to-colorWhite bg-clip-text text-transparent">{title}<span className="pl-1 font-figtree">...</span></h2>
+                    <p className="text-colorMain dark:text-colorWhite font-figtree text-base mt-6 pb-8">{paragraph}</p>
                 </div>
                 <Button 
                 children={buttonLabel}
@@ -43,7 +43,7 @@ function AskMeSomething({ language }: { language: Language }) {
                         viewBox="0 0 50 50"
                         xmlns="http://www.w3.org/2000/svg"
                         fill="currentColor"
-                        className="w-5 h-5 text-current group-hover:text-colorMain dark:group-hover:text-colorWhite"
+                        className="w-5 h-5 text-current dark:group-hover:text-colorMain group-hover:text-colorWhite"
                     >
                         <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
                         <g id="SVGRepo_tracerCarrier" strokeLinecap="round" strokeLinejoin="round"></g>

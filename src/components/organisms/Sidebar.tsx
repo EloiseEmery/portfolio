@@ -34,16 +34,16 @@ const Sidebar: React.FC<SidebarProps> = ({ closeSidebar, language }) => {
   };
 
   return (
-    <div className="sidebar fixed top-10 left-0 w-full md:w-[300px] h-full z-50 overflow-y-auto bg-colorMain/25 dark:bg-transparent md:bg-transparent dark:md:bg-transparent">
-      <div className="flex flex-col font-sans text-colorWhite dark:text-colorBlack text-xl md:text-base font-medium space-y-8 px-4 md:px-10 pt-[100px]">
-        <a href="/#ask-me-something" onClick={handleLinkClick('#ask-me-something')} className="cursor-pointer hover:text-colorQuaternary dark:hover:text-colorTertiary transition-all duration-300 ease-in-out leading-[1.2]">{sidebarLink1}</a>
-        <a href="/#my-skillset" onClick={handleLinkClick('#my-skillset')} className="cursor-pointer hover:text-colorQuaternary dark:hover:text-colorTertiary transition-all duration-300 ease-in-out whitespace-nowrap">{sidebarLink2}</a>
+    <div className="z-50 sidebar fixed top-10 left-0 w-full md:w-[300px] h-full overflow-y-auto dark:bg-colorMain/25 bg-transparent dark:md:bg-transparent">
+      <div className="flex flex-col font-sans text-xl md:text-base font-medium text-colorBlack dark:text-colorWhite space-y-8 px-4 md:px-10 pt-[100px]">
+        <a href="/#ask-me-something" onClick={handleLinkClick('#ask-me-something')} className="cursor-pointer transition-all duration-300 ease-in-out leading-[1.2] dark:hover:text-colorQuaternary hover:text-colorTertiary">{sidebarLink1}</a>
+        <a href="/#my-skillset" onClick={handleLinkClick('#my-skillset')} className="cursor-pointer transition-all duration-300 ease-in-out whitespace-nowrap">{sidebarLink2}</a>
         
         <div>
           <a 
             href="/#my-projects" 
             onClick={handleLinkClick('#my-projects')} 
-            className="cursor-pointer hover:text-colorQuaternary dark:hover:text-colorTertiary transition-all duration-300 ease-in-out whitespace-nowrap"
+            className="cursor-pointer transition-all duration-300 ease-in-out whitespace-nowrap hover:text-colorTertiary dark:hover:text-colorQuaternary"
           >
             {sidebarLink3}
           </a>
@@ -52,7 +52,7 @@ const Sidebar: React.FC<SidebarProps> = ({ closeSidebar, language }) => {
               <a 
                 key={project.id} 
                 href={`/project/${project.id}`} 
-                className="block text-base text-colorWhite/80 dark:text-colorBlack/80 md:text-xs hover:text-colorQuaternary dark:hover:text-colorTertiary transition-all duration-300 ease-in-out relative pl-4 before:content-['•'] before:absolute before:left-0 before:text-colorQuaternary dark:before:text-colorTertiary"
+                className="block text-base text-colorBlack/80 dark:text-colorWhite/80 md:text-xs hover:text-colorTertiary dark:hover:text-colorQuaternary transition-all duration-300 ease-in-out relative pl-4 before:content-['•'] before:absolute before:left-0 before:text-colorTertiary dark:before:text-colorQuaternary"
               >
                 {project.title}
               </a>
@@ -60,7 +60,7 @@ const Sidebar: React.FC<SidebarProps> = ({ closeSidebar, language }) => {
           </div>
         </div>
         
-        <a href="/#get-in-touch" onClick={handleLinkClick('#get-in-touch')} className="cursor-pointer hover:text-colorQuaternary dark:hover:text-colorTertiary transition-all duration-300 ease-in-out whitespace-nowrap">{sidebarLink4}</a>
+        <a href="/#get-in-touch" onClick={handleLinkClick('#get-in-touch')} className="cursor-pointer hover:text-colorTertiary dark:hover:text-colorQuaternary transition-all duration-300 ease-in-out whitespace-nowrap">{sidebarLink4}</a>
       </div>
     </div>
   );

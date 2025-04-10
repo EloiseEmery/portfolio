@@ -18,7 +18,7 @@ import AppRoutes from './routes';
 
 
 const App: React.FC = () => {
-  const [colorModeSrc, setColorModeSrc] = useState(lightMode);
+  const [colorModeSrc, setColorModeSrc] = useState(darkMode);
   const [language, setLanguage] = useState<Language>(() => {
     const savedLanguage = localStorage.getItem('language');
     return savedLanguage ? (savedLanguage as Language) : 'en';
@@ -36,7 +36,7 @@ const App: React.FC = () => {
     const isDarkMode = savedColorMode === 'dark';
     
     // Set color mode source based on saved mode
-    setColorModeSrc(isDarkMode ? darkMode : lightMode);
+    setColorModeSrc(isDarkMode ? lightMode : darkMode);
 
     // Setup hash change listener for scrolling
     const cleanup = setupHashChangeListener();
@@ -77,7 +77,7 @@ const App: React.FC = () => {
 
   return (
     <Router>
-      <div className="app-container bg-gradient-main-secondary-main from-colorMain via-colorSecondary dark:bg-gradient-main-secondary-light-mode  flex">
+      <div className="flex app-container bg-gradient-main-secondary-light-mode dark:bg-gradient-main-secondary-main">
         {/* Sidebar */}
         {isSidebarOpen && <Sidebar closeSidebar={closeSidebar} language={language} />}
         {/* To top button */}

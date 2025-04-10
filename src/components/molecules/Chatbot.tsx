@@ -51,21 +51,21 @@ function Chatbot({ language }: { language: Language }) {
 
     return (
        <div className="">
-            <form className="relative bg-darkBlue dark:bg-[#B6B6B9] p-4 rounded-lg bg-[#121F2E] rounded-t-lg border border-colorWhite/20 dark:border-colorMain/10">
+            <form className="relative bg-[#B6B6B9] dark:bg-darkBlue p-4 rounded-lg dark:bg-[#121F2E] rounded-t-lg border dark:border-colorWhite/20  border-colorMain/10">
                 <div className="">
                     <div className="h-64 bg-darkBlueDarker rounded-lg"></div>
                 </div>
-                <div className="flex items-center p-2 border border-colorWhite/40 dark:border-colorMain/20 bg-colorWhite/20 dark:bg-colorWhite/60 rounded-lg">
+                <div className="flex items-center p-2 border dark:border-colorWhite/40 border-colorMain/20 dark:bg-colorWhite/20 bg-colorWhite/60 rounded-lg">
                     <input 
                         type="text" 
                         placeholder={`${displayedPlaceholder}${!isFocused && showCursor ? '│' : ''}`}
                         onFocus={() => setIsFocused(true)}
                         onBlur={() => setIsFocused(false)}
-                        className="flex-grow bg-transparent p-1 text-white dark:text-colorMain focus:outline-none 
-                            placeholder:text-white/80 dark:placeholder:text-colorMain/80"
+                        className="flex-grow bg-transparent p-1 dark:text-white text-colorMain focus:outline-none 
+                            dark:placeholder:text-white/80 placeholder:text-colorMain/80"
                     />
-                    <button type="submit" className="ml-2 bg-colorQuinary/50 dark:bg-[#c5d438] p-2 rounded-full">
-                        <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" strokeWidth="3" stroke="currentColor" fill="none" className="text-colorMain dark:text-colorMain/50 w-4 h-4">
+                    <button type="submit" className="ml-2 dark:bg-colorQuinary/50 bg-[#c5d438] p-2 rounded-full">
+                        <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" strokeWidth="3" stroke="currentColor" fill="none" className="text-colorMain/60 dark:text-colorMain w-4 h-4">
                             <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
                             <g id="SVGRepo_tracerCarrier" strokeLinecap="round" strokeLinejoin="round"></g>
                             <g id="SVGRepo_iconCarrier">
@@ -76,7 +76,7 @@ function Chatbot({ language }: { language: Language }) {
                     </button>
                 </div>
             </form>
-            <div className="absolute  right-0 -top-14 sm:-bottom-10 sm:top-auto dark:filter-brightness-0 dark:invert">
+            <div className="absolute  right-0 -top-14 sm:-bottom-10 sm:top-auto filter-brightness-0 invert dark:filter-none">
                 <img src={chatLogos} className='h-[20px] sm:h-[25px]'/>
             </div>
         </div>

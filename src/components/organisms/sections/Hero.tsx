@@ -41,19 +41,19 @@ function Hero({ language }: { language: Language }) {
   return (
     <div className="relative">
       {/* Hero Images paralaxe */}
-      <div className="absolute -right-[200px] md:right-0 top-0 z-0" id="decorativeEl">
-        <img src={decorativeEl} alt="Decorative Element" className="w-full max-h-[350px] opacity-30 sm:opacity-70 dark:opacity-30 dark:filter-brightness-0 dark:invert" />
+      <div className="absolute -right-[200px] md:right-0 top-0 z-0 opacity-30 filter-brightness-0 invert dark:sm:opacity-70 dark:filter-none" id="decorativeEl">
+        <img src={decorativeEl} alt="Decorative Element" className="w-full max-h-[350px] dark:sm:opacity-70 dark:filter-none" />
       </div>
-      <div className="absolute top-[150px] -right-[50px] md:right-8 md:top-0 z-0" id="paralaxeEl">
+      <div className="absolute top-[150px] -right-[50px] md:right-8 md:top-0 z-0 opacity-40 sm:opacity-100" id="paralaxeEl">
         <img src={paralaxeEl} alt="Paralaxe Element" className="w-full max-h-[350px] opacity-40 sm:opacity-100" />
       </div>
       {/* Hero Texts */}
       <div className="-mt-10">
-        <h1 className="text-shadow shadow-red-3 relative z-10 font-sans text-4xl md:text-5xl bg-gradient-to-r from-colorWhite to-colorWhite dark:from-colorTertiary dark:to-colorMain/80 bg-clip-text text-transparent leading-[1.2] ">{h1Text}</h1>
-        <p className=" relative z-10 text-colorWhite font-figtree mt-6 pb-8 text-lg dark:text-colorMain">{pText}</p>
+        <h1 className="text-shadow shadow-red-3 relative z-10 font-sans text-4xl md:text-5xl bg-gradient-to-r from-colorTertiary to-colorMain/80 dark:from-colorWhite dark:to-colorWhite bg-clip-text text-transparent leading-[1.2] ">{h1Text}</h1>
+        <p className="relative z-10 text-colorMain dark:text-colorWhite font-figtree mt-6 pb-8 text-lg">{pText}</p>
         <Button
           children={buttonLabel}
-          className="relative z-10 glow-on-hover bg-colorQuaternary after:bg-colorQuaternary dark:after:bg-colorTertiary hover:bg-colorMain hover:after:bg-colorMain dark:hover:after:bg-colorMain hover:text-colorWhite"
+          className="relative z-10 glow-on-hover bg-colorTertiary after:bg-colorTertiary hover:bg-colorMain hover:after:bg-colorMain hover:text-colorWhite dark:bg-colorQuaternary dark:after:bg-colorQuaternary dark:hover:bg-colorMain dark:hover:after:bg-colorMain dark:hover:text-colorWhite"
           href="https://www.linkedin.com/in/eloise-emery/"
           aria-label="See my LinkedIn profile"
           blank={true}
@@ -63,7 +63,7 @@ function Hero({ language }: { language: Language }) {
                   fill="currentColor"
                   viewBox="0 0 50 50"
                   xmlns="http://www.w3.org/2000/svg"
-                  className="w-5 h-5 text-current group-hover:text-colorMain dark:group-hover:text-colorWhite"
+                  className="w-5 h-5 text-current group-hover:text-colorWhite dark:group-hover:text-colorMain"
               >
                   <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
                   <g id="SVGRepo_tracerCarrier" strokeLinecap="round" strokeLinejoin="round"></g>

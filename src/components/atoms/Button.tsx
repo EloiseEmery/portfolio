@@ -11,8 +11,8 @@ interface ButtonProps {
 
 const Button: React.FC<ButtonProps> = ({ children, className, href, blank, type = 'primary', icon }) => {
   const baseStyle = 'max-w-fit py-3 px-6 rounded-lg text-[13px] font-semibold tracking-wider whitespace-nowrap flex items-center justify-center transition-all duration-300 ease-in-out';
-  const primaryStyle = 'bg-colorQuaternary/80 text-colorMain hover:bg-colorQuaternary dark:bg-colorTertiary/80 dark:hover:bg-colorTertiary dark:text-colorWhite';
-  const secondaryStyle = 'border border-colorQuaternary text-colorWhite hover:bg-colorQuaternary hover:text-colorMain dark:border-colorTertiary dark:text-colorTertiary dark:hover:bg-colorTertiary dark:hover:border-colorTertiary dark:hover:text-colorWhite';
+  const primaryStyle = 'dark:bg-colorQuaternary/80 dark:text-colorMain dark:hover:bg-colorQuaternary bg-colorTertiary/80 hover:bg-colorTertiary text-colorWhite';
+  const secondaryStyle = 'border dark:border-colorQuaternary dark:text-colorWhite dark:hover:bg-colorQuaternary dark:hover:text-colorMain border-colorTertiary text-colorTertiary hover:bg-colorTertiary hover:border-colorTertiary hover:text-colorWhite';
 
   const buttonStyle = `${baseStyle} ${type === 'primary' ? primaryStyle : secondaryStyle}`;
 
