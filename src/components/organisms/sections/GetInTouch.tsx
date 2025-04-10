@@ -10,8 +10,8 @@ function GetInTouch({ language }: { language: Language }) {
     const button = getTranslation('getInTouchButton', language);
     return (
         <div className="relative">
-            <div className="absolute -top-6 -left-10 md:-left-6 w-full md:w-[50%] h-[300px] border border-colorQuinary/50 dark:border-[#c5d438] z-0"></div>
-            <div className="relative bg-[#161B22] dark:bg-transparent dark:bg-gradient-to-r from-[#ebeffd] via-[#D9DFF7] to-[#D9DFF7]  rounded-lg p-10 md:flex z-11">
+            <div className="absolute -top-6 -left-10 md:-left-6 w-full md:w-[50%] h-[300px] border border-colorQuinary/20 dark:border-[#c5d438] z-0"></div>
+            <div className="relative bg-[#161B22] dark:bg-transparent dark:bg-gradient-to-r from-[#ebeffd] via-[#ebeffd] to-[#D9DFF7]  rounded-lg p-10 md:flex z-11">
                 <div className="items-center flex md:w-1/2">
                     <img src={document.documentElement.classList.contains('dark') ? decorativeFormLight : decorativeForms} className="max-h-[200px] " alt="decorative forms" />
                 </div>

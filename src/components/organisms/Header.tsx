@@ -28,7 +28,7 @@ function Header({ toggleMenu, menuSrc,toggleColorMode, colorModeSrc, toggleLangu
         <div className="flex items-center gap-8">
           {/* Logo */}
           <p className={`text-colorWhite dark:text-colorBlack transition-all duration-300 ease-in-out text-md ${isScrolled ? 'text-sm' : 'text-md'} font-sans font-medium`}>
-            <Link to="/">eloemery~</Link>
+            <Link to="/" onClick={() => window.scrollTo(0, 0)}>eloemery~</Link>
           </p>
           {/* Sidebar icone Desktop */}
           <div className="hidden md:block cursor-pointer min-w-[35px] hover:opacity-70 transition-all duration-300 ease-in-out" onClick={toggleMenu}>

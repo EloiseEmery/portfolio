@@ -17,7 +17,7 @@ function AskMeSomething({ language }: { language: Language }) {
                     <p className="text-colorWhite dark:text-colorMain font-figtree text-base mt-6 pb-8">{paragraph}</p>
                 </div>
                 <div className="relative opacity-80 hover:opacity-100 mb-16 lg:mb-0">
-                    <div className="absolute -top-6 -right-10 md:-right-6 w-full h-[300px] border border-colorQuinary/50 dark:border-[#c5d438] z-0"></div>
+                    <div className="absolute -top-6 -right-10 md:-right-6 w-full h-[300px] border border-colorQuinary/20 dark:border-[#c5d438] z-0"></div>
                     <div className="relative z-10">
                         <Chatbot language={language} />
                     </div>

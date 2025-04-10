@@ -12,7 +12,7 @@ function MyProjects({ language }: { language: Language }) {
     const title = getTranslation('myProjectsTitle', language);
     const paragraph = getTranslation('myProjectsParagraph', language);
     const button = getTranslation('myProjectsButton', language);
-    const tags = getTranslation('myProjectsTag', language);
+    const tagsRedesign = getTranslation('myProjectsTag', language);
 
     const [hoveredProject, setHoveredProject] = useState<string | null>("portfolio");
     const navigate = useNavigate();
@@ -33,12 +33,27 @@ function MyProjects({ language }: { language: Language }) {
         {
             id: "banq",
             title: "BanQ dans ta classe",
-            tags: ["UI/UX", tags, "MCD", "React", "Tailwind"]
+            tags: ["UI/UX", tagsRedesign, "MCD", "React", "Tailwind"]
         },
         {
             id: "sqi",
             title: "Société Québécoise des Infrastructures",
-            tags: ["UI/UX", tags, "CMS"]
+            tags: ["UI/UX", tagsRedesign, "CMS"]
+        },
+        {
+            id: "stampee",
+            title: "Stampee Auction website",
+            tags: ["UI/UX","JavaScript", "MVC", "PHP", "SQL"]
+        },
+        {
+            id: "21 game",
+            title: "21 game",
+            tags: ["UI/UX", "JavaScript", "POO"]
+        },
+        {
+            id: "Mon Vino web app",
+            title: "Mon Vino web app",
+            tags: ["UI/UX", "React", "API REST"]
         }
     ];
 
@@ -46,7 +61,7 @@ function MyProjects({ language }: { language: Language }) {
         // Projects section
         <div className="relative">  
             {/* Decorative element */}
-            <div className="absolute -right-[170px] sm:-right-[275px] z-1">
+            <div className="absolute -right-[300px] sm:-right-[275px] z-1">
                 <img src={decorativeEl} alt="Decorative Element" className="w-full max-h-[300px] sm:max-h-[340px] object-contain opacity-100 dark:filter-brightness-0 dark:invert" />
             </div>
             {/* Top section */}
@@ -91,13 +106,13 @@ function MyProjects({ language }: { language: Language }) {
                 {/* Projects Image */}
                 <div className="lg:w-[50%] pt-6 text-colorWhite dark:text-colorMain flex">
                     <div className="rounded-lg overflow-hidden w-full">
-                        <div className="h-[400px]">
+                        <div className="h-[285px] sm:h-[400px]">
                             <img src={hoveredProject !== null ? projectImages[projects.findIndex(project => project.id === hoveredProject)] : project1} alt="" className="w-full h-full object-cover" />
                         </div>
                     </div>
                 </div>
                 {/* Projects Templating */}
-                <div className="mt-8 lg:w-[50%] lg:pl-6">
+                <div className="mt-8 lg:w-[50%] lg:pl-6 max-h-[285px] overflow-y-auto lg:max-h-[100%] lg:overflow-y-hidden">
                     {projects.map(project => (
                         <div 
                             key={project.id} 
@@ -108,7 +123,7 @@ function MyProjects({ language }: { language: Language }) {
                             onMouseLeave={() => setHoveredProject("portfolio")}
                             onClick={() => handleProjectClick(project.id)}
                         >
-                            <h3 className="w-[70%] text-colorWhite dark:text-colorMain pb-4 sm:pb-0 pr-4">{project.title}</h3>
+                            <h3 className="w-full text-base text-colorWhite dark:text-colorMain pb-4 sm:pb-0 pr-4">{project.title}</h3>
                             <div className="flex sm:justify-end w-full text-xs gap-x-2">
                                 {project.tags.map(tag => (
                                     <p 

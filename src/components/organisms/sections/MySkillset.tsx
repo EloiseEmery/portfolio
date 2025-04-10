@@ -33,7 +33,7 @@ function MySkillset({ language }: { language: Language }) {
     return (
         <div className="relative">
             {/* Decorative element */}
-            <div className="absolute -top-[50px] -left-[150px] md:-bottom-[100px] xl:-left-[225px] 2xl:-left-[300px] z-0">
+            <div className="absolute -top-[50px] -left-[220px] sm:-left-[150px] md:-bottom-[100px] xl:-left-[225px] 2xl:-left-[300px] z-0">
                 <img src={decorativeEl} alt="Decorative Element" className="w-full max-h-[300px] sm:max-h-[290px] object-contain opacity-30 dark:opacity-10 dark:sm:opacity-15 dark:filter-brightness-0 dark:invert" />
             </div>
             <div className="relative">
@@ -43,40 +43,40 @@ function MySkillset({ language }: { language: Language }) {
             {/* Skillset grid */}
             <div className="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-y-8 mt-6">
                 <div className='flex justify-center items-center opacity-70 hover:opacity-100'>
-                    <img src={document.documentElement.classList.contains('dark') ? html_light : html} alt="SQL Icon" className="w-25 h-20" />
+                    <img src={document.documentElement.classList.contains('dark') ? html_light : html} alt="SQL Icon" className="w-20 h-15 sm:w-25 sm:h-20" />
                 </div>
                 <div className='flex justify-center items-center opacity-70 hover:opacity-100'>
-                    <img src={document.documentElement.classList.contains('dark') ? css_light : css} alt="CSS Icon" className="w-25 h-20" />
+                    <img src={document.documentElement.classList.contains('dark') ? css_light : css} alt="CSS Icon" className="w-20 h-15 sm:w-25 sm:h-20" />
                 </div>
                 <div className='flex justify-center items-center opacity-70 hover:opacity-100'>
-                    <img src={document.documentElement.classList.contains('dark') ? js_light : js} alt="Node Icon" className="w-25 h-20" />
+                    <img src={document.documentElement.classList.contains('dark') ? js_light : js} alt="Node Icon" className="w-20 h-15 sm:w-25 sm:h-20" />
                 </div>
                 <div className='flex justify-center items-center opacity-70 hover:opacity-100'>
-                    <img src={document.documentElement.classList.contains('dark') ? sql_light : sql} alt="SQL Icon" className="w-25 h-20" />
+                    <img src={document.documentElement.classList.contains('dark') ? sql_light : sql} alt="SQL Icon" className="w-20 h-15 sm:w-25 sm:h-20" />
                 </div>  
                 <div className='flex justify-center items-center opacity-70 hover:opacity-100'>
-                    <img src={document.documentElement.classList.contains('dark') ? docker_light : docker} alt="Docker Icon" className="w-25 h-20" />
+                    <img src={document.documentElement.classList.contains('dark') ? docker_light : docker} alt="Docker Icon" className="w-20 h-15 sm:w-25 sm:h-20" />
                 </div>
                 <div className='flex justify-center items-center opacity-70 hover:opacity-100'>
-                    <img src={document.documentElement.classList.contains('dark') ? openai_light : openai} alt="OpenAI Icon" className="w-25 h-20" />
+                    <img src={document.documentElement.classList.contains('dark') ? openai_light : openai} alt="OpenAI Icon" className="w-20 h-15 sm:w-25 sm:h-20" />
                 </div>
                 <div className='flex justify-center items-center opacity-70 hover:opacity-100'>
-                    <img src={document.documentElement.classList.contains('dark') ? react_light : react} alt="React Icon" className="w-25 h-20" />
+                    <img src={document.documentElement.classList.contains('dark') ? react_light : react} alt="React Icon" className="w-20 h-15 sm:w-25 sm:h-20" />
                 </div>
                 <div className='flex justify-center items-center opacity-70 hover:opacity-100'>
-                    <img src={document.documentElement.classList.contains('dark') ? git_light : git} alt="Git Icon" className="w-25 h-20" />
+                    <img src={document.documentElement.classList.contains('dark') ? git_light : git} alt="Git Icon" className="w-20 h-15 sm:w-25 sm:h-20" />
                 </div>
                 <div className='flex justify-center items-center opacity-70 hover:opacity-100'>
-                    <img src={document.documentElement.classList.contains('dark') ? wp_light : wp} alt="WP Icon" className="w-25 h-20" />
+                    <img src={document.documentElement.classList.contains('dark') ? wp_light : wp} alt="WP Icon" className="w-20 h-15 sm:w-25 sm:h-20" />
                 </div>
                 <div className='flex justify-center items-center opacity-70 hover:opacity-100'>
-                    <img src={document.documentElement.classList.contains('dark') ? adobe_light : adobe} alt="SQL Icon" className="w-25 h-20" />
+                    <img src={document.documentElement.classList.contains('dark') ? adobe_light : adobe} alt="Adobe Icon" className="w-25 h-20 sm:w-25 sm:h-20" />
                 </div>
                 <div className='flex justify-center items-center opacity-70 hover:opacity-100'>
-                    <img src={document.documentElement.classList.contains('dark') ? php_light : php} alt="PHP Icon" className="w-25 h-20" />
+                    <img src={document.documentElement.classList.contains('dark') ? php_light : php} alt="PHP Icon" className="w-20 h-15 sm:w-25 sm:h-20" />
                 </div>
                 <div className='flex justify-center items-center opacity-70 hover:opacity-100'>
-                    <img src={document.documentElement.classList.contains('dark') ? npm_light : npm} alt="npm Icon" className="w-25 h-20" />
+                    <img src={document.documentElement.classList.contains('dark') ? npm_light : npm} alt="npm Icon" className="w-20 h-15 sm:w-25 sm:h-20" />
                 </div>
             </div>
             {/* Section Bottom */}
@@ -84,7 +84,7 @@ function MySkillset({ language }: { language: Language }) {
                 <p>Figma</p>
                 <p>User experience</p>
                 <p>Responsive design</p>
-                <p>Tailwind CSS</p>
+                <p>Tailwind</p>
                 <p>Langchain</p>
                 <p>Shopify</p>
                 <p>Next.js</p>
@@ -95,7 +95,7 @@ function MySkillset({ language }: { language: Language }) {
                 <p>Ableton</p>
             </div>
             <div className="mt-3">
-                <small className='flex justify-end cursor-pointer text-colorWhite/80 dark:text-colorMain/70 underline hover:text-colorQuaternary dark:hover:text-colorTertiary'><a href="https://www.linkedin.com/in/eloise-emery/details/skills/" target="_blank" rel="noopener noreferrer">see all my skills on my LinkedIn</a> 
+                <small className='flex justify-end cursor-pointer text-colorWhite/60 dark:text-colorMain/60 underline hover:text-colorQuaternary dark:hover:text-colorTertiary'><a href="https://www.linkedin.com/in/eloise-emery/details/skills/" target="_blank" rel="noopener noreferrer">see all my skills on my LinkedIn</a> 
                     <svg
                         fill="currentColor"
                         viewBox="0 0 50 50"

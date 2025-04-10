@@ -42,13 +42,13 @@ function Hero({ language }: { language: Language }) {
     <div className="relative">
       {/* Hero Images paralaxe */}
       <div className="absolute -right-[200px] md:right-0 top-0 z-0" id="decorativeEl">
-        <img src={decorativeEl} alt="Decorative Element" className="w-full max-h-[350px] opacity-70 dark:opacity-30 dark:filter-brightness-0 dark:invert" />
+        <img src={decorativeEl} alt="Decorative Element" className="w-full max-h-[350px] opacity-30 sm:opacity-70 dark:opacity-30 dark:filter-brightness-0 dark:invert" />
       </div>
       <div className="absolute top-[150px] -right-[50px] md:right-8 md:top-0 z-0" id="paralaxeEl">
-        <img src={paralaxeEl} alt="Paralaxe Element" className="w-full max-h-[350px] opacity-100" />
+        <img src={paralaxeEl} alt="Paralaxe Element" className="w-full max-h-[350px] opacity-40 sm:opacity-100" />
       </div>
       {/* Hero Texts */}
-      <div className="">
+      <div className="-mt-10">
         <h1 className="text-shadow shadow-red-3 relative z-10 font-sans text-4xl md:text-5xl bg-gradient-to-r from-colorWhite to-colorWhite dark:from-colorTertiary dark:to-colorMain/80 bg-clip-text text-transparent leading-[1.2] ">{h1Text}</h1>
         <p className=" relative z-10 text-colorWhite font-figtree mt-6 pb-8 text-lg dark:text-colorMain">{pText}</p>
         <Button

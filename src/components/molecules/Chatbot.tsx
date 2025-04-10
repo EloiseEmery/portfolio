@@ -64,9 +64,14 @@ function Chatbot({ language }: { language: Language }) {
                         className="flex-grow bg-transparent p-1 text-white dark:text-colorMain focus:outline-none 
                             placeholder:text-white/80 dark:placeholder:text-colorMain/80"
                     />
-                    <button type="submit" className="ml-2 bg-colorWhite/40 dark:bg-colorBlack/30 p-2 rounded-full">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" className="w-4 h-4 text-white">
-                            <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" className="text-colorMain dark:text-colorWhite" />
+                    <button type="submit" className="ml-2 bg-colorQuinary/50 dark:bg-[#c5d438] p-2 rounded-full">
+                        <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" strokeWidth="3" stroke="currentColor" fill="none" className="text-colorMain dark:text-colorMain/50 w-4 h-4">
+                            <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
+                            <g id="SVGRepo_tracerCarrier" strokeLinecap="round" strokeLinejoin="round"></g>
+                            <g id="SVGRepo_iconCarrier">
+                                <path d="M38.61,54.93,27.94,35.57,9.08,25.38a1,1,0,0,1,.2-1.8L54.08,8.64a1,1,0,0,1,1.27,1.27L40.41,54.73A1,1,0,0,1,38.61,54.93Z"></path>
+                                <line x1="55.13" y1="8.91" x2="27.94" y2="35.57" strokeLinecap="round"></line>
+                            </g>
                         </svg>
                     </button>
                 </div>
