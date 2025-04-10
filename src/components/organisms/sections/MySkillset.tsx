@@ -43,56 +43,56 @@ function MySkillset({ language }: { language: Language }) {
             {/* Skillset grid */}
             <div className="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-y-8 mt-6">
                 <div className='flex justify-center items-center opacity-70 hover:opacity-100'>
-                    <img src={document.documentElement.classList.contains('dark') ? html_light : html} alt="SQL Icon" className="w-20 h-15 sm:w-25 sm:h-20" />
+                    <img src={document.documentElement.classList.contains('dark') ? html_light : html} alt="SQL Icon" className="w-20 h-15 sm:w-25 sm:h-25" />
                 </div>
                 <div className='flex justify-center items-center opacity-70 hover:opacity-100'>
-                    <img src={document.documentElement.classList.contains('dark') ? css_light : css} alt="CSS Icon" className="w-20 h-15 sm:w-25 sm:h-20" />
+                    <img src={document.documentElement.classList.contains('dark') ? css_light : css} alt="CSS Icon" className="w-20 h-15 sm:w-25 sm:h-25" />
                 </div>
                 <div className='flex justify-center items-center opacity-70 hover:opacity-100'>
-                    <img src={document.documentElement.classList.contains('dark') ? js_light : js} alt="Node Icon" className="w-20 h-15 sm:w-25 sm:h-20" />
+                    <img src={document.documentElement.classList.contains('dark') ? js_light : js} alt="Node Icon" className="w-20 h-15 sm:w-25 sm:h-25" />
                 </div>
                 <div className='flex justify-center items-center opacity-70 hover:opacity-100'>
-                    <img src={document.documentElement.classList.contains('dark') ? sql_light : sql} alt="SQL Icon" className="w-20 h-15 sm:w-25 sm:h-20" />
+                    <img src={document.documentElement.classList.contains('dark') ? sql_light : sql} alt="SQL Icon" className="w-20 h-15 sm:w-25 sm:h-25" />
                 </div>  
                 <div className='flex justify-center items-center opacity-70 hover:opacity-100'>
-                    <img src={document.documentElement.classList.contains('dark') ? docker_light : docker} alt="Docker Icon" className="w-20 h-15 sm:w-25 sm:h-20" />
+                    <img src={document.documentElement.classList.contains('dark') ? docker_light : docker} alt="Docker Icon" className="w-20 h-15 sm:w-25 sm:h-25" />
                 </div>
                 <div className='flex justify-center items-center opacity-70 hover:opacity-100'>
-                    <img src={document.documentElement.classList.contains('dark') ? openai_light : openai} alt="OpenAI Icon" className="w-20 h-15 sm:w-25 sm:h-20" />
+                    <img src={document.documentElement.classList.contains('dark') ? openai_light : openai} alt="OpenAI Icon" className="w-20 h-15 sm:w-25 sm:h-25" />
                 </div>
                 <div className='flex justify-center items-center opacity-70 hover:opacity-100'>
-                    <img src={document.documentElement.classList.contains('dark') ? react_light : react} alt="React Icon" className="w-20 h-15 sm:w-25 sm:h-20" />
+                    <img src={document.documentElement.classList.contains('dark') ? react_light : react} alt="React Icon" className="w-20 h-15 sm:w-25 sm:h-25" />
                 </div>
                 <div className='flex justify-center items-center opacity-70 hover:opacity-100'>
-                    <img src={document.documentElement.classList.contains('dark') ? git_light : git} alt="Git Icon" className="w-20 h-15 sm:w-25 sm:h-20" />
+                    <img src={document.documentElement.classList.contains('dark') ? git_light : git} alt="Git Icon" className="w-20 h-15 sm:w-25 sm:h-25" />
                 </div>
                 <div className='flex justify-center items-center opacity-70 hover:opacity-100'>
-                    <img src={document.documentElement.classList.contains('dark') ? wp_light : wp} alt="WP Icon" className="w-20 h-15 sm:w-25 sm:h-20" />
+                    <img src={document.documentElement.classList.contains('dark') ? wp_light : wp} alt="WP Icon" className="w-20 h-15 sm:w-25 sm:h-25" />
                 </div>
                 <div className='flex justify-center items-center opacity-70 hover:opacity-100'>
-                    <img src={document.documentElement.classList.contains('dark') ? adobe_light : adobe} alt="Adobe Icon" className="w-25 h-20 sm:w-25 sm:h-20" />
+                    <img src={document.documentElement.classList.contains('dark') ? adobe_light : adobe} alt="Adobe Icon" className="w-25 h-20 sm:w-25 sm:h-25" />
                 </div>
                 <div className='flex justify-center items-center opacity-70 hover:opacity-100'>
-                    <img src={document.documentElement.classList.contains('dark') ? php_light : php} alt="PHP Icon" className="w-20 h-15 sm:w-25 sm:h-20" />
+                    <img src={document.documentElement.classList.contains('dark') ? php_light : php} alt="PHP Icon" className="w-20 h-15 sm:w-25 sm:h-25" />
                 </div>
                 <div className='flex justify-center items-center opacity-70 hover:opacity-100'>
-                    <img src={document.documentElement.classList.contains('dark') ? npm_light : npm} alt="npm Icon" className="w-20 h-15 sm:w-25 sm:h-20" />
+                    <img src={document.documentElement.classList.contains('dark') ? npm_light : npm} alt="npm Icon" className="w-20 h-15 sm:w-25 sm:h-25" />
                 </div>
             </div>
             {/* Section Bottom */}
             <div className="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-y-8 rounded-lg text-center font-sans text-sm mt-8 p-6 sm:p-10 bg-[#121F2E] dark:bg-[#F3F3F3] text-colorWhite/80 hover:text-colorWhite dark:text-colorMain border border-colorWhite/60 dark:border-colorMain/10 opacity-90 hover:opacity-100 dark:opacity-70 dark:hover:opacity-100" >
                 <p>Figma</p>
-                <p>User experience</p>
-                <p>Responsive design</p>
-                <p>Tailwind</p>
+                <p>User<br /> experience</p>
+                <p>Responsive<br /> design</p>
+                <p>Tailwind<br /> CSS</p>
                 <p>Langchain</p>
                 <p>Shopify</p>
                 <p>Next.js</p>
                 <p>Node.js</p>
                 <p>Angular</p>
                 <p>Laravel</p>
-                <p>Blender</p>
-                <p>Ableton</p>
+                <p>API REST</p>
+                <p>.Liquid</p>
             </div>
             <div className="mt-3">
                 <small className='flex justify-end cursor-pointer text-colorWhite/60 dark:text-colorMain/60 underline hover:text-colorQuaternary dark:hover:text-colorTertiary'><a href="https://www.linkedin.com/in/eloise-emery/details/skills/" target="_blank" rel="noopener noreferrer">see all my skills on my LinkedIn</a> 
