@@ -22,7 +22,7 @@ function Footer({ language }: { language: Language }) {
   const footerLinkHover3 = getTranslation('footerLinkHover3', language);
   
   return (
-        <div className="relative w-full overflow-x-hidden px-4 md:px-10 xl:px-[125px] 2xl:px-[200px] pb-10">
+        <div className="relative w-full overflow-x-hidden px-4 md:px-10 xl:px-[200px] pb-10">
           {/* Decorative element */}
           {/* <div className="absolute -right-[100px] bottom-[130px] dark:filter-brightness-0 dark:invert">
             <img src={decorativeEl} alt="Decorative Element" className="w-full h-[150px] opacity-50 dark:opacity-40 dark:sm:opacity-60" />

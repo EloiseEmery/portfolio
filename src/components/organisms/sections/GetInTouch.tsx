@@ -9,14 +9,14 @@ function GetInTouch({ language }: { language: Language }) {
     const paragraph = getTranslation('getInTouchParagraph', language);
     const button = getTranslation('getInTouchButton', language);
     return (
-        <div className="relative">
-            <div className="absolute -top-6 -left-10 md:-left-6 w-full md:w-[50%] h-[300px] border dark:border-colorQuinary/20 border-[#c5d438] z-0"></div>
-            <div className="relative  bg-transparent bg-gradient-to-r from-[#ebeffd] via-[#ebeffd] to-[#D9DFF7] dark:from-[#161B22] dark:via-[#161B22] dark:to-[#161B22] rounded-lg p-10 md:flex z-11">
+        <div className="relative pb-10 md:pb-0">
+            <div className="absolute -top-6 -left-10 md:-left-6 w-full md:w-[50%] h-[300px] border dark:border-colorQuinary/40 border-colorQuinaryLight z-0"></div>
+            <div className="relative  bg-transparent bg-gradient-to-r from-[#bfc4d4] via-[#bfc4d4] to-[#bfc4d4] dark:from-[#31465d] dark:via-[#31465d] dark:to-[#31465d] rounded-lg p-10 md:flex z-11">
                 <div className="items-center flex md:w-1/2">
                     <img src={document.documentElement.classList.contains('dark') ? decorativeForms : decorativeFormLight} className="max-h-[200px] " alt="decorative forms" />
                 </div>
                 <div className="md:w-1/2 py-8">
-                    <h2 className="font-sans font-medium text-2xl sm:text-3xl leading-[1.2] bg-gradient-to-r dark:from-colorWhite/80 dark:to-colorWhite/80 from-colorTertiary to-colorMain/80 bg-clip-text text-transparent">{title}</h2>
+                    <h2 className="font-sans font-medium text-2xl sm:text-3xl leading-[1.2] bg-gradient-to-r dark:from-colorWhite/90 dark:to-colorWhite/90 from-colorTertiary to-colorMain/80 bg-clip-text text-transparent">{title}</h2>
                     <p className="text-colorMain dark:text-colorWhite font-figtree text-base mt-6 pb-8">{paragraph}</p>
                     <Button 
                         children={button}

@@ -41,8 +41,8 @@ function Hero({ language }: { language: Language }) {
   return (
     <div className="relative">
       {/* Hero Images paralaxe */}
-      <div className="absolute -right-[200px] md:right-0 top-0 z-0 opacity-30 filter-brightness-0 invert dark:sm:opacity-70 dark:filter-none" id="decorativeEl">
-        <img src={decorativeEl} alt="Decorative Element" className="w-full max-h-[350px] dark:sm:opacity-70 dark:filter-none" />
+      <div className="absolute right-[-100px] md:right-0 top-0 z-0 opacity-30 filter-brightness-0 invert dark:sm:opacity-70 dark:filter-none" id="decorativeEl">
+        <img src={decorativeEl} alt="Decorative Element" className="w-full max-w-[450px] max-h-[350px] dark:sm:opacity-70 dark:filter-none" />
       </div>
       <div className="absolute top-[150px] -right-[50px] md:right-8 md:top-0 z-0 opacity-40 sm:opacity-100" id="paralaxeEl">
         <img src={paralaxeEl} alt="Paralaxe Element" className="w-full max-h-[350px] opacity-100 sm:opacity-100" />

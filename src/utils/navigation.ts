@@ -66,5 +66,8 @@ export const scrollToHashSection = () => {
       // Smooth scroll to the element
       element.scrollIntoView({ behavior: 'smooth' });
     }
+  } else {
+    // If no hash, scroll to the top of the page
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   }
 };

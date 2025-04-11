@@ -51,7 +51,7 @@ function Chatbot({ language }: { language: Language }) {
 
     return (
        <div className="">
-            <form className="relative bg-[#B6B6B9] dark:bg-darkBlue p-4 rounded-lg dark:bg-[#121F2E] rounded-t-lg border dark:border-colorWhite/20  border-colorMain/10">
+            <form className="relative bg-[#bfc4d4] dark:bg-darkBlue p-4 rounded-lg dark:bg-[#31465d] rounded-t-lg border dark:border-colorWhite/20  border-colorMain/10">
                 <div className="">
                     <div className="h-64 bg-darkBlueDarker rounded-lg"></div>
                 </div>

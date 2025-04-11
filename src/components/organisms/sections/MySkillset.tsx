@@ -37,54 +37,40 @@ function MySkillset({ language }: { language: Language }) {
                 <img src={decorativeEl} alt="Decorative Element" className="w-full max-h-[300px] sm:max-h-[290px] object-contain dark:opacity-30 opacity-10 sm:opacity-15 filter-brightness-0 invert dark:filter-none" />
             </div> */}
             <div className="relative">
-                <h2 className="mx-auto text-center w-[350px] font-sans font-medium text-2xl sm:text-3xl leading-[1.2] dark:text-colorWhite/80 bg-gradient-to-r from-colorTertiary to-colorMain/80 bg-clip-text text-transparent">{title}</h2>
-                <p className="text-center dark:text-colorWhite text-colorMain font-figtree text-base mt-6 pb-8 md:max-w-[75%] lg:max-w-[60%] md:mx-auto">{paragraph}</p>
+                <h2 className="mx-auto text-center w-[350px] font-sans font-medium text-2xl sm:text-3xl leading-[1.2]  bg-gradient-to-r dark:from-colorWhite/90 dark:to-colorWhite/90 from-colorTertiary to-colorMain/80 bg-clip-text text-transparent">{title}</h2>
+                <p className="text-center dark:text-colorWhite text-colorMain font-figtree text-base mt-6 pb-2 md:max-w-[75%] lg:max-w-[60%] md:mx-auto">{paragraph}</p>
             </div>
             {/* Skillset grid */}
-            <div className="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-y-8 mt-6">
-                <div className='flex justify-center items-center opacity-70 hover:opacity-100'>
-                    <img src={document.documentElement.classList.contains('dark') ? html : html_light} alt="SQL Icon" className="w-20 h-15 sm:w-25 sm:h-25" />
-                </div>
-                <div className='flex justify-center items-center opacity-70 hover:opacity-100'>
-                    <img src={document.documentElement.classList.contains('dark') ? css : css_light} alt="CSS Icon" className="w-20 h-15 sm:w-25 sm:h-25" />
-                </div>
-                <div className='flex justify-center items-center opacity-70 hover:opacity-100'>
-                    <img src={document.documentElement.classList.contains('dark') ? js : js_light} alt="Node Icon" className="w-20 h-15 sm:w-25 sm:h-25" />
-                </div>
-                <div className='flex justify-center items-center opacity-70 hover:opacity-100'>
-                    <img src={document.documentElement.classList.contains('dark') ? sql : sql_light} alt="SQL Icon" className="w-20 h-15 sm:w-25 sm:h-25" />
-                </div>  
-                <div className='flex justify-center items-center opacity-70 hover:opacity-100'>
-                    <img src={document.documentElement.classList.contains('dark') ? docker : docker_light} alt="Docker Icon" className="w-20 h-15 sm:w-25 sm:h-25" />
-                </div>
-                <div className='flex justify-center items-center opacity-70 hover:opacity-100'>
-                    <img src={document.documentElement.classList.contains('dark') ? openai : openai_light} alt="OpenAI Icon" className="w-20 h-15 sm:w-25 sm:h-25" />
-                </div>
-                <div className='flex justify-center items-center opacity-70 hover:opacity-100'>
-                    <img src={document.documentElement.classList.contains('dark') ? react : react_light} alt="React Icon" className="w-20 h-15 sm:w-25 sm:h-25" />
-                </div>
-                <div className='flex justify-center items-center opacity-70 hover:opacity-100'>
-                    <img src={document.documentElement.classList.contains('dark') ? git : git_light} alt="Git Icon" className="w-20 h-15 sm:w-25 sm:h-25" />
-                </div>
-                <div className='flex justify-center items-center opacity-70 hover:opacity-100'>
-                    <img src={document.documentElement.classList.contains('dark') ? wp : wp_light} alt="WP Icon" className="w-20 h-15 sm:w-25 sm:h-25" />
-                </div>
-                <div className='flex justify-center items-center opacity-70 hover:opacity-100'>
-                    <img src={document.documentElement.classList.contains('dark') ? adobe : adobe_light} alt="Adobe Icon" className="w-25 h-20 sm:w-25 sm:h-25" />
-                </div>
-                <div className='flex justify-center items-center opacity-70 hover:opacity-100'>
-                    <img src={document.documentElement.classList.contains('dark') ? php : php_light} alt="PHP Icon" className="w-20 h-15 sm:w-25 sm:h-25" />
-                </div>
-                <div className='flex justify-center items-center opacity-70 hover:opacity-100'>
-                    <img src={document.documentElement.classList.contains('dark') ? npm : npm_light} alt="npm Icon" className="w-20 h-15 sm:w-25 sm:h-25" />
-                </div>
+            <div className="mr-[25px] md:mr-0 flex overflow-x-auto space-x-4 py-4 md:grid md:grid-cols-4 lg:grid-cols-6 gap-y-8 mt-6">
+                {[
+                    { dark: html, light: html_light, alt: "HTML Icon" },
+                    { dark: css, light: css_light, alt: "CSS Icon" },
+                    { dark: js, light: js_light, alt: "Node Icon" },
+                    { dark: sql, light: sql_light, alt: "SQL Icon" },
+                    { dark: docker, light: docker_light, alt: "Docker Icon" },
+                    { dark: openai, light: openai_light, alt: "OpenAI Icon" },
+                    { dark: react, light: react_light, alt: "React Icon" },
+                    { dark: git, light: git_light, alt: "Git Icon" },
+                    { dark: wp, light: wp_light, alt: "WP Icon" },
+                    { dark: adobe, light: adobe_light, alt: "Adobe Icon"},
+                    { dark: php, light: php_light, alt: "PHP Icon" },
+                    { dark: npm, light: npm_light, alt: "npm Icon" }
+                ].map((skill, index) => (
+                    <div key={index} className="flex-shrink-0 flex justify-center items-center opacity-70 hover:opacity-100">
+                        <img 
+                            src={document.documentElement.classList.contains('dark') ? skill.dark : skill.light} 
+                            alt={skill.alt} 
+                            className={`w-auto h-[75px] sm:w-25 sm:h-25`}
+                        />
+                    </div>
+                ))}
             </div>
             {/* Section Bottom */}
-            <div className="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-y-8 rounded-lg text-center font-sans text-sm mt-8 p-6 sm:p-10 bg-[#F3F3F3] dark:bg-[#121F2E] text-colorMain dark:text-colorWhite/80 border dark:border-colorWhite/60 border-colorMain/10 dark:opacity-90 opacity-70 hover:opacity-100 dark:hover:opacity-100" >
-                <p>Figma</p>
-                <p>User<br /> experience</p>
+            <div className="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-y-8 rounded-lg text-center font-sans text-xs sm:text-sm mt-8 p-6 sm:p-10 bg-[#bfc4d470] dark:bg-[#31465d70] text-colorMain dark:text-colorWhite/80 border dark:border-colorWhite/60 border-colorMain/10 dark:opacity-90 opacity-70 hover:opacity-100 dark:hover:opacity-100" >
                 <p>Responsive<br /> design</p>
+                <p>User<br /> experience</p>
                 <p>Tailwind<br /> CSS</p>
+                <p>Figma</p>
                 <p>Langchain</p>
                 <p>Shopify</p>
                 <p>Next.js</p>

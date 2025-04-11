@@ -53,7 +53,7 @@ const App: React.FC = () => {
     setMenuSrc(newSidebarState ? menuSidebarOpen : menuSidebarClosed);
     
     // Manage main content translation
-    // setMainContentTranslate(newSidebarState && window.innerWidth <= 768 ? 300 : 0);
+    // setMainContentTranslate(newSidebarState && window.innerWidth <= 768 ? -300 : 0);
   };
 
   const toggleMenu = () => manageSidebar();
@@ -62,7 +62,9 @@ const App: React.FC = () => {
   return (
     <Router>
       <div className="relative flex app-container bg-gradient-main-secondary-light-mode dark:bg-gradient-main-secondary-main">
-        <div className="absolute top-0 left-0 w-full h-full bg-noise-texture opacity-5 dark:opacity-5"></div>
+        <div className="absolute top-0 left-0 w-full h-full bg-noise-texture bg-repeat bg-[length:100px_100px] 
+          opacity-25 
+          dark:opacity-10 dark:brightness-150 dark:contrast-150"></div>
         {/* Sidebar */}
         {isSidebarOpen && <Sidebar closeSidebar={closeSidebar} language={language} />}
         {/* To top button */}
@@ -75,7 +77,7 @@ const App: React.FC = () => {
                 <Header toggleMenu={toggleMenu} menuSrc={menuSrc} colorModeSrc={colorModeSrc} toggleColorMode={handleToggleColorMode} toggleLanguage={handleToggleLanguage} language={language} />
               </header>
               {/* Main content */}
-              <div className={`app-main-content relative z-10 transition-all duration-300 ease-in-out ${isSidebarOpen ? 'md:ml-[250px] xl:ml-[150px] blur-xl md:blur-0 ' : ''} translate-x-[${mainContentTranslate}px]`}>
+              <div className={`app-main-content relative z-10 transition-all duration-300 ease-in-out ${isSidebarOpen ? 'md:ml-[250px] xl:ml-[150px] blur-3xl md:blur-0' : ''} translate-x-[${mainContentTranslate}px]`}>
                 <Routes>
                   <Route path="/*" element={<AppRoutes language={language} />} />
                   <Route path="/project/:projectId" element={<TemplateProject language={language} />} />

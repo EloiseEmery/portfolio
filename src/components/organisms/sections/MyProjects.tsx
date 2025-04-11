@@ -68,11 +68,12 @@ function MyProjects({ language }: { language: Language }) {
             <div className="lg:flex z-10 relative">
                 <div className="sm:pr-[50px] lg:w-[55%] flex">
                     <div>
-                        <h2 className="font-sans font-medium text-2xl sm:text-3xl leading-[1.2] dark:text-colorWhite/80 bg-gradient-to-r from-colorTertiary to-colorMain/80 bg-clip-text text-transparent">{title}</h2>
-                        <p className="dark:text-colorWhite text-colorMain font-figtree text-base mt-6 pb-8 lg:pb-0 ">{paragraph}</p>
+                        <h2 className="font-sans font-medium text-2xl sm:text-3xl leading-[1.2]  bg-gradient-to-r dark:from-colorWhite/90 dark:to-colorWhite/90 from-colorTertiary to-colorMain/80 bg-clip-text text-transparent">{title}</h2>
+                        <p className="dark:text-colorWhite text-colorMain font-figtree text-base mt-6 lg:pb-8 ">{paragraph}</p>
                     </div>
                 </div>
-                <div className="lg:w-[45%]">
+                {/* Button Desktop */}
+                <div className="hidden lg:block lg:w-[45%]">
                     <div className="flex lg:justify-end">
                         <Button 
                             children={button}
@@ -102,7 +103,7 @@ function MyProjects({ language }: { language: Language }) {
                 </div>
             </div>
             {/* Bottom section */}
-            <div className="lg:flex z-10 relative">
+            <div className="lg:flex z-10 relative pb-6 md:pb-0">
                 {/* Projects Image */}
                 <div className="lg:w-[50%] pt-6 dark:text-colorWhite text-colorMain flex">
                     <div className="rounded-lg overflow-hidden w-full">
@@ -117,7 +118,7 @@ function MyProjects({ language }: { language: Language }) {
                         <div 
                             key={project.id} 
                             className={`project-${project.id} group sm:flex 
-                                ${hoveredProject === project.id ? 'dark:bg-white/10 bg-colorTertiary/10' : ''} 
+                                ${hoveredProject === project.id ? 'dark:bg-[#31465d70] bg-colorTertiary/10' : ''} 
                                 justify-center items-center p-4 rounded-lg cursor-pointer`}
                             onMouseEnter={() => setHoveredProject(project.id)}
                             onMouseLeave={() => setHoveredProject("portfolio")}
@@ -139,6 +140,32 @@ function MyProjects({ language }: { language: Language }) {
                             </div>
                         </div>
                     ))}
+                </div>
+                <div className="flex lg:hidden mt-10">
+                    <Button 
+                        children={button}
+                        aria-label="See more projects on my Github"
+                        className="relative z-10 group"
+                        href="https://github.com/eloiseemery"
+                        blank={true}
+                        type="secondary"
+                        icon={
+                            <svg
+                                fill="currentColor"
+                                viewBox="0 0 50 50"
+                                xmlns="http://www.w3.org/2000/svg"
+                                className="w-5 h-5 text-current dark:group-hover:text-colorMain group-hover:text-colorWhite"
+                            >
+                                <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
+                                <g id="SVGRepo_tracerCarrier" strokeLinecap="round" strokeLinejoin="round"></g>
+                                <g id="SVGRepo_iconCarrier">
+                                    <path d="M38.288 10.297l1.414 1.415-14.99 14.99-1.414-1.414z"></path>
+                                    <path d="M40 20h-2v-8h-8v-2h10z"></path>
+                                    <path d="M35 38H15c-1.7 0-3-1.3-3-3V15c0-1.7 1.3-3 3-3h11v2H15c-.6 0-1 .4-1 1v20c0 .6.4 1 1 1h20c.6 0 1-.4 1-1V24h2v11c0 1.7-1.3 3-3 3z"></path>
+                                </g>
+                            </svg>
+                        }
+                    />
                 </div>
             </div>
         </div>

@@ -55,8 +55,8 @@ const Sidebar: React.FC<SidebarProps> = ({ closeSidebar, language }) => {
   }, [closeSidebar, previousWindowWidth]);
 
   return (
-    <div className="z-50 sidebar fixed top-10 left-0 w-full md:w-[300px] h-full overflow-y-auto dark:bg-colorMain/25 bg-transparent dark:md:bg-transparent">
-      <div className="flex flex-col font-sans text-xl md:text-base font-medium text-colorBlack dark:text-colorWhite space-y-8 px-4 md:px-10 pt-[100px]">
+    <div className="z-50 sidebar fixed top-10 left-0 w-full md:w-[300px] h-full overflow-y-auto bg-transparent">
+      <div className="flex flex-col font-sans text-xl md:text-base font-medium text-colorBlack dark:text-colorWhite space-y-8 px-4 md:px-10 pt-[75px] md:pt-[100px]">
         <a href="/#ask-me-something" onClick={handleLinkClick('#ask-me-something')} className="cursor-pointer transition-all duration-300 ease-in-out leading-[1.2] dark:hover:text-colorQuaternary hover:text-colorTertiary">{sidebarLink1}</a>
         <a href="/#my-skillset" onClick={handleLinkClick('#my-skillset')} className="cursor-pointer transition-all duration-300 ease-in-out whitespace-nowrap">{sidebarLink2}</a>
         
