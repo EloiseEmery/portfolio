@@ -4,7 +4,7 @@
             "id": "portfolio",
             "title": "Project Portfolio",
             "descriptionKey": "projectPortfolioDescription",
-            "technologies": ["React", "Tailwind", "TypeScript", "OpenAI", "Docker"],
+            "technologies": [ "React", "Tailwind", "TypeScript", "OpenAI", "Docker"],
             "githubLink": "https://github.com/eloiseemery/portfolio",
             "highlights": [
                 "Responsive and modern portfolio design",
@@ -19,7 +19,7 @@
             "id": "banq",
             "title": "BAnQ dans ta classe",
             "descriptionKey": "projectBanqDescription", 
-            "technologies": ["React", "Tailwind", "TypeScript", "MCD", "Educational Tech"],
+            "technologies": ["Figma", "React", "Tailwind", "TypeScript", "SQL", "Drupal"],
             "websiteLink": "https://www.banqdanstaclasse.gouv.qc.ca/",
             "highlights": [
                 "Interactive educational platform",

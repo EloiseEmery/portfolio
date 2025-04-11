@@ -17,13 +17,13 @@ function MyProjects({ language }: { language: Language }) {
     const [hoveredProject, setHoveredProject] = useState<string | null>("portfolio");
     const navigate = useNavigate();
 
-    const handleProjectClick = (projectId: string) => {
+    const handleProjectClick = (projectId: string, e: React.MouseEvent) => {
+        e.preventDefault();
         navigate(`/project/${projectId}`);
     };
 
+    // Projects datas
     const projectImages = [project1, project2, project3];
-
-    // Projects data
     const projects = [
         {
             id: "portfolio",
@@ -121,7 +121,7 @@ function MyProjects({ language }: { language: Language }) {
                                 justify-center items-center p-4 rounded-lg cursor-pointer`}
                             onMouseEnter={() => setHoveredProject(project.id)}
                             onMouseLeave={() => setHoveredProject("portfolio")}
-                            onClick={() => handleProjectClick(project.id)}
+                            onClick={(e) => handleProjectClick(project.id, e)}
                         >
                             <h3 className="w-full text-base dark:text-colorWhite text-colorMain pb-4 sm:pb-0 pr-4">{project.title}</h3>
                             <div className="flex sm:justify-end w-full text-xs gap-x-2">

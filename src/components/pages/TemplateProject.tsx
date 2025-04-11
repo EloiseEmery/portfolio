@@ -37,6 +37,12 @@ const TemplateProject: React.FC<TemplateProjectProps> = ({ language }) => {
     const navigate = useNavigate();
     const project: ProjectDataItem | undefined = projectData.projects.find((p: ProjectDataItem) => p.id === projectId);
 
+    // Scroll to top immediately when component mounts
+    // Ensure the scroll is instant when clicking on a project from homepage
+    useEffect(() => {
+        window.scrollTo({ top: 0, behavior: 'auto' });
+    }, [projectId]);
+
     // If project is not found, redirect to 404
     useEffect(() => {
         if (!project) {
@@ -50,15 +56,15 @@ const TemplateProject: React.FC<TemplateProjectProps> = ({ language }) => {
     }
 
     return (
-        <div className="container lg:flex px-4 md:px-10 xl:px-[150px] py-[200px]">
-            <div className="lg:w-[50%] w-full mr-[120px]">
+        <div className="2xl:flex px-4 md:px-10 xl:px-[150px] py-[100px] 2xl:py-[200px]">
+            <div className="2xl:pl-[50px] 2xl:w-[70%] 2xl:mr-[50px]">
                 <img 
                     src={projectImages[project.id as keyof typeof projectImages]} 
                     alt={project.title} 
-                    className="w-full h-auto object-cover rounded-lg mb-4"
+                    className="w-full h-auto max-h-[500px] object-cover rounded-lg mb-4"
                 />
-                {/* Buttons external links */}
-                <div className="flex gap-4 pt-2 justify-end">
+                {/* Buttons external links mobile */}
+                <div className="hidden 2xl:flex gap-4 pt-2 justify-end">
                     {project.githubLink && (
                         <Button 
                         children={getTranslation('viewOnGithub', language)}
@@ -111,9 +117,9 @@ const TemplateProject: React.FC<TemplateProjectProps> = ({ language }) => {
                     )}
                 </div>
             </div>
-            <div className="lg:w-[50%] w-full">
+            <div className="pt-6">
                 <h1 className="text-4xl font-sans dark:text-colorWhite/80 bg-gradient-to-r from-colorTertiary to-colorMain/80 bg-clip-text text-transparent">{project.title}</h1>
-                <div className="pb-6 font-figtree text-base leading-7 text-colorMain dark:text-colorWhite mt-6 pr-[120px]">
+                <div className="pb-10 font-figtree text-base leading-7 text-colorMain dark:text-colorWhite mt-6">
                     {project.intro}
                 </div>
                 <div className="font-figtree text-colorMain dark:text-colorWhite">
@@ -135,6 +141,59 @@ const TemplateProject: React.FC<TemplateProjectProps> = ({ language }) => {
                             ))}
                         </ul>
                     </div>
+                </div>
+                {/* Buttons external links desktop */}
+                <div className="flex 2xl:hidden gap-4 pt-2">
+                    {project.githubLink && (
+                        <Button 
+                        children={getTranslation('viewOnGithub', language)}
+                        aria-label="View on GitHub"
+                        href={project.githubLink}
+                        blank={true}
+                        type="secondary"
+                        icon={
+                            <svg
+                                fill="currentColor"
+                                viewBox="0 0 50 50"
+                                xmlns="http://www.w3.org/2000/svg"
+                                className="w-5 h-5 text-current group-hover:text-colorMain dark:group-hover:text-colorWhite"
+                            >
+                                <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
+                                <g id="SVGRepo_tracerCarrier" strokeLinecap="round" strokeLinejoin="round"></g>
+                                <g id="SVGRepo_iconCarrier">
+                                    <path d="M38.288 10.297l1.414 1.415-14.99 14.99-1.414-1.414z"></path>
+                                    <path d="M40 20h-2v-8h-8v-2h10z"></path>
+                                    <path d="M35 38H15c-1.7 0-3-1.3-3-3V15c0-1.7 1.3-3 3-3h11v2H15c-.6 0-1 .4-1 1v20c0 .6.4 1 1 1h20c.6 0 1-.4 1-1V24h2v11c0 1.7-1.3 3-3 3z"></path>
+                                </g>
+                            </svg>
+                        }
+                        />
+                    )}
+                    {project.websiteLink && (
+                        <Button
+                        children={getTranslation('visitWebsite', language)}
+                        aria-label="Visit Website"
+                        href={project.websiteLink}
+                        blank={true}
+                        type="secondary"
+                        icon={
+                            <svg
+                                fill="currentColor"
+                                viewBox="0 0 50 50"
+                                xmlns="http://www.w3.org/2000/svg"
+                                className="w-5 h-5 text-current group-hover:text-colorMain dark:group-hover:text-colorWhite"
+                            >
+                                <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
+                                <g id="SVGRepo_tracerCarrier" strokeLinecap="round" strokeLinejoin="round"></g>
+                                <g id="SVGRepo_iconCarrier">
+                                    <path d="M38.288 10.297l1.414 1.415-14.99 14.99-1.414-1.414z"></path>
+                                    <path d="M40 20h-2v-8h-8v-2h10z"></path>
+                                    <path d="M35 38H15c-1.7 0-3-1.3-3-3V15c0-1.7 1.3-3 3-3h11v2H15c-.6 0-1 .4-1 1v20c0 .6.4 1 1 1h20c.6 0 1-.4 1-1V24h2v11c0 1.7-1.3 3-3 3z"></path>
+                                </g>
+                            </svg>
+                        }
+                    />
+                    )}
                 </div>
             </div>
         </div>

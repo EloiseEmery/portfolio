@@ -16,6 +16,7 @@ const Sidebar: React.FC<SidebarProps> = ({ closeSidebar, language }) => {
 
   const [previousWindowWidth, setPreviousWindowWidth] = useState<number | null>(null);
 
+  // Handle link clicks and close sidebar on mobile
   const handleLinkClick = (hash: string) => (e: React.MouseEvent) => {
     handleAnchorLinkNavigation(hash)(e);
     
