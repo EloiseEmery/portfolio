@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Language, getTranslation } from '../../utils/translations';
 import projectData from '../../datas/datasProjects.json';
-import { handleAnchorLinkNavigation } from '../../utils/UrlUtils';
+import { handleAnchorLinkNavigation } from '../../utils/navigation';
 
 interface SidebarProps {
   closeSidebar: () => void;

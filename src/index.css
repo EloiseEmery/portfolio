@@ -12,6 +12,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
 }
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
@@ -69,3 +70,35 @@ code {
   50% { background-position: 300% 0; }
   100% { background-position: 0 0; }
 }
+
+/* Cursor Glow Effect */
+.cursor-glow {
+  position: fixed;
+  width: 300px;
+  height: 300px;
+  border-radius: 0%;
+  pointer-events: none;
+  z-index: 9999;
+  background: radial-gradient(circle, rgba(68, 104, 253, 0.2) 0%, rgba(68, 104, 253, 0) 70%);
+  transform: translate(-50%, -50%);
+  transition: transform 0.1s ease-out;
+}
+
+/* Dark mode cursor glow */
+.dark .cursor-glow {
+  background: radial-gradient(circle, rgba(100, 255, 244, 0.05) 0%, rgba(100, 255, 244, 0) 70%);
+}
+
+/* Cursor Glow Trail */
+/* .cursor-glow-trail {
+  position: fixed;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9999;
+  background: radial-gradient(circle, rgba(68, 104, 253, 0.2) 0%, rgba(68, 104, 253, 0) 70%);
+  transform: translate(-50%, -50%);
+  transition: transform 0.1s ease-out;
+} */
+  

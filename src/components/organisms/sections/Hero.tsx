@@ -45,7 +45,7 @@ function Hero({ language }: { language: Language }) {
         <img src={decorativeEl} alt="Decorative Element" className="w-full max-h-[350px] dark:sm:opacity-70 dark:filter-none" />
       </div>
       <div className="absolute top-[150px] -right-[50px] md:right-8 md:top-0 z-0 opacity-40 sm:opacity-100" id="paralaxeEl">
-        <img src={paralaxeEl} alt="Paralaxe Element" className="w-full max-h-[350px] opacity-40 sm:opacity-100" />
+        <img src={paralaxeEl} alt="Paralaxe Element" className="w-full max-h-[350px] opacity-100 sm:opacity-100" />
       </div>
       {/* Hero Texts */}
       <div className="-mt-10">

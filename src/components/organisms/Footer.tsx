@@ -4,7 +4,7 @@ import iconeLinkedIn from '../../assets/png/linkedin.png';
 import iconeGithub from '../../assets/png/github.png';
 import decorativeEl from '../../assets/png/elementFooter.png';
 import { getTranslation, Language } from '../../utils/translations';
-import { handleAnchorLinkNavigation } from '../../utils/UrlUtils';
+import { handleAnchorLinkNavigation } from '../../utils/navigation';
 
 function Footer({ language }: { language: Language }) {
   // Translations

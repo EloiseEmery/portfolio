@@ -12,7 +12,7 @@ import lightMode from './assets/svg/lightMode.svg';
 import darkMode from './assets/svg/darkMode.svg';
 import './index.css';
 import { Language } from './utils/translations';
-import { setupHashChangeListener } from './utils/UrlUtils';
+import { setupHashChangeListener } from './utils/navigation';
 import { getInitialColorMode, toggleColorMode, getInitialLanguage, toggleLanguage } from './utils/appSettings';
 import AppRoutes from './routes';
 
