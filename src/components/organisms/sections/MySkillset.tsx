@@ -33,9 +33,9 @@ function MySkillset({ language }: { language: Language }) {
     return (
         <div className="relative">
             {/* Decorative element */}
-            <div className="absolute -top-[50px] -left-[220px] sm:-left-[150px] md:-bottom-[100px] xl:-left-[225px] 2xl:-left-[300px] z-0">
+            {/* <div className="absolute -top-[50px] -left-[220px] sm:-left-[150px] md:-bottom-[100px] xl:-left-[225px] 2xl:-left-[300px] z-0">
                 <img src={decorativeEl} alt="Decorative Element" className="w-full max-h-[300px] sm:max-h-[290px] object-contain dark:opacity-30 opacity-10 sm:opacity-15 filter-brightness-0 invert dark:filter-none" />
-            </div>
+            </div> */}
             <div className="relative">
                 <h2 className="mx-auto text-center w-[350px] font-sans font-medium text-2xl sm:text-3xl leading-[1.2] dark:text-colorWhite/80 bg-gradient-to-r from-colorTertiary to-colorMain/80 bg-clip-text text-transparent">{title}</h2>
                 <p className="text-center dark:text-colorWhite text-colorMain font-figtree text-base mt-6 pb-8 md:max-w-[75%] lg:max-w-[60%] md:mx-auto">{paragraph}</p>

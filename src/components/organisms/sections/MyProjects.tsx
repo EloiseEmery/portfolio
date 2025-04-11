@@ -61,9 +61,9 @@ function MyProjects({ language }: { language: Language }) {
         // Projects section
         <div className="relative">  
             {/* Decorative element */}
-            <div className="absolute -right-[300px] sm:-right-[275px] z-1">
+            {/* <div className="absolute -right-[300px] sm:-right-[275px] z-1">
                 <img src={decorativeEl} alt="Decorative Element" className="w-full max-h-[300px] sm:max-h-[340px] object-contain opacity-100 filter-brightness-0 invert dark:filter-none" />
-            </div>
+            </div> */}
             {/* Top section */}
             <div className="lg:flex z-10 relative">
                 <div className="sm:pr-[50px] lg:w-[55%] flex">

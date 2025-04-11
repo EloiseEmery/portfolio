@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Language, getTranslation } from '../../utils/translations';
 import projectData from '../../datas/datasProjects.json';
+import { handleAnchorLinkNavigation } from '../../utils/UrlUtils';
 
 interface SidebarProps {
   closeSidebar: () => void;
@@ -13,25 +14,44 @@ const Sidebar: React.FC<SidebarProps> = ({ closeSidebar, language }) => {
   const sidebarLink3 = getTranslation('sidebarLink3', language);
   const sidebarLink4 = getTranslation('sidebarLink4', language);
 
-  const handleLinkClick = (hash: string) => (e: React.MouseEvent) => {
-    e.preventDefault();
-    
-    // If on a different page, navigate first
-    if (window.location.pathname !== '/') {
-      window.location.href = `/${hash}`;
-    } else {
-      // Scroll to the section
-      const element = document.querySelector(hash);
-      if (element) {
-        element.scrollIntoView({ behavior: 'smooth' });
-      }
-    }
+  const [previousWindowWidth, setPreviousWindowWidth] = useState<number | null>(null);
 
-    // Close sidebar on mobile
+  const handleLinkClick = (hash: string) => (e: React.MouseEvent) => {
+    handleAnchorLinkNavigation(hash)(e);
+    
+    // Close sidebar on mobile when clicking a link
     if (window.innerWidth < 768) {
       closeSidebar();
     }
   };
+
+  // Handle sidebar when resizing the window from desktop to mobile
+  useEffect(() => {
+    const handleResize = () => {
+      const currentWidth = window.innerWidth;
+      
+      // Check if we've transitioned from desktop to mobile
+      if (previousWindowWidth !== null && 
+          previousWindowWidth >= 768 && 
+          currentWidth < 768) {
+        closeSidebar();
+      }
+      
+      // Always update the previous width
+      setPreviousWindowWidth(currentWidth);
+    };
+
+    // Set initial window width
+    setPreviousWindowWidth(window.innerWidth);
+
+    // Add resize event listener
+    window.addEventListener('resize', handleResize);
+    
+    // Cleanup
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, [closeSidebar, previousWindowWidth]);
 
   return (
     <div className="z-50 sidebar fixed top-10 left-0 w-full md:w-[300px] h-full overflow-y-auto dark:bg-colorMain/25 bg-transparent dark:md:bg-transparent">

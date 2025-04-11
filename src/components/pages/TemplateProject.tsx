@@ -50,34 +50,8 @@ const TemplateProject: React.FC<TemplateProjectProps> = ({ language }) => {
     }
 
     return (
-        <div className="container lg:flex mx-auto px-4 md:px-10 xl:px-[150px] py-[200px]">
-            <div className="lg:w-[50%] w-full">
-                <h1 className="text-4xl font-sans dark:text-colorWhite/80 bg-gradient-to-r from-colorTertiary to-colorMain/80 bg-clip-text text-transparent">{project.title}</h1>
-                <div className="pb-6 font-figtree text-base leading-7 text-colorMain dark:text-colorWhite mt-6 pr-[120px]">
-                    {project.intro}
-                </div>
-                <div className="font-figtree text-colorMain dark:text-colorWhite">
-                    <div className="mb-6">
-                        <h2 className="font-sans">{getTranslation('technologies', language)}:</h2>
-                        <div className="flex flex-wrap gap-2 mt-2">
-                            {project.technologies.map((tech) => (
-                                <span key={tech} className="text-colorWhite dark:text-colorMain bg-colorTertiary dark:bg-colorQuaternary dark:border-colorQuaternary border-colorTertiar px-2 py-1 rounded text-sm">
-                                    {tech}
-                                </span>
-                            ))}
-                        </div>
-                    </div>
-                    <div className="mb-4">
-                        <h2 className="font-sans">{getTranslation('highlights', language)}:</h2>
-                        <ul className="list-disc list-inside text-sm mt-1">
-                            {project.highlights.map((highlight) => (
-                                <li key={highlight} className="mt-1">{highlight}</li>
-                            ))}
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div className="lg:w-[50%] w-full">
+        <div className="container lg:flex px-4 md:px-10 xl:px-[150px] py-[200px]">
+            <div className="lg:w-[50%] w-full mr-[120px]">
                 <img 
                     src={projectImages[project.id as keyof typeof projectImages]} 
                     alt={project.title} 
@@ -135,6 +109,32 @@ const TemplateProject: React.FC<TemplateProjectProps> = ({ language }) => {
                         }
                     />
                     )}
+                </div>
+            </div>
+            <div className="lg:w-[50%] w-full">
+                <h1 className="text-4xl font-sans dark:text-colorWhite/80 bg-gradient-to-r from-colorTertiary to-colorMain/80 bg-clip-text text-transparent">{project.title}</h1>
+                <div className="pb-6 font-figtree text-base leading-7 text-colorMain dark:text-colorWhite mt-6 pr-[120px]">
+                    {project.intro}
+                </div>
+                <div className="font-figtree text-colorMain dark:text-colorWhite">
+                    <div className="mb-6">
+                        <h2 className="font-sans">{getTranslation('technologies', language)}:</h2>
+                        <div className="flex flex-wrap gap-2 mt-2">
+                            {project.technologies.map((tech) => (
+                                <span key={tech} className="text-colorWhite dark:text-colorMain bg-colorTertiary dark:bg-colorQuaternary dark:border-colorQuaternary border-colorTertiar px-2 py-1 rounded text-sm">
+                                    {tech}
+                                </span>
+                            ))}
+                        </div>
+                    </div>
+                    <div className="mb-4">
+                        <h2 className="font-sans">{getTranslation('highlights', language)}:</h2>
+                        <ul className="list-disc list-inside text-sm mt-1">
+                            {project.highlights.map((highlight) => (
+                                <li key={highlight} className="mt-1">{highlight}</li>
+                            ))}
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>

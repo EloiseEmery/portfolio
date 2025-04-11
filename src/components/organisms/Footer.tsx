@@ -1,8 +1,10 @@
+import React from 'react';
 import iconeEmail from '../../assets/png/email.png';
 import iconeLinkedIn from '../../assets/png/linkedin.png';
 import iconeGithub from '../../assets/png/github.png';
 import decorativeEl from '../../assets/png/elementFooter.png';
 import { getTranslation, Language } from '../../utils/translations';
+import { handleAnchorLinkNavigation } from '../../utils/UrlUtils';
 
 function Footer({ language }: { language: Language }) {
   // Translations
@@ -38,15 +40,19 @@ function Footer({ language }: { language: Language }) {
             <div className="sm:w-1/2 lg:w-1/3 mb-10">
               <h3 className="font-sans text-lg font-regular mb-4 opacity-50">{footerTitle2}</h3>
               <ul className="tracking-wider font-figtree space-y-4 text-[15px] font-medium">
-                <li className="cursor-pointer hover:text-colorTertiary dark:hover:text-colorQuaternary transition-all duration-300 ease-in-out"><a href="/#ask-me-something">{linkText1}</a></li>
-                <li className="cursor-pointer hover:text-colorTertiary dark:hover:text-colorQuaternary transition-all duration-300 ease-in-out"><a href="/#my-skillset">{linkText2}</a></li>
+                <li className="cursor-pointer hover:text-colorTertiary dark:hover:text-colorQuaternary transition-all duration-300 ease-in-out">
+                  <a href="/#ask-me-something" onClick={handleAnchorLinkNavigation('#ask-me-something')}>{linkText1}</a>
+                </li>
+                <li className="cursor-pointer hover:text-colorTertiary dark:hover:text-colorQuaternary transition-all duration-300 ease-in-out">
+                  <a href="/#my-skillset" onClick={handleAnchorLinkNavigation('#my-skillset')}>{linkText2}</a>
+                </li>
               </ul>
             </div>
             <div className="sm:w-1/2 lg:w-1/3 mb-10">
               <h3 className="font-sans text-lg font-regular mb-4 opacity-50">{footerTitle3}</h3>
               <div className="flex gap-4">
                 <a href="https://www.linkedin.com/in/eloise-emery/" target="_blank" rel="noopener noreferrer" className="relative group">
-                  <div className="cursor-pointer border border-colorMain/10 dark:border-colorWhite/30 rounded-full p-2 hover:border-colorTertiary/50 dark:hover-border-colorWhite/100 transition-all duration-300 ease-in-out ">
+                  <div className="cursor-pointer border border-colorMain/10 dark:border-colorWhite/30 rounded-full p-2 hover:border-colorTertiary/50 dark:hover:border-colorWhite/100 transition-all duration-300 ease-in-out ">
                     <img src={iconeLinkedIn} alt="LinkedIn" className="max-w-[22px] brightness-0 invert(1) dark:filter-none" />
                   </div>
                   <span className="hidden md:block md:absolute font-sans bottom-full left-1/2 transform -translate-x-1/2 mb-2 w-max bg-black text-white text-xs rounded-md px-2 py-1 opacity-0 group-hover:opacity-100 transition-opacity duration-300">

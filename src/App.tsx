@@ -12,68 +12,52 @@ import lightMode from './assets/svg/lightMode.svg';
 import darkMode from './assets/svg/darkMode.svg';
 import './index.css';
 import { Language } from './utils/translations';
-import { setupHashChangeListener } from './utils/urlUtils';
+import { setupHashChangeListener } from './utils/UrlUtils';
+import { getInitialColorMode, toggleColorMode, getInitialLanguage, toggleLanguage } from './utils/appSettings';
 import AppRoutes from './routes';
 
 
 
 const App: React.FC = () => {
-  const [colorModeSrc, setColorModeSrc] = useState(darkMode);
-  const [language, setLanguage] = useState<Language>(() => {
-    const savedLanguage = localStorage.getItem('language');
-    return savedLanguage ? (savedLanguage as Language) : 'en';
-  });
+  const [colorModeSrc, setColorModeSrc] = useState(getInitialColorMode());
+  const [language, setLanguage] = useState<Language>(getInitialLanguage());
   const [isSidebarOpen, setIsSidebarOpen] = useState(() => {
     // Only open sidebar by default on desktop (md breakpoint and above)
     return window.innerWidth >= 768;
   });
   const [menuSrc, setMenuSrc] = useState(isSidebarOpen ? menuSidebarOpen : menuSidebarClosed);
+  const [mainContentTranslate, setMainContentTranslate] = useState(0);
 
-  // Manage color mode when page is loaded
+  //Setup hash change listener for scrolling
   useEffect(() => {
-    // Check saved color mode
-    const savedColorMode = localStorage.getItem('colorMode');
-    const isDarkMode = savedColorMode === 'dark';
-    
-    // Set color mode source based on saved mode
-    setColorModeSrc(isDarkMode ? lightMode : darkMode);
-
-    // Setup hash change listener for scrolling
     const cleanup = setupHashChangeListener();
     return cleanup;
   }, []);
-
-  // Manage sidebar
-  const toggleMenu = () => {
-    setIsSidebarOpen(!isSidebarOpen);
-    setMenuSrc(isSidebarOpen ? menuSidebarClosed : menuSidebarOpen);
-  };
-  // Close sidebar
-  const closeSidebar = () => {
-    setIsSidebarOpen(false);
-    setMenuSrc(menuSidebarClosed);
-  };
-
+  
   // Manage color mode
-  const toggleColorMode = () => {
-    const newColorMode = colorModeSrc === lightMode ? darkMode : lightMode;
-    
-    // Toggle dark class on html element
-    const isDarkModeActive = document.documentElement.classList.toggle('dark');
-    
-    // Set localStorage based on the current state of dark class
-    localStorage.setItem('colorMode', isDarkModeActive ? 'dark' : 'light');
-    
-    // Update color mode source
+  const handleToggleColorMode = () => {
+    const newColorMode = toggleColorMode(colorModeSrc);
     setColorModeSrc(newColorMode);
   };
-
+  
   // Manage language
-  const toggleLanguage = () => {
-    const newLanguage = language === 'en' ? 'fr' : 'en';
+  const handleToggleLanguage = () => {
+    const newLanguage = toggleLanguage(language);
     setLanguage(newLanguage);
-    localStorage.setItem('language', newLanguage);
   };
+
+  // Manage sidebar
+  const manageSidebar = (forceState?: boolean) => {
+    const newSidebarState = forceState !== undefined ? forceState : !isSidebarOpen;
+    setIsSidebarOpen(newSidebarState);
+    setMenuSrc(newSidebarState ? menuSidebarOpen : menuSidebarClosed);
+    
+    // Manage main content translation
+    // setMainContentTranslate(newSidebarState && window.innerWidth <= 768 ? 300 : 0);
+  };
+
+  const toggleMenu = () => manageSidebar();
+  const closeSidebar = () => manageSidebar(false);
 
   return (
     <Router>
@@ -87,19 +71,19 @@ const App: React.FC = () => {
           <div className="flex-1 transition-all duration-300 ease-in-out">
             {/* Header */}
             <header className="">
-              <Header toggleMenu={toggleMenu} menuSrc={menuSrc} colorModeSrc={colorModeSrc} toggleColorMode={toggleColorMode} toggleLanguage={toggleLanguage} language={language} />
+              <Header toggleMenu={toggleMenu} menuSrc={menuSrc} colorModeSrc={colorModeSrc} toggleColorMode={handleToggleColorMode} toggleLanguage={handleToggleLanguage} language={language} />
             </header>
             {/* Main content */}
-            <div className={`app-main-content relative z-10 transition-all duration-300 ease-in-out ${isSidebarOpen ? 'md:ml-[250px] xl:ml-[150px] blur-xl md:blur-0 ' : ''}`}>
+            <div className={`app-main-content relative z-10 transition-all duration-300 ease-in-out ${isSidebarOpen ? 'md:ml-[250px] xl:ml-[150px] blur-xl md:blur-0 ' : ''} translate-x-[${mainContentTranslate}px]`}>
               <Routes>
                 <Route path="/*" element={<AppRoutes language={language} />} />
                 <Route path="/project/:projectId" element={<TemplateProject language={language} />} />
                 <Route path="*" element={<NotFound language={language} />} />
               </Routes>
+              <footer>
+                <Footer language={language} />
+              </footer>
             </div>
-            <footer>
-              <Footer language={language} />
-            </footer>
           </div>
         </div>
       </div>
