@@ -149,8 +149,8 @@ const translations = {
     fr: 'Points Clés'
   },
   viewOnGithub: {
-    en: 'View on GitHub',
-    fr: 'Voir sur GitHub'
+    en: 'Give it a ★ on GitHub',
+    fr: 'Donnez-lui une ★ sur GitHub'
   },
   visitWebsite: {
     en: 'Visit Website',

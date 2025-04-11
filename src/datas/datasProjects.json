@@ -2,7 +2,7 @@
     "projects": [
         {
             "id": "portfolio",
-            "title": "Project Portfolio",
+            "title": "Portfolio Éloïse Emery",
             "descriptionKey": "projectPortfolioDescription",
             "technologies": [ "React", "Tailwind", "TypeScript", "OpenAI", "Docker"],
             "githubLink": "https://github.com/eloiseemery/portfolio",
@@ -45,20 +45,6 @@
             "intro": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Elit eget metus, dignissim sit amet. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Elit eget metus, dignissim sit amet."
         },
         {
-            "id": "stampee",
-            "title": "Stampee Auction website",
-            "descriptionKey": "projectStampeeDescription",
-            "technologies": ["UI/UX","JavaScript", "MVC", "PHP", "SQL"],
-            "githubLink": "https://github.com/eloiseemery/stampee",
-            "highlights": [
-                "MVC architecture",
-                "User-friendly interface",
-                "SQL database",
-                "User login"
-            ],
-            "intro": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Elit eget metus, dignissim sit amet. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Elit eget metus, dignissim sit amet."
-        },
-        {
             "id": "21 game",
             "title": "21 game",
             "descriptionKey": "project21GameDescription",
@@ -72,15 +58,16 @@
             "intro": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Elit eget metus, dignissim sit amet. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Elit eget metus, dignissim sit amet."
         },
         {
-            "id": "Mon Vino web app",
-            "title": "Mon Vino web app",
-            "descriptionKey": "projectMonVinoDescription",
-            "technologies": ["UI/UX", "React", "API REST", "AWS"],
+            "id": "stampee",
+            "title": "Stampee",
+            "descriptionKey": "projectStampeeDescription",
+            "technologies": ["UI/UX","JavaScript", "MVC", "PHP", "SQL"],
+            "githubLink": "https://github.com/eloiseemery/stampee",
             "highlights": [
-                "AWS login management",
-                "Responsive design",
-                "API REST integration",
-                "AWS deployment"
+                "MVC architecture",
+                "User-friendly interface",
+                "SQL database",
+                "User login"
             ],
             "intro": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Elit eget metus, dignissim sit amet. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Elit eget metus, dignissim sit amet."
         }

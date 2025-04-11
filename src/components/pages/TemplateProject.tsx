@@ -64,7 +64,7 @@ const TemplateProject: React.FC<TemplateProjectProps> = ({ language }) => {
                     className="w-full h-auto max-h-[500px] object-cover rounded-lg mb-4"
                 />
                 {/* Buttons external links mobile */}
-                <div className="hidden 2xl:flex gap-4 pt-2 justify-end">
+                <div className="hidden 2xl:flex gap-4 pt-2">
                     {project.githubLink && (
                         <Button 
                         children={getTranslation('viewOnGithub', language)}

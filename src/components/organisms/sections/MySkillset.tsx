@@ -67,16 +67,16 @@ function MySkillset({ language }: { language: Language }) {
             </div>
             {/* Section Bottom */}
             <div className="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-y-8 rounded-lg text-center font-sans text-xs sm:text-sm mt-8 p-6 sm:p-10 bg-[#bfc4d470] dark:bg-[#31465d70] text-colorMain dark:text-colorWhite/80 border dark:border-colorWhite/60 border-colorMain/10 dark:opacity-90 opacity-70 hover:opacity-100 dark:hover:opacity-100" >
-                <p>Responsive<br /> design</p>
-                <p>User<br /> experience</p>
+                <p>UX/UI<br /> conception</p>
                 <p>Tailwind<br /> CSS</p>
+                <p>Responsive<br /> design</p>
+                <p>Design<br /> system</p>
                 <p>Figma</p>
-                <p>Langchain</p>
                 <p>Shopify</p>
                 <p>Next.js</p>
-                <p>Node.js</p>
                 <p>Angular</p>
                 <p>Laravel</p>
+                <p>Langchain</p>
                 <p>API REST</p>
                 <p>.Liquid</p>
             </div>

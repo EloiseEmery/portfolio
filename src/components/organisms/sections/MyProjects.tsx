@@ -27,7 +27,7 @@ function MyProjects({ language }: { language: Language }) {
     const projects = [
         {
             id: "portfolio",
-            title: "This project portfolio",
+            title: "Portfolio Éloïse Emery",
             tags: ["UI/UX", "React", "Tailwind", "OpenAI", "Docker"]
         },
         {
@@ -41,19 +41,14 @@ function MyProjects({ language }: { language: Language }) {
             tags: ["UI/UX", tagsRedesign, "CMS"]
         },
         {
-            id: "stampee",
-            title: "Stampee Auction website",
-            tags: ["UI/UX","JavaScript", "MVC", "PHP", "SQL"]
-        },
-        {
             id: "21 game",
             title: "21 game",
             tags: ["UI/UX", "JavaScript", "OOP"]
         },
         {
-            id: "Mon Vino web app",
-            title: "Mon Vino web app",
-            tags: ["UI/UX", "React", "API REST"]
+            id: "stampee",
+            title: "Stampee",
+            tags: ["UI/UX","JavaScript", "MVC", "PHP", "SQL"]
         }
     ];
 

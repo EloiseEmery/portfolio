@@ -1,6 +1,10 @@
 import Button from '../../atoms/Button';
-import decorativeEl from '../../../assets/png/elementHero.png';
-import paralaxeEl from '../../../assets/png/paralaxeEl.png';
+import layer4 from '../../../assets/png/elementHero.png';
+import layer1 from '../../../assets/png/layer1.png';
+import layer1Light from '../../../assets/png/layer1_light.png';
+import layer2Light from '../../../assets/png/layer2_light.png';
+import layer2 from '../../../assets/png/layer2.png';
+import layer3 from '../../../assets/png/layer3.png';
 import { getTranslation, Language } from '../../../utils/translations';
 import { useEffect } from 'react';
 import '../../../index.css';
@@ -16,18 +20,42 @@ function Hero({ language }: { language: Language }) {
   useEffect(() => {
     const handleScroll = () => {
       const scrollPosition = window.scrollY;
-      const decorativeEl = document.getElementById('decorativeEl');
-      const paralaxeEl = document.getElementById('paralaxeEl');
+      const layer4 = document.getElementById('layer4');
+      const layer1 = document.getElementById('layer1');
+      const layer2 = document.getElementById('layer2');
+      const layer3 = document.getElementById('layer3');
+      const layer1Light = document.getElementById('layer1Light');
+      const layer2Light = document.getElementById('layer2Light');
 
-      if (decorativeEl) {
-        const maxTranslateY = 200; // Set the maximum translate value
-        const translateY = Math.min(scrollPosition * 0.4, maxTranslateY);
-        decorativeEl.style.transform = `translateY(${translateY}px)`;
-      }
-      if (paralaxeEl) {
-        const maxTranslateY = 100; // Set the maximum translate value
+      if (layer1) {
+        const maxTranslateY = 170; // Set the maximum translate value
         const translateY = Math.min(scrollPosition * 0.6, maxTranslateY);
-        paralaxeEl.style.transform = `translateY(${translateY}px)`;
+        layer1.style.transform = `translateY(${translateY}px)`;
+      }
+      if (layer1Light) {
+        const maxTranslateY = 170; // Set the maximum translate value
+        const translateY = Math.min(scrollPosition * 0.6, maxTranslateY);
+        layer1Light.style.transform = `translateY(${translateY}px)`;
+      }
+      if (layer2) {
+        const maxTranslateY = 120; // Set the maximum translate value
+        const translateY = Math.min(scrollPosition * 0.5, maxTranslateY);
+        layer2.style.transform = `translateY(${translateY}px)`;
+      }
+      if (layer2Light) {
+        const maxTranslateY = 120; // Set the maximum translate value
+        const translateY = Math.min(scrollPosition * 0.5, maxTranslateY);
+        layer2Light.style.transform = `translateY(${translateY}px)`;
+      }
+      if (layer3) {
+        const maxTranslateY = 50; // Set the maximum translate value
+        const translateY = Math.min(scrollPosition * 0.4, maxTranslateY);
+        layer3.style.transform = `translateY(${translateY}px)`;
+      }
+      if (layer4) {
+        const maxTranslateY = 75; // Set the maximum translate value
+        const translateY = Math.min(scrollPosition * 0.4, maxTranslateY);
+        layer4.style.transform = `translateY(${translateY}px)`;
       }
     };
 
@@ -41,11 +69,38 @@ function Hero({ language }: { language: Language }) {
   return (
     <div className="relative">
       {/* Hero Images paralaxe */}
-      <div className="absolute right-[-100px] md:right-0 top-0 z-0 opacity-30 filter-brightness-0 invert dark:sm:opacity-70 dark:filter-none" id="decorativeEl">
-        <img src={decorativeEl} alt="Decorative Element" className="w-full max-w-[450px] max-h-[350px] dark:sm:opacity-70 dark:filter-none" />
+
+      <div className="absolute right-[-100px] md:right-0 top-0 z-0 opacity-70">
+        <div className="flex relative">
+          <img 
+            src={layer1Light} 
+            alt="Layer 1" 
+            className="absolute object-contain -ml-[500px] w-[450px] -mt-[50px] max-w-[450px] max-h-[350px] dark:hidden" 
+            id="layer1Light" 
+          />
+          <img 
+            src={layer1} 
+            alt="Layer 1" 
+            className="absolute object-contain -ml-[500px] w-[450px] -mt-[50px] max-w-[450px] max-h-[350px] hidden dark:block" 
+            id="layer1" 
+          />
+          <img 
+            src={layer2Light} 
+            alt="Layer 2" 
+            className="absolute object-contain -ml-[500px] w-[450px] max-w-[340px] max-h-[270px] dark:hidden opacity-30 sm:opacity-70" 
+            id="layer2Light" 
+          />
+          <img 
+            src={layer2} 
+            alt="Layer 2" 
+            className="absolute object-contain -ml-[500px] w-[450px] max-w-[340px] max-h-[270px] hidden dark:block" 
+            id="layer2" 
+          />
+          <img src={layer3} alt="Layer 3" className="absolute object-contain -ml-[600px] mt-[100px] w-[130px] max-w-[130px] max-h-[130px] filter-brightness-0 invert dark:filter-none" id="layer3" />
+        </div>
       </div>
-      <div className="absolute top-[150px] -right-[50px] md:right-8 md:top-0 z-0 opacity-40 sm:opacity-100" id="paralaxeEl">
-        <img src={paralaxeEl} alt="Paralaxe Element" className="w-full max-h-[350px] opacity-100 sm:opacity-100" />
+      <div className="absolute top-[50px] -right-[50px] md:right-8 md:top-0 z-0 opacity-30 sm:opacity-50 filter-brightness-0 invert dark:filter-none" id="layer4">
+        <img src={layer4} alt="Paralaxe Element" className="w-full max-h-[350px]" />
       </div>
       {/* Hero Texts */}
       <div className="-mt-10">
