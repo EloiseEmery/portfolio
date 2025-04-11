@@ -24,6 +24,7 @@ module.exports = {
         'gradient-main-secondary-main': 'linear-gradient(to bottom, #030303, #001427, #030303)',
         'gradient-main-secondary-light-mode': 'linear-gradient(to bottom, #4468F720, #F3F3F3, #4468F720)',
         'gradient-text': 'linear-gradient(to right, #4468FD, #64FFF4)',
+        'noise-texture': 'url("/src/assets/png/noise_texture.png")',
       },
     },
   },
