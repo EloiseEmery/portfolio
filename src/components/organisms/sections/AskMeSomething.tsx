@@ -1,3 +1,4 @@
+import React, { useRef, useEffect, useState } from 'react';
 import Link from '../../../components/atoms/Link';   
 import Chatbot from '../../molecules/Chatbot';
 import { getTranslation, Language } from '../../../utils/translations';
@@ -6,24 +7,82 @@ function AskMeSomething({ language }: { language: Language }) {
     // Translations
     const title = getTranslation('askMeTitle', language);
     const paragraph = getTranslation('askMeParagraph', language);
-    const buttonLabel = getTranslation('askMeButton', language);
+    const linkLabel = getTranslation('askMeLink', language);
     
+    // Parallax and interaction refs
+    const chatbotRef = useRef<HTMLDivElement>(null);
+    const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
+    const [isHovering, setIsHovering] = useState(false);
+
+    useEffect(() => {
+        const handleScroll = () => {
+            if (chatbotRef.current) {
+                const scrollPosition = window.pageYOffset;
+                
+                // Playful wave-like scroll effect with sine wave (no vertical translation)
+                const waveAmplitude = 10; // Adjust for more/less wobble
+                const waveFrequency = 0.005; // Adjust for different wave patterns
+                const wobbleX = Math.sin(scrollPosition * waveFrequency) * waveAmplitude;
+
+                chatbotRef.current.style.transform = `translateX(${wobbleX}px) rotate(${wobbleX * 0.1}deg)`;
+            }
+        };
+
+        const handleMouseMove = (e: MouseEvent) => {
+            setMousePosition({ x: e.clientX, y: e.clientY });
+        };
+
+        window.addEventListener('scroll', handleScroll);
+        window.addEventListener('mousemove', handleMouseMove);
+
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+            window.removeEventListener('mousemove', handleMouseMove);
+        };
+    }, []);
+
+    const handleMouseEnter = () => setIsHovering(true);
+    const handleMouseLeave = () => setIsHovering(false);
+
+    // Calculate interactive tilt based on mouse position
+    const calculateTilt = () => {
+        if (!chatbotRef.current) return { transform: 'none' };
+        
+        const rect = chatbotRef.current.getBoundingClientRect();
+        const centerX = rect.left + rect.width / 2;
+        const centerY = rect.top + rect.height / 2;
+        
+        const deltaX = (mousePosition.x - centerX) / 100;
+        const deltaY = (mousePosition.y - centerY) / 100;
+        
+        return {
+            transform: `perspective(1000px) rotateX(${-deltaY}deg) rotateY(${deltaX}deg) scale(${isHovering ? 1.02 : 1})`,
+            transition: 'transform 0.1s ease-out'
+        };
+    };
+
     return (
         <div className="lg:flex">
             <div className="lg:w-[50%]">
                 {/* Mobile text */}
-                <div className="block lg:hidden pb-14 sm:pb-4">
+                <div className="block lg:hidden pb-12 sm:pb-4">
                     <h2 className="font-sans font-medium text-2xl sm:text-3xl leading-[1.2]  bg-gradient-to-r from-colorTertiary to-colorMain/80 dark:from-colorWhite/90 dark:to-colorWhite/90 bg-clip-text text-transparent">{title} <span className="-ml-2 font-figtree">...</span></h2>
                     <p className="text-colorMain dark:text-colorWhite font-figtree text-base mt-6 pb-8">{paragraph}</p>
                 </div>
                 <div className="relative opacity-80 hover:opacity-100">
                     <div className="absolute -top-6 -right-10 md:-right-6 w-full h-[300px] border border-colorQuinaryLight dark:border-colorQuinary/50 z-0"></div>
-                    <div className="relative z-10">
+                    <div 
+                        ref={chatbotRef}
+                        className="relative z-10 transition-all duration-200 ease-out"
+                        style={calculateTilt()}
+                        onMouseEnter={handleMouseEnter}
+                        onMouseLeave={handleMouseLeave}
+                    >
                         <Chatbot language={language} />
                     </div>
                     <div className="mt-6">
                         <Link 
-                            linkText="Download my full resume" 
+                            linkText={linkLabel} 
                             linkUrl="" 
                             blank={true}
                             icon={<svg
@@ -48,8 +107,8 @@ function AskMeSomething({ language }: { language: Language }) {
             </div>
             <div className="sm:pl-[50px] lg:w-[50%] lg:pl-[100px] 2xl:pl-[200px]">
                 {/* Desktop text */}
-                <div className="hidden lg:block">
-                    <h2 className="font-sans font-medium text-2xl sm:text-3xl leading-[1.2] bg-gradient-to-r from-colorTertiary to-colorMain/80 dark:from-colorWhite dark:to-colorWhite bg-clip-text text-transparent">{title}<span className="pl-1 font-figtree">...</span></h2>
+                <div className="hidden lg:block max-w-[550px]">
+                    <h2 className="font-sans font-medium text-3xl leading-[1.2] bg-gradient-to-r from-colorTertiary to-colorMain/80 dark:from-colorWhite/90 dark:to-colorWhite/90 bg-clip-text text-transparent">{title} <span className="-ml-2 font-figtree">...</span></h2>
                     <p className="text-colorMain dark:text-colorWhite font-figtree text-base mt-6 pb-8">{paragraph}</p>
                 </div>
             </div>

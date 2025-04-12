@@ -51,11 +51,11 @@ function Chatbot({ language }: { language: Language }) {
 
     return (
        <div className="">
-            <form className="relative bg-[#bfc4d4] dark:bg-darkBlue p-4 rounded-lg dark:bg-[#31465d] rounded-t-lg border dark:border-colorWhite/20  border-colorMain/10">
+            <form className="relative bg-[#bfc4d4] dark:bg-darkBlue p-4 rounded-2xl dark:bg-[#31465d] border dark:border-colorWhite/30  border-colorMain/15">
                 <div className="">
                     <div className="h-64 bg-darkBlueDarker rounded-lg"></div>
                 </div>
-                <div className="flex items-center p-2 border dark:border-colorWhite/40 border-colorMain/20 dark:bg-colorWhite/20 bg-colorWhite/60 rounded-lg">
+                <div className="flex items-center p-2 border dark:border-colorWhite/40 border-colorMain/15 dark:bg-colorWhite/20 bg-colorWhite/60 rounded-lg">
                     <input 
                         type="text" 
                         placeholder={`${displayedPlaceholder}${!isFocused && showCursor ? '│' : ''}`}
@@ -64,7 +64,7 @@ function Chatbot({ language }: { language: Language }) {
                         className="flex-grow bg-transparent p-1 dark:text-white text-colorMain focus:outline-none 
                             dark:placeholder:text-white/80 placeholder:text-colorMain/80"
                     />
-                    <button type="submit" className="ml-2 dark:bg-colorQuinary/50 bg-[#c5d438] p-2 rounded-full">
+                    <button type="submit" className="ml-2 dark:bg-colorQuinary/50 bg-[#c5d438] p-2 rounded-full dark:hover:scale-105 hover:scale-105 transition-transform">
                         <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" strokeWidth="3" stroke="currentColor" fill="none" className="text-colorMain/60 dark:text-colorMain w-4 h-4">
                             <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
                             <g id="SVGRepo_tracerCarrier" strokeLinecap="round" strokeLinejoin="round"></g>

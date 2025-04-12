@@ -4,7 +4,6 @@ import Button from '../../atoms/Button';
 import project1 from '../../../assets/projects/project1.png';
 import project2 from '../../../assets/projects/project2.png';
 import project3 from '../../../assets/projects/project3.png';
-import decorativeEl from '../../../assets/png/decorativeCube.png';
 import { getTranslation, Language } from '../../../utils/translations';
 
 function MyProjects({ language }: { language: Language }) {
@@ -27,7 +26,7 @@ function MyProjects({ language }: { language: Language }) {
     const projects = [
         {
             id: "portfolio",
-            title: "Portfolio Éloïse Emery",
+            title: "Éloïse Emery Portfolio",
             tags: ["UI/UX", "React", "Tailwind", "OpenAI", "Docker"]
         },
         {
@@ -54,11 +53,7 @@ function MyProjects({ language }: { language: Language }) {
 
     return (
         // Projects section
-        <div className="relative">  
-            {/* Decorative element */}
-            {/* <div className="absolute -right-[300px] sm:-right-[275px] z-1">
-                <img src={decorativeEl} alt="Decorative Element" className="w-full max-h-[300px] sm:max-h-[340px] object-contain opacity-100 filter-brightness-0 invert dark:filter-none" />
-            </div> */}
+        <div className="relative"> 
             {/* Top section */}
             <div className="lg:flex z-10 relative">
                 <div className="sm:pr-[50px] lg:w-[55%] flex">
@@ -119,8 +114,8 @@ function MyProjects({ language }: { language: Language }) {
                             onMouseLeave={() => setHoveredProject("portfolio")}
                             onClick={(e) => handleProjectClick(project.id, e)}
                         >
-                            <h3 className="w-full text-base text-left dark:text-colorWhite text-colorMain pb-4 sm:pb-0 pr-4">{project.title}</h3>
-                            <div className="flex sm:justify-end w-full text-xs gap-x-2">
+                            <h3 className="text-base w-full sm:w-[50%] text-left dark:text-colorWhite text-colorMain pb-4 sm:pb-0 pr-4">{project.title}</h3>
+                            <div className="w-full sm:w-[50%] flex flex-wrap sm:justify-end text-xs gap-2">
                                 {project.tags.map(tag => (
                                     <p 
                                         key={tag} 
@@ -136,6 +131,7 @@ function MyProjects({ language }: { language: Language }) {
                         </button>
                     ))}
                 </div>
+                {/* Mobile Button */}
                 <div className="flex lg:hidden mt-10">
                     <Button 
                         children={button}

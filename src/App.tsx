@@ -73,7 +73,7 @@ const App: React.FC = () => {
         <div className="flex w-full overflow-x-hidden">
             <div className="flex-1 transition-all duration-300 ease-in-out">
               {/* Header */}
-              <header className="">
+              <header className="w-full max-w-[2000px] mx-auto">
                 <Header toggleMenu={toggleMenu} menuSrc={menuSrc} colorModeSrc={colorModeSrc} toggleColorMode={handleToggleColorMode} toggleLanguage={handleToggleLanguage} language={language} />
               </header>
               {/* Main content */}
@@ -83,7 +83,7 @@ const App: React.FC = () => {
                   <Route path="/project/:projectId" element={<TemplateProject language={language} />} />
                   <Route path="*" element={<NotFound language={language} />} />
                 </Routes>
-                <footer>
+                <footer className="w-full max-w-[2000px] mx-auto">
                   <Footer language={language} />
                 </footer>
               </div>

@@ -28,24 +28,32 @@ function Hero({ language }: { language: Language }) {
       const layer2Light = document.getElementById('layer2Light');
 
       if (layer1) {
-        const maxTranslateY = 170;
+        const maxTranslateY = 190;
+        const maxScaleDown = 0.95; 
         const translateY = Math.min(scrollPosition * 0.6, maxTranslateY);
-        layer1.style.transform = `translateY(${translateY}px)`;
+        const scaleDown = Math.max(1 - (scrollPosition * 0.002), maxScaleDown); 
+        layer1.style.transform = `translateY(${translateY}px) scale(${scaleDown})`;
       }
       if (layer1Light) {
-        const maxTranslateY = 170;
+        const maxTranslateY = 190;
+        const maxScaleDown = 0.95; 
         const translateY = Math.min(scrollPosition * 0.6, maxTranslateY);
-        layer1Light.style.transform = `translateY(${translateY}px)`;
+        const scaleDown = Math.max(1 - (scrollPosition * 0.002), maxScaleDown); 
+        layer1Light.style.transform = `translateY(${translateY}px) scale(${scaleDown})`;
       }
       if (layer2) {
-        const maxTranslateY = 120;
+        const maxTranslateY = 130;
+        const maxScaleDown = 0.75; 
         const translateY = Math.min(scrollPosition * 0.5, maxTranslateY);
-        layer2.style.transform = `translateY(${translateY}px)`;
+        const scaleDown = Math.max(1 - (scrollPosition * 0.002), maxScaleDown); 
+        layer2.style.transform = `translateY(${translateY}px) scale(${scaleDown})`;
       }
       if (layer2Light) {
         const maxTranslateY = 120;
+        const maxScaleDown = 0.75; 
         const translateY = Math.min(scrollPosition * 0.5, maxTranslateY);
-        layer2Light.style.transform = `translateY(${translateY}px)`;
+        const scaleDown = Math.max(1 - (scrollPosition * 0.002), maxScaleDown); 
+        layer2Light.style.transform = `translateY(${translateY}px) scale(${scaleDown})`;
       }
       if (layer3) {
         const maxTranslateY = 50;
@@ -56,7 +64,7 @@ function Hero({ language }: { language: Language }) {
       }
       if (layer4) {
         const maxTranslateY = 75;
-        const maxScaleDown = 0.95; 
+        const maxScaleDown = 0.80; 
         const translateY = Math.min(scrollPosition * 0.4, maxTranslateY);
         const scaleDown = Math.max(1 - (scrollPosition * 0.0015), maxScaleDown); 
         layer4.style.transform = `translateY(${translateY}px) scale(${scaleDown})`;
@@ -102,7 +110,7 @@ function Hero({ language }: { language: Language }) {
           <img src={layer3} alt="Layer 3" className="absolute object-contain -ml-[600px] mt-[100px] w-[130px] max-w-[130px] max-h-[130px] filter-brightness-0 invert dark:filter-none opacity-50 dark:opacity-70 sm:opacity-100" id="layer3" />
         </div>
       </div>
-      <div className="absolute top-[50px] -right-[50px] md:right-8 md:top-0 z-0 opacity-30 sm:opacity-50 filter-brightness-0 invert dark:filter-none" id="layer4">
+      <div className="absolute top-[50px] -right-[50px] md:right-8 md:top-0 z-0 opacity-30 sm:opacity- filter-brightness-0 invert dark:filter-none" id="layer4">
         <img src={layer4} alt="Paralaxe Element" className="w-full max-h-[350px]" />
       </div>
       {/* Hero Texts */}

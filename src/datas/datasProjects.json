@@ -2,7 +2,7 @@
     "projects": [
         {
             "id": "portfolio",
-            "title": "Portfolio Éloïse Emery",
+            "title": "Éloïse Emery Portfolio",
             "descriptionKey": "projectPortfolioDescription",
             "technologies": [ "React", "Tailwind", "TypeScript", "OpenAI", "Docker"],
             "githubLink": "https://github.com/eloiseemery/portfolio",

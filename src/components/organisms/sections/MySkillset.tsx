@@ -17,12 +17,17 @@ function MySkillset({ language }: { language: Language }) {
     // Translations
     const title = getTranslation('mySkillsetTitle', language);
     const paragraph = getTranslation('mySkillsetParagraph', language);
+    const linkLabel = getTranslation('mySkillsetLink', language);
+    const skill1 = getTranslation('mySkillsetSkill1', language);
+    const skill2 = getTranslation('mySkillsetSkill2', language);
+    const skill3 = getTranslation('mySkillsetSkill3', language);
+    const skill4 = getTranslation('mySkillsetSkill4', language);
     
     return (
         <div className="relative">
             <div className="relative">
                 <h2 className="mx-auto text-center w-[350px] font-sans font-medium text-2xl sm:text-3xl leading-[1.2]  bg-gradient-to-r dark:from-colorWhite/90 dark:to-colorWhite/90 from-colorTertiary to-colorMain/80 bg-clip-text text-transparent">{title}</h2>
-                <p className="text-center dark:text-colorWhite text-colorMain font-figtree text-base mt-6 pb-2 md:max-w-[75%] lg:max-w-[60%] md:mx-auto">{paragraph}</p>
+                <p className="text-center dark:text-colorWhite text-colorMain font-figtree text-base mt-6 pb-2 max-w-[700px] md:mx-auto">{paragraph}</p>
             </div>
             {/* Skillset grid // Can add different images depends on color mode */}
             <div className="mr-[25px] md:mr-0 flex overflow-x-auto space-x-4 py-4 md:grid md:grid-cols-4 lg:grid-cols-6 gap-y-8 mt-6">
@@ -44,18 +49,18 @@ function MySkillset({ language }: { language: Language }) {
                         <img 
                             src={document.documentElement.classList.contains('dark') ? skill.dark : skill.light} 
                             alt={skill.alt} 
-                            className={`w-auto h-[75px] ${skill.alt === "Adobe Icon" ? "h-[80px]" : ""}`}
+                            className={`w-auto h-[75px] ${skill.alt === "Adobe Icon" ? "h-[80px]" : ""} ${skill.alt === "PHP Icon" ? "h-[70px]" : ""}`}
                         />
                     </div>
                 ))}
             </div>
             {/* Section Bottom */}
-            <div className="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-y-8 rounded-lg text-center font-sans text-xs sm:text-sm mt-8 p-6 sm:p-10 bg-[#bfc4d470] dark:bg-[#31465d70] text-colorMain dark:text-colorWhite/80 border dark:border-colorWhite/20 border-colorMain/10 dark:opacity-90 opacity-70 hover:opacity-100 dark:hover:opacity-100" >
-                <p>UX/UI<br /> conception</p>
-                <p>Design<br /> system</p>
-                <p>Responsive<br /> design</p>
-                <p>Tailwind<br /> CSS</p>
-                <p>Database<br /> conception</p>
+            <div className="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-y-8 rounded-lg gap-x-10  text-center font-sans text-xs sm:text-sm mt-8 p-6 sm:p-10 bg-[#bfc4d470] dark:bg-[#31465d70] text-colorMain dark:text-colorWhite/80 border dark:border-colorWhite/20 border-colorMain/10 dark:opacity-90 opacity-70 hover:opacity-100 dark:hover:opacity-100" >
+                <p className="">{skill1}</p>
+                <p>{skill2}</p>
+                <p>{skill3}</p>
+                <p>Tailwind CSS</p>
+                <p>{skill4}</p>
                 <p>Shopify</p>
                 <p>Next.js</p>
                 <p>Angular</p>
@@ -66,7 +71,7 @@ function MySkillset({ language }: { language: Language }) {
             </div>
             <div className="mt-3 flex justify-end">
                 <Link 
-                    linkText="see all my skills on my LinkedIn" 
+                    linkText={linkLabel} 
                     linkUrl="https://www.linkedin.com/in/eloise-emery/details/skills/" 
                     blank={true}
                 />
