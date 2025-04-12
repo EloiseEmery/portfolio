@@ -76,8 +76,8 @@ const translations = {
     fr: "Posez-moi une question"  
   },
   askMeParagraph: {
-    en: "Being an introvert, I've made this chatbot for you to chat with me. It has an in-depth understanding of my professional experience and the project's source code. Feel free to ask it questions about me or my work. It uses OpenAI's GPT-4 and LangChain. Enjoy!",
-    fr: "Étant introvertie, j'ai conçu ce chatbot pour vous permettre de discuter avec moi. Il bénéficie d'une connaissance approfondie de mon expérience professionnelle et du code source de ce projet. Posez-lui vos questions sur moi ou mon travail. Il utilise GPT-4 d'OpenAI et LangChain. Amusez-vous!"
+    en: "Being an introverted person, I've made this chatbot for you to chat with me. It has an in-depth understanding of my professional experience and the project's source code. Feel free to ask it questions about me or my work. It uses OpenAI's GPT-4 and LangChain. Enjoy!",
+    fr: "Étant une personne introvertie, j'ai conçu ce chatbot pour vous permettre de discuter avec moi. Il bénéficie d'une connaissance approfondie de mon expérience professionnelle et du code source de ce projet. Posez-lui vos questions sur moi ou mon travail. Il utilise GPT-4 d'OpenAI et LangChain. Amusez-vous!"
   },
   askMeButton: {
     en: "Download my full resume",
@@ -149,8 +149,8 @@ const translations = {
     fr: 'Points Clés'
   },
   viewOnGithub: {
-    en: 'Give it a ★ on GitHub',
-    fr: 'Donnez-lui une ★ sur GitHub'
+    en: 'Give a ★ on GitHub',
+    fr: 'Donnez une ★ sur GitHub'
   },
   visitWebsite: {
     en: 'Visit Website',

@@ -16,7 +16,7 @@ function Hero({ language }: { language: Language }) {
   const pText = getTranslation('heroParagraph', language);
   const buttonLabel = getTranslation('heroButton', language);
 
-  // Handle Paralaxe effect
+  // Handle paralax effect
   useEffect(() => {
     const handleScroll = () => {
       const scrollPosition = window.scrollY;
@@ -28,32 +28,32 @@ function Hero({ language }: { language: Language }) {
       const layer2Light = document.getElementById('layer2Light');
 
       if (layer1) {
-        const maxTranslateY = 170; // Set the maximum translate value
+        const maxTranslateY = 170;
         const translateY = Math.min(scrollPosition * 0.6, maxTranslateY);
         layer1.style.transform = `translateY(${translateY}px)`;
       }
       if (layer1Light) {
-        const maxTranslateY = 170; // Set the maximum translate value
+        const maxTranslateY = 170;
         const translateY = Math.min(scrollPosition * 0.6, maxTranslateY);
         layer1Light.style.transform = `translateY(${translateY}px)`;
       }
       if (layer2) {
-        const maxTranslateY = 120; // Set the maximum translate value
+        const maxTranslateY = 120;
         const translateY = Math.min(scrollPosition * 0.5, maxTranslateY);
         layer2.style.transform = `translateY(${translateY}px)`;
       }
       if (layer2Light) {
-        const maxTranslateY = 120; // Set the maximum translate value
+        const maxTranslateY = 120;
         const translateY = Math.min(scrollPosition * 0.5, maxTranslateY);
         layer2Light.style.transform = `translateY(${translateY}px)`;
       }
       if (layer3) {
-        const maxTranslateY = 50; // Set the maximum translate value
+        const maxTranslateY = 50;
         const translateY = Math.min(scrollPosition * 0.4, maxTranslateY);
         layer3.style.transform = `translateY(${translateY}px)`;
       }
       if (layer4) {
-        const maxTranslateY = 75; // Set the maximum translate value
+        const maxTranslateY = 75;
         const translateY = Math.min(scrollPosition * 0.4, maxTranslateY);
         layer4.style.transform = `translateY(${translateY}px)`;
       }
@@ -69,7 +69,6 @@ function Hero({ language }: { language: Language }) {
   return (
     <div className="relative">
       {/* Hero Images paralaxe */}
-
       <div className="absolute right-[-100px] md:right-0 top-0 z-0 opacity-70">
         <div className="flex relative">
           <img 
@@ -96,7 +95,7 @@ function Hero({ language }: { language: Language }) {
             className="absolute object-contain -ml-[500px] w-[450px] max-w-[340px] max-h-[270px] hidden dark:block" 
             id="layer2" 
           />
-          <img src={layer3} alt="Layer 3" className="absolute object-contain -ml-[600px] mt-[100px] w-[130px] max-w-[130px] max-h-[130px] filter-brightness-0 invert dark:filter-none" id="layer3" />
+          <img src={layer3} alt="Layer 3" className="absolute object-contain -ml-[600px] mt-[100px] w-[130px] max-w-[130px] max-h-[130px] filter-brightness-0 invert dark:filter-none opacity-50 dark:opacity-70 sm:opacity-100" id="layer3" />
         </div>
       </div>
       <div className="absolute top-[50px] -right-[50px] md:right-8 md:top-0 z-0 opacity-30 sm:opacity-50 filter-brightness-0 invert dark:filter-none" id="layer4">

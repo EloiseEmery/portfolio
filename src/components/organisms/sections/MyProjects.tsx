@@ -108,18 +108,18 @@ function MyProjects({ language }: { language: Language }) {
                     </div>
                 </div>
                 {/* Projects Templating */}
-                <div className="mt-8 lg:w-[50%] lg:pl-6 max-h-[285px] overflow-y-auto lg:max-h-[100%] lg:overflow-y-hidden">
+                <div className="mt-8 lg:w-[50%] lg:pl-6 max-h-[285px] sm:max-h-[200px] overflow-y-auto lg:max-h-[100%] lg:overflow-y-hidden">
                     {projects.map(project => (
-                        <div 
+                        <button 
                             key={project.id} 
-                            className={`project-${project.id} group sm:flex 
+                            className={`project-${project.id} group sm:flex w-full  
                                 ${hoveredProject === project.id ? 'dark:bg-[#31465d70] bg-colorTertiary/10' : ''} 
                                 justify-center items-center p-4 rounded-lg cursor-pointer`}
                             onMouseEnter={() => setHoveredProject(project.id)}
                             onMouseLeave={() => setHoveredProject("portfolio")}
                             onClick={(e) => handleProjectClick(project.id, e)}
                         >
-                            <h3 className="w-full text-base dark:text-colorWhite text-colorMain pb-4 sm:pb-0 pr-4">{project.title}</h3>
+                            <h3 className="w-full text-base text-left dark:text-colorWhite text-colorMain pb-4 sm:pb-0 pr-4">{project.title}</h3>
                             <div className="flex sm:justify-end w-full text-xs gap-x-2">
                                 {project.tags.map(tag => (
                                     <p 
@@ -133,7 +133,7 @@ function MyProjects({ language }: { language: Language }) {
                                     </p>
                                 ))}
                             </div>
-                        </div>
+                        </button>
                     ))}
                 </div>
                 <div className="flex lg:hidden mt-10">

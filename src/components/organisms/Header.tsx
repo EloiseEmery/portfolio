@@ -31,34 +31,34 @@ function Header({ toggleMenu, menuSrc, toggleColorMode, colorModeSrc, toggleLang
         {/* Logo */}
         <LogoHeader isScrolled={isScrolled} />
         {/* Sidebar icone Desktop */}
-        <div className="hidden md:block cursor-pointer min-w-[35px] hover:opacity-70 transition-all duration-300 ease-in-out" onClick={toggleMenu}>
+        <button className="hidden md:block cursor-pointer min-w-[35px] hover:opacity-70 transition-all duration-300 ease-in-out" onClick={toggleMenu}>
           <img
             className="h-[16px] opacity-70 filter-brightness-0 invert dark:filter-none"
             src={menuSrc}
             alt="Menu"
           />
-        </div>
+        </button>
       </div>
       {/* Right section header */}
       <div className="flex items-center">
         {/* Language */}
-        <p className="p-4 cursor-pointer text-colorBlack dark:text-colorWhite text-sm font-sans hover:opacity-70 transition-all duration-300 ease-in-out" onClick={() => {
+        <button className="p-4 cursor-pointer text-colorBlack dark:text-colorWhite text-sm font-sans hover:opacity-70 transition-all duration-300 ease-in-out" onClick={() => {
           toggleLanguage();
-        }}>{language === 'fr' ? 'EN' : 'FR'}</p>
+        }}>{language === 'fr' ? 'EN' : 'FR'}</button>
         {/* Color mode */}
-        <div className="p-4 cursor-pointer hover:opacity-70 transition-all duration-300 ease-in-out" onClick={() => {
+        <button className="p-4 cursor-pointer hover:opacity-70 transition-all duration-300 ease-in-out" onClick={() => {
           toggleColorMode();
         }}>
           <img src={colorModeSrc} alt="Light/Dark Mode" className="h-[18px] filter-brightness-0 invert dark:filter-none" />
-        </div>
+        </button>
         {/* Sidebar icone Mobile */}
-        <div className="p-4 md:hidden cursor-pointer min-w-[35px] hover:opacity-70 transition-all duration-300 ease-in-out" onClick={toggleMenu}>
+        <button className="p-4 md:hidden cursor-pointer min-w-[35px] hover:opacity-70 transition-all duration-300 ease-in-out" onClick={toggleMenu}>
           <img
             className="h-[16px] filter-brightness-0 invert dark:filter-none"
             src={menuSrc}
             alt="Menu"
           />
-        </div>
+        </button>
       </div>
     </div>
   );

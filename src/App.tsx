@@ -63,7 +63,7 @@ const App: React.FC = () => {
     <Router>
       <div className="relative flex app-container bg-gradient-main-secondary-light-mode dark:bg-gradient-main-secondary-main">
         <div className="absolute top-0 left-0 w-full h-full bg-noise-texture bg-repeat bg-[length:100px_100px] 
-          opacity-25 
+          opacity-30 
           dark:opacity-10 dark:brightness-150 dark:contrast-150"></div>
         {/* Sidebar */}
         {isSidebarOpen && <Sidebar closeSidebar={closeSidebar} language={language} />}
