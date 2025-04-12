@@ -49,13 +49,17 @@ function Hero({ language }: { language: Language }) {
       }
       if (layer3) {
         const maxTranslateY = 50;
+        const maxScaleDown = 0.9; 
         const translateY = Math.min(scrollPosition * 0.4, maxTranslateY);
-        layer3.style.transform = `translateY(${translateY}px)`;
+        const scaleDown = Math.max(1 - (scrollPosition * 0.002), maxScaleDown); 
+        layer3.style.transform = `translateY(${translateY}px) scale(${scaleDown})`;
       }
       if (layer4) {
         const maxTranslateY = 75;
+        const maxScaleDown = 0.95; 
         const translateY = Math.min(scrollPosition * 0.4, maxTranslateY);
-        layer4.style.transform = `translateY(${translateY}px)`;
+        const scaleDown = Math.max(1 - (scrollPosition * 0.0015), maxScaleDown); 
+        layer4.style.transform = `translateY(${translateY}px) scale(${scaleDown})`;
       }
     };
 
