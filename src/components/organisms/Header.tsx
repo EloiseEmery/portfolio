@@ -25,7 +25,7 @@ function Header({ toggleMenu, menuSrc, toggleColorMode, colorModeSrc, toggleLang
   }, []);
 
   return (
-    <div className={`fixed top-0 z-50 w-full flex items-center justify-between px-4 md:px-10 transition-all duration-300 ease-in-out ${isScrolled ? 'h-[50px] shadow-md backdrop-blur-md bg-gradient-to-bl from-[#e6eaf195] to-[#bbc2cf95] dark:from-[#171d2890] dark:to-[#18202D90]' : 'h-[80px]' }`}>
+    <div className={`fixed top-0 z-50 w-full flex items-center justify-between px-4 md:px-10 transition-all duration-300 ease-in-out ${isScrolled ? 'h-[50px] shadow-md backdrop-blur-md bg-gradient-to-bl from-[#e6eaf1] to-[#bbc2cf] sm:from-[#e6eaf195] sm:to-[#bbc2cf95] dark:from-[#171d28] dark:to-[#18202D] sm:dark:from-[#171d2890] sm:dark:to-[#18202D90]' : 'h-[80px]' }`}>
       {/* Left section header */}
       <div className="flex items-center gap-8">
         {/* Logo */}

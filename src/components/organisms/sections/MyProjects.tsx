@@ -131,7 +131,7 @@ function MyProjects({ language }: { language: Language }) {
                         </button>
                     ))}
                 </div>
-                {/* Mobile Button */}
+                {/* Button Mobile */}
                 <div className="flex lg:hidden mt-10">
                     <Button 
                         children={button}

@@ -2,6 +2,7 @@ import React, { useRef, useEffect, useState } from 'react';
 import Link from '../../../components/atoms/Link';   
 import Chatbot from '../../molecules/Chatbot';
 import { getTranslation, Language } from '../../../utils/translations';
+import { openaiApiKey } from '../../../utils/appSettings';
 
 function AskMeSomething({ language }: { language: Language }) {
     // Translations
@@ -13,34 +14,6 @@ function AskMeSomething({ language }: { language: Language }) {
     const chatbotRef = useRef<HTMLDivElement>(null);
     const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
     const [isHovering, setIsHovering] = useState(false);
-
-    useEffect(() => {
-        const handleScroll = () => {
-            if (chatbotRef.current) {
-                const scrollPosition = window.pageYOffset;
-                
-                // Playful wave-like scroll effect with sine wave (no vertical translation)
-                const waveAmplitude = 10; // Adjust for more/less wobble
-                const waveFrequency = 0.005; // Adjust for different wave patterns
-                const wobbleX = Math.sin(scrollPosition * waveFrequency) * waveAmplitude;
-
-                chatbotRef.current.style.transform = `translateX(${wobbleX}px) rotate(${wobbleX * 0.1}deg)`;
-            }
-        };
-
-        const handleMouseMove = (e: MouseEvent) => {
-            setMousePosition({ x: e.clientX, y: e.clientY });
-        };
-
-        window.addEventListener('scroll', handleScroll);
-        window.addEventListener('mousemove', handleMouseMove);
-
-        return () => {
-            window.removeEventListener('scroll', handleScroll);
-            window.removeEventListener('mousemove', handleMouseMove);
-        };
-    }, []);
-
     const handleMouseEnter = () => setIsHovering(true);
     const handleMouseLeave = () => setIsHovering(false);
 
@@ -61,6 +34,49 @@ function AskMeSomething({ language }: { language: Language }) {
         };
     };
 
+    // Handle parallax and interaction
+    useEffect(() => {
+        const handleScroll = () => {
+            if (chatbotRef.current) {
+                const scrollPosition = window.pageYOffset;
+                
+                // Playful wave-like scroll effect with sine wave (no vertical translation)
+                const waveAmplitude = 10; // Adjust for more/less wobble
+                const waveFrequency = 0.005; // Adjust for different wave patterns
+                const wobbleX = Math.sin(scrollPosition * waveFrequency) * waveAmplitude;
+
+                chatbotRef.current.style.transform = `translateX(${wobbleX}px) rotate(${wobbleX * 0.1}deg)`;
+            }
+        };
+
+        const handleMouseMove = (e: MouseEvent) => {
+            setMousePosition({ x: e.clientX, y: e.clientY });
+        };
+
+        window.addEventListener('scroll', handleScroll);
+        window.addEventListener('mousemove', handleMouseMove);
+        
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+            window.removeEventListener('mousemove', handleMouseMove);
+        };
+    }, []);
+
+    // Handle Chatbot
+    const [prompt, setPrompt] = useState("How to get rich?");
+    const [messages, setMessages] = useState([
+        {
+        text: "Hi, I'm a Naval AI. What would you like to know?",
+        type: "bot",
+        },
+    ]);
+    const [error, setError] = useState("");
+
+    // This function updates the prompt value when the user types in the prompt box
+    const handlePromptChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+        setPrompt(e.target.value);
+    };
+
     return (
         <div className="lg:flex">
             <div className="lg:w-[50%]">
@@ -78,7 +94,10 @@ function AskMeSomething({ language }: { language: Language }) {
                         onMouseEnter={handleMouseEnter}
                         onMouseLeave={handleMouseLeave}
                     >
-                        <Chatbot language={language} />
+                        <Chatbot 
+                            language={language}
+                            handlePromptChange={handlePromptChange}
+                        />
                     </div>
                     <div className="mt-6">
                         <Link 

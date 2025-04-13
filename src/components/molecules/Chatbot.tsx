@@ -2,7 +2,7 @@ import chatLogos from '../../assets/png/chatLogos.png';
 import { getTranslation, Language } from '../../utils/translations';
 import { useState, useEffect } from 'react';
 
-function Chatbot({ language }: { language: Language }) {
+function Chatbot({ language, handlePromptChange }: { language: Language, handlePromptChange: (e: React.ChangeEvent<HTMLInputElement>) => void })  {
     const title = getTranslation('askMeInput', language);
     const [displayedPlaceholder, setDisplayedPlaceholder] = useState('');
     const [isComplete, setIsComplete] = useState(false);

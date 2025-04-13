@@ -8,15 +8,11 @@ import NotFound from './components/pages/NotFound';
 import TemplateProject from './components/pages/TemplateProject'; 
 import menuSidebarClosed from './assets/svg/menuSidebar.svg'; 
 import menuSidebarOpen from './assets/svg/menuSidebarOpen.svg'; 
-import lightMode from './assets/svg/lightMode.svg';
-import darkMode from './assets/svg/darkMode.svg';
 import './index.css';
 import { Language } from './utils/translations';
 import { setupHashChangeListener } from './utils/navigation';
 import { getInitialColorMode, toggleColorMode, getInitialLanguage, toggleLanguage } from './utils/appSettings';
 import AppRoutes from './routes';
-
-
 
 const App: React.FC = () => {
   const [colorModeSrc, setColorModeSrc] = useState(getInitialColorMode());
@@ -27,6 +23,7 @@ const App: React.FC = () => {
   });
   const [menuSrc, setMenuSrc] = useState(isSidebarOpen ? menuSidebarOpen : menuSidebarClosed);
   const [mainContentTranslate, setMainContentTranslate] = useState(0);
+
 
   //Setup hash change listener for scrolling
   useEffect(() => {
