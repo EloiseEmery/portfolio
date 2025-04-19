@@ -2,7 +2,7 @@ import chatLogos from '../../assets/png/chatLogos.png';
 import { getTranslation, Language } from '../../utils/translations';
 import { useState, useEffect } from 'react';
 
-function Chatbot({ language, handlePromptChange }: { language: Language, handlePromptChange: (e: React.ChangeEvent<HTMLInputElement>) => void })  {
+function Chatbot({ language }: { language: Language })  {
     const title = getTranslation('askMeInput', language);
     const [displayedPlaceholder, setDisplayedPlaceholder] = useState('');
     const [isComplete, setIsComplete] = useState(false);
@@ -49,9 +49,54 @@ function Chatbot({ language, handlePromptChange }: { language: Language, handleP
         setShowCursor(true);
     }, [language]);
 
+     // Handle Chatbot
+        const [prompt, setPrompt] = useState("How to get rich?");
+        const [messages, setMessages] = useState([
+            {
+            text: "Hi, I'm a Naval AI. What would you like to know?",
+            type: "assistant",
+            },
+        ]);
+        const [error, setError] = useState("");
+    
+        // This function updates the prompt value when the user types in the prompt box
+        const handlePromptChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+            setPrompt(e.target.value);
+        };
+    
+
+    const handleSubmit = async (e: React.FormEvent) => {
+        e.preventDefault();
+        console.log('Submitted');
+        // if (prompt) {
+        //     setMessages(prev => [...prev, { text: prompt, type: "user" }]);
+        //     setPrompt('');
+        //     setError('');
+        //     try {
+        //         const response = await fetch('http://localhost:3000/api/chat', {
+        //             method: 'POST',
+        //             headers: {
+        //                 'Content-Type': 'application/json',
+        //             },
+        //             body: JSON.stringify({ prompt }),
+        //         });
+        //         const data = await response.json();
+        //         if (data.error) {
+        //             setError(data.error);
+        //         } else {
+        //             setMessages(prev => [...prev, { text: data.response, type: "assistant" }]);
+        //         }
+        //     } catch (error) {
+        //         setError('Failed to fetch response');
+        //     }
+        // }
+    };
+
     return (
        <div className="">
-            <form className="relative bg-[#bfc4d4] dark:bg-darkBlue p-4 rounded-2xl dark:bg-[#31465d] border dark:border-colorWhite/30  border-colorMain/15">
+            <form 
+                onSubmit={handleSubmit}
+                className="relative bg-[#bfc4d4] dark:bg-darkBlue p-4 rounded-2xl dark:bg-[#31465d] border dark:border-colorWhite/30  border-colorMain/15">
                 <div className="">
                     <div className="h-64 bg-darkBlueDarker rounded-lg"></div>
                 </div>

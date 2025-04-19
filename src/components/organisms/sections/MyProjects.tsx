@@ -59,7 +59,7 @@ function MyProjects({ language }: { language: Language }) {
                 <div className="sm:pr-[50px] lg:w-[55%] flex">
                     <div>
                         <h2 className="font-sans font-medium text-2xl sm:text-3xl leading-[1.2]  bg-gradient-to-r dark:from-colorWhite/90 dark:to-colorWhite/90 from-colorTertiary to-colorMain/80 bg-clip-text text-transparent">{title}</h2>
-                        <p className="dark:text-colorWhite text-colorMain font-figtree text-base mt-6 lg:pb-8 ">{paragraph}</p>
+                        <p className="dark:text-colorWhite text-colorMain font-figtree text-base mt-6 pb-1 ">{paragraph}</p>
                     </div>
                 </div>
                 {/* Button Desktop */}

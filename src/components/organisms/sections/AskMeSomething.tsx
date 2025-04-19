@@ -62,27 +62,12 @@ function AskMeSomething({ language }: { language: Language }) {
         };
     }, []);
 
-    // Handle Chatbot
-    const [prompt, setPrompt] = useState("How to get rich?");
-    const [messages, setMessages] = useState([
-        {
-        text: "Hi, I'm a Naval AI. What would you like to know?",
-        type: "bot",
-        },
-    ]);
-    const [error, setError] = useState("");
-
-    // This function updates the prompt value when the user types in the prompt box
-    const handlePromptChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-        setPrompt(e.target.value);
-    };
-
     return (
         <div className="lg:flex">
             <div className="lg:w-[50%]">
                 {/* Mobile text */}
                 <div className="block lg:hidden pb-12 sm:pb-4">
-                    <h2 className="font-sans font-medium text-2xl sm:text-3xl leading-[1.2]  bg-gradient-to-r from-colorTertiary to-colorMain/80 dark:from-colorWhite/90 dark:to-colorWhite/90 bg-clip-text text-transparent">{title} <span className="-ml-2 font-figtree">...</span></h2>
+                    <h2 className="font-sans font-medium text-2xl sm:text-3xl leading-[1.2]  bg-gradient-to-r from-colorTertiary to-colorMain/80 dark:from-colorWhite/90 dark:to-colorWhite/90 bg-clip-text text-transparent">{title} <span className="-ml-3.5 font-figtree">...</span></h2>
                     <p className="text-colorMain dark:text-colorWhite font-figtree text-base mt-6 pb-8">{paragraph}</p>
                 </div>
                 <div className="relative opacity-80 hover:opacity-100">
@@ -96,7 +81,6 @@ function AskMeSomething({ language }: { language: Language }) {
                     >
                         <Chatbot 
                             language={language}
-                            handlePromptChange={handlePromptChange}
                         />
                     </div>
                     <div className="mt-6">
@@ -127,7 +111,7 @@ function AskMeSomething({ language }: { language: Language }) {
             <div className="sm:pl-[50px] lg:w-[50%] lg:pl-[100px] 2xl:pl-[200px]">
                 {/* Desktop text */}
                 <div className="hidden lg:block max-w-[550px]">
-                    <h2 className="font-sans font-medium text-3xl leading-[1.2] bg-gradient-to-r from-colorTertiary to-colorMain/80 dark:from-colorWhite/90 dark:to-colorWhite/90 bg-clip-text text-transparent">{title} <span className="-ml-2 font-figtree">...</span></h2>
+                    <h2 className="font-sans font-medium text-3xl leading-[1.2] bg-gradient-to-r from-colorTertiary to-colorMain/80 dark:from-colorWhite/90 dark:to-colorWhite/90 bg-clip-text text-transparent">{title} <span className="-ml-4 font-figtree">...</span></h2>
                     <p className="text-colorMain dark:text-colorWhite font-figtree text-base mt-6 pb-8">{paragraph}</p>
                 </div>
             </div>

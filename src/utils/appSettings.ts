@@ -11,6 +11,7 @@ export const getInitialColorMode = () => {
   const isDarkMode = savedColorMode === 'dark';
   return isDarkMode ? lightMode : darkMode;
 };
+
 // Handle color mode toggle between light and dark mode
 export const toggleColorMode = (currentColorModeSrc: string) => {
   const newColorMode = currentColorModeSrc === lightMode ? darkMode : lightMode;
@@ -29,6 +30,7 @@ export const getInitialLanguage = (): Language => {
   const savedLanguage = localStorage.getItem('language');
   return savedLanguage ? savedLanguage as Language : 'en';
 };
+
 // Handle language toggle between English and French
 export const toggleLanguage = (currentLanguage: Language): Language => {
   const newLanguage = currentLanguage === 'en' ? 'fr' : 'en';
