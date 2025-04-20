@@ -136,7 +136,7 @@ function Chatbot({ language }: { language: Language })  {
                     </button>
                 </div>
             </form>
-            <div className="absolute right-0 -top-14 sm:-bottom-10 sm:top-auto filter-brightness-0 invert dark:filter-none">
+            <div className="opacity-80 absolute right-0 -top-14 sm:-bottom-10 sm:top-auto filter-brightness-0 invert dark:filter-none">
                 <img src={chatLogos} className='h-[20px] sm:h-[25px]'/>
             </div>
         </div>

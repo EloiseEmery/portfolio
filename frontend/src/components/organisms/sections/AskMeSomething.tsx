@@ -83,7 +83,8 @@ function AskMeSomething({ language }: { language: Language }) {
                             language={language}
                         />
                     </div>
-                    <div className="mt-6">
+                    {/* Lien télécharger CV */}
+                    {/* <div className="mt-6">
                         <Link 
                             linkText={linkLabel} 
                             linkUrl="" 
@@ -105,12 +106,12 @@ function AskMeSomething({ language }: { language: Language }) {
                             </svg>
                             }
                         />
-                    </div>
+                    </div> */}
                 </div>
             </div>
-            <div className="sm:pl-[50px] lg:w-[50%] lg:pl-[100px] 2xl:pl-[200px]">
-                {/* Desktop text */}
-                <div className="hidden lg:block max-w-[550px]">
+            {/* Desktop text */}
+            <div className="hidden lg:block sm:pl-[50px] lg:w-[50%] lg:pl-[100px] 2xl:pl-[200px]">
+                <div className="max-w-[550px]">
                     <h2 className="font-sans font-medium text-3xl leading-[1.2] bg-gradient-to-r from-colorTertiary to-colorMain/80 dark:from-colorWhite/90 dark:to-colorWhite/90 bg-clip-text text-transparent">{title} <span className="-ml-4 font-figtree">...</span></h2>
                     <p className="text-colorMain dark:text-colorWhite font-figtree text-base mt-6 pb-8">{paragraph}</p>
                 </div>

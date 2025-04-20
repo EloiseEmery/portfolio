@@ -1,12 +1,79 @@
 Présentation
 
-Éloïse Emery est une développeuse web avec une expérience solide. Elle a plus de 5 ans d'expérience dans le domaine du développement web.
+#À propos
+- Je m’appelle Éloïse Emery, j'ai 27 ans et je suis développeuse web à Montréal. Grâce à une double formation en design graphique et en programmation, j’ai développé une synergie unique entre créativité et compétences techniques. J’aime transformer des concepts en designs intuitifs, tout en accordant une grande importance à l’accessibilité et à l’expérience utilisateur.
+En équipe, j’apporte une vision globale et je sais m’adapter à différents rôles selon les besoins du projet. Mon tempérament introverti m’aide à écouter et comprendre les besoins des autres, et j’utilise mon intuition pour soutenir efficacement mon entourage. Je crois fermement qu’une communication authentique et une harmonie d’équipe sont essentielles à la réussite. Je veille toujours à ce que chacun se sente valorisé et entendu.
+J’accorde aussi beaucoup d’importance à la ponctualité, à l’organisation et à la fiabilité, des valeurs qui me tiennent à cœur au quotidien. J’apprécie le travail bien fait, que ce soit en équipe ou en autonomie.
+- Elle est full stack développeuse, mais a une préférence pour le frontend. C’est aussi quelqu’un de très polyvalent.
 
-Expérience professionnelle
+#Expérience professionnelle
+- Développeuse web / YULCOM Technologies
+Montréal, octobre 2022 - aujourd’hui
+Gestion de projets informatiques (méthode agile)
+Développement web, principalement frontend
+Intégration, édition et maintenance de contenus web
+Mise en ligne et maintenance de sites, portails et applications web
+Conception d’architectures de données et modélisation (MCD)
+Création de maquettes UX/UI et définition de l’arborescence des sites
+- Graphiste / Freelance
+2018 - 2023
+Analyse des besoins clients et recherche documentaire
+Réalisation de maquettes, mise en page, édition de concepts graphiques
+Création de sites WordPress, production et numérisation d’images
+Préparation de documents pour l’impression
 
-- Secureworks (2022-2024)
-  Développement de solutions d'IA générative.
-- Neuraxio Inc. (2018-2022)
-  Fondateur et directeur en machine learning.
+#Formation
+- AEC Programmation et développement Web
+Collège de Maisonneuve, 2021 - 2022
+(Acquisition de plusieurs connaissances en informatique et développement de la méthodologie de travail: Processus de conception d’un site Web de a à z et travaux d’équipe dans un environnement de travail agile. Diversification des connaissances et prise d’expériences dans le domaine tout en travaillant à temps partiel sur des contrats à la pige.)
+(Mention d’excellence en programmation avancée, cote R 31)
+- DEC Design graphique
+Cégep du Vieux Montréal, 2017 - 2020
+(Expertise en design, mise en page, création visuelle, initiation au web)
+- Études en sciences humaines
+Collège Montmorency, 2015 - 2017
+(Développement de l’esprit critique, de synthèse et d’analyse)
 
-Langues : Français (natif), Anglais (courant)
+#Certifications
+- LangChain: Develop AI web-apps with JavaScript and LangChain (Udemy, 2023)
+- Docker for the Absolute Beginner - Hands On - DevOps (Udemy, 2023)
+- React JS, Angular & Vue JS - Quickstart & Comparison (Udemy, 2023)
+- Learning How to Learn (Coursera, 2023)
+
+#Distinctions
+- Prix du Mérite en Histoire (MNQ, 2015)
+- Prix de la meilleure moyenne générale (École secondaire Horizon-Jeunesse, 2015)
+
+#Compétences techniques
+## Développement web :
+- HTML5, CSS3, JavaScript (avancé)
+- Programmation orientée objet (POO)
+- PHP, MySQL, SQL, XML, API REST, Node.js
+- Frameworks/bibliothèques : React.js, Vue.js, AngularJS, Next.js, Laravel, Bootstrap, Sass, BEM, ITCSS, Tailwind CSS
+- WordPress (création, intégration, maintenance)
+- Responsive Design, Accessibilité web
+- Shopify, .Liquid
+
+## Outils et environnements :
+- Git, PhpMyAdmin, Docker, JIRA, Méthodes agiles (Scrum)
+- LangChain, OpenAI API
+- Figma, Adobe Creative Suite (Photoshop, Illustrator, InDesign, After Effects), Blender, Ableton Live
+
+## Autres compétences :
+- Design d’interface utilisateur (UI) & expérience utilisateur (UX)
+- Création de maquettes et prototypes (Figma, Adobe XD)
+- Édition graphique et production de visuels
+- Préparation de documents pour l'impression
+
+#Certifications et formations complémentaires
+- LangChain: Develop AI web-apps with JavaScript and LangChain (Udemy)
+- Docker for the Absolute Beginner - Hands On - DevOps (Udemy, KodeKloud)
+- React JS, Angular & Vue JS - Quickstart & Comparison (Udemy)
+- Learning How to Learn (Coursera)
+
+#Compétences humaines et organisationnelles
+- Travail en équipe, communication authentique et écoute active
+- Adaptabilité, polyvalence, autonomie
+- Organisation, ponctualité, fiabilité
+- Sens de l’initiative, créativité, esprit d’analyse et de synthèse
+

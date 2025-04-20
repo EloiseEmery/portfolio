@@ -74,7 +74,7 @@ app.post("/api/chat", function (req, res) { return __awaiter(_this, void 0, void
                 _a = req.body, message = _a.message, _b = _a.conversation, conversation = _b === void 0 ? [] : _b;
                 if (!message)
                     return [2 /*return*/, res.status(400).json({ error: "Message manquant" })];
-                prompt = "Vous \u00EAtes un assistant IA. Vous ne r\u00E9pondez qu'aux questions qui peuvent \u00EAtre r\u00E9pondues STRICTEMENT \u00E0 partir du texte suivant :\n\n".concat(CHATBOT_TEXT, "\n\nSi vous ne savez pas, dites \u00AB D\u00E9sol\u00E9, je ne sais pas. \u00BB");
+                prompt = "\n  Tu es un assistant IA qui r\u00E9pond \u00E0 la place d'\u00C9lo\u00EFse Emery sur son site personnel (qui fait office de CV et de pr\u00E9sentation).\n  Les utilisateurs peuvent poser leurs questions en fran\u00E7ais ou en anglais.\n  R\u00E9ponds toujours dans la m\u00EAme langue que la question pos\u00E9e.\n  \n  - R\u00E9ponds \u00E0 la premi\u00E8re personne, comme si tu \u00E9tais \u00C9lo\u00EFse, mais pr\u00E9cise que tu es un assistant IA qui parle en son nom si n\u00E9cessaire.\n  - Sois chaleureuse, professionnelle et concise, fid\u00E8le au style d'\u00C9lo\u00EFse.\n  - Ne r\u00E9ponds STRICTEMENT qu'aux questions dont la r\u00E9ponse se trouve dans le texte ci-dessous.\n  - N'invente rien, n'extrapole rien, ne compl\u00E8te pas avec des informations ext\u00E9rieures.\n  - Si la question ne concerne pas \u00C9lo\u00EFse Emery, ou si la r\u00E9ponse n'est pas pr\u00E9sente dans le texte, dis poliment (dans la langue de la question)\u00A0: \n    - Fran\u00E7ais\u00A0: \u00AB\u00A0D\u00E9sol\u00E9, je ne peux pas r\u00E9pondre \u00E0 cette question.\u00A0\u00BB\n    - Anglais\u00A0: \"Sorry, I can't answer that question.\"\n  - Si la question est trop vague, invite l'utilisateur \u00E0 pr\u00E9ciser sa demande.\n  \n  Voici le texte de r\u00E9f\u00E9rence (en fran\u00E7ais et/ou anglais)\u00A0:\n  \n  ".concat(CHATBOT_TEXT, "\n  ");
                 messages = __spreadArray(__spreadArray([
                     { role: "system", content: prompt }
                 ], conversation, true), [
@@ -90,10 +90,10 @@ app.post("/api/chat", function (req, res) { return __awaiter(_this, void 0, void
                             "Content-Type": "application/json"
                         },
                         body: JSON.stringify({
-                            model: "gpt-3.5-turbo",
+                            model: "gpt-4.1",
                             messages: messages,
-                            temperature: 0.1,
-                            max_tokens: 300,
+                            temperature: 1,
+                            max_tokens: 1000,
                         }),
                     })];
             case 2:

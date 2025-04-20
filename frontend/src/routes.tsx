@@ -27,16 +27,16 @@ const AppRoutes: React.FC<RoutesProps> = ({ language }) => {
           <section id="hero" className="py-[250px]">
             <Hero language={language} />
           </section>
-          <section id="ask-me-something" className="py-[50px] md:py-[200px]">
+          <section id="ask-me-something" className="py-[75px] md:py-[150px]">
             <AskMeSomething language={language} />
           </section>
-          <section id="my-skillset" className="py-[50px] md:py-[100px]">
+          <section id="my-skillset" className="py-[75px] md:py-[100px]">
             <MySkillset language={language} />
           </section>
-          <section id="my-projects" className="py-[50px] md:py-[100px]">
+          <section id="my-projects" className="py-[75px] md:py-[100px]">
             <MyProjects language={language} />
           </section>
-          <section id="get-in-touch" className="py-[50px] md:py-[100px]">
+          <section id="get-in-touch" className="py-[75px] md:py-[100px]">
             <GetInTouch language={language} />
           </section>
         </main>
