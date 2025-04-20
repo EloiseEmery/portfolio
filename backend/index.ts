@@ -1,11 +1,11 @@
-import express from "express";
-import cors from "cors";
-import dotenv from "dotenv";
-import fetch from "node-fetch";
-import fs from "fs";
-import path from "path";
+const express = require('express');
+const cors = require('cors');
+const dotenv = require('dotenv');
+const nodeFetch = require('node-fetch');
+const fs = require('fs');
+const path = require('path');
 
-// Type definition for OpenAI API response
+// Define OpenAI API response interface
 interface OpenAIResponse {
   choices: Array<{
     message: {
@@ -17,22 +17,27 @@ interface OpenAIResponse {
   };
 }
 
+// Load environment variables
 dotenv.config();
 
+// Initialize Express app
 const app = express();
 app.use(express.json());
 
-// Autorise le frontend en dev (localhost:3000)
+// Autorize frontend access (localhost:3000)
 app.use(cors({
   origin: "http://localhost:3000"
 }));
 
+// Get OpenAI API key from .env
 const OPENAI_API_KEY = process.env.OPENAI_API_KEY;
 if (!OPENAI_API_KEY) throw new Error("OPENAI_API_KEY manquante dans .env");
 
+// Get chatbot text from file
 const CHATBOT_TEXT = fs.readFileSync(path.join(__dirname, "chatbotText.txt"), "utf8");
 
-app.post("/api/chat", async (req, res) => {
+// Handle chat request
+app.post("/api/chat", async (req: any, res: any) => {
   const { message, conversation = [] } = req.body;
   if (!message) return res.status(400).json({ error: "Message manquant" });
 
@@ -44,21 +49,43 @@ app.post("/api/chat", async (req, res) => {
     { role: "user", content: message }
   ];
 
+  // Call OpenAI API
   try {
-    const openaiRes = await fetch("https://api.openai.com/v1/chat/completions", {
+    const openaiRes = await nodeFetch("https://api.openai.com/v1/chat/completions", {
       method: "POST",
       headers: {
         "Authorization": `Bearer ${OPENAI_API_KEY}`,
         "Content-Type": "application/json"
       },
       body: JSON.stringify({
-        model: "gpt-3.5-turbo", // ou gpt-4 si tu as accès
+        model: "gpt-3.5-turbo",
         messages,
         temperature: 0.1,
         max_tokens: 300,
       }),
     });
-    const data = await openaiRes.json() as OpenAIResponse;
+
+    // Get and parse API response
+    const data = await openaiRes.json();
+
+    // Add error handling for API response
+    if (!openaiRes.ok) {
+      throw new Error(`OpenAI API request failed with status ${openaiRes.status}: ${JSON.stringify(data)}`);
+    }
+
+    // Type guard to ensure data is OpenAIResponse
+    const isOpenAIResponse = (obj: any): obj is OpenAIResponse => {
+      return obj && 
+             Array.isArray(obj.choices) && 
+             obj.choices.every((choice: any) => 
+               choice.message && typeof choice.message.content === 'string'
+             );
+    }
+
+    // Validate response
+    if (!isOpenAIResponse(data)) {
+      throw new Error('Invalid OpenAI API response');
+    }
     if (data.error) return res.status(500).json({ error: data.error.message });
     return res.json({ response: data.choices[0].message.content });
   } catch (err) {
@@ -66,7 +93,10 @@ app.post("/api/chat", async (req, res) => {
   }
 });
 
+// Start server
 const PORT = process.env.PORT || 3001;
 app.listen(PORT, () => {
   console.log(`Backend lancé sur http://localhost:${PORT}`);
 });
+
+module.exports = app;
