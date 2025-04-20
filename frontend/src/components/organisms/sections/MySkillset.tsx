@@ -11,7 +11,7 @@ import figma from '../../../assets/logos-skills/figma.png';
 import sql from '../../../assets/logos-skills/sql.png';
 import js from '../../../assets/logos-skills/js.png';
 import { getTranslation, Language } from '../../../utils/translations';
-import Link from '../../../components/atoms/Link';
+import Link from '../../atoms/Link';
 
 function MySkillset({ language }: { language: Language }) {
     // Translations

@@ -1,5 +1,5 @@
 import React, { useRef, useEffect, useState } from 'react';
-import Link from '../../../components/atoms/Link';   
+import Link from '../../atoms/Link';   
 import Chatbot from '../../molecules/Chatbot';
 import { getTranslation, Language } from '../../../utils/translations';
 import { openaiApiKey } from '../../../utils/appSettings';
