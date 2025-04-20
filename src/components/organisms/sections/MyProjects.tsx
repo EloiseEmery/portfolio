@@ -115,7 +115,7 @@ function MyProjects({ language }: { language: Language }) {
                             onClick={(e) => handleProjectClick(project.id, e)}
                         >
                             <h3 className="text-base w-full sm:w-[50%] text-left dark:text-colorWhite text-colorMain pb-4 sm:pb-0 pr-4">{project.title}</h3>
-                            <div className="w-full sm:w-[50%] flex flex-wrap sm:justify-end text-xs gap-2">
+                            <div className="w-full sm:w-[75%] flex flex-wrap sm:justify-end text-xs gap-2">
                                 {project.tags.map(tag => (
                                     <p 
                                         key={tag} 

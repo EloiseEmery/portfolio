@@ -49,7 +49,7 @@ function MySkillset({ language }: { language: Language }) {
                         <img 
                             src={document.documentElement.classList.contains('dark') ? skill.dark : skill.light} 
                             alt={skill.alt} 
-                            className={`w-auto h-[75px] ${skill.alt === "Adobe Icon" ? "h-[80px]" : ""} ${skill.alt === "PHP Icon" ? "h-[70px]" : ""}`}
+                            className={`w-auto h-[75px] ${skill.alt === "Adobe Icon" ? "h-[80px]" : ""} ${skill.alt === "PHP Icon" ? "h-[70px]" : ""} ${skill.alt === "React Icon" ? "lg:-ml-4" : ""}`}
                         />
                     </div>
                 ))}
