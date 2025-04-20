@@ -94,6 +94,10 @@ const translations = {
     en: "Éloïse is answering...",
     fr: "Éloïse est en train de répondre..."
   },
+  assistantDefaultMessage: {
+    en: "Hello! I'm here to answer all your questions about my journey, experiences, or skills. Don't hesitate!",
+    fr: "Bonjour ! Je suis là pour répondre à toutes tes questions sur mon parcours, mes expériences ou mes compétences. N’hésite pas ! "
+  },
 
   // My skillset
   mySkillsetTitle: {

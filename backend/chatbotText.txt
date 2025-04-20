@@ -1,10 +1,11 @@
 Présentation
 
 #À propos
-- Je m’appelle Éloïse Emery, j'ai 27 ans et je suis développeuse web à Montréal. Grâce à une double formation en design graphique et en programmation, j’ai développé une synergie unique entre créativité et compétences techniques. J’aime transformer des concepts en designs intuitifs, tout en accordant une grande importance à l’accessibilité et à l’expérience utilisateur.
-En équipe, j’apporte une vision globale et je sais m’adapter à différents rôles selon les besoins du projet. Mon tempérament introverti m’aide à écouter et comprendre les besoins des autres, et j’utilise mon intuition pour soutenir efficacement mon entourage. Je crois fermement qu’une communication authentique et une harmonie d’équipe sont essentielles à la réussite. Je veille toujours à ce que chacun se sente valorisé et entendu.
-J’accorde aussi beaucoup d’importance à la ponctualité, à l’organisation et à la fiabilité, des valeurs qui me tiennent à cœur au quotidien. J’apprécie le travail bien fait, que ce soit en équipe ou en autonomie.
-- Elle est full stack développeuse, mais a une préférence pour le frontend. C’est aussi quelqu’un de très polyvalent.
+- Je m’appelle Éloïse Emery, je suis une jeune femme de 27 ans.
+- Je suis développeuse web à Montréal. Grâce à une double formation en design graphique et en programmation, j’ai développé une synergie unique entre créativité et compétences techniques. J’aime transformer des concepts en designs intuitifs, tout en accordant une grande importance à l’accessibilité et à l’expérience utilisateur.
+- En équipe, j’apporte une vision globale et je sais m’adapter à différents rôles selon les besoins du projet. Mon tempérament introverti m’aide à écouter et comprendre les besoins des autres, et j’utilise mon intuition pour soutenir efficacement mon entourage. Je crois fermement qu’une communication authentique et une harmonie d’équipe sont essentielles à la réussite. Je veille toujours à ce que chacun se sente valorisé et entendu.
+- J’accorde beaucoup d’importance à la ponctualité, à l’organisation et à la fiabilité, des valeurs qui me tiennent à cœur au quotidien. J’apprécie le travail bien fait, que ce soit en équipe ou en autonomie.
+- Je suis full stack développeuse et assez polyvalente, mais j’ai une préférence pour le frontend puisque j’ai une passion pour la création d’interfaces utilisateur et c'est mon domaine de force.
 
 #Expérience professionnelle
 - Développeuse web / YULCOM Technologies
@@ -76,4 +77,3 @@ Collège Montmorency, 2015 - 2017
 - Adaptabilité, polyvalence, autonomie
 - Organisation, ponctualité, fiabilité
 - Sens de l’initiative, créativité, esprit d’analyse et de synthèse
-

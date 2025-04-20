@@ -10,6 +10,7 @@ function Chatbot({ language }: { language: Language })  {
     // Translations
     const title = getTranslation('askMeInput', language);
     const assistantTyping = getTranslation('assistantTyping', language);
+    const assistantDefaultMessage = getTranslation('assistantDefaultMessage', language);
     // Effects
     const [displayedPlaceholder, setDisplayedPlaceholder] = useState('');
     const [isComplete, setIsComplete] = useState(false);
@@ -20,13 +21,6 @@ function Chatbot({ language }: { language: Language })  {
     const [input, setInput] = useState("");
     const [loading, setLoading] = useState(false);
     const messagesContainerRef = useRef<HTMLDivElement>(null);
-
-    // Auto-scroll to the last message
-    useEffect(() => {
-        if (messagesContainerRef.current) {
-            messagesContainerRef.current.scrollTop = messagesContainerRef.current.scrollHeight;
-        }
-    }, [messages, loading]);
 
     // Animated placeholder letters
     useEffect(() => {
@@ -68,14 +62,31 @@ function Chatbot({ language }: { language: Language })  {
         setShowCursor(true);
     }, [language]);
 
-    // 
+    // Add initial Assistant message with a delay
+    useEffect(() => {
+        const timeoutId = setTimeout(() => {
+            setMessages([{ role: 'assistant', content: assistantDefaultMessage }]);
+        }, 1500);
+
+        return () => clearTimeout(timeoutId);
+    }, [assistantDefaultMessage]);
+
+    // Auto-scroll to the last message
+    useEffect(() => {
+        if (messagesContainerRef.current) {
+            messagesContainerRef.current.scrollTop = messagesContainerRef.current.scrollHeight;
+        }
+    }, [messages, loading]);
+
+    // Handle message submission
     async function sendMessage(userMsg: string) {
         const userMessage: Message = { role: 'user', content: userMsg };
         const updatedMessages: Message[] = [...messages, userMessage];
         setMessages(updatedMessages);
         setInput('');
         setLoading(true);
-    
+
+        // Send message to API
         const response = await fetch('http://localhost:3001/api/chat', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
@@ -84,8 +95,12 @@ function Chatbot({ language }: { language: Language })  {
             conversation: updatedMessages.filter((m): m is Message & { role: 'user' } => m.role !== 'assistant'),
           }),
         });
+        
+        // Get response from API
         const data = await response.json();
         const assistantMessage: Message = { role: 'assistant', content: data.response || data.error };
+
+        // Add assistant message to chat
         setMessages([...updatedMessages, assistantMessage]);
         setLoading(false);
     }
