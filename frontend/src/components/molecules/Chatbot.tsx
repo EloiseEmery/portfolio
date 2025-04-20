@@ -1,13 +1,32 @@
 import chatLogos from '../../assets/png/chatLogos.png';
 import { getTranslation, Language } from '../../utils/translations';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
+import userIcon from '../../assets/png/userIcon.png';
+import assistantIcon from '../../assets/png/assistantIcon.png';
+
+type Message = { role: "user" | "assistant"; content: string; };
 
 function Chatbot({ language }: { language: Language })  {
+    // Translations
     const title = getTranslation('askMeInput', language);
+    const assistantTyping = getTranslation('assistantTyping', language);
+    // Effects
     const [displayedPlaceholder, setDisplayedPlaceholder] = useState('');
     const [isComplete, setIsComplete] = useState(false);
     const [showCursor, setShowCursor] = useState(true);
     const [isFocused, setIsFocused] = useState(false);
+    // Chatbot logic
+    const [messages, setMessages] = useState<Message[]>([]);
+    const [input, setInput] = useState("");
+    const [loading, setLoading] = useState(false);
+    const messagesContainerRef = useRef<HTMLDivElement>(null);
+
+    // Auto-scroll to the last message
+    useEffect(() => {
+        if (messagesContainerRef.current) {
+            messagesContainerRef.current.scrollTop = messagesContainerRef.current.scrollHeight;
+        }
+    }, [messages, loading]);
 
     // Animated placeholder letters
     useEffect(() => {
@@ -49,56 +68,49 @@ function Chatbot({ language }: { language: Language })  {
         setShowCursor(true);
     }, [language]);
 
-     // Handle Chatbot
-        const [prompt, setPrompt] = useState("How to get rich?");
-        const [messages, setMessages] = useState([
-            {
-            text: "Hi, I'm a Naval AI. What would you like to know?",
-            type: "assistant",
-            },
-        ]);
-        const [error, setError] = useState("");
+    // 
+    async function sendMessage(userMsg: string) {
+        const userMessage: Message = { role: 'user', content: userMsg };
+        const updatedMessages: Message[] = [...messages, userMessage];
+        setMessages(updatedMessages);
+        setInput('');
+        setLoading(true);
     
-        // This function updates the prompt value when the user types in the prompt box
-        const handlePromptChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-            setPrompt(e.target.value);
-        };
-    
-
-    const handleSubmit = async (e: React.FormEvent) => {
-        e.preventDefault();
-        console.log('Submitted');
-        // if (prompt) {
-        //     setMessages(prev => [...prev, { text: prompt, type: "user" }]);
-        //     setPrompt('');
-        //     setError('');
-        //     try {
-        //         const response = await fetch('http://localhost:3000/api/chat', {
-        //             method: 'POST',
-        //             headers: {
-        //                 'Content-Type': 'application/json',
-        //             },
-        //             body: JSON.stringify({ prompt }),
-        //         });
-        //         const data = await response.json();
-        //         if (data.error) {
-        //             setError(data.error);
-        //         } else {
-        //             setMessages(prev => [...prev, { text: data.response, type: "assistant" }]);
-        //         }
-        //     } catch (error) {
-        //         setError('Failed to fetch response');
-        //     }
-        // }
-    };
+        const response = await fetch('http://localhost:3001/api/chat', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            message: userMsg,
+            conversation: updatedMessages.filter((m): m is Message & { role: 'user' } => m.role !== 'assistant'),
+          }),
+        });
+        const data = await response.json();
+        const assistantMessage: Message = { role: 'assistant', content: data.response || data.error };
+        setMessages([...updatedMessages, assistantMessage]);
+        setLoading(false);
+    }
 
     return (
        <div className="">
             <form 
-                onSubmit={handleSubmit}
-                className="relative bg-[#bfc4d4] dark:bg-darkBlue p-4 rounded-2xl dark:bg-[#31465d] border dark:border-colorWhite/30  border-colorMain/15">
+                onSubmit={e => {
+                    e.preventDefault();
+                    if (input.trim()) sendMessage(input);
+                }}
+                className="relative bg-[#bfc4d4] dark:bg-darkBlue p-4 rounded-2xl dark:bg-[#31465d] border dark:border-colorWhite/30  border-colorMain/15"
+            >
                 <div className="">
-                    <div className="h-64 bg-darkBlueDarker rounded-lg"></div>
+                    <div ref={messagesContainerRef} className="h-64 bg-darkBlueDarker rounded-lg overflow-y-auto py-4">
+                    {messages.map((m, i) => (
+                        <div key={i} className={`mb-2 flex ${m.role === "user" ? "justify-end" : "justify-start"}`}>
+                            <img src={m.role === "user" ? userIcon : assistantIcon} className={`w-6 h-6 ${m.role === "user" ? "order-2 ml-1 opacity-60" : "mr-1"}`} />
+                            <span className={`inline-block rounded p-2 ${m.role === "user" ? "bg-colorWhite/80 text-colorMain" : "bg-colorMain/30 text-colorWhite"}`}>
+                                {m.content}
+                            </span>
+                        </div>
+                    ))}
+                    {loading && <div className="text-gray-400 italic">{assistantTyping}</div>}
+                    </div>
                 </div>
                 <div className="flex items-center p-2 border dark:border-colorWhite/40 border-colorMain/15 dark:bg-colorWhite/20 bg-colorWhite/60 rounded-lg">
                     <input 
@@ -106,6 +118,9 @@ function Chatbot({ language }: { language: Language })  {
                         placeholder={`${displayedPlaceholder}${!isFocused && showCursor ? '│' : ''}`}
                         onFocus={() => setIsFocused(true)}
                         onBlur={() => setIsFocused(false)}
+                        value={input}
+                        onChange={e => setInput(e.target.value)}
+                        disabled={loading}
                         className="flex-grow bg-transparent p-1 dark:text-white text-colorMain focus:outline-none 
                             dark:placeholder:text-white/80 placeholder:text-colorMain/80"
                     />

@@ -1,9 +1,12 @@
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed aliquet sapien lacus, in ultrices lacus interdum non. Phasellus in facilisis mi. Morbi commodo, ante in euismod fermentum, tellus nulla ultrices ex, vitae fermentum lorem ex ac felis. Nunc risus odio, pharetra sit amet interdum eu, blandit quis tortor. Nunc condimentum feugiat ultrices. Maecenas vitae aliquam massa, id rutrum odio. Quisque vitae erat pulvinar, egestas nisi eu, aliquet massa. Proin auctor sem pharetra dolor faucibus dignissim. Morbi auctor interdum enim, ac laoreet enim tincidunt sed. Donec facilisis lobortis erat, et blandit ligula ultrices sed. Morbi viverra tortor mauris, a elementum dui condimentum vitae.
+Présentation
 
-Suspendisse in auctor massa. Aenean ac tincidunt sem, ac scelerisque augue. Etiam blandit gravida enim. Donec interdum sed nibh vel pharetra. Cras vel consectetur purus, in cursus velit. Duis ultricies massa purus, eget pulvinar nisl mollis vel. Donec semper turpis risus, sit amet dictum dolor accumsan ultrices. Curabitur ac dui pellentesque, molestie libero sit amet, pretium tortor. Suspendisse nec ipsum sit amet ante viverra hendrerit. Integer pharetra congue risus, pretium sollicitudin justo fermentum in. Fusce lacinia facilisis lorem. Duis orci elit, interdum vel rutrum a, ultrices eu libero.
+Éloïse Emery est une développeuse web avec une expérience solide. Elle a plus de 5 ans d'expérience dans le domaine du développement web.
 
-Sed id feugiat felis. Sed mollis tellus eu velit dignissim volutpat. Cras et justo tempus, ornare lacus non, tincidunt dui. Donec tristique lectus ac lacus molestie, eget lacinia odio finibus. Aliquam erat volutpat. Nullam in tincidunt elit. Sed id dolor nisl. Nam rutrum mauris felis, eget varius nunc sagittis vel. Ut a quam at dolor suscipit sollicitudin non luctus dolor.
+Expérience professionnelle
 
-Fusce mauris justo, semper at ex aliquam, ullamcorper laoreet neque. Nullam interdum neque eros, vel dictum ligula dignissim eu. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Interdum et malesuada fames ac ante ipsum primis in faucibus. Sed id mollis augue. Morbi nulla massa, placerat in scelerisque sed, ultrices nec enim. Aliquam rhoncus eros nisl, et placerat odio venenatis in. Praesent egestas nunc urna, in elementum ligula dictum ut. Suspendisse dapibus, ex at tincidunt ornare, velit nisl congue justo, nec mollis justo velit ut est. Quisque condimentum convallis velit, vitae vehicula velit consectetur accumsan.
+- Secureworks (2022-2024)
+  Développement de solutions d'IA générative.
+- Neuraxio Inc. (2018-2022)
+  Fondateur et directeur en machine learning.
 
-Ut tortor purus, pharetra vel posuere vitae, aliquet non urna. Nullam vel turpis sit amet dui faucibus gravida. Fusce venenatis nisi sem, at laoreet purus aliquet vitae. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Ut ex orci, bibendum non augue vel, rhoncus tincidunt elit. Aliquam in finibus tellus. Vestibulum ex ligula, tincidunt eget ornare nec, mollis vel risus.s
+Langues : Français (natif), Anglais (courant)

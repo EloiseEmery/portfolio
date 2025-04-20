@@ -61,7 +61,7 @@ app.post("/api/chat", async (req: any, res: any) => {
         model: "gpt-3.5-turbo",
         messages,
         temperature: 0.1,
-        max_tokens: 300,
+        max_tokens: 1000,
       }),
     });
 

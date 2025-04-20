@@ -90,6 +90,10 @@ const translations = {
     en: "Ask me something...",
     fr: "Posez-moi une question..."
   },
+  assistantTyping: {
+    en: "Éloïse is answering...",
+    fr: "Éloïse est en train de répondre..."
+  },
 
   // My skillset
   mySkillsetTitle: {
