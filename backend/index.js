@@ -50,6 +50,7 @@ var dotenv = require('dotenv');
 var nodeFetch = require('node-fetch');
 var fs = require('fs');
 var path = require('path');
+var rateLimit = require('express-rate-limit');
 // Load environment variables
 dotenv.config();
 // Initialize Express app
@@ -59,6 +60,14 @@ app.use(express.json());
 app.use(cors({
     origin: "http://localhost:3000"
 }));
+// Apply rate limiting 
+// Prevent too many requests and token abuse
+var limiter = rateLimit({
+    windowMs: 15 * 60 * 1000,
+    max: 20,
+    message: "Too many requests, please try again later."
+});
+app.use(limiter);
 // Get OpenAI API key from .env
 var OPENAI_API_KEY = process.env.OPENAI_API_KEY;
 if (!OPENAI_API_KEY)

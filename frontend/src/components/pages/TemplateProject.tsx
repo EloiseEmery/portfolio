@@ -56,13 +56,21 @@ const TemplateProject: React.FC<TemplateProjectProps> = ({ language }) => {
     }
 
     return (
-        <div className="2xl:flex px-4 md:px-10 xl:px-[150px] py-[100px] 2xl:py-[200px]">
-            <div className="2xl:pl-[50px] 2xl:w-[70%] 2xl:mr-[50px]">
-                <img 
-                    src={projectImages[project.id as keyof typeof projectImages]} 
-                    alt={project.title} 
-                    className="w-full h-auto max-h-[500px] object-cover rounded-lg mb-4"
-                />
+        <div className="2xl:flex px-4 md:px-10 xl:px-[200px] py-[100px] 2xl:py-[200px]">
+            <div className="lg:pr-[50px]">
+                <div className="relative">
+                    <img 
+                        src={projectImages[project.id as keyof typeof projectImages]} 
+                        alt={project.title} 
+                        className="relative w-full max-h-[400px] lg:min-h-[400px] lg:w-[700px] max-w-[700px] object-cover rounded-lg mb-4 hover:opacity-80 transition-opacity"
+                    /> 
+                    <a 
+                        href={project.githubLink || project.websiteLink} 
+                        target="_blank" 
+                        rel="noopener noreferrer" 
+                        className="hidden lg:block absolute inset-0 z-10 cursor-pointer"
+                    />
+                </div>
                 {/* Buttons external links mobile */}
                 <div className="hidden 2xl:flex gap-4 pt-2">
                     {project.githubLink && (

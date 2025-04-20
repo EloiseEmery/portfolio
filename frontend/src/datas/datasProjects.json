@@ -4,13 +4,14 @@
             "id": "portfolio",
             "title": "Éloïse Emery Portfolio",
             "descriptionKey": "projectPortfolioDescription",
-            "technologies": [ "Tailwind", "React", "TypeScript", "Docker", "OpenAI", "Pinecone", "LLM"],
+            "technologies": [ "Tailwind", "React", "TypeScript", "OpenAI API", "Docker"],
             "githubLink": "https://github.com/eloiseemery/portfolio",
             "highlights": [
                 "Responsive, modern and accessible design",
                 "AI-powered interactions",
                 "Dark mode support", 
-                "Multilingual translations"
+                "Multilingual translations",
+                "Backend and containerization"
             ],
             "intro": "This project is a uniquely designed portfolio developed from scratch by me.",
             "descriptionMain": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Elit eget metus, dignissim sit amet. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Elit eget metus, dignissim sit amet."

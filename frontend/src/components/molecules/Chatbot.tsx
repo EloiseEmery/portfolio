@@ -119,7 +119,7 @@ function Chatbot({ language }: { language: Language })  {
                     {messages.map((m, i) => (
                         <div key={i} className={`mb-2 flex ${m.role === "user" ? "justify-end" : "justify-start"}`}>
                             <img src={m.role === "user" ? userIcon : assistantIcon} className={`w-6 h-6 ${m.role === "user" ? "order-2 ml-1 opacity-60" : "mr-1"}`} />
-                            <span className={`inline-block rounded p-2 ${m.role === "user" ? "bg-colorWhite/80 text-colorMain" : "bg-colorMain/30 text-colorWhite"}`}>
+                            <span className={`inline-block rounded p-2 ${m.role === "user" ? "bg-colorWhite/80 text-colorMain" : "bg-colorMain/40 text-colorWhite"}`}>
                                 {m.content}
                             </span>
                         </div>

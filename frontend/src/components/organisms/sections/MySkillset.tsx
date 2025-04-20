@@ -65,7 +65,7 @@ function MySkillset({ language }: { language: Language }) {
                 <p>Next.js</p>
                 <p>Angular</p>
                 <p>Laravel</p>
-                <p>Langchain</p>
+                <p>TypeScript</p>
                 <p>API REST</p>
                 <p>.Liquid</p>
             </div>

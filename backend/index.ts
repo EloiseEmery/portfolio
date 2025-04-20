@@ -4,6 +4,7 @@ const dotenv = require('dotenv');
 const nodeFetch = require('node-fetch');
 const fs = require('fs');
 const path = require('path');
+const rateLimit = require('express-rate-limit');
 
 // Define OpenAI API response interface
 interface OpenAIResponse {
@@ -28,6 +29,15 @@ app.use(express.json());
 app.use(cors({
   origin: "http://localhost:3000"
 }));
+
+// Apply rate limiting 
+// Prevent too many requests and token abuse
+const limiter = rateLimit({
+  windowMs: 15 * 60 * 1000,
+  max: 20,
+  message: "Too many requests, please try again later."
+});
+app.use(limiter);
 
 // Get OpenAI API key from .env
 const OPENAI_API_KEY = process.env.OPENAI_API_KEY;
