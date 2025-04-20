@@ -1,4 +1,3 @@
-"use strict";
 var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
     function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
     return new (P || (P = Promise))(function (resolve, reject) {
@@ -44,25 +43,30 @@ var __spreadArray = (this && this.__spreadArray) || function (to, from, pack) {
     }
     return to.concat(ar || Array.prototype.slice.call(from));
 };
-Object.defineProperty(exports, "__esModule", { value: true });
-var express = require("express");
-var cors = require("cors");
-var dotenv = require("dotenv");
-var fetch = require("node-fetch");
-var fs = require("fs");
-var path = require("path");
+var _this = this;
+var express = require('express');
+var cors = require('cors');
+var dotenv = require('dotenv');
+var nodeFetch = require('node-fetch');
+var fs = require('fs');
+var path = require('path');
+// Load environment variables
 dotenv.config();
+// Initialize Express app
 var app = express();
 app.use(express.json());
-// Autorise le frontend en dev (localhost:3000)
+// Autorize frontend access (localhost:3000)
 app.use(cors({
     origin: "http://localhost:3000"
 }));
+// Get OpenAI API key from .env
 var OPENAI_API_KEY = process.env.OPENAI_API_KEY;
 if (!OPENAI_API_KEY)
     throw new Error("OPENAI_API_KEY manquante dans .env");
+// Get chatbot text from file
 var CHATBOT_TEXT = fs.readFileSync(path.join(__dirname, "chatbotText.txt"), "utf8");
-app.post("/api/chat", function (req, res) { return __awaiter(void 0, void 0, void 0, function () {
+// Handle chat request
+app.post("/api/chat", function (req, res) { return __awaiter(_this, void 0, void 0, function () {
     var _a, message, _b, conversation, prompt, messages, openaiRes, data, isOpenAIResponse, err_1;
     return __generator(this, function (_c) {
         switch (_c.label) {
@@ -79,14 +83,14 @@ app.post("/api/chat", function (req, res) { return __awaiter(void 0, void 0, voi
                 _c.label = 1;
             case 1:
                 _c.trys.push([1, 4, , 5]);
-                return [4 /*yield*/, fetch("https://api.openai.com/v1/chat/completions", {
+                return [4 /*yield*/, nodeFetch("https://api.openai.com/v1/chat/completions", {
                         method: "POST",
                         headers: {
                             "Authorization": "Bearer ".concat(OPENAI_API_KEY),
                             "Content-Type": "application/json"
                         },
                         body: JSON.stringify({
-                            model: "gpt-3.5-turbo", // ou gpt-4 si tu as accès
+                            model: "gpt-3.5-turbo",
                             messages: messages,
                             temperature: 0.1,
                             max_tokens: 300,
@@ -108,6 +112,7 @@ app.post("/api/chat", function (req, res) { return __awaiter(void 0, void 0, voi
                             return choice.message && typeof choice.message.content === 'string';
                         });
                 };
+                // Validate response
                 if (!isOpenAIResponse(data)) {
                     throw new Error('Invalid OpenAI API response');
                 }
@@ -121,7 +126,9 @@ app.post("/api/chat", function (req, res) { return __awaiter(void 0, void 0, voi
         }
     });
 }); });
+// Start server
 var PORT = process.env.PORT || 3001;
 app.listen(PORT, function () {
     console.log("Backend lanc\u00E9 sur http://localhost:".concat(PORT));
 });
+module.exports = app;
