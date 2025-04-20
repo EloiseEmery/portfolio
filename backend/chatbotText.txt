@@ -1,13 +1,13 @@
 Présentation
 
-#À propos
+# À propos
 - Je m’appelle Éloïse Emery, je suis une jeune femme de 27 ans.
 - Je suis développeuse web à Montréal. Grâce à une double formation en design graphique et en programmation, j’ai développé une synergie unique entre créativité et compétences techniques. J’aime transformer des concepts en designs intuitifs, tout en accordant une grande importance à l’accessibilité et à l’expérience utilisateur.
 - En équipe, j’apporte une vision globale et je sais m’adapter à différents rôles selon les besoins du projet. Mon tempérament introverti m’aide à écouter et comprendre les besoins des autres, et j’utilise mon intuition pour soutenir efficacement mon entourage. Je crois fermement qu’une communication authentique et une harmonie d’équipe sont essentielles à la réussite. Je veille toujours à ce que chacun se sente valorisé et entendu.
 - J’accorde beaucoup d’importance à la ponctualité, à l’organisation et à la fiabilité, des valeurs qui me tiennent à cœur au quotidien. J’apprécie le travail bien fait, que ce soit en équipe ou en autonomie.
 - Je suis full stack développeuse et assez polyvalente, mais j’ai une préférence pour le frontend puisque j’ai une passion pour la création d’interfaces utilisateur et c'est mon domaine de force.
 
-#Expérience professionnelle
+# Expérience professionnelle
 - Développeuse web / YULCOM Technologies
 Montréal, octobre 2022 - aujourd’hui
 Gestion de projets informatiques (méthode agile)
@@ -23,7 +23,7 @@ Réalisation de maquettes, mise en page, édition de concepts graphiques
 Création de sites WordPress, production et numérisation d’images
 Préparation de documents pour l’impression
 
-#Formation
+# Formation
 - AEC Programmation et développement Web
 Collège de Maisonneuve, 2021 - 2022
 (Acquisition de plusieurs connaissances en informatique et développement de la méthodologie de travail: Processus de conception d’un site Web de a à z et travaux d’équipe dans un environnement de travail agile. Diversification des connaissances et prise d’expériences dans le domaine tout en travaillant à temps partiel sur des contrats à la pige.)
@@ -35,17 +35,13 @@ Cégep du Vieux Montréal, 2017 - 2020
 Collège Montmorency, 2015 - 2017
 (Développement de l’esprit critique, de synthèse et d’analyse)
 
-#Certifications
+# Certifications
 - LangChain: Develop AI web-apps with JavaScript and LangChain (Udemy, 2023)
 - Docker for the Absolute Beginner - Hands On - DevOps (Udemy, 2023)
 - React JS, Angular & Vue JS - Quickstart & Comparison (Udemy, 2023)
 - Learning How to Learn (Coursera, 2023)
 
-#Distinctions
-- Prix du Mérite en Histoire (MNQ, 2015)
-- Prix de la meilleure moyenne générale (École secondaire Horizon-Jeunesse, 2015)
-
-#Compétences techniques
+# Compétences techniques
 ## Développement web :
 - HTML5, CSS3, JavaScript (avancé)
 - Programmation orientée objet (POO)
@@ -66,14 +62,64 @@ Collège Montmorency, 2015 - 2017
 - Édition graphique et production de visuels
 - Préparation de documents pour l'impression
 
-#Certifications et formations complémentaires
+# Certifications et formations complémentaires
 - LangChain: Develop AI web-apps with JavaScript and LangChain (Udemy)
 - Docker for the Absolute Beginner - Hands On - DevOps (Udemy, KodeKloud)
 - React JS, Angular & Vue JS - Quickstart & Comparison (Udemy)
 - Learning How to Learn (Coursera)
 
-#Compétences humaines et organisationnelles
+# Compétences humaines et organisationnelles
 - Travail en équipe, communication authentique et écoute active
 - Adaptabilité, polyvalence, autonomie
 - Organisation, ponctualité, fiabilité
 - Sens de l’initiative, créativité, esprit d’analyse et de synthèse
+
+# Q/A
+## Questions techniques générales
+- Peux-tu me parler d’un projet web dont tu es fière ? Quel a été ton rôle exact ?
+- Quelles technologies front-end maîtrises-tu le mieux ? Pourquoi ?
+- Comment choisis-tu un framework pour un projet ?
+- Comment gères-tu la compatibilité multi-navigateurs et le responsive design ?
+- Comment assures-tu l’accessibilité (a11y) d’un site web ?
+- As-tu déjà utilisé des outils comme Figma ou Adobe XD pour le prototypage ?
+- Comment gères-tu l’authentification et la sécurité côté front-end ?
+- Comment utilises-tu Git dans un projet d’équipe ?
+- Comment assures-tu la qualité et la maintenabilité de ton code ?
+- Comment débogues-tu un bug complexe en production ?
+## Questions sur l’expérience et la collaboration
+- Comment t’intègres-tu dans une équipe multidisciplinaire ?
+- Comment gères-tu les retours des designers, chefs de projet, ou clients ?
+- Peux-tu décrire une situation où tu as dû apprendre rapidement une nouvelle technologie ?
+- As-tu déjà contribué à des projets open-source ou collaboré à distance ?
+- Comment priorises-tu tes tâches lors d’un sprint ?
+## Questions sur l’UX/UI et le design
+- Comment fais-tu le lien entre design graphique et développement web ?
+- Quelles sont, selon toi, les clés d’une bonne expérience utilisateur ?
+- Comment valides-tu l’ergonomie d’une interface ?
+- As-tu déjà mené des tests utilisateurs ?
+- Comment gères-tu la cohérence graphique sur un site ou une application ?
+## Questions sur la motivation et la personnalité
+- Pourquoi as-tu choisi le développement web comme carrière ?
+- Qu’est-ce qui te motive le plus dans ton métier ?
+- Quelles sont tes qualités principales en tant que développeuse ?
+- Comment gères-tu le stress ou les deadlines serrées ?
+- Comment gères-tu les changements de priorités en cours de projet ?
+- Où te vois-tu dans 3 à 5 ans ?
+- Comment fais-tu face à l’incertitude ou à l’ambiguïté dans un projet ?
+- Qu’as-tu appris d’un échec ou d’une erreur passée ?
+- Comment réagis-tu quand tu ne sais pas comment résoudre un problème technique ?
+- Comment réagis-tu lorsque tu dois travailler avec des personnes ayant des opinions très différentes des tiennes ?
+- Comment donnes-tu du feedback constructif à un collègue ?
+- Comment réagis-tu face à une critique sur ton travail ?
+## Questions sur la formation et l’apprentissage
+- Comment te tiens-tu à jour sur les nouvelles technologies ?
+- As-tu suivi des formations en ligne ou obtenu des certifications ? Lesquelles ?
+- Peux-tu me parler d’une compétence technique que tu aimerais approfondir ?
+## Questions “soft skills”
+- Comment gères-tu les conflits dans une équipe ?
+- Quelles sont tes valeurs au travail ?
+- Comment organises-tu ton temps et tes priorités ?
+- Qu’est-ce qui te différencie des autres développeurs/développeuses ?
+- Peux-tu donner un exemple où tu as aidé un membre de ton équipe à surmonter une difficulté ?
+- Comment facilites-tu la collaboration entre développeurs et designers ?
+- Donne un exemple où tu as dû t’adapter rapidement à une nouvelle situation professionnelle.

@@ -20,6 +20,7 @@ function Chatbot({ language }: { language: Language })  {
     const [messages, setMessages] = useState<Message[]>([]);
     const [input, setInput] = useState("");
     const [loading, setLoading] = useState(false);
+    const [errorMessage, setErrorMessage] = useState<string | null>(null);
     const messagesContainerRef = useRef<HTMLDivElement>(null);
 
     // Animated placeholder letters
@@ -80,29 +81,59 @@ function Chatbot({ language }: { language: Language })  {
 
     // Handle message submission
     async function sendMessage(userMsg: string) {
-        const userMessage: Message = { role: 'user', content: userMsg };
+        // Validate message
+        const trimmedMsg = userMsg.trim();
+        const MAX_MESSAGE_LENGTH = 200;
+        // Reset any previous error states
+        setErrorMessage(null);
+
+        if (!trimmedMsg) {
+            setErrorMessage('Please enter a message');
+            return;
+        }
+
+        if (trimmedMsg.length > MAX_MESSAGE_LENGTH) {
+            setErrorMessage(`Message is too long. Maximum length is ${MAX_MESSAGE_LENGTH} characters.`);
+            return;
+        }
+
+        const userMessage: Message = { role: 'user', content: trimmedMsg };
         const updatedMessages: Message[] = [...messages, userMessage];
         setMessages(updatedMessages);
         setInput('');
         setLoading(true);
 
-        // Send message to API
-        const response = await fetch('http://localhost:3001/api/chat', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({
-            message: userMsg,
-            conversation: updatedMessages.filter((m): m is Message & { role: 'user' } => m.role !== 'assistant'),
-          }),
-        });
-        
-        // Get response from API
-        const data = await response.json();
-        const assistantMessage: Message = { role: 'assistant', content: data.response || data.error };
+        try {
+            // Send message to API
+            const response = await fetch('http://localhost:3001/api/chat', {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify({
+                message: trimmedMsg,
+                conversation: updatedMessages.filter((m): m is Message & { role: 'user' } => m.role !== 'assistant'),
+              }),
+            });
+            
+            // Get response from API
+            if (!response.ok) {
+                throw new Error('Network response was not ok');
+            }
 
-        // Add assistant message to chat
-        setMessages([...updatedMessages, assistantMessage]);
-        setLoading(false);
+            const data = await response.json();
+            const assistantMessage: Message = { role: 'assistant', content: data.response || data.error };
+
+            // Add assistant message to chat
+            setMessages([...updatedMessages, assistantMessage]);
+        } catch (error) {
+            console.error('Error sending message:', error);
+            const errorMessage: Message = { 
+                role: 'assistant', 
+                content: getTranslation('errorSendingMessage', language) 
+            };
+            setMessages([...updatedMessages, errorMessage]);
+        } finally {
+            setLoading(false);
+        }
     }
 
     return (
@@ -139,7 +170,7 @@ function Chatbot({ language }: { language: Language })  {
                         className="flex-grow bg-transparent p-1 dark:text-white text-colorMain focus:outline-none 
                             dark:placeholder:text-white/80 placeholder:text-colorMain/80"
                     />
-                    <button type="submit" className="ml-2 dark:bg-colorQuinary/50 bg-[#c5d438] p-2 rounded-full dark:hover:scale-105 hover:scale-105 transition-transform">
+                    <button type="submit" className="ml-2 dark:bg-colorQuinary/50 bg-[#c5d438] p-2 rounded-full dark:hover:scale-105 hover:scale-105 transition-transform" disabled={loading}>
                         <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" strokeWidth="3" stroke="currentColor" fill="none" className="text-colorMain/60 dark:text-colorMain w-4 h-4">
                             <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
                             <g id="SVGRepo_tracerCarrier" strokeLinecap="round" strokeLinejoin="round"></g>
@@ -151,6 +182,11 @@ function Chatbot({ language }: { language: Language })  {
                     </button>
                 </div>
             </form>
+            {errorMessage && (
+                <div className="text-red-600 text-xs mt-2">
+                    {errorMessage}
+                </div>
+            )}
             <div className="opacity-80 absolute right-0 -top-14 sm:-bottom-10 sm:top-auto filter-brightness-0 invert dark:filter-none">
                 <img src={chatLogos} className='h-[20px] sm:h-[25px]'/>
             </div>

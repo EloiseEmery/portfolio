@@ -98,6 +98,11 @@ const translations = {
     en: "Hello! I'm here to answer all your questions about my journey, experiences, or skills. Don't hesitate!",
     fr: "Bonjour ! Je suis là pour répondre à toutes tes questions sur mon parcours, mes expériences ou mes compétences. N’hésite pas ! "
   },
+  // Chatbot error messages
+errorSendingMessage: {
+  en: 'Sorry, there was an error sending your message. Please try again.',
+  fr: 'Désolé, une erreur s\'est produite lors de l\'envoi de votre message. Veuillez réessayer.'
+},
 
   // My skillset
   mySkillsetTitle: {
