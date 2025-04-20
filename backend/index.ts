@@ -1,60 +1,72 @@
-// import express from "express";
-// import cors from "cors";
-// import dotenv from "dotenv";
-// import fetch from "node-fetch";
-// import fs from "fs";
-// import path from "path";
+import express from "express";
+import cors from "cors";
+import dotenv from "dotenv";
+import fetch from "node-fetch";
+import fs from "fs";
+import path from "path";
 
-// dotenv.config();
+// Type definition for OpenAI API response
+interface OpenAIResponse {
+  choices: Array<{
+    message: {
+      content: string;
+    };
+  }>;
+  error?: {
+    message: string;
+  };
+}
 
-// const app = express();
-// app.use(express.json());
+dotenv.config();
 
-// // Autorise le frontend en dev (localhost:5173)
-// app.use(cors({
-//   origin: "http://localhost:5173"
-// }));
+const app = express();
+app.use(express.json());
 
-// const OPENAI_API_KEY = process.env.OPENAI_API_KEY;
-// if (!OPENAI_API_KEY) throw new Error("OPENAI_API_KEY manquante dans .env");
+// Autorise le frontend en dev (localhost:3000)
+app.use(cors({
+  origin: "http://localhost:3000"
+}));
 
-// const CHATBOT_TEXT = fs.readFileSync(path.join(__dirname, "chatbotText.txt"), "utf8");
+const OPENAI_API_KEY = process.env.OPENAI_API_KEY;
+if (!OPENAI_API_KEY) throw new Error("OPENAI_API_KEY manquante dans .env");
 
-// app.post("/api/chat", async (req, res) => {
-//   const { message, conversation = [] } = req.body;
-//   if (!message) return res.status(400).json({ error: "Message manquant" });
+const CHATBOT_TEXT = fs.readFileSync(path.join(__dirname, "chatbotText.txt"), "utf8");
 
-//   const prompt = `Vous êtes un assistant IA. Vous ne répondez qu'aux questions qui peuvent être répondues STRICTEMENT à partir du texte suivant :\n\n${CHATBOT_TEXT}\n\nSi vous ne savez pas, dites « Désolé, je ne sais pas. »`;
+app.post("/api/chat", async (req, res) => {
+  const { message, conversation = [] } = req.body;
+  if (!message) return res.status(400).json({ error: "Message manquant" });
 
-//   const messages = [
-//     { role: "system", content: prompt },
-//     ...conversation,
-//     { role: "user", content: message }
-//   ];
+  const prompt = `Vous êtes un assistant IA. Vous ne répondez qu'aux questions qui peuvent être répondues STRICTEMENT à partir du texte suivant :\n\n${CHATBOT_TEXT}\n\nSi vous ne savez pas, dites « Désolé, je ne sais pas. »`;
 
-//   try {
-//     const openaiRes = await fetch("https://api.openai.com/v1/chat/completions", {
-//       method: "POST",
-//       headers: {
-//         "Authorization": `Bearer ${OPENAI_API_KEY}`,
-//         "Content-Type": "application/json"
-//       },
-//       body: JSON.stringify({
-//         model: "gpt-3.5-turbo", // ou gpt-4 si tu as accès
-//         messages,
-//         temperature: 0.1,
-//         max_tokens: 300,
-//       }),
-//     });
-//     const data = await openaiRes.json();
-//     if (data.error) return res.status(500).json({ error: data.error.message });
-//     return res.json({ response: data.choices[0].message.content });
-//   } catch (err) {
-//     return res.status(500).json({ error: "Erreur API OpenAI" });
-//   }
-// });
+  const messages = [
+    { role: "system", content: prompt },
+    ...conversation,
+    { role: "user", content: message }
+  ];
 
-// const PORT = process.env.PORT || 3001;
-// app.listen(PORT, () => {
-//   console.log(`Backend lancé sur http://localhost:${PORT}`);
-// });
+  try {
+    const openaiRes = await fetch("https://api.openai.com/v1/chat/completions", {
+      method: "POST",
+      headers: {
+        "Authorization": `Bearer ${OPENAI_API_KEY}`,
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify({
+        model: "gpt-3.5-turbo", // ou gpt-4 si tu as accès
+        messages,
+        temperature: 0.1,
+        max_tokens: 300,
+      }),
+    });
+    const data = await openaiRes.json() as OpenAIResponse;
+    if (data.error) return res.status(500).json({ error: data.error.message });
+    return res.json({ response: data.choices[0].message.content });
+  } catch (err) {
+    return res.status(500).json({ error: "Erreur API OpenAI" });
+  }
+});
+
+const PORT = process.env.PORT || 3001;
+app.listen(PORT, () => {
+  console.log(`Backend lancé sur http://localhost:${PORT}`);
+});
