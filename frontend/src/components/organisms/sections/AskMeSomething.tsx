@@ -108,7 +108,7 @@ function AskMeSomething({ language }: { language: Language }) {
                 </div>
             </div>
             {/* Desktop text */}
-            <div className="relative hidden lg:block sm:pl-[50px] lg:w-[50%] lg:pl-[100px] 2xl:pl-[200px]">
+            <div className="relative hidden lg:block sm:pl-[50px] lg:w-[50%] lg:pl-[100px] 2xl:pl-[175px]">
                 <div className="max-w-[550px]">
                     <h2 className="font-sans font-medium text-3xl leading-[1.2] bg-gradient-to-r from-colorTertiary to-colorMain/80 dark:from-colorWhite/90 dark:to-colorWhite/90 bg-clip-text text-transparent">{title}</h2>
                     <p className="text-colorMain dark:text-colorWhite font-figtree text-base mt-6 pb-8">{paragraph}</p>
