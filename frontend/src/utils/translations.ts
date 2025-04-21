@@ -79,8 +79,8 @@ const translations = {
     fr: "Posez-moi une question"  
   },
   askMeParagraph: {
-    en: "Being an introverted person, I've made this chatbot for you to chat with me. It has an in-depth understanding of my professional experience and the project's source code. Feel free to ask it questions about me or my work. It uses OpenAI's API. Enjoy!",
-    fr: "Étant une personne introvertie, j'ai conçu ce chatbot pour vous permettre de discuter avec moi. Il bénéficie d'une connaissance approfondie de mon expérience professionnelle et du code source de ce projet. Posez-lui vos questions sur moi ou mon travail. Il utilise l'API d'OpenAI. Amusez-vous!"
+    en: "As an introvert at heart, I’ve delegated all social interactions to my personal chatbot. Programmed to represent me and answer any questions you may have about myself, my work, or even the technical details of the project, it runs on OpenAI's API and never needs a coffee break!",
+    fr: "Ayant l’âme d’une introvertie, j’ai confié la gestion des interactions sociales à mon chatbot personnel. Programmé pour me représenter et pour répondre à toutes vos questions sur moi, mon travail, ou même les dessous techniques du projet, il carbure à l’API d’OpenAI et ne demande jamais de pause-café !"
   },
   askMeLink: {
     en: "Download my full resume",
@@ -95,13 +95,13 @@ const translations = {
     fr: "Éloïse est en train de répondre..."
   },
   assistantDefaultMessage: {
-    en: "Hello! I'm here to answer all your questions about my journey, experiences, or skills. Don't hesitate!",
-    fr: "Bonjour ! Je suis là pour répondre à toutes tes questions sur mon parcours, mes expériences ou mes compétences. N’hésite pas ! "
+    en: "Hello! I'm here to answer all your questions about my journey, experiences, or skills. Have fun, but don't overburden me please!",
+    fr: "Bonjour ! Je suis là pour répondre à toutes tes questions sur mon parcours, mes expériences ou mes compétences. Amusez-vous, mais ne me surchargez pas s'il vous plaît !"
   },
   // Chatbot error messages
 errorSendingMessage: {
   en: 'Sorry, there was an error sending your message. Please try again.',
-  fr: 'Désolé, une erreur s\'est produite lors de l\'envoi de votre message. Veuillez réessayer.'
+  fr: 'Désolé, une erreur s\'est produite lors de l\'envoi de votre message. Veuillez réessayer. Vous avez atteint le nombre maximum de messages. Veuillez réessayer plus tard.'
 },
 
   // My skillset

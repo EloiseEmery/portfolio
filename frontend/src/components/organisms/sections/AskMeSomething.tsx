@@ -66,7 +66,7 @@ function AskMeSomething({ language }: { language: Language }) {
         <div className="lg:flex">
             <div className="lg:w-[50%]">
                 {/* Mobile text */}
-                <div className="block lg:hidden pb-12 sm:pb-4">
+                <div className="block lg:hidden pb-10">
                     <h2 className="font-sans font-medium text-2xl sm:text-3xl leading-[1.2]  bg-gradient-to-r from-colorTertiary to-colorMain/80 dark:from-colorWhite/90 dark:to-colorWhite/90 bg-clip-text text-transparent">{title}</h2>
                     <p className="text-colorMain dark:text-colorWhite font-figtree text-base mt-6 pb-8">{paragraph}</p>
                 </div>

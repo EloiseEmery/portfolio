@@ -75,6 +75,16 @@ const Sidebar: React.FC<SidebarProps> = ({ closeSidebar, language }) => {
               <a 
                 key={project.id} 
                 href={`/project/${project.id}`} 
+                onClick={(e) => {
+                  if (window.innerWidth < 768) {
+                    e.preventDefault(); 
+                    setTimeout(() => {
+                      closeSidebar();
+                      // Navigate after a short delay to allow sidebar transition
+                      window.location.href = `/project/${project.id}`;
+                    }, 250);
+                  }
+                }}
                 className="block text-base text-colorBlack/80 dark:text-colorWhite/80 md:text-xs hover:text-colorTertiary dark:hover:text-colorQuaternary transition-all duration-300 ease-in-out relative pl-4 before:content-['•'] before:absolute before:left-0 before:text-colorTertiary dark:before:text-colorQuaternary"
               >
                 {project.title}

@@ -18,8 +18,9 @@ const App: React.FC = () => {
   const [colorModeSrc, setColorModeSrc] = useState(getInitialColorMode());
   const [language, setLanguage] = useState<Language>(getInitialLanguage());
   const [isSidebarOpen, setIsSidebarOpen] = useState(() => {
-    // Only open sidebar by default on desktop (md breakpoint and above)
-    return window.innerWidth >= 768;
+    // Retrieve sidebar state from localStorage, default to false
+    const savedSidebarState = localStorage.getItem('sidebarOpen');
+    return savedSidebarState === 'true';
   });
   const [menuSrc, setMenuSrc] = useState(isSidebarOpen ? menuSidebarOpen : menuSidebarClosed);
   const [mainContentTranslate, setMainContentTranslate] = useState(0);
@@ -48,6 +49,9 @@ const App: React.FC = () => {
     const newSidebarState = forceState !== undefined ? forceState : !isSidebarOpen;
     setIsSidebarOpen(newSidebarState);
     setMenuSrc(newSidebarState ? menuSidebarOpen : menuSidebarClosed);
+    
+    // Save sidebar state to localStorage
+    localStorage.setItem('sidebarOpen', newSidebarState.toString());
     
     // Manage main content translation
     // setMainContentTranslate(newSidebarState && window.innerWidth <= 768 ? -300 : 0);

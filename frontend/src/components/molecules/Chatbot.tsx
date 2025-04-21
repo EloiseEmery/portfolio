@@ -22,6 +22,11 @@ function Chatbot({ language }: { language: Language })  {
     const [loading, setLoading] = useState(false);
     const [errorMessage, setErrorMessage] = useState<string | null>(null);
     const messagesContainerRef = useRef<HTMLDivElement>(null);
+    const questions = [
+        'Où te vois-tu dans 3 à 5 ans ?',
+        'Quelles sont tes valeurs au travail ?',
+        'Où travailles-tu actuellement ?'
+    ]
 
     // Animated placeholder letters
     useEffect(() => {
@@ -78,6 +83,11 @@ function Chatbot({ language }: { language: Language })  {
             messagesContainerRef.current.scrollTop = messagesContainerRef.current.scrollHeight;
         }
     }, [messages, loading]);
+
+    // Function to handle question click
+    const handleQuestionClick = (question: string) => {
+        setInput(question);
+    }
 
     // Handle message submission
     async function sendMessage(userMsg: string) {
@@ -138,6 +148,9 @@ function Chatbot({ language }: { language: Language })  {
 
     return (
        <div className="">
+             <div className="opacity-80 absolute right-0 -top-[60px] filter-brightness-0 invert dark:filter-none">
+                <img src={chatLogos} className='h-[25px]'/>
+            </div>
             <form 
                 onSubmit={e => {
                     e.preventDefault();
@@ -148,11 +161,16 @@ function Chatbot({ language }: { language: Language })  {
                 <div className="">
                     <div ref={messagesContainerRef} className="h-64 bg-darkBlueDarker rounded-lg overflow-y-auto py-4">
                     {messages.map((m, i) => (
-                        <div key={i} className={`mb-2 flex ${m.role === "user" ? "justify-end" : "justify-start"}`}>
-                            <img src={m.role === "user" ? userIcon : assistantIcon} className={`w-6 h-6 ${m.role === "user" ? "order-2 ml-1 opacity-60" : "mr-1"}`} />
-                            <span className={`inline-block rounded p-2 ${m.role === "user" ? "bg-colorWhite/80 text-colorMain" : "bg-colorMain/40 text-colorWhite"}`}>
-                                {m.content}
-                            </span>
+                        <div key={i} className={`flex ${m.role === "user" ? "justify-end" : ""}`}>
+                            <div>
+                                <span className={`text-colorMain/80 dark:text-colorWhite/80 text-xs ${m.role === "user" ? "flex justify-end" : ""}`}>{m.role === "user" ? "You" : "Éloïse"}</span>
+                                <div className="flex mb-2 pt-1">
+                                    <img src={m.role === "user" ? userIcon : assistantIcon} className={`w-6 h-6 ${m.role === "user" ? "opacity-60 order-1 ml-2" : "mr-2"}`} />
+                                    <span className={`inline-block rounded p-2 ${m.role === "user" ? "bg-colorWhite/80 text-colorMain" : "bg-colorMain/40 text-colorWhite"}`}>
+                                        {m.content}
+                                    </span>
+                                </div>
+                            </div>
                         </div>
                     ))}
                     {loading && <div className="text-gray-400 italic">{assistantTyping}</div>}
@@ -187,8 +205,16 @@ function Chatbot({ language }: { language: Language })  {
                     {errorMessage}
                 </div>
             )}
-            <div className="opacity-80 absolute right-0 -top-14 sm:-bottom-10 sm:top-auto filter-brightness-0 invert dark:filter-none">
-                <img src={chatLogos} className='h-[20px] sm:h-[25px]'/>
+            <div className="mt-2 flex gap-2 flex-wrap">
+                {questions.map((question, index) => (
+                    <span 
+                        key={index} 
+                        onClick={() => handleQuestionClick(question)}
+                        className="cursor-pointer text-colorMain/60 dark:text-colorWhite/75 bg-colorMain/15 dark:bg-colorWhite/20 px-2 py-1 rounded-md text-xs hover:bg-colorMain/20 dark:hover:bg-colorWhite/30 transition-colors"
+                    >
+                        {question}
+                    </span>
+                ))}
             </div>
         </div>
     );
