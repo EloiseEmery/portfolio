@@ -1,14 +1,11 @@
-import React, { useRef, useEffect, useState } from 'react';
-import Link from '../../atoms/Link';   
+import { useRef, useEffect, useState } from 'react';
 import Chatbot from '../../molecules/Chatbot';
 import { getTranslation, Language } from '../../../utils/translations';
-import { openaiApiKey } from '../../../utils/appSettings';
 
 function AskMeSomething({ language }: { language: Language }) {
     // Translations
     const title = getTranslation('askMeTitle', language);
     const paragraph = getTranslation('askMeParagraph', language);
-    const linkLabel = getTranslation('askMeLink', language);
     
     // Parallax and interaction refs
     const chatbotRef = useRef<HTMLDivElement>(null);
@@ -19,7 +16,8 @@ function AskMeSomething({ language }: { language: Language }) {
 
     // Calculate interactive tilt based on mouse position
     const calculateTilt = () => {
-        if (!chatbotRef.current) return { transform: 'none' };
+        // Only apply tilt effect on md screens and larger
+        if (!chatbotRef.current || window.innerWidth < 640) return { transform: 'none' };
         
         const rect = chatbotRef.current.getBoundingClientRect();
         const centerX = rect.left + rect.width / 2;
@@ -110,7 +108,7 @@ function AskMeSomething({ language }: { language: Language }) {
                 </div>
             </div>
             {/* Desktop text */}
-            <div className="hidden lg:block sm:pl-[50px] lg:w-[50%] lg:pl-[100px] 2xl:pl-[200px]">
+            <div className="relative hidden lg:block sm:pl-[50px] lg:w-[50%] lg:pl-[100px] 2xl:pl-[200px]">
                 <div className="max-w-[550px]">
                     <h2 className="font-sans font-medium text-3xl leading-[1.2] bg-gradient-to-r from-colorTertiary to-colorMain/80 dark:from-colorWhite/90 dark:to-colorWhite/90 bg-clip-text text-transparent">{title}</h2>
                     <p className="text-colorMain dark:text-colorWhite font-figtree text-base mt-6 pb-8">{paragraph}</p>

@@ -1,16 +1,17 @@
-import chatLogos from '../../assets/png/chatLogos.png';
 import { getTranslation, Language } from '../../utils/translations';
 import { useState, useEffect, useRef } from 'react';
 import userIcon from '../../assets/png/userIcon.png';
 import assistantIcon from '../../assets/png/assistantIcon.png';
+import chatLogos from '../../assets/png/chatLogos.png';
 
 type Message = { role: "user" | "assistant"; content: string; };
 
 function Chatbot({ language }: { language: Language })  {
     // Translations
     const title = getTranslation('askMeInput', language);
-    const assistantTyping = getTranslation('assistantTyping', language);
-    const assistantDefaultMessage = getTranslation('assistantDefaultMessage', language);
+    const chatbotAssistantTyping = getTranslation('chatbotAssistantTyping', language);
+    const chatbotAssistantDefaultMessage = getTranslation('chatbotAssistantDefaultMessage', language);
+    const chatbotUsername = getTranslation('chatbotUsername', language);
     // Effects
     const [displayedPlaceholder, setDisplayedPlaceholder] = useState('');
     const [isComplete, setIsComplete] = useState(false);
@@ -23,9 +24,9 @@ function Chatbot({ language }: { language: Language })  {
     const [errorMessage, setErrorMessage] = useState<string | null>(null);
     const messagesContainerRef = useRef<HTMLDivElement>(null);
     const questions = [
-        'Où te vois-tu dans 3 à 5 ans ?',
-        'Quelles sont tes valeurs au travail ?',
-        'Où travailles-tu actuellement ?'
+        getTranslation('chatbotQuestion1', language),
+        getTranslation('chatbotQuestion2', language),
+        getTranslation('chatbotQuestion3', language)
     ]
 
     // Animated placeholder letters
@@ -71,11 +72,11 @@ function Chatbot({ language }: { language: Language })  {
     // Add initial Assistant message with a delay
     useEffect(() => {
         const timeoutId = setTimeout(() => {
-            setMessages([{ role: 'assistant', content: assistantDefaultMessage }]);
+            setMessages([{ role: 'assistant', content: chatbotAssistantDefaultMessage }]);
         }, 1500);
 
         return () => clearTimeout(timeoutId);
-    }, [assistantDefaultMessage]);
+    }, [chatbotAssistantDefaultMessage]);
 
     // Auto-scroll to the last message
     useEffect(() => {
@@ -138,7 +139,7 @@ function Chatbot({ language }: { language: Language })  {
             console.error('Error sending message:', error);
             const errorMessage: Message = { 
                 role: 'assistant', 
-                content: getTranslation('errorSendingMessage', language) 
+                content: getTranslation('chatbotErrorSendingMessage', language) 
             };
             setMessages([...updatedMessages, errorMessage]);
         } finally {
@@ -148,9 +149,6 @@ function Chatbot({ language }: { language: Language })  {
 
     return (
        <div className="">
-             <div className="opacity-80 absolute right-0 -top-[60px] filter-brightness-0 invert dark:filter-none">
-                <img src={chatLogos} className='h-[25px]'/>
-            </div>
             <form 
                 onSubmit={e => {
                     e.preventDefault();
@@ -158,12 +156,15 @@ function Chatbot({ language }: { language: Language })  {
                 }}
                 className="relative bg-[#bfc4d4] dark:bg-darkBlue p-4 rounded-2xl dark:bg-[#31465d] border dark:border-colorWhite/30  border-colorMain/15"
             >
+            <div className="opacity-80 absolute right-0 -top-[60px] filter-brightness-0 invert dark:filter-none">
+                <img src={chatLogos} className='h-[25px]'/>
+            </div>
                 <div className="">
                     <div ref={messagesContainerRef} className="h-64 bg-darkBlueDarker rounded-lg overflow-y-auto py-4">
                     {messages.map((m, i) => (
                         <div key={i} className={`flex ${m.role === "user" ? "justify-end" : ""}`}>
                             <div>
-                                <span className={`text-colorMain/80 dark:text-colorWhite/80 text-xs ${m.role === "user" ? "flex justify-end" : ""}`}>{m.role === "user" ? "You" : "Éloïse"}</span>
+                                <span className={`text-colorMain/80 dark:text-colorWhite/80 text-xs ${m.role === "user" ? "flex justify-end" : ""}`}>{m.role === "user" ? chatbotUsername : "Éloïse"}</span>
                                 <div className="flex mb-2 pt-1">
                                     <img src={m.role === "user" ? userIcon : assistantIcon} className={`w-6 h-6 ${m.role === "user" ? "opacity-60 order-1 ml-2" : "mr-2"}`} />
                                     <span className={`inline-block rounded p-2 ${m.role === "user" ? "bg-colorWhite/80 text-colorMain" : "bg-colorMain/40 text-colorWhite"}`}>
@@ -173,7 +174,7 @@ function Chatbot({ language }: { language: Language })  {
                             </div>
                         </div>
                     ))}
-                    {loading && <div className="text-gray-400 italic">{assistantTyping}</div>}
+                    {loading && <div className="text-gray-400 italic">{chatbotAssistantTyping}</div>}
                     </div>
                 </div>
                 <div className="flex items-center p-2 border dark:border-colorWhite/40 border-colorMain/15 dark:bg-colorWhite/20 bg-colorWhite/60 rounded-lg">

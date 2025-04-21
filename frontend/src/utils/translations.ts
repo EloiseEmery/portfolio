@@ -13,8 +13,8 @@ const translations = {
     fr: "Connectez avec moi"
   }, 
   footerCopyright: {
-    en: "Copyright 2025 Éloïse Emery. All rights reserved.",
-    fr: "Copyright 2025 Éloïse Emery. Tous droits réservés."
+    en: "All rights reserved.",
+    fr: "Tous droits réservés."
   },
   footerText1: {
     en: "Created with",
@@ -90,19 +90,36 @@ const translations = {
     en: "Ask me something...",
     fr: "Posez-moi une question..."
   },
-  assistantTyping: {
+  
+  // Chatbot
+  chatbotAssistantTyping: {
     en: "Éloïse is answering...",
     fr: "Éloïse est en train de répondre..."
   },
-  assistantDefaultMessage: {
-    en: "Hello! I'm here to answer all your questions about my journey, experiences, or skills. Have fun, but don't overburden me please!",
-    fr: "Bonjour ! Je suis là pour répondre à toutes tes questions sur mon parcours, mes expériences ou mes compétences. Amusez-vous, mais ne me surchargez pas s'il vous plaît !"
+  chatbotAssistantDefaultMessage: {
+    en: "Hello! I'm here to answer all your questions about Éloïse. Have fun, but don't overburden me please.",
+    fr: "Bonjour ! Je suis là pour répondre à toutes vos questions sur Éloïse. Amusez-vous, mais ne me surchargez pas s'il-vous-plaît."
   },
-  // Chatbot error messages
-errorSendingMessage: {
-  en: 'Sorry, there was an error sending your message. Please try again.',
-  fr: 'Désolé, une erreur s\'est produite lors de l\'envoi de votre message. Veuillez réessayer. Vous avez atteint le nombre maximum de messages. Veuillez réessayer plus tard.'
-},
+  chatbotErrorSendingMessage: {
+    en: 'Sorry, there was an error sending your message. Please try again.',
+    fr: 'Désolé, une erreur s\'est produite lors de l\'envoi de votre message. Veuillez réessayer. Vous avez atteint le nombre maximum de messages. Veuillez réessayer plus tard.'
+  },
+  chatbotUsername: {
+    en: 'You',
+    fr: 'Vous'
+  },
+  chatbotQuestion1: {
+    en: 'Where do you see yourself in 3 to 5 years?',
+    fr: 'Où te vois-tu dans 3 à 5 ans ?'
+  },
+  chatbotQuestion2: {
+    en: 'What are your values at work ?',
+    fr: 'Quelles sont tes valeurs au travail ?'
+  },
+  chatbotQuestion3: {
+    en: 'Where do you work currently ?',
+    fr: 'Où travailles-tu actuellement ?'
+  },
 
   // My skillset
   mySkillsetTitle: {
