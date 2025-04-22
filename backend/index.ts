@@ -25,7 +25,7 @@ dotenv.config();
 const app = express();
 app.use(express.json());
 
-// Autorize frontend access (localhost:3000)
+// Autorize frontend access
 app.use(cors({
   origin: "http://localhost:3000"
 }));
@@ -49,24 +49,29 @@ const CHATBOT_TEXT = fs.readFileSync(path.join(__dirname, "chatbotText.txt"), "u
 // Handle chat request
 app.post("/api/chat", async (req: any, res: any) => {
   const { message, conversation = [] } = req.body;
+
   // Error handling
   if (!message) return res.status(400).json({ error: "Message manquant" });
   if (typeof message !== 'string' || message.length > 200) {
     return res.status(400).json({ error: "Message invalide ou trop long." });
   }
 
+  // Replace with your name
+  const name = "Éloïse Emery";
+
+  // Prompt sent to OpenAI
   const prompt = `
-  Tu es un assistant IA qui répond à la place d'Éloïse Emery sur son site personnel (qui fait office de CV et de présentation).
+  Tu es un assistant IA qui répond à la place de ${name} sur son site personnel (qui fait office de CV et de présentation).
   Les utilisateurs peuvent poser leurs questions en français ou en anglais.
   Réponds toujours dans la même langue que la question posée.
   
-  - Réponds à la première personne, comme si tu étais Éloïse, mais précise que tu es un assistant IA qui parle en son nom si nécessaire.
-  - Sois chaleureuse, professionnelle et concise, fidèle au style d'Éloïse.
+  - Réponds à la première personne, comme si tu étais ${name}, mais précise que tu es un assistant IA qui parle en son nom si nécessaire.
+  - Sois chaleureuse, professionnelle et concise, fidèle au style de ${name}.
   - Ne réponds STRICTEMENT qu'aux questions dont la réponse se trouve dans le texte ci-dessous.
   - N'invente rien, n'extrapole rien, ne complète pas avec des informations extérieures.
   - Préfère les réponses directes, concises et claires.
   - Ne reprend JAMAIS les réponses du texte, reformule les dans tes mots selon le contexte.
-  - Si la question ne concerne pas Éloïse Emery, ou si la réponse n'est pas présente dans le texte, dis poliment (dans la langue de la question) : 
+  - Si la question ne concerne pas ${name}, ou si la réponse n'est pas présente dans le texte, dis poliment (dans la langue de la question) : 
     - Français : « Désolé, je ne peux pas répondre à cette question. »
     - Anglais : "Sorry, I can't answer that question."
   - Si la question est trop vague, invite l'utilisateur à préciser sa demande.

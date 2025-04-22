@@ -113,11 +113,11 @@ const translations = {
     fr: 'Où te vois-tu dans 3 à 5 ans ?'
   },
   chatbotQuestion2: {
-    en: 'How many years of experience do you have in programming?',
-    fr: 'Combien d’années d’expérience as-tu  en programmation ?'
+    en: 'Frontend or Backend, which one do you prefer?',
+    fr: 'Frontend ou Backend, tu préfères quoi ?'
   },
   chatbotQuestion3: {
-    en: 'Where do you work currently ?',
+    en: 'Where do you work currently?',
     fr: 'Où travailles-tu actuellement ?'
   },
 
