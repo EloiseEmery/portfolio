@@ -1,17 +1,16 @@
-Présentation
+Présentation d'Éloïse Emery
 
 # À propos
-- Je m’appelle Éloïse Emery, je suis une jeune femme de 27 ans.
-- Je suis développeuse web à Montréal. Grâce à une double formation en design graphique et en programmation, j’ai développé une synergie unique entre créativité et compétences techniques. 
-- Je suis full stack développeuse et polyvalente, mais j’ai une préférence pour le frontend puisque j’ai une passion pour la création d’interfaces utilisateur et c'est mon domaine de force.
+- Je m’appelle Éloïse Emery, je suis une jeune femme de 27 ans. Je vis à Montréal. Je suis née au Québec, Canada.
+- Grâce à une double formation en design graphique et en programmation, j’ai développé une synergie unique entre créativité et compétences techniques. 
+- Je suis développeuse web full stack et polyvalente, mais j’ai une préférence pour le frontend puisque j’ai une passion pour la création d’interfaces utilisateur et c'est mon domaine de force.
 - J’aime transformer des concepts en designs intuitifs, tout en accordant une grande importance à l’accessibilité et à l’expérience utilisateur.
 - En équipe, j’apporte une vision globale et je sais m’adapter à différents rôles selon les besoins du projet. Mon tempérament introverti m’aide à écouter et comprendre les besoins des autres, et j’utilise mon intuition pour soutenir efficacement mon entourage. Je crois fermement qu’une communication authentique et une harmonie d’équipe sont essentielles à la réussite. Je veille toujours à ce que chacun se sente valorisé et entendu.
 - J’accorde de l’importance à la ponctualité et à la fiabilité. J’apprécie le travail bien fait, clair et propre, que ce soit en équipe ou en autonomie. Je suis observatrice, rationnelle, sensible, organisée, perfectionniste
+- Je prends particulièrement plaisir à coder et à travailler sur le design, et j’ai naturellement tendance à privilégier le travail en autonomie derrière mon ordinateur. Cependant, je sais aussi sortir de ma zone de confort et collaborer efficacement avec les autres lorsque le projet l’exige.
 - Mon type de personnalité mbti est INFJ (Lien vers mes résultats : https://www.16personalities.com/fr/profils/f2ae3d022b2f1). Mon Énneagramme est 7w6. 
-- Dans mes temps libres, j’aime me détendre et me divertir, découvrir de nouvelles choses, jouer du piano et aller au gym.
 
-
-# Expérience professionnelle
+# Expériences professionnelles
 - Développeuse web / YULCOM Technologies
     Montréal, octobre 2022 - aujourd’hui (2025)
     Gestion de projets informatiques (méthode agile)
@@ -32,7 +31,7 @@ Présentation
     Création de sites WordPress, production et numérisation d’images
     Préparation de documents pour l’impression
 
-# Formation
+# Formations
 - AEC Programmation et développement Web
     Collège de Maisonneuve, 2021 - 2022
     (Acquisition de plusieurs connaissances en informatique et développement de la méthodologie de travail: Processus de conception d’un site Web de a à z et travaux d’équipe dans un environnement de travail agile. Diversification des connaissances et prise d’expériences dans le domaine tout en travaillant à temps partiel sur des contrats à la pige.)
@@ -85,6 +84,7 @@ Présentation
 - Adaptabilité, polyvalence, autonomie
 - Organisation, ponctualité, fiabilité, minutie
 - Sens de l’initiative, créativité, esprit d’analyse et de synthèse
+- Parle Français d'origine, mais je suis à l'aise en anglais aussi. 
 
 # Q/A
 ## Questions techniques générales
@@ -182,7 +182,7 @@ Présentation
     Je collaborer constante avec designers et parties prenantes pour améliorer l’interface
 - As-tu déjà mené des tests utilisateurs ?
     Oui, j'ai mené des tests utilisateurs et donné des retours à l'aide de BugHerd dans certains projets professionnels.
-- As tu deja fait des personas et des parcours utilisateurs ?
+- As tu déjà fait des personas et des parcours utilisateurs ?
     Oui, j'ai eu à faire des personas et des parcours utilisateurs dans un projet professionnel chez YULCOM Technologies.
     J'ai également eu un cours pour cela lors de mon AEC en programmation et développement web.
 - Comment gères-tu la cohérence graphique sur un site ou une application ?
@@ -211,25 +211,77 @@ Présentation
     La satisfaction de voir les idées transmises par l'interface utilisateur et prendre forme visuellement
     La satisfaction et la gratification ressentit lorsqu'un projet est terminé ou lorsque je résous un problème ou conçois une fonctionnalité.
 - Quelles sont tes qualités principales en tant que développeuse ?
-    J'aime le code bien organisé, clair, propre et bien structuré. 
-    Je suis persévérante, autodidacte et autonome.
+    J'ai de la rigueur et le souci du détail dans le code. J'aime le code bien organisé, clair, propre et bien structuré. 
+    Je suis persévérante, autodidacte, curieuse et autonome.
     J'ai une experience assez complète en tant que développeuse full stack.
 - Comment gères-tu le stress, les deadlines serrées et le changement de priorités en cours de projet ?
+    Je m'assure de bien organiser et planifier mon travail.
+    Je découpe mes taches et les tris par priorités.
+    Je communique plus fréquemment avec mon équipe pour m'assurer que tout se passe bien.
+    Je suis capable de prendre du recul pour eviter la surcharge.
 - Où te vois-tu dans 3 à 5 ans ?
-- Comment fais-tu face à l’incertitude ou à l’ambiguïté dans un projet ?
+    Je souhaite avoir pris de l'expertise dans mes domaines de force, avoir approfondi mes compétences actuelles et les matriser le plus possible.
+    Je souhaite être en constant apprentissage et avoir agrandis mon stack technique.
+    Je souhaite avoir une expérience de travail qui me permettra de varier mes taches et de m'amuser.
+    Je souhaite être reconnu pour la qualité de mon travail et ma capacité à résoudre des problématiques complexes.
+    Je souhaite avoir un emploi stable que j'apprécie.
+    Je souhaite être le plus libre possible de mon temps, avoir un bon equilibre entre ma vie personnelle et professionnelle.
+    Je souhaite contribuer activement à la réussite de mon équipe et pouvoir aider mes collègues.
 - Qu’as-tu appris d’un échec ou d’une erreur passée ?
+    J'ai appris que la patience et la persévérance sont des qualités essentielles et qu'elles permettent de venir à bout de n'importe quel problème.
+    J'ai appris qu'une communication fréquente et transparente dans l'équipe augmente les chances de livraison réussie.
 - Comment réagis-tu quand tu ne sais pas comment résoudre un problème technique ?
+    Je ne vais pas mentir, je ressens toujours un peu de frustration, mais je sais mettre mon ego de côté et chercher de l'aide.
+    J’analyse la situation pour bien comprendre le problème et identifier les points bloquants
+    Je vais toujours essayer de résoudre par moi-même le problème (y compris sur internet et avec ChatGPT), mais si je suis bloqué, je demande de l'aide à mes collègues.
+    Je reste persévérante et garde une attitude positive, même face à la difficulté
 - Comment réagis-tu lorsque tu dois travailler avec des personnes ayant des opinions très différentes des tiennes ?
+    Je reste toujours ouverte d'esprit pour accueillir des opinions différentes.
+    Je fais valoir mes opinions, mais je suis ouverte à l'écoute des opinions des autres.
+    Si on s'entend mal, je cherche une solution qui convienne à tous. Je suis toujours prête à faire des compromis.
 - Comment donnes-tu du feedback constructif à un collègue ?
+    Je souligne les points positifs et je donne mes remarques sans jugement.
+    Je reste bienveillante et constructive.
+    Je propose des pistes d'amélioration ou des suggestions et j'encourage.
 - Comment réagis-tu face à une critique sur ton travail ?
+    Parfois, ça me blesse, mais je sais que c'est une partie du processus d'apprentissage.
+    J'y vois une opportunité d'apprendre et de m'améliorer. 
+    Je trouve que la vision de l'autre m'aide à m'inspirer et à pousser plus loin mon travail.
 - Peux-tu décrire une situation où tu as dû apprendre rapidement une nouvelle technologie ?
-- Quelles sont selon vous vos principales forces ainsi que les axes sur lesquels vous souhaitez progresser ?
-- Pouvez-vous partager certaines de vos réalisations marquantes ou difficultés rencontrées au cours de votre parcours professionnel ?
+    En travaillant chez Yulcom, j'ai dû apprendre TYPO3 pour pouvoir faire un guide d'utilisation d'une plateforme gouvernementale.
+    En travaillant chez Yulcom, j'ai du apprendre Figma, pour faire des maquettes pour un client, car avant j'utilisais seulement Adobe XD.
+    En travaillant chez Yulcom, j'ai dû apprendre Swiftic et Angular pour appuyer le développement de projets à livrer dans de très courts délais.
+    En travaillant chez Yulcom, j'ai dû me refamiliariser avec Tailwind (que je n'avais pas utilisé depuis mon AEC), pour compléter le développement d'un site web interactif en moins d'un mois.
+- Quelles sont les axes sur lesquels vous souhaitez progresser ?
+    Je travaille à améliorer mes compétences en gestion de projet et en IA, ainsi que ma capacité à prendre la parole en public et à communiquer sur des sujets techniques à des profils non techniques.
+    Je cherche aussi à renforcer ma maîtrise de certains outils et frameworks récents pour rester à jour dans un secteur en constante évolution.
+- Pouvez-vous partager des difficultés rencontrées au cours de votre parcours professionnel ?
+    J'ai dû faire face à des projets mal gérés, avec un ownership mal défini. Je me suis retrouver à devoir prendre le lead et des rôles qui ne m'étaient pas assignés.
+    J'ai dû faire face à des difficultés de communication avec des collègues à cause de la langue. Je devais faire preuve de patience pour qu'on se comprenne.
+    J'ai dû faire face à des projets avec des délais serrés, j'ai donner mon maximum et travaillé des heures supplémentaires pour les aider.
 
 ## Questions “soft skills”
 - Comment gères-tu les conflits dans une équipe ?
+    Je reste calme et je m'assure de bien comprendre la situation et les points de vue de tout les membres de l'équipe.
+    J'envisage des solutions qui conviennent à tous.
+    J'ajoute une touche d'humour pour détendre l'atmosphère.
+    Je m'assure que tout le monde est satisfait de la décision prise.
 - Comment organises-tu ton temps et tes priorités ?
+    Je définis mes objectifs quotidiens.
+    Je classe mes tâches par ordre de priorité et d’urgence.
+    Je découpe les tâches complexes en sous-tâches pour mieux avancer.
+    Je fais régulièrement le point sur l’avancement pour réajuster si besoin.
+    Je garde ma todo liste à jour tout au long de la journée.
 - Qu’est-ce qui te différencie des autres développeurs/développeuses ?
-    J'ai une experience unique en tant que graphiste et développeuse.
+    J'ai une experience et un parcours unique en tant que graphiste et développeuse. 
+    Je peux collaborer efficacement avec tous les rôles de l'équipe.
+    Je suis une ambivertie. J'ai le type de personnalité le plus rare (INFJ). J’ai naturellement une personnalité introvertie, calme et posée, mais je sais également faire preuve d’ouverture et d’extraversion lorsque la situation l’exige.
+    J'ai une facilité d'apprentissage, j'apprends rapidement et je suis autodidacte.
+    Je suis très organisée et je mets du coeur dans mon travail.
 - Peux-tu donner un exemple où tu as aidé un membre de ton équipe à surmonter une difficulté ?
+    J'ai eu a superviser des stagiaires, répondre à leurs questions et à les guider vers des pistes lorsqu'ils étaient bloqués.
+    J'ai aider un collègue avec JavaScript lorsqu'il avait du mal à comprendre un concept. Je lui ai proposé de prendre un temps ensemble pour analyser le problème. J’ai partagé avec lui des ressources et de bonnes pratiques basées sur mon expérience.
 - Comment facilites-tu la collaboration entre développeurs et designers ?
+    Je m'assure que tous les matériaux de base soient disponibles pour les designers et développeurs.
+    Je suis à l'aise avec la communication entre développeurs et designers puisque j'ai été formée pour occuper les deux rôles.
+    Tout au long du projet, je m'assure que tout le monde est sur la même longueur d'onde.

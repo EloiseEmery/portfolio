@@ -67,7 +67,7 @@ function MySkillset({ language }: { language: Language }) {
                 <p>Laravel</p>
                 <p>TypeScript</p>
                 <p>API REST</p>
-                <p>.Liquid</p>
+                <p>JIRA</p>
             </div>
             <div className="mt-3 flex justify-end">
                 <Link 
