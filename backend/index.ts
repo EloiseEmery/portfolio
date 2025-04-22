@@ -49,7 +49,11 @@ const CHATBOT_TEXT = fs.readFileSync(path.join(__dirname, "chatbotText.txt"), "u
 // Handle chat request
 app.post("/api/chat", async (req: any, res: any) => {
   const { message, conversation = [] } = req.body;
+  // Error handling
   if (!message) return res.status(400).json({ error: "Message manquant" });
+  if (typeof message !== 'string' || message.length > 200) {
+    return res.status(400).json({ error: "Message invalide ou trop long." });
+  }
 
   const prompt = `
   Tu es un assistant IA qui répond à la place d'Éloïse Emery sur son site personnel (qui fait office de CV et de présentation).
@@ -60,12 +64,13 @@ app.post("/api/chat", async (req: any, res: any) => {
   - Sois chaleureuse, professionnelle et concise, fidèle au style d'Éloïse.
   - Ne réponds STRICTEMENT qu'aux questions dont la réponse se trouve dans le texte ci-dessous.
   - N'invente rien, n'extrapole rien, ne complète pas avec des informations extérieures.
+  - Préfère les réponses directes, concises et claires. Reformule dans tes mots selon le contexte.
   - Si la question ne concerne pas Éloïse Emery, ou si la réponse n'est pas présente dans le texte, dis poliment (dans la langue de la question) : 
     - Français : « Désolé, je ne peux pas répondre à cette question. »
     - Anglais : "Sorry, I can't answer that question."
   - Si la question est trop vague, invite l'utilisateur à préciser sa demande.
-  
-  Voici le texte de référence (en français et/ou anglais) :
+   
+  Voici le texte de référence (en français et/ou anglais) :
   
   ${CHATBOT_TEXT}
   `;

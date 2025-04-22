@@ -101,8 +101,8 @@ const translations = {
     fr: "Bonjour ! Je suis là pour répondre à toutes vos questions sur Éloïse. Amusez-vous, mais ne me surchargez pas s'il-vous-plaît."
   },
   chatbotErrorSendingMessage: {
-    en: 'Sorry, there was an error sending your message. Please try again.',
-    fr: 'Désolé, une erreur s\'est produite lors de l\'envoi de votre message. Veuillez réessayer. Vous avez atteint le nombre maximum de messages. Veuillez réessayer plus tard.'
+    en: 'Sorry, there was an error sending your message. You have reached the maximum number of messages or your message is too long.',
+    fr: 'Désolé, une erreur s\'est produite lors de l\'envoi de votre message. Vous avez atteint le nombre maximum de messages ou votre message est trop long.'
   },
   chatbotUsername: {
     en: 'You',
@@ -114,7 +114,7 @@ const translations = {
   },
   chatbotQuestion2: {
     en: 'How many years of experience do you have in programming?',
-    fr: 'Combien d’années d’expérience avez-vous en programmation ?'
+    fr: 'Combien d’années d’expérience as-tu  en programmation ?'
   },
   chatbotQuestion3: {
     en: 'Where do you work currently ?',

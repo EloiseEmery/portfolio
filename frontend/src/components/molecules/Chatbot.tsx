@@ -92,17 +92,15 @@ function Chatbot({ language }: { language: Language })  {
 
     // Handle message submission
     async function sendMessage(userMsg: string) {
-        // Validate message
         const trimmedMsg = userMsg.trim();
         const MAX_MESSAGE_LENGTH = 200;
         // Reset any previous error states
         setErrorMessage(null);
-
+        // Validate message
         if (!trimmedMsg) {
             setErrorMessage('Please enter a message');
             return;
         }
-
         if (trimmedMsg.length > MAX_MESSAGE_LENGTH) {
             setErrorMessage(`Message is too long. Maximum length is ${MAX_MESSAGE_LENGTH} characters.`);
             return;
@@ -129,14 +127,14 @@ function Chatbot({ language }: { language: Language })  {
             if (!response.ok) {
                 throw new Error('Network response was not ok');
             }
-
+            // Handle API response
             const data = await response.json();
             const assistantMessage: Message = { role: 'assistant', content: data.response || data.error };
 
             // Add assistant message to chat
             setMessages([...updatedMessages, assistantMessage]);
         } catch (error) {
-            console.error('Error sending message:', error);
+            // Handle errors
             const errorMessage: Message = { 
                 role: 'assistant', 
                 content: getTranslation('chatbotErrorSendingMessage', language) 

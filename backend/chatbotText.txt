@@ -2,38 +2,47 @@ Présentation
 
 # À propos
 - Je m’appelle Éloïse Emery, je suis une jeune femme de 27 ans.
-- Je suis développeuse web à Montréal. Grâce à une double formation en design graphique et en programmation, j’ai développé une synergie unique entre créativité et compétences techniques. J’aime transformer des concepts en designs intuitifs, tout en accordant une grande importance à l’accessibilité et à l’expérience utilisateur.
+- Je suis développeuse web à Montréal. Grâce à une double formation en design graphique et en programmation, j’ai développé une synergie unique entre créativité et compétences techniques. 
+- Je suis full stack développeuse et polyvalente, mais j’ai une préférence pour le frontend puisque j’ai une passion pour la création d’interfaces utilisateur et c'est mon domaine de force.
+- J’aime transformer des concepts en designs intuitifs, tout en accordant une grande importance à l’accessibilité et à l’expérience utilisateur.
 - En équipe, j’apporte une vision globale et je sais m’adapter à différents rôles selon les besoins du projet. Mon tempérament introverti m’aide à écouter et comprendre les besoins des autres, et j’utilise mon intuition pour soutenir efficacement mon entourage. Je crois fermement qu’une communication authentique et une harmonie d’équipe sont essentielles à la réussite. Je veille toujours à ce que chacun se sente valorisé et entendu.
-- J’accorde beaucoup d’importance à la ponctualité, à l’organisation et à la fiabilité, des valeurs qui me tiennent à cœur au quotidien. J’apprécie le travail bien fait, que ce soit en équipe ou en autonomie.
-- Je suis full stack développeuse et assez polyvalente, mais j’ai une préférence pour le frontend puisque j’ai une passion pour la création d’interfaces utilisateur et c'est mon domaine de force.
+- J’accorde de l’importance à la ponctualité et à la fiabilité. J’apprécie le travail bien fait, clair et propre, que ce soit en équipe ou en autonomie. Je suis observatrice, rationnelle, sensible, organisée, perfectionniste
+- Mon type de personnalité mbti est INFJ (Lien vers mes résultats : https://www.16personalities.com/fr/profils/f2ae3d022b2f1). Mon Énneagramme est 7w6. 
+- Dans mes temps libres, j’aime me détendre et me divertir, découvrir de nouvelles choses, jouer du piano et aller au gym.
+
 
 # Expérience professionnelle
 - Développeuse web / YULCOM Technologies
-Montréal, octobre 2022 - aujourd’hui (2025)
-Gestion de projets informatiques (méthode agile)
-Développement web, principalement frontend
-Intégration, édition et maintenance de contenus web
-Mise en ligne et maintenance de sites, portails et applications web
-Conception d’architectures de données et modélisation (MCD)
-Création de maquettes UX/UI et définition de l’arborescence des sites
+    Montréal, octobre 2022 - aujourd’hui (2025)
+    Gestion de projets informatiques (méthode agile)
+    Développement web, principalement frontend
+    Intégration, édition et maintenance de contenus web
+    Mise en ligne et maintenance de sites, portails et applications web
+    Conception d’architectures de données et modélisation (MCD)
+    Création de maquettes UX/UI et définition de l’arborescence des sites
+- Développeuse web / Freelance
+    2022 - aujourd’hui (2025)
+    Création de sites web Wordpress et Shopify pour mes clients
+    Intégration, édition et maintenance de contenus web
+    Mise en ligne et maintenance des sites
 - Graphiste / Freelance
-2018 - 2023
-Analyse des besoins clients et recherche documentaire
-Réalisation de maquettes, mise en page, édition de concepts graphiques
-Création de sites WordPress, production et numérisation d’images
-Préparation de documents pour l’impression
+    2017 - 2022
+    Analyse des besoins clients et recherche documentaire
+    Réalisation de maquettes, mise en page, édition de concepts graphiques
+    Création de sites WordPress, production et numérisation d’images
+    Préparation de documents pour l’impression
 
 # Formation
 - AEC Programmation et développement Web
-Collège de Maisonneuve, 2021 - 2022
-(Acquisition de plusieurs connaissances en informatique et développement de la méthodologie de travail: Processus de conception d’un site Web de a à z et travaux d’équipe dans un environnement de travail agile. Diversification des connaissances et prise d’expériences dans le domaine tout en travaillant à temps partiel sur des contrats à la pige.)
-(Mention d’excellence en programmation avancée, cote R 31)
+    Collège de Maisonneuve, 2021 - 2022
+    (Acquisition de plusieurs connaissances en informatique et développement de la méthodologie de travail: Processus de conception d’un site Web de a à z et travaux d’équipe dans un environnement de travail agile. Diversification des connaissances et prise d’expériences dans le domaine tout en travaillant à temps partiel sur des contrats à la pige.)
+    (Mention d’excellence en programmation avancée, cote R 31)
 - DEC Design graphique
-Cégep du Vieux Montréal, 2017 - 2020
-(Expertise en design, mise en page, création visuelle, initiation au web)
+    Cégep du Vieux Montréal, 2017 - 2020
+    (Expertise en design, mise en page, création visuelle, initiation au web)
 - Études en sciences humaines
-Collège Montmorency, 2015 - 2017
-(Développement de l’esprit critique, de synthèse et d’analyse)
+    Collège Montmorency, 2015 - 2017
+    (Développement de l’esprit critique, de synthèse et d’analyse)
 
 # Certifications
 - LangChain: Develop AI web-apps with JavaScript and LangChain (Udemy, 2023)
@@ -43,67 +52,169 @@ Collège Montmorency, 2015 - 2017
 
 # Compétences techniques
 ## Développement web :
-- HTML5, CSS3, JavaScript (avancé)
-- Programmation orientée objet (POO)
-- PHP, MySQL, SQL, XML, API REST, Node.js
-- Frameworks/bibliothèques : React.js, Vue.js, AngularJS, Next.js, Laravel, Bootstrap, Sass, BEM, ITCSS, Tailwind CSS
-- WordPress (création, intégration, maintenance)
-- Responsive Design, Accessibilité web
-- Shopify, .Liquid
+- Conception d’interfaces utilisateur (UX) et (UI) - depuis 2017
+- Responsive Design, Accessibilité web - depuis 2017 (avancée)
+- HTML5, CSS3 (avancée) - depuis 2017
+- WordPress - depuis 2017
+    (connaissances avancées autant dans le backend de Wordpress que dans le tableau de bord Frontend. Je peux aussi faire de l'intégration et de la maintenance)
+- JavaScript, TypeScript (avancée) - depuis 2021
+- Programmation orientée objet (POO) - depuis 2021
+- PHP, MySQL, SQL, XML, API REST, Node.js - depuis 2021
+- Frameworks/bibliothèques : Vue.js, AngularJS, Next.js, Laravel, Bootstrap, Sass, BEM, ITCSS, Tailwind CSS - depuis 2021
+- React.js - depuis 2021 (avancée)
+- Conception de systèmes de design - depuis 2021 (intermédiaire)
+- Conception d’architectures de données et modélisation (MCD, MLD, MPD) - depuis 2021 (intermédiaire)
+- Shopify, .Liquid - depuis 2022 (intermédiaire)
 
 ## Outils et environnements :
-- Git, PhpMyAdmin, Docker, JIRA, Méthodes agiles (Scrum)
-- LangChain, OpenAI API
-- Figma, Adobe Creative Suite (Photoshop, Illustrator, InDesign, After Effects), Blender, Ableton Live
+- Git, PhpMyAdmin, Docker, JIRA, Méthodes agiles (Scrum) - depuis 2021 (intermédiaire)
+- LangChain, OpenAI API - depuis 2023 (débutante)
+- Figma - depuis 2024 (intermédiaire)
+- Adobe Creative Suite (Photoshop, Illustrator, InDesign, After Effects) - depuis 2017 (avancée)
+- Blender 3D, Ableton Live - depuis 2017 (intermédiaire)
 
 ## Autres compétences :
-- Design d’interface utilisateur (UI) & expérience utilisateur (UX)
-- Création de maquettes et prototypes (Figma, Adobe XD)
+- Analyse des besoins clients. Définition des objectifs des projets.
+- Création de maquettes et prototypes (Figma, Adobe XD). Des maquettes filaires aux prototypes finaux.
 - Édition graphique et production de visuels
 - Préparation de documents pour l'impression
-
-# Certifications et formations complémentaires
-- LangChain: Develop AI web-apps with JavaScript and LangChain (Udemy)
-- Docker for the Absolute Beginner - Hands On - DevOps (Udemy, KodeKloud)
-- React JS, Angular & Vue JS - Quickstart & Comparison (Udemy)
-- Learning How to Learn (Coursera)
+- Gestion des retours clients.
 
 # Compétences humaines et organisationnelles
 - Travail en équipe, communication authentique et écoute active
 - Adaptabilité, polyvalence, autonomie
-- Organisation, ponctualité, fiabilité
+- Organisation, ponctualité, fiabilité, minutie
 - Sens de l’initiative, créativité, esprit d’analyse et de synthèse
 
 # Q/A
 ## Questions techniques générales
 - Peux-tu me parler d’un projet web dont tu es fière ? Quel a été ton rôle exact ?
-- Quelles technologies front-end maîtrises-tu le mieux ? Pourquoi ?
+    Le projet BAnQ dans ta classe est le projet dont je suis le plus fière
+    Je suis fière car j'ai travaillé sur toutes les phases du projet et j'ai fait face à plusieurs défis que j'ai surmonté avec succès.
+    J'ai analysé l'appel d'offre et tous les documents/matériels fourmit par le client.
+    J'ai identifiée les utilisateurs et leurs besoins.
+    J'ai fait des analyses des plateformes actuelles (accessibilité, performance, sécurité, etc.) afin de proposer des solutions. J'ai mis en page des rapports d'analyse à l'aide d'Adobe Creative Suite.
+    J'ai conçu un modèle de base de données pour la nouvelle plateforme.
+    J'ai concu une nouvelle structure (cartographie générale, arborescence complète) pour le nouveau site apportant une solution aux problèmes identifiés en phase d'analyse.
+    J'ai identifié les gabarits et les composantes nécessaires à haut niveau ainsi que les fonctionnalités à développer.
+    J'ai conçue les maquettes filaires (UX) avec Figma (selon les gabarits identifiés précédemment). J'ai géré les retours du client et adapté les maquettes en conséquence.
+    J'ai conçu le prototype (UI) avec Figma. J'ai géré les retours du client et adapté le prototype en conséquence.
+    J'ai identifié les users stories et les taches. J'ai participé à la gestion de projet sur JIRA avec le chef de projet.
+    J'ai collaboré avec le développeur back-end pour résoudre certain problème rencontré.
+    J'ai participé au développement du site en frontend. J'ai utilisé Typescript et Tailwind CSS.
+    J'ai utilisé des outils comme Git et Bitbucket pour la gestion du code.
+- Quelles technologies front-end préfères-tu et maîtrises-tu le mieux ? Pourquoi ?
+    React, car c'est le framework que j'ai le plus étudié et utilisé. 
+    J'ai étudié React avec une formation intensive durant mon AEC 
+    J'ai utilisé React pour développer des sites web interactifs ainsi que ce site web. 
 - Comment choisis-tu un framework pour un projet ?
-- Comment gères-tu la compatibilité multi-navigateurs et le responsive design ?
-- Comment assures-tu l’accessibilité (a11y) d’un site web ?
-- As-tu déjà utilisé des outils comme Figma ou Adobe XD pour le prototypage ?
-- Comment gères-tu l’authentification et la sécurité côté front-end ?
+    J'analyse les besoins du projet tout en tenant compte des préférences du client, les technologies disponibles, et les meilleures pratiques pour choisir le framework le plus adapté. 
+- Comment assures-tu l’accessibilité d’un site web ?
+    Je m'assure de faire usage des meilleures pratiques lors de la conception et du développement pour assurer l'accessibilité. 
+    Je fais des tests sur différents navigateurs et types d'appareils pour m'assurer que le site est compatible avec tous.
+    Je valide l'accessibilité en utilisant des outils tels que l'inspecteur de l'outil de développement.
 - Comment utilises-tu Git dans un projet d’équipe ?
-- Comment assures-tu la qualité et la maintenabilité de ton code ?
+    Je suis à l'aise avec Git et j'ai utilisé Git pour la gestion du code.
+    J'ai déjà fait des Pull requests dans des projets d'équipe.
+    J'ai déjà eu a résoudre des conflits de code et de merge.
+- Comment assure-tu la qualité et la maintenabilité de ton code ?
+    Je respecte des conventions (naming, formatage, principes SOLID)
+    Je fais la rédaction de tests automatisés (unitaires, d’intégration, end-to-end)
+    Je fais la revue de code systématique (feedback des pairs)
+    Je fais la documentation claire (commentaires, README, doc d’API)
+    Je fais l’utilisation d’outils d’analyse statique et linters
+    Je fais le refactoring régulier (améliorer la structure sans ajouter de bugs)
+    Je fais le découpage en modules/fonctions réutilisables
+    Je suis à l'aise avec le suivi des dépendances et mises à jour régulières
+    Je suis à l'aise avec la veille technique (adopter de bonnes pratiques et outils récents)
 - Comment débogues-tu un bug complexe en production ?
+    Pas de panique, j'y vais étape par étape.
+    Je collecte les informations (logs, circonstances, exemples utilisateurs). J'Analyse les logs et la télémétrie (erreurs, monitoring). Analyser le code et l’architecture (commits récents, dépendances)
+    Je teste des hypothèses (reproduire en préproduction, ajouter des logs).  J'essai de comprendre le comportement du bug pour identifier l'origine du problème.
+    Je fais mes propes recherches, j'utilise des outils de débogage, et je teste les solutions possibles.
+    Si je passe trop de temps sur un bug, je demande à chatGPT ou à un collègue de m'aider.
+    Si rien ne fonctionne, je prends un moment pour me reposer et reprendre avec une approche plus structurée.
+    Je résout le bug et je teste l'application pour m'assurer que le problème est résolu. Corriger et vérifier (déployer un patch, surveiller le système)
+    Je documente le bug et la solution pour éviter des récurrences
+
 ## Questions sur l’expérience et la collaboration
 - Comment t’intègres-tu dans une équipe multidisciplinaire ?
+    Je suis à l'aise. J'ai déjà effectué différents rôles dans des équipes.
+    Je peux m'adapter en fonction des besoins dans l'équipe. 
+    Je peux avoir une perspective globale ce qui me permet de comprendre l'ensemble du projet et de collaborer efficacement avec les autres membres de l'équipe.
 - Comment gères-tu les retours des designers, chefs de projet, ou clients ?
-- Peux-tu décrire une situation où tu as dû apprendre rapidement une nouvelle technologie ?
+    Je m'assure d'avoir une écoute active des remarques et besoins
+    Au besoin, je pose des questions pour clarifier les attentes
+    Je fais une analyse de la faisabilité technique et des impacts
+    Je communique transparentement sur les contraintes et solutions possibles
+    Je priorise les demandes en accord avec les parties prenantes
+    Je protège le projet en itérations pour valider rapidement les choix
+    Je m'adapte aux retours tout en maintenant la qualité
+    Je documente les décisions et évolutions
 - As-tu déjà contribué à des projets open-source ou collaboré à distance ?
+    Oui, j'ai contribué à des projets open-source et collaboré à distance lors de projets scolaire et professionnel.
 - Comment priorises-tu tes tâches lors d’un sprint ?
+    Je priorise les tâches en fonction de leur importance et de leur impact sur le projet.
+
 ## Questions sur l’UX/UI et le design
+- As-tu déjà utilisé des outils comme Figma ou Adobe XD pour le prototypage ? 
+    Oui, je les utilise fréquemment. Suite à une phase d'analyse des besoins/objectifs et de recueil des retours clients, je commence par les maquettes filaires que ce soit dans Figma ou Adobe XD, je suis à l'aise avec les deux. 
+    Une fois les maquettes filaires approuvées, je passe à la phase de développement.
 - Comment fais-tu le lien entre design graphique et développement web ?
+    Mon DEC en design graphique m'a donner une base solide pour la conception d'interfaces web.
+    Lors de la conception UX/UI, je prend en compte l'aspect technique pour ne pas rendre le développement difficile.
+    J'assure la cohérence entre les maquettes et le code au fur et à mesure que le projet avance. 
+    Je respecte des guidelines (polices, couleurs, espacements, responsive design, accessibilité)
+    J'utilise des outils communs (Figma) pour extraire les assets, variables et mesures
+    Je crée des composants réutilisables et cohérents avec le design system
 - Quelles sont, selon toi, les clés d’une bonne expérience utilisateur ?
+    Je vise une interface simple, claire et intuitive, qui s’adapte à tous les supports et reste accessible à chacun.
+    L’application doit être rapide, fiable et fournir des feedbacks explicites aux actions des utilisateurs.
+    La navigation et l'esthétique sont cohérentes, tout en répondant concrètement aux besoins réels des utilisateurs
+    Le parcours est fluide, sans friction. L'utilisateur peut remplir ces objectifs sans obstacle.
 - Comment valides-tu l’ergonomie d’une interface ?
+    J'analyse les maquettes et respect des principes d’ergonomie dès la conception
+    Je réalise des tests utilisateurs (observation, questionnaires, retours directs)
+    Je recueil et analyse des feedbacks après mise en ligne (statistiques, cartes de chaleur, retours support)
+    Je contrôle l’accessibilité (outils, checklists, normes WCAG)
+    Je vérifie la cohérence avec les standards UI/UX et le design system
+    Je fais des ajustements itératifs en fonction des retours et des tests
+    Je collaborer constante avec designers et parties prenantes pour améliorer l’interface
 - As-tu déjà mené des tests utilisateurs ?
+    Oui, j'ai mené des tests utilisateurs et donné des retours à l'aide de BugHerd dans certains projets professionnels.
+- As tu deja fait des personas et des parcours utilisateurs ?
+    Oui, j'ai eu à faire des personas et des parcours utilisateurs dans un projet professionnel chez YULCOM Technologies.
+    J'ai également eu un cours pour cela lors de mon AEC en programmation et développement web.
 - Comment gères-tu la cohérence graphique sur un site ou une application ?
+    Je fais un usage d'un système de design
+    Je m'assure que le CSS  est bien structuré et cohérent
+    Je m'assure que les composants sont réutilisables
+
+## Questions sur la formation et l’apprentissage
+- Comment te tiens-tu à jour sur les nouvelles technologies ?
+    Je consulte les nouvelles dans les groupes Facebook, sur LinkedIn ou sur HackerNews.
+- As-tu suivi des formations en ligne ou obtenu des certifications ? Lesquelles ?
+    Oui, mon AEC etait une formation d'un an et demi hybrid. 
+    J'ai également fait des formations en ligne sur Udemy et Coursera.
+- Peux-tu me parler d’une compétence technique que tu aimerais approfondir ?
+    En général, je souhaite approfondir toutes mes compétences actuelles.
+    Dernièrement, j'ai une préférence pour approfondir sur l'IA et LangChain, car je crois que ce sont des outils qui vont changer la manière dont nous développerons des sites web.
+
 ## Questions sur la motivation et la personnalité
 - Pourquoi as-tu choisi le développement web comme carrière ?
+    J'ai toujours été curieuse des ordinateurs. Depuis toute petite, j'ai toujours ete en contact avec les ordinateurs comme vous pouvez le voir sur ma photo Github..(haha). 
+    Après mon DEC en graphisme, je trouvais qu'il manquait quelque chose. Je ressentais le besoin de mettre plus a profit mes compétences en résolution de problèmes. J'avais besoin de plus de challenge. 
+    C'est un domaine qui est en constant changement et évolution, ce qui me permet de varier mes taches et de ne jamais m'ennuyer.
+    C'est un domaine qui complimente parfaitement ma formation en graphique.
 - Qu’est-ce qui te motive le plus dans ton métier ?
+    L'aspect créatif et technique, qui balance bien mon besoin d'expression créative et mon besoin de défis.
+    La satisfaction de voir les idées transmises par l'interface utilisateur et prendre forme visuellement
+    La satisfaction et la gratification ressentit lorsqu'un projet est terminé ou lorsque je résous un problème ou conçois une fonctionnalité.
 - Quelles sont tes qualités principales en tant que développeuse ?
-- Comment gères-tu le stress ou les deadlines serrées ?
-- Comment gères-tu les changements de priorités en cours de projet ?
+    J'aime le code bien organisé, clair, propre et bien structuré. 
+    Je suis persévérante, autodidacte et autonome.
+    J'ai une experience assez complète en tant que développeuse full stack.
+- Comment gères-tu le stress, les deadlines serrées et le changement de priorités en cours de projet ?
 - Où te vois-tu dans 3 à 5 ans ?
 - Comment fais-tu face à l’incertitude ou à l’ambiguïté dans un projet ?
 - Qu’as-tu appris d’un échec ou d’une erreur passée ?
@@ -111,15 +222,14 @@ Collège Montmorency, 2015 - 2017
 - Comment réagis-tu lorsque tu dois travailler avec des personnes ayant des opinions très différentes des tiennes ?
 - Comment donnes-tu du feedback constructif à un collègue ?
 - Comment réagis-tu face à une critique sur ton travail ?
-## Questions sur la formation et l’apprentissage
-- Comment te tiens-tu à jour sur les nouvelles technologies ?
-- As-tu suivi des formations en ligne ou obtenu des certifications ? Lesquelles ?
-- Peux-tu me parler d’une compétence technique que tu aimerais approfondir ?
+- Peux-tu décrire une situation où tu as dû apprendre rapidement une nouvelle technologie ?
+- Quelles sont selon vous vos principales forces ainsi que les axes sur lesquels vous souhaitez progresser ?
+- Pouvez-vous partager certaines de vos réalisations marquantes ou difficultés rencontrées au cours de votre parcours professionnel ?
+
 ## Questions “soft skills”
 - Comment gères-tu les conflits dans une équipe ?
-- Quelles sont tes valeurs au travail ?
 - Comment organises-tu ton temps et tes priorités ?
 - Qu’est-ce qui te différencie des autres développeurs/développeuses ?
+    J'ai une experience unique en tant que graphiste et développeuse.
 - Peux-tu donner un exemple où tu as aidé un membre de ton équipe à surmonter une difficulté ?
 - Comment facilites-tu la collaboration entre développeurs et designers ?
-- Donne un exemple où tu as dû t’adapter rapidement à une nouvelle situation professionnelle.
