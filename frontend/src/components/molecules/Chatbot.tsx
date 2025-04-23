@@ -155,7 +155,7 @@ function Chatbot({ language }: { language: Language })  {
                 className="relative bg-[#bfc4d4] dark:bg-darkBlue p-4 rounded-2xl dark:bg-[#31465d] border dark:border-colorWhite/30  border-colorMain/15"
             >
             <div className="opacity-80 absolute right-0 -top-[60px] filter-brightness-0 invert dark:filter-none">
-                <img src={chatLogos} className='h-[25px]'/>
+                <img src={chatLogos} alt="tech logo" className='h-[25px]'/>
             </div>
                 <div className="">
                     <div ref={messagesContainerRef} className="h-64 bg-darkBlueDarker rounded-lg overflow-y-auto py-4">
@@ -164,7 +164,7 @@ function Chatbot({ language }: { language: Language })  {
                             <div>
                                 <span className={`text-colorMain/80 dark:text-colorWhite/80 text-xs ${m.role === "user" ? "flex justify-end" : ""}`}>{m.role === "user" ? chatbotUsername : "Éloïse"}</span>
                                 <div className="flex mb-2 pt-1">
-                                    <img src={m.role === "user" ? userIcon : assistantIcon} className={`w-6 h-6 ${m.role === "user" ? "opacity-60 order-1 ml-2" : "mr-2"}`} />
+                                    <img src={m.role === "user" ? userIcon : assistantIcon} alt="user image" className={`w-6 h-6 ${m.role === "user" ? "opacity-60 order-1 ml-2" : "mr-2"}`} />
                                     <span className={`inline-block rounded p-2 ${m.role === "user" ? "bg-colorWhite/80 text-colorMain" : "bg-colorMain/40 text-colorWhite"}`}>
                                         {m.content}
                                     </span>
@@ -187,7 +187,13 @@ function Chatbot({ language }: { language: Language })  {
                         className="flex-grow bg-transparent p-1 dark:text-white text-colorMain focus:outline-none 
                             dark:placeholder:text-white/80 placeholder:text-colorMain/80"
                     />
-                    <button type="submit" className="ml-2 dark:bg-colorQuinary/50 bg-[#c5d438] p-2 rounded-full dark:hover:scale-105 hover:scale-105 transition-transform" disabled={loading}>
+                    <button 
+                        type="submit" 
+                        name="send" 
+                        aria-label="Send message" 
+                        className="ml-2 dark:bg-colorQuinary/50 bg-[#c5d438] p-2 rounded-full dark:hover:scale-105 hover:scale-105 transition-transform" 
+                        disabled={loading}
+                    >
                         <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" strokeWidth="3" stroke="currentColor" fill="none" className="text-colorMain/60 dark:text-colorMain w-4 h-4">
                             <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
                             <g id="SVGRepo_tracerCarrier" strokeLinecap="round" strokeLinejoin="round"></g>
