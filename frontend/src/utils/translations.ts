@@ -117,8 +117,8 @@ const translations = {
     fr: 'Frontend ou Backend, tu préfères quoi ?'
   },
   chatbotQuestion3: {
-    en: 'Where do you work currently?',
-    fr: 'Où travailles-tu actuellement ?'
+    en: 'Tell me about Éloïse',
+    fr: 'Parle moi d\'Éloïse'
   },
 
   // My skillset
@@ -211,8 +211,12 @@ const translations = {
     fr: 'Donnez une ★ sur GitHub'
   },
   visitWebsite: {
-    en: 'Visit Website',
-    fr: 'Visiter le Site'
+    en: "Visit website",
+    fr: "Visiter le site web"
+  },
+  projectDocuments: {
+    en: "Project Documents",
+    fr: "Documents du projet"
   }
 
   // Project 1 : Éloïse Emery Portfolio

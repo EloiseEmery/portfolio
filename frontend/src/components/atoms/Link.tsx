@@ -5,21 +5,24 @@ interface LinkProps {
   linkUrl: string;
   icon?: ReactNode;
   blank?: boolean;
+  className?: string;
 }
 
 const Link: React.FC<LinkProps> = ({ 
   linkText, 
   linkUrl, 
   icon,
-  blank = true 
+  blank = true,
+  className
 }) => {
   return (
-    <div className="mt-3">
-      <small className='flex cursor-pointer text-colorMain/80 dark:text-colorWhite/60 underline dark:hover:text-colorQuaternary hover:text-colorTertiary'>
+    <div className={`mt-3 ${className || ''}`}>
+      <small className='flex cursor-pointer text-colorMain/80 dark:text-colorWhite/60 underline'>
         <a 
           href={linkUrl} 
           target={blank ? "_blank" : undefined}
           rel={blank ? "noopener noreferrer" : undefined}
+          className="hover:text-colorTertiary group-hover:text-colorTertiary dark:hover:text-colorQuaternary dark:group-hover:text-colorQuaternary"
         >
           {linkText}
         </a>
@@ -28,7 +31,7 @@ const Link: React.FC<LinkProps> = ({
             fill="currentColor"
             viewBox="0 0 50 50"
             xmlns="http://www.w3.org/2000/svg"
-            className="w-5 h-5 text-current group-hover:text-colorMain dark:group-hover:text-colorWhite"
+            className="w-5 h-5 text-current"
           >
             <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
             <g id="SVGRepo_tracerCarrier" strokeLinecap="round" strokeLinejoin="round"></g>

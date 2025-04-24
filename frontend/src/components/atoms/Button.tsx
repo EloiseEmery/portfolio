@@ -7,7 +7,7 @@ interface ButtonProps {
   blank?: boolean;
   type?: 'primary' | 'secondary';
   icon?: React.ReactNode;
-  onClick?: () => void;
+  onClick?: (event?: React.MouseEvent<HTMLButtonElement>) => void;
   handleSubmit?: (endpoint: string) => Promise<void>;
   endpoint?: string;
 }
@@ -19,6 +19,7 @@ const Button: React.FC<ButtonProps> = ({
   blank, 
   type = 'primary', 
   icon, 
+  onClick,
   handleSubmit, 
   endpoint 
 }) => {
@@ -28,7 +29,19 @@ const Button: React.FC<ButtonProps> = ({
 
   const buttonStyle = `${baseStyle} ${type === 'primary' ? primaryStyle : secondaryStyle}`;
 
-  const handleClick = async () => {
+  const handleClick = async (event?: React.MouseEvent<HTMLButtonElement>) => {
+    // Prevent default if event is passed
+    if (event) {
+      event.preventDefault();
+      event.stopPropagation();
+    }
+
+    // Call custom onClick if provided
+    if (onClick) {
+      onClick(event);
+    }
+
+    // Handle submit if provided
     if (handleSubmit && endpoint) {
       await handleSubmit(endpoint);
     }

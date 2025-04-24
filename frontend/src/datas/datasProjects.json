@@ -13,8 +13,8 @@
                 "Traductions multilingues",
                 "Backend et conteneurisation"
             ],
-            "intro": "Ce projet de portfolio a été imaginé, designé et développé par moi, dans son intégralité. (2025)",
-            "descriptionMain": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Elit eget metus, dignissim sit amet. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Elit eget metus, dignissim sit amet."
+            "intro": "Ce projet de portfolio a été imaginé, designé et développé par moi, dans son intégralité en 2025.",
+            "descriptionMain": "La conception de ce portfolio a débutée par la sélection d'une charte graphique et la création de maquette dans Figma. Ensuite, j'ai développé "
         },
         {
             "id": "banq",
@@ -27,7 +27,7 @@
                 "Interface utilisateur claire et intuitive", 
                 "Design responsive"
             ],
-            "intro": "Ce projet de refonte consistait à unifier 3 plateformes éducatives en une seule plateforme. Il a été réalisé dans le cadre de mon emploi chez Yulcom technologies pour le client Bibliothèque et Archives nationales du Québec (2024-2025).",
+            "intro": "Ce projet de refonte consistait à unifier 3 plateformes éducatives en une seule plateforme. Il fallait également concevoir un Espace Enseignant. Il a été réalisé dans le cadre de mon emploi chez Yulcom technologies pour le client Bibliothèque et Archives nationales du Québec entre 2024 et 2025.",
             "descriptionMain": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Elit eget metus, dignissim sit amet. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Elit eget metus, dignissim sit amet."
         },
         {
@@ -42,7 +42,7 @@
                 "Utilisation d'un système de design",
                 "Responsive sur tous les supports"
             ],
-            "intro": "Ce projet de refonte consistait à moderniser un site web gouvernemental. Il a été réalisé dans le cadre de mon emploi chez Yulcom technologies pour le client Société québécoise des infrastructures (SQI) (2023-2024).",
+            "intro": "Ce projet de refonte consistait à moderniser un site web gouvernemental. Il a été réalisé dans le cadre de mon emploi chez Yulcom technologies pour le client Société québécoise des infrastructures (SQI) entre 2023 et 2024.",
             "descriptionMain": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Elit eget metus, dignissim sit amet. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Elit eget metus, dignissim sit amet."
         },
         {
@@ -57,8 +57,9 @@
                 "Base de données SQL",
                 "Gestion d'une session utilisateur"
             ],
-            "intro": "Ce projet consistait à développer un plateforme de vente en ligne d'enchères de timbres. Il a été réalisé dans le cadre de ma formation en Conception et programmation de sites Web (2022).",
-            "descriptionMain": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Elit eget metus, dignissim sit amet. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Elit eget metus, dignissim sit amet."
+            "intro": "Ce projet consistait à développer une plateforme de ventes d'enchères en ligne afin que les utilisateurs puissent acheter et vendre des timbres. Il a été réalisé dans le cadre de ma formation en Conception et programmation de sites Web en 2022.",
+            "descriptionMain": "J'ai eu à concevoir tout de A à Z en commençant par la conception de la charte graphique et la création de maquettes dans Adobe XD. Ces maquettes ont ensuite été développées en HTML/CSS (disponible ci-dessous). J'ai modéliser une base de données en fonction des entités identifiées en phase d'analyse et j'ai défini les user stories. J'ai ensuite créé mon backlog, je l'ai trié par priorité et divisé en 3 sprints, correspondant à 3 semaines de développement. Une fois le projet bien organisé et défini, j'ai commencé le développement. J'ai développé l'application en plusieurs étapes, avec chaque sprint correspondant à une partie spécifique du projet, en mettant l'accent sur les fonctionnalités nécessaires pour le fonctionnement du site et la satisfaction des utilisateurs. Les fonctionnalités principales étaient  la gestion complète d’enchères de timbres (création, gestion, mise, paiement, favoris, historique, etc.), la gestion de comptes membres, des fonctionnalités d’administration, et diverses options de visualisation et d’interaction pour les utilisateurs. Finalement, j'ai créé un guide utilisateur pour faciliter l'utilisation du site avant la remise finale. Consulter les documents que j'ai réalisés ci-dessous ou le code sur GitHub pour en savoir plus.",
+            "files": ["premier_sprint.pdf", "dernier_sprint.pdf", "guide_utilisateur.pdf", "maquettes_stampee.zip"]
         },
         {
             "id": "21 game",
@@ -70,7 +71,7 @@
                 "Programmation orientée objet",
                 "Logique de jeu et gestion d'état"
             ],
-            "intro": "Ce projet consistait à développer une version simplifiée du jeu de 21 (Blackjack). Il a été réalisé dans le cadre de ma formation en Conception et programmation de sites Web (2021).",
+            "intro": "Ce projet consistait à développer une version simplifiée du jeu de 21 (Blackjack). Il a été réalisé dans le cadre de ma formation en Conception et programmation de sites Web en 2021.",
             "descriptionMain": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Elit eget metus, dignissim sit amet. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Elit eget metus, dignissim sit amet."
         }
     ]

@@ -132,7 +132,7 @@ Présentation d'Éloïse Emery
     Je collecte les informations (logs, circonstances, exemples utilisateurs). J'Analyse les logs et la télémétrie (erreurs, monitoring). Analyser le code et l’architecture (commits récents, dépendances)
     Je teste des hypothèses (reproduire en préproduction, ajouter des logs).  J'essai de comprendre le comportement du bug pour identifier l'origine du problème.
     Je fais mes propes recherches, j'utilise des outils de débogage, et je teste les solutions possibles.
-    Si je passe trop de temps sur un bug, je demande à chatGPT ou à un collègue de m'aider.
+    Si je passe trop de temps sur un bug, je demande à chatGPT, à Phind ou à un collègue de m'aider.
     Si rien ne fonctionne, je prends un moment pour me reposer et reprendre avec une approche plus structurée.
     Je résout le bug et je teste l'application pour m'assurer que le problème est résolu. Corriger et vérifier (déployer un patch, surveiller le système)
     Je documente le bug et la solution pour éviter des récurrences
@@ -233,12 +233,12 @@ Présentation d'Éloïse Emery
 - Comment réagis-tu quand tu ne sais pas comment résoudre un problème technique ?
     Je ne vais pas mentir, je ressens toujours un peu de frustration, mais je sais mettre mon ego de côté et chercher de l'aide.
     J’analyse la situation pour bien comprendre le problème et identifier les points bloquants
-    Je vais toujours essayer de résoudre par moi-même le problème (y compris sur internet et avec ChatGPT), mais si je suis bloqué, je demande de l'aide à mes collègues.
+    Je vais toujours essayer de résoudre par moi-même le problème (y compris sur internet et avec ChatGPT ou Phind), mais si je suis bloqué, je demande de l'aide à mes collègues.
     Je reste persévérante et garde une attitude positive, même face à la difficulté
 - Comment réagis-tu lorsque tu dois travailler avec des personnes ayant des opinions très différentes des tiennes ?
     Je reste toujours ouverte d'esprit pour accueillir des opinions différentes.
     Je fais valoir mes opinions, mais je suis ouverte à l'écoute des opinions des autres.
-    Si on s'entend mal, je cherche une solution qui convienne à tous. Je suis toujours prête à faire des compromis.
+    Si on s'entend mal, je cherche une solution qui convienne à tous. Je suis toujours prête à faire des compromis tout en faisant valoir mes opinions.
 - Comment donnes-tu du feedback constructif à un collègue ?
     Je souligne les points positifs et je donne mes remarques sans jugement.
     Je reste bienveillante et constructive.
@@ -285,3 +285,4 @@ Présentation d'Éloïse Emery
     Je m'assure que tous les matériaux de base soient disponibles pour les designers et développeurs.
     Je suis à l'aise avec la communication entre développeurs et designers puisque j'ai été formée pour occuper les deux rôles.
     Tout au long du projet, je m'assure que tout le monde est sur la même longueur d'onde.
+
