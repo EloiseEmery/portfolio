@@ -4,16 +4,16 @@
             "id": "portfolio",
             "title": "Éloïse Emery Portfolio",
             "descriptionKey": "projectPortfolioDescription",
-            "technologies": [ "Tailwind", "React", "TypeScript", "OpenAI API", "Docker"],
+            "technologies": [ "Tailwind", "React", "TypeScript", "Express.js", "OpenAI API", "Docker"],
             "githubLink": "https://github.com/eloiseemery/portfolio",
             "highlights": [
-                "Responsive, modern and accessible design",
-                "AI-powered interactions",
-                "Dark mode support", 
-                "Multilingual translations",
-                "Backend and containerization"
+                "Design responsive, moderne et accessible",
+                "Interactions avec l'IA",
+                "Support du mode sombre et du mode clair",
+                "Traductions multilingues",
+                "Backend et conteneurisation"
             ],
-            "intro": "This project is a uniquely designed portfolio developed from scratch by me.",
+            "intro": "Ce projet de portfolio a été imaginé, designé et développé par moi, dans son intégralité. (2025)",
             "descriptionMain": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Elit eget metus, dignissim sit amet. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Elit eget metus, dignissim sit amet."
         },
         {
@@ -23,53 +23,55 @@
             "technologies": ["Figma", "React", "Tailwind", "TypeScript", "SQL", "Drupal"],
             "websiteLink": "https://danstaclasse.banq.yulcom.ca/",
             "highlights": [
-                "Interactive educational platform",
-                "User-friendly interface", 
-                "Responsive design"
+                "Plateforme éducative interactive",
+                "Interface utilisateur claire et intuitive", 
+                "Design responsive"
             ],
-            "intro": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Elit eget metus, dignissim sit amet. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Elit eget metus, dignissim sit amet."
+            "intro": "Ce projet de refonte consistait à unifier 3 plateformes éducatives en une seule plateforme. Il a été réalisé dans le cadre de mon emploi chez Yulcom technologies pour le client Bibliothèque et Archives nationales du Québec (2024-2025).",
+            "descriptionMain": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Elit eget metus, dignissim sit amet. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Elit eget metus, dignissim sit amet."
         },
         {
             "id": "sqi",
-            "title": "Société Québécoise des Infrastructures",
+            "title": "Société québécoise des infrastructures",
             "descriptionKey": "projectSQIDescription",
             "technologies": ["AdobeXD", "TYPO3", "CSS", "HTML"],
             "websiteLink": "https://www.sqi.gouv.qc.ca/",
             "highlights": [
-                "Professional government website design",
-                "Clean and intuitive user interface",
-                "Usage of a design system",
-                "Responsive across devices", 
-                "Accessibility-focused design"
+                "Design d'un site web gouvernemental accessible",
+                "Interface utilisateur claire et intuitive",
+                "Utilisation d'un système de design",
+                "Responsive sur tous les supports"
             ],
-            "intro": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Elit eget metus, dignissim sit amet. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Elit eget metus, dignissim sit amet."
-        },
-        {
-            "id": "21 game",
-            "title": "21 game",
-            "descriptionKey": "project21GameDescription",
-            "technologies": ["UI/UX", "JavaScript", "POO"],
-            "githubLink": "https://github.com/eloiseemery/21-game",
-            "highlights": [
-                "Object-Oriented Programming",
-                "Game Logic",
-                "State Management"
-            ],
-            "intro": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Elit eget metus, dignissim sit amet. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Elit eget metus, dignissim sit amet."
+            "intro": "Ce projet de refonte consistait à moderniser un site web gouvernemental. Il a été réalisé dans le cadre de mon emploi chez Yulcom technologies pour le client Société québécoise des infrastructures (SQI) (2023-2024).",
+            "descriptionMain": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Elit eget metus, dignissim sit amet. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Elit eget metus, dignissim sit amet."
         },
         {
             "id": "stampee",
             "title": "Stampee",
             "descriptionKey": "projectStampeeDescription",
-            "technologies": ["UI/UX","JavaScript", "MVC", "PHP", "SQL"],
-            "githubLink": "https://github.com/eloiseemery/stampee",
+            "technologies": ["HTML", "CSS", "JavaScript", "PHP", "Twig", "SQL", "PHPMyAdmin"],
+            "githubLink": "https://github.com/EloiseEmery/Stampee-Auction-eCommerce",
             "highlights": [
-                "MVC architecture",
-                "User-friendly interface",
-                "SQL database",
-                "User login"
+                "Architecture MVC",
+                "Interface utilisateur claire et intuitive",
+                "Base de données SQL",
+                "Gestion d'une session utilisateur"
             ],
-            "intro": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Elit eget metus, dignissim sit amet. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Elit eget metus, dignissim sit amet."
+            "intro": "Ce projet consistait à développer un plateforme de vente en ligne d'enchères de timbres. Il a été réalisé dans le cadre de ma formation en Conception et programmation de sites Web (2022).",
+            "descriptionMain": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Elit eget metus, dignissim sit amet. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Elit eget metus, dignissim sit amet."
+        },
+        {
+            "id": "21 game",
+            "title": "21 game",
+            "descriptionKey": "project21GameDescription",
+            "technologies": ["HTML", "CSS", "JavaScript"],
+            "githubLink": "https://github.com/EloiseEmery/21-Game-JSApp",
+            "highlights": [
+                "Programmation orientée objet",
+                "Logique de jeu et gestion d'état"
+            ],
+            "intro": "Ce projet consistait à développer une version simplifiée du jeu de 21 (Blackjack). Il a été réalisé dans le cadre de ma formation en Conception et programmation de sites Web (2021).",
+            "descriptionMain": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Elit eget metus, dignissim sit amet. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Elit eget metus, dignissim sit amet."
         }
     ]
 }

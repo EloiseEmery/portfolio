@@ -4,6 +4,8 @@ import Button from '../../atoms/Button';
 import project1 from '../../../assets/projects/project1.png';
 import project2 from '../../../assets/projects/project2.png';
 import project3 from '../../../assets/projects/project3.png';
+import project4 from '../../../assets/projects/project4.png';
+import project5 from '../../../assets/projects/project5.png';
 import { getTranslation, Language } from '../../../utils/translations';
 
 function MyProjects({ language }: { language: Language }) {
@@ -22,7 +24,7 @@ function MyProjects({ language }: { language: Language }) {
     };
 
     // Projects datas
-    const projectImages = [project1, project2, project3];
+    const projectImages = [project1, project2, project3, project4, project5];
     const projects = [
         {
             id: "portfolio",
@@ -31,23 +33,23 @@ function MyProjects({ language }: { language: Language }) {
         },
         {
             id: "banq",
-            title: "BanQ dans ta classe",
-            tags: ["UI/UX", tagsRedesign, "MCD", "React", "Tailwind"]
+            title: "BAnQ dans ta classe",
+            tags: ["UI/UX", tagsRedesign, "React", "Tailwind"]
         },
         {
             id: "sqi",
-            title: "Société Québécoise des Infrastructures",
+            title: "Société québécoise des infrastructures",
             tags: ["UI/UX", tagsRedesign, "CMS"]
+        },
+        {
+            id: "stampee",
+            title: "Stampee",
+            tags: ["UI/UX","TWIG", "MVC"]
         },
         {
             id: "21 game",
             title: "21 game",
             tags: ["UI/UX", "JavaScript", "OOP"]
-        },
-        {
-            id: "stampee",
-            title: "Stampee",
-            tags: ["UI/UX","JavaScript", "MVC", "PHP", "SQL"]
         }
     ];
 

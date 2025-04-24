@@ -228,6 +228,7 @@ export type TranslationKey = keyof typeof translations;
 // Define a type for supported languages
 export type Language = 'en' | 'fr';
 
+
 // Get translation with type safety
 export const getTranslation = (key: TranslationKey, language: Language) => {
   return translations[key][language];
