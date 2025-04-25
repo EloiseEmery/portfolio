@@ -6,60 +6,117 @@
             "descriptionKey": "projectPortfolioDescription",
             "technologies": [ "Tailwind", "React", "TypeScript", "Express.js", "OpenAI API", "Docker"],
             "githubLink": "https://github.com/eloiseemery/portfolio",
-            "highlights": [
-                "Design responsive, moderne et accessible",
-                "Interactions avec l'IA",
-                "Support du mode sombre et du mode clair",
-                "Traductions multilingues",
-                "Backend et conteneurisation"
-            ],
-            "intro": "Ce projet de portfolio a été imaginé, designé et développé par moi, dans son intégralité en 2025.",
-            "descriptionMain": "La conception de ce portfolio a débutée par la sélection d'une charte graphique et la création de maquette dans Figma. Ensuite, j'ai développé "
+            "highlights": {
+                "fr": [
+                    "Design responsive, moderne et accessible",
+                    "Interactions avec l'IA",
+                    "Support du mode sombre et du mode clair",
+                    "Traductions multilingues"
+                ],
+                "en": [
+                    "Responsive, modern, and accessible design",
+                    "AI interactions", 
+                    "Dark and light mode support",
+                    "Multilingual translations"
+                ]
+            },
+            "intro": {
+                "fr": "Ce projet de portfolio a été imaginé, designé et développé par moi, dans son intégralité en 2025.",
+                "en": "This portfolio project was entirely conceived, designed, and developed by me in 2025."
+            },
+            "descriptionMain": {
+                "fr": "Ce projet de type application Fullstack, met en avant mes compétences techniques en développement web moderne, ainsi qu'une approche sécurisée et professionnelle du développement. Il repose sur une architecture technique solide combinant React, TypeScript et Tailwind CSS pour le frontend, Express (Node.js) pour le backend, ainsi qu'une intégration de l'API OpenAI et une conteneurisation via Docker. J'ai selectionné une charte graphique unique pour le projet, puis j'ai fait des maquettes dans Figma. Le site propose un design responsive, l'internationalisation (français/anglais) et une présentation détaillée des projets. L'interface utilisateur et la logique serveur sont séparées dans des dossiers dédiés, avec une gestion centralisée des configurations sensibles. La sécurité est assurée par la protection et la gestion sécurisée des variables d'environnement, ainsi que l'utilisation d'un proxy backend pour sécuriser les appels API.",
+                "en": "This full-stack web application showcases my technical skills in modern web development, emphasizing a secure and professional development approach. The project is built on a robust technical architecture combining React, TypeScript, and Tailwind CSS for the frontend, Express (Node.js) for the backend, with OpenAI API integration and Docker containerization. I selected a unique graphic charter and created mockups in Figma. The site offers a responsive design, internationalization (French/English), and a detailed project presentation. The user interface and server logic are separated into dedicated folders, with centralized management of sensitive configurations. Security is ensured through protected and secure environment variable management, as well as using a backend proxy to secure API calls."
+            }
         },
         {
             "id": "banq",
             "title": "BAnQ dans ta classe",
             "descriptionKey": "projectBanqDescription", 
-            "technologies": ["Figma", "React", "Tailwind", "TypeScript", "SQL", "Drupal"],
+            "technologies": ["Figma", "Tailwind", "React", "TypeScript", "SQL", "Drupal"],
             "websiteLink": "https://danstaclasse.banq.yulcom.ca/",
-            "highlights": [
-                "Plateforme éducative interactive",
-                "Interface utilisateur claire et intuitive", 
-                "Design responsive"
-            ],
-            "intro": "Ce projet de refonte consistait à unifier 3 plateformes éducatives en une seule plateforme. Il fallait également concevoir un Espace Enseignant avec gestion de comptes utilisateurs. Il a été réalisé dans le cadre de mon emploi chez Yulcom technologies pour le client Bibliothèque et Archives nationales du Québec entre 2024 et 2025.",
-            "descriptionMain": "J’ai participé à toutes les phases du projet et j'ai eu à prendre des positions de leadership, de l’analyse initiale à la mise en œuvre technique, en surmontant de nombreux défis. J’ai commencé par analyser l’appel d’offre et la documentation fournie par le client, puis j’ai identifié les utilisateurs et leurs besoins. J’ai étudié les plateformes existantes pour proposer des solutions en matière d’accessibilité, de performance et de sécurité. J’ai rédigé et mis en page des rapports d’analyse avec Adobe Creative Suite. J’ai conçu le modèle de base de données et la nouvelle structure du site (cartographie, arborescence), identifié les gabarits et fonctionnalités à développer, puis réalisé les maquettes UX et le prototype UI sur Figma, en intégrant les retours du client à chaque étape. J’ai également défini les users stories, participé à la gestion du projet sur JIRA, collaboré avec les développeurs pour résoudre certains problèmes, et contribué au développement frontend avec TypeScript et Tailwind CSS, en utilisant Git et Bitbucket pour la gestion du code. Le backend du projet a été développé avec Drupal. Consultez les livrables que j'ai réalisés ci-dessous pour plus de détails.",
+            "highlights": {
+                "fr": [
+                    "Plateforme éducative interactive",
+                    "Interface utilisateur claire et intuitive", 
+                    "Espace Enseignant et comptes utilisateurs",
+                    "Conception de base de données"
+                ],
+                "en": [
+                    "Interactive educational platform",
+                    "Clear and intuitive user interface", 
+                    "Teacher Space and user accounts",
+                    "Database design"
+                ]
+            },
+            "intro": {
+                "fr": "Ce projet de refonte consistait à unifier 3 plateformes éducatives en une seule plateforme. Il fallait également concevoir un Espace Enseignant avec gestion de comptes utilisateurs. Il a été réalisé dans le cadre de mon emploi chez Yulcom technologies pour le client Bibliothèque et Archives nationales du Québec entre 2024 et 2025.",
+                "en": "This redesign project aimed to unify three educational platforms into a single platform, including the development of a Teacher Space with user account management. The project was completed during my employment at Yulcom technologies for the Bibliothèque et Archives nationales du Québec client between 2024 and 2025."
+            },
+            "descriptionMain": {
+                "fr": "La plateforme permet de découvrir des objects culturels et des événements historiques du Québec en classe. J'ai participé à toutes les phases du projet et j'ai eu à prendre des positions de leadership, de l'analyse initiale à la mise en œuvre technique, en surmontant de nombreux défis. J'ai commencé par analyser l'appel d'offre et la documentation fournie par le client, puis j'ai identifié les utilisateurs et leurs besoins. J'ai étudié les plateformes existantes pour proposer des solutions en matière d'accessibilité, de performance et de sécurité. J'ai rédigé et mis en page des rapports d'analyse avec Adobe Creative Suite. J'ai conçu le modèle de base de données et la nouvelle structure du site (cartographie, arborescence), identifié les gabarits et fonctionnalités à développer, puis réalisé les maquettes UX et le prototype UI sur Figma, en intégrant les retours du client à chaque étape. J'ai également défini les users stories, participé à la gestion du projet sur JIRA, collaboré avec les développeurs pour résoudre certains problèmes, et contribué au développement frontend avec TypeScript et Tailwind CSS, en utilisant Git et Bitbucket pour la gestion du code. Le backend du projet a été développé avec Drupal. Consultez les livrables que j'ai réalisés ci-dessous pour plus de détails.",
+                "en": "The platform allows discovering cultural objects and historical events from Quebec in the classroom. I participated in all project phases, taking leadership positions from initial analysis to technical implementation, overcoming numerous challenges. I began by analyzing the client's call for proposals and documentation, then identified users and their needs. I studied existing platforms to propose solutions for accessibility, performance, and security. I wrote and laid out analysis reports using Adobe Creative Suite. I designed the database model and the new site structure (mapping, tree structure), identified templates and features to develop, and created UX mockups and UI prototypes in Figma, integrating client feedback at each stage. I also defined user stories, participated in project management on JIRA, collaborated with developers to resolve certain issues, and contributed to frontend development using TypeScript and Tailwind CSS, utilizing Git and Bitbucket for code management. The project backend was developed with Drupal. Consult the deliverables I created below for more details."
+            },
             "files": ["livrable_banq_volet1.pdf", "structure_banqdanstaclasse.pdf"]
         },
         {
             "id": "sqi",
             "title": "Société québécoise des infrastructures",
             "descriptionKey": "projectSQIDescription",
-            "technologies": ["AdobeXD", "TYPO3", "CSS", "HTML"],
+            "technologies": ["AdobeXD", "CSS", "HTML", "JavaScript", "SQL", "TYPO3"],
             "websiteLink": "https://www.sqi.gouv.qc.ca/",
-            "highlights": [
-                "Design d'un site web gouvernemental accessible",
-                "Interface utilisateur claire et intuitive",
-                "Utilisation d'un système de design",
-                "Responsive sur tous les supports"
-            ],
-            "intro": "Ce projet de refonte consistait à moderniser un site web gouvernemental. Il a été réalisé dans le cadre de mon emploi chez Yulcom technologies pour le client Société québécoise des infrastructures (SQI) entre 2023 et 2024.",
-            "descriptionMain": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Elit eget metus, dignissim sit amet. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Elit eget metus, dignissim sit amet."
+            "highlights": {
+                "fr": [
+                    "Design d'un site web gouvernemental accessible",
+                    "Interface utilisateur claire et intuitive",
+                    "Utilisation d'un système de design",
+                    "Responsive sur tous les supports"
+                ],
+                "en": [
+                    "Accessible government website design",
+                    "Clear and intuitive user interface",
+                    "Use of a design system",
+                    "Responsive on all devices"
+                ]
+            },
+            "intro": {
+                "fr": "Ce projet de refonte consistait à moderniser un site web gouvernemental et son outil de repérage d'immeubles. Il a été réalisé dans le cadre de mon emploi chez Yulcom technologies pour le client Société québécoise des infrastructures (SQI) entre 2023 et 2024.",
+                "en": "This redesign project aimed to modernize a government website and its building location tool. The project was completed during my employment at Yulcom technologies for the Société québécoise des infrastructures (SQI) client between 2023 and 2024."
+            },
+            "descriptionMain": {
+                "fr": "J'ai eu à concevoir des maquettes UX et UI sur Adobe XD, ainsi qu'un prototype incluant le nouvel outil de repérage d'immeubles. Le visuel devait respecter <a href=\"https://design.quebec.ca/design\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-colorMain hover:text-colorTertiary dark:text-colorWhite dark:hover:text-colorQuaternary underline\">un système de design</a>  précis fournit par le gouvernement du Québec ainsi qu'une arborescence fournie par le client. Développé en PHP avec TYPO3, le site utilise HTML, CSS et JavaScript pour le front-end. Le contenu est stocké dans une base de données MySQL. J'ai également eu à concevoir un guide utilisateur pour le client afin qu'il puisse modifier les contenus facilement dans TYPO3. Consultez le avant/après du site ci-dessous ainsi que le prototype final. ",
+                "en": "I had to design UX and UI mockups on Adobe XD, as well as a prototype including the new building location tool. The visual had to respect <a href=\"https://design.quebec.ca/design\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-colorMain hover:text-colorTertiary dark:text-colorWhite dark:hover:text-colorQuaternary underline\">a design system</a> provided by the Quebec government, as well as a tree structure provided by the client. Developed in PHP with TYPO3, the site uses HTML, CSS, and JavaScript for the frontend. The content is stored in a MySQL database. I also had to design a user guide for the client so that they could easily modify the content in TYPO3. Consult the before/after of the site below as well as the final prototype."
+            },
+            "files": ["sqi_before_after.pdf", "sqi_proto_ui_desktop.pdf", "sqi_proto_ui_mobile.pdf"]
         },
         {
             "id": "stampee",
-            "title": "Stampee",
+            "title": "Stampee Auction",
             "descriptionKey": "projectStampeeDescription",
             "technologies": ["HTML", "CSS", "JavaScript", "PHP", "Twig", "SQL", "PHPMyAdmin"],
             "githubLink": "https://github.com/EloiseEmery/Stampee-Auction-eCommerce",
-            "highlights": [
-                "Architecture MVC",
-                "Interface utilisateur claire et intuitive",
-                "Base de données SQL",
-                "Gestion d'une session utilisateur"
-            ],
-            "intro": "Ce projet consistait à développer une plateforme de ventes d'enchères en ligne afin que les utilisateurs puissent acheter et vendre des timbres. Il a été réalisé dans le cadre de ma formation en Conception et programmation de sites Web en 2022.",
-            "descriptionMain": "J'ai eu à concevoir tout de A à Z en commençant par la conception de la charte graphique et la création de maquettes dans Adobe XD. Ces maquettes ont ensuite été développées en HTML/CSS (disponible ci-dessous). J'ai modéliser une base de données en fonction des entités identifiées en phase d'analyse et j'ai défini les user stories. J'ai ensuite créé mon backlog, je l'ai trié par priorité et divisé en 3 sprints, correspondant à 3 semaines de développement. Une fois le projet bien organisé et défini, j'ai commencé le développement. J'ai développé l'application en plusieurs étapes, avec chaque sprint correspondant à une partie spécifique du projet, en mettant l'accent sur les fonctionnalités nécessaires pour le fonctionnement du site et la satisfaction des utilisateurs. Les fonctionnalités principales étaient  la gestion complète d’enchères de timbres (création, gestion, mise, paiement, favoris, historique, etc.), la gestion de comptes membres, des fonctionnalités d’administration, et diverses options de visualisation et d’interaction pour les utilisateurs. Finalement, j'ai créé un guide utilisateur pour faciliter l'utilisation du site avant la remise finale. Consulter les documents que j'ai réalisés ci-dessous ou le code sur GitHub pour en savoir plus.",
+            "highlights": {
+                "fr": [
+                    "Architecture MVC",
+                    "Interface utilisateur claire et intuitive",
+                    "Base de données SQL",
+                    "Gestion d'une session utilisateur"
+                ],
+                "en": [
+                    "MVC architecture",
+                    "Clear and intuitive user interface",
+                    "SQL database",
+                    "User session management"
+                ]
+            },
+            "intro": {
+                "fr": "Ce projet consistait à développer une plateforme de ventes d'enchères en ligne afin que les utilisateurs puissent acheter et vendre des timbres. Il a été réalisé dans le cadre de ma formation en Conception et programmation de sites Web en 2022.",
+                "en": "This project aimed to develop an online auction platform so that users could buy and sell stamps. It was completed as part of my training in Web Site Design and Programming in 2022."
+            },
+            "descriptionMain": {
+                "fr": "J'ai eu à concevoir tout de A à Z en commençant par la conception de la charte graphique et la création de maquettes dans Adobe XD. Ces maquettes ont ensuite été développées en HTML/CSS (disponible ci-dessous). J'ai modéliser une base de données en fonction des entités identifiées en phase d'analyse et j'ai défini les user stories. J'ai ensuite créé mon backlog, je l'ai trié par priorité et divisé en 3 sprints, correspondant à 3 semaines de développement. Une fois le projet bien organisé et défini, j'ai commencé le développement. J'ai développé l'application en plusieurs étapes, avec chaque sprint correspondant à une partie spécifique du projet, en mettant l'accent sur les fonctionnalités nécessaires pour le fonctionnement du site et la satisfaction des utilisateurs. Les fonctionnalités principales étaient  la gestion complète d’enchères de timbres (création, gestion, mise, paiement, favoris, historique, etc.), la gestion de comptes membres, des fonctionnalités d’administration, et diverses options de visualisation et d’interaction pour les utilisateurs. Finalement, j'ai créé un guide utilisateur pour faciliter l'utilisation du site avant la remise finale. Consulter les documents que j'ai réalisés ci-dessous ou le code sur GitHub pour en savoir plus.",
+                "en": "I had to design everything from A to Z, starting with the creation of the graphic charter and the creation of mockups in Adobe XD. These mockups were then developed in HTML/CSS (available below). I modeled a database based on the entities identified during the analysis phase and defined the user stories. I then created my backlog, prioritized it, and divided it into 3 sprints, corresponding to 3 weeks of development. Once the project was well organized and defined, I started the development. I developed the application in several stages, with each sprint corresponding to a specific part of the project, focusing on the features necessary for the site's functionality and user satisfaction. The main features were the complete management of stamp auctions (creation, management, bidding, payment, favorites, history, etc.), member account management, administrative features, and various visualization and interaction options for users. Finally, I created a user guide to facilitate the use of the site before the final delivery. Consult the documents I created below or the code on GitHub to learn more."
+            },
             "files": ["premier_sprint.pdf", "dernier_sprint.pdf", "guide_utilisateur.pdf", "maquettes_stampee.zip"]
         },
         {
@@ -68,12 +125,24 @@
             "descriptionKey": "project21GameDescription",
             "technologies": ["HTML", "CSS", "JavaScript"],
             "githubLink": "https://github.com/EloiseEmery/21-Game-JSApp",
-            "highlights": [
-                "Programmation orientée objet",
-                "Logique de jeu et gestion d'état"
-            ],
-            "intro": "Ce projet consistait à développer une version simplifiée du jeu de 21 (Blackjack). Il a été réalisé dans le cadre de ma formation en Conception et programmation de sites Web en 2021.",
-            "descriptionMain": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Elit eget metus, dignissim sit amet. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Elit eget metus, dignissim sit amet."
+            "highlights": {
+                "fr": [
+                    "Programmation orientée objet",
+                    "Logique de jeu et gestion d'état"
+                ],
+                "en": [
+                    "Object-oriented programming",
+                    "Game logic and state management"
+                ]
+            },
+            "intro": {
+                "fr": "Ce projet consistait à développer une version simplifiée du jeu de 21 (Blackjack). Il a été réalisé dans le cadre de ma formation en Conception et programmation de sites Web en 2021.",
+                "en": "This project aimed to develop a simplified version of the 21 game (Blackjack). It was completed as part of my training in Web Site Design and Programming in 2021."
+            },
+            "descriptionMain": {
+                "fr": "Développé en JavaScript pur et orienté objet, avec une interface utilisateur en HTML et CSS. Le jeu permet à plusieurs joueurs de s’affronter au tour par tour, chacun pouvant piocher des cartes ou s’arrêter, avec un suivi individuel du score. Les cartes sont gérées via une classe dédiée et distribuées aléatoirement, avec un calcul automatique des scores et une validation pour ne pas dépasser 21. L’interface propose un formulaire pour choisir le nombre de joueurs, un panneau de jeu interactif, l’affichage en temps réel des cartes, des boutons d’action et un compteur de parties jouées. Le système détecte automatiquement la fin de partie et désigne le gagnant, tout en assurant la gestion de l’état du jeu et des tours. Cette version simplifiée du Blackjack respecte les règles classiques du 21, où l’objectif est d’atteindre un score aussi proche que possible de 21 sans le dépasser. ",
+                "en": "Developed in pure JavaScript and object-oriented, with a user interface in HTML and CSS. The game allows multiple players to compete turn by turn, each able to draw cards or stop, with individual score tracking. The cards are managed through a dedicated class and distributed randomly, with automatic score calculation and validation to not exceed 21. The interface offers a form to choose the number of players, an interactive game panel, real-time display of cards, action buttons, and a counter of played games. The system automatically detects the end of the game and designates the winner, while ensuring game state and turn management. This simplified version of Blackjack respects the classic rules of 21, where the goal is to get a score as close as possible to 21 without exceeding it."
+            }
         }
     ]
 }

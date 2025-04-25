@@ -42,7 +42,7 @@ function MyProjects({ language }: { language: Language }) {
         },
         {
             id: "stampee",
-            title: "Stampee",
+            title: "Stampee Auction",
             tags: ["UI/UX","TWIG", "MVC"]
         },
         {
@@ -57,7 +57,7 @@ function MyProjects({ language }: { language: Language }) {
         <div className="relative"> 
             {/* Top section */}
             <div className="lg:flex z-10 relative">
-                <div className="sm:pr-[50px] lg:w-[75%] flex">
+                <div className="sm:pr-[50px] lg:w-[55%] flex">
                     <div>
                         <div className="flex">
                             <h2 className="font-sans font-medium text-2xl sm:text-3xl leading-[1.2] pr-6  bg-gradient-to-r dark:from-colorWhite/90 dark:to-colorWhite/90 from-colorTertiary to-colorMain/80 bg-clip-text text-transparent">{title}</h2>

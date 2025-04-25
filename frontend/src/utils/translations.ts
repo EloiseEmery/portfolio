@@ -204,7 +204,7 @@ const translations = {
   },
   highlights: {
     en: 'Highlights',
-    fr: 'Points Clés'
+    fr: 'Points clés'
   },
   viewOnGithub: {
     en: 'Give a ★ on GitHub',

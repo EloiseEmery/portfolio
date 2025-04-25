@@ -7,6 +7,7 @@ import Link from '../atoms/Link';
 import project1 from '../../assets/projects/project1.png';
 import project2 from '../../assets/projects/project2.png';
 import project3 from '../../assets/projects/project3.png';
+import project3_1 from '../../assets/projects/project3_1.png';
 import project4 from '../../assets/projects/project4.png';
 import project5 from '../../assets/projects/project5.png';
 
@@ -14,6 +15,7 @@ const projectImages = {
     'portfolio': project1,
     'banq': project2,
     'sqi': project3,
+    'sqi1': project3_1,
     'stampee': project4,
     '21 game': project5
 };
@@ -26,15 +28,21 @@ interface ProjectDataItem {
     id: string;
     title: string;
     technologies: string[];
-    highlights: string[];
+    highlights: {
+        fr: string[];
+        en: string[];
+    };
     githubLink?: string;
     websiteLink?: string;
     descriptionKey: string;
-    intro?: string;
-    image1?: string;
-    image2?: string;
-    image3?: string;
-    descriptionMain?: string;
+    intro: {
+        fr: string;
+        en: string;
+    };
+    descriptionMain: {
+        fr: string;
+        en: string;
+    };
     files?: string[];
 }
 
@@ -96,8 +104,16 @@ const TemplateProject: React.FC<TemplateProjectProps> = ({ language }) => {
         return null;
     };
 
+    // Render project description with HTML support
+    const renderDescriptionWithHTML = (description: string) => {
+        return <div 
+            className="font-figtree text-[15px] leading-7" 
+            dangerouslySetInnerHTML={{ __html: description }} 
+        />;
+    };
+
     return (
-        <div className="lg:flex px-4 md:px-10 xl:px-[150px] 2xl:px-[200px] py-[100px] 2xl:py-[200px]">
+        <div className="lg:flex px-4 md:px-10 xl:px-[150px] 2xl:px-[200px] py-[100px] 2xl:pt-[200px]">
             <div className="lg:pr-[50px] lg:w-1/2">
                 <div className="relative group">
                     <img 
@@ -109,7 +125,7 @@ const TemplateProject: React.FC<TemplateProjectProps> = ({ language }) => {
                         href={project.githubLink || project.websiteLink} 
                         target="_blank" 
                         rel="noopener noreferrer" 
-                        className="hidden lg:block absolute inset-0 z-10 cursor-pointer"
+                        className="block absolute inset-0 z-10 cursor-pointer"
                     />
                 
                     {/* Buttons external links desktop */}
@@ -166,10 +182,10 @@ const TemplateProject: React.FC<TemplateProjectProps> = ({ language }) => {
                 </div>
                 
             </div>
-            <div className="pt-6 lg:pt-0 lg:w-1/2">
+            <div className="pt-6 lg:pt-0 lg:w-1/2 overflow-y-auto lg:max-h-[525px]">
                 <h1 className="text-2xl md:text-4xl font-sans font-medium dark:text-colorWhite/80 bg-gradient-to-r from-colorTertiary to-colorMain/80 bg-clip-text text-transparent">{project.title}</h1>
                 <div className="pb-10 font-figtree text-base leading-7 text-colorMain dark:text-colorWhite mt-6">
-                    {project.intro}
+                    {project.intro[language]}
                 </div>
                 <div className="font-figtree text-colorMain dark:text-colorWhite">
                     <div className="mb-8">
@@ -185,14 +201,23 @@ const TemplateProject: React.FC<TemplateProjectProps> = ({ language }) => {
                     <div className="mb-6">
                         <h2 className="font-sans font-medium">{getTranslation('highlights', language)}:</h2>
                         <ul className="list-disc list-inside text-sm mt-1">
-                            {project.highlights.map((highlight) => (
+                            {project.highlights[language].map((highlight) => (
                                 <li key={highlight} className="mt-1">{highlight}</li>
                             ))}
                         </ul>
                     </div>
                     <div className="mb-6">
-                        <p className="font-figtree text-[15px] leading-7">{project.descriptionMain}</p>
+                        {project.descriptionMain && (
+                            renderDescriptionWithHTML(project.descriptionMain[language])
+                        )}
                     </div>
+                    {/* {projectId === 'sqi' && (
+                        <img 
+                            src={projectImages['sqi1' as keyof typeof projectImages]} 
+                            alt={project.title} 
+                            className="w-full h-[300px] object-cover rounded-lg mb-4"
+                        />
+                    )} */}
                 </div>
                 {renderFilesSection()}
             </div>
