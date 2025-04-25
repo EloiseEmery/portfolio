@@ -27,8 +27,9 @@
                 "Interface utilisateur claire et intuitive", 
                 "Design responsive"
             ],
-            "intro": "Ce projet de refonte consistait à unifier 3 plateformes éducatives en une seule plateforme. Il fallait également concevoir un Espace Enseignant. Il a été réalisé dans le cadre de mon emploi chez Yulcom technologies pour le client Bibliothèque et Archives nationales du Québec entre 2024 et 2025.",
-            "descriptionMain": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Elit eget metus, dignissim sit amet. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Elit eget metus, dignissim sit amet."
+            "intro": "Ce projet de refonte consistait à unifier 3 plateformes éducatives en une seule plateforme. Il fallait également concevoir un Espace Enseignant avec gestion de comptes utilisateurs. Il a été réalisé dans le cadre de mon emploi chez Yulcom technologies pour le client Bibliothèque et Archives nationales du Québec entre 2024 et 2025.",
+            "descriptionMain": "J’ai participé à toutes les phases du projet et j'ai eu à prendre des positions de leadership, de l’analyse initiale à la mise en œuvre technique, en surmontant de nombreux défis. J’ai commencé par analyser l’appel d’offre et la documentation fournie par le client, puis j’ai identifié les utilisateurs et leurs besoins. J’ai étudié les plateformes existantes pour proposer des solutions en matière d’accessibilité, de performance et de sécurité. J’ai rédigé et mis en page des rapports d’analyse avec Adobe Creative Suite. J’ai conçu le modèle de base de données et la nouvelle structure du site (cartographie, arborescence), identifié les gabarits et fonctionnalités à développer, puis réalisé les maquettes UX et le prototype UI sur Figma, en intégrant les retours du client à chaque étape. J’ai également défini les users stories, participé à la gestion du projet sur JIRA, collaboré avec les développeurs pour résoudre certains problèmes, et contribué au développement frontend avec TypeScript et Tailwind CSS, en utilisant Git et Bitbucket pour la gestion du code. Le backend du projet a été développé avec Drupal. Consultez les livrables que j'ai réalisés ci-dessous pour plus de détails.",
+            "files": ["livrable_banq_volet1.pdf", "structure_banqdanstaclasse.pdf"]
         },
         {
             "id": "sqi",
