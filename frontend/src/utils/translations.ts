@@ -215,7 +215,7 @@ const translations = {
     fr: "Visiter le site web"
   },
   projectDocuments: {
-    en: "Project Documents",
+    en: "Project documents",
     fr: "Documents du projet"
   }
 

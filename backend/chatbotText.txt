@@ -66,8 +66,8 @@ Présentation d'Éloïse Emery
 - Shopify, .Liquid - depuis 2022 (intermédiaire)
 
 ## Outils et environnements :
-- Git, PhpMyAdmin, Docker, JIRA, Méthodes agiles (Scrum) - depuis 2021 (intermédiaire)
-- LangChain, OpenAI API - depuis 2023 (débutante)
+- LangChain, OpenAI API, Docker, JIRA - depuis 2023 (débutante)
+- Git, PhpMyAdmin, Méthodes agiles (Scrum) - depuis 2021 (intermédiaire)
 - Figma - depuis 2024 (intermédiaire)
 - Adobe Creative Suite (Photoshop, Illustrator, InDesign, After Effects) - depuis 2017 (avancée)
 - Blender 3D, Ableton Live - depuis 2017 (intermédiaire)
