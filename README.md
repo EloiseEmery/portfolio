@@ -34,9 +34,9 @@ cd port/backend
 2. Fill in required environment variables
    - `OPENAI_API_KEY`: Your OpenAI API key
    - `PORT`: Your port number for the backend to run on
-```bash
-cp .env.example .env
-```
+   ```bash
+   cp .env.example .env
+   ```
 
 ### 3. Backend Configuration
 1. Still in the backend directory, access index.ts
@@ -44,27 +44,13 @@ cp .env.example .env
    cd index.ts
    ```
 2. Replace `3000` with your frontend port number to authorize frontend access
-```typescript
-app.use(cors({
-  origin: "http://localhost:your_port_number"
-}))
-```
-3. Replace const name value with your name and adjust the prompt if needed
-```typescript
-const name = "your_name";
-
-const prompt ="..."
-```
-
-### 4. Update Chatbot Text
-1. Still in the backend directory, access exampleChatbotText.txt
-   ```bash
-   cd exampleChatbotText.txt
+   ```typescript
+   app.use(cors({
+   origin: "http://localhost:your_port_number"
+   }))
    ```
-2. Rename the file to chatbotText.txt
-3. Replace the content with your desired text
 
-### 5. Install Dependencies and Run Development Server
+### 4. Install Dependencies and Run Development Server
 1. Simply run `./run.sh` in the root directory of the project
 2. Wait for the backend and frontend to start
 
