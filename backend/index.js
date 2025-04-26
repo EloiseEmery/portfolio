@@ -63,8 +63,8 @@ app.use(cors({
 // Apply rate limiting 
 // Prevent too many requests and token abuse
 var limiter = rateLimit({
-    windowMs: 15 * 60 * 1000,
-    max: 20,
+    windowMs: 30 * 24 * 60 * 60 * 1000, // 1 month in milliseconds
+    max: 75,
     message: "Too many requests, please try again later."
 });
 app.use(limiter);

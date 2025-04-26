@@ -4,10 +4,10 @@ import projectData from '../../datas/datasProjects.json';
 import { getTranslation } from '../../utils/translations';
 import Button from '../atoms/Button';
 import Link from '../atoms/Link';
+import SEO from '../atoms/SEO';
 import project1 from '../../assets/projects/project1.png';
 import project2 from '../../assets/projects/project2.png';
 import project3 from '../../assets/projects/project3.png';
-import project3_1 from '../../assets/projects/project3_1.png';
 import project4 from '../../assets/projects/project4.png';
 import project5 from '../../assets/projects/project5.png';
 
@@ -15,7 +15,6 @@ const projectImages = {
     'portfolio': project1,
     'banq': project2,
     'sqi': project3,
-    'sqi1': project3_1,
     'stampee': project4,
     '21 game': project5
 };
@@ -62,22 +61,14 @@ const TemplateProject: React.FC<TemplateProjectProps> = ({ language }) => {
             navigate('/404', { replace: true });
         }
     }, [project, navigate]);
-
     if (!project) {
         return null;
     }
 
-    // Open File
-    const openFile = (fileName: string) => {
-        try {
-            const filePath = `/files/${projectId}/${fileName}`;
-            const fullFileUrl = `${window.location.origin}${filePath}`;
-
-            window.open(fullFileUrl, '_blank', 'noopener,noreferrer');
-        } catch (error) {
-            alert('Unable to open file. Please try again.');
-        }
-    };
+    const projectImage = projectImages[projectId as keyof typeof projectImages] || '';
+    const projectTitle = project.title;
+    const projectDescription = project.intro[language];
+    const projectUrl = `https://www.eloemery.com/projects/${projectId}`;
 
     // Render Files section
     const renderFilesSection = () => {
@@ -104,6 +95,18 @@ const TemplateProject: React.FC<TemplateProjectProps> = ({ language }) => {
         return null;
     };
 
+    // Open File
+    const openFile = (fileName: string) => {
+        try {
+            const filePath = `/files/${projectId}/${fileName}`;
+            const fullFileUrl = `${window.location.origin}${filePath}`;
+
+            window.open(fullFileUrl, '_blank', 'noopener,noreferrer');
+        } catch (error) {
+            alert('Unable to open file. Please try again.');
+        }
+    };
+
     // Render project description with HTML support
     const renderDescriptionWithHTML = (description: string) => {
         return <div 
@@ -114,10 +117,19 @@ const TemplateProject: React.FC<TemplateProjectProps> = ({ language }) => {
 
     return (
         <div className="lg:flex px-4 md:px-10 xl:px-[150px] 2xl:px-[200px] py-[100px] 2xl:pt-[200px]">
+            <SEO 
+                title={`${projectTitle} | Éloïse Emery`}
+                description={projectDescription}
+                image={projectImage}
+                url={projectUrl}
+                type="article"
+                canonicalUrl={projectUrl}
+                keywords={project.technologies}
+            />
             <div className="lg:pr-[50px] lg:w-1/2">
                 <div className="relative group">
                     <img 
-                        src={projectImages[project.id as keyof typeof projectImages]} 
+                        src={projectImages[projectId as keyof typeof projectImages]} 
                         alt={project.title} 
                         className="relative w-full h-[300px] object-cover rounded-lg mb-4 group-hover:opacity-80 transition-opacity"
                     /> 
@@ -211,13 +223,6 @@ const TemplateProject: React.FC<TemplateProjectProps> = ({ language }) => {
                             renderDescriptionWithHTML(project.descriptionMain[language])
                         )}
                     </div>
-                    {/* {projectId === 'sqi' && (
-                        <img 
-                            src={projectImages['sqi1' as keyof typeof projectImages]} 
-                            alt={project.title} 
-                            className="w-full h-[300px] object-cover rounded-lg mb-4"
-                        />
-                    )} */}
                 </div>
                 {renderFilesSection()}
             </div>

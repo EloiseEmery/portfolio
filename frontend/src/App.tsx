@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
+import { HelmetProvider } from 'react-helmet-async';
 import Header from './components/organisms/Header';
 import Footer from './components/organisms/Footer';
 import Sidebar from './components/organisms/Sidebar';
@@ -61,37 +62,39 @@ const App: React.FC = () => {
   const closeSidebar = () => manageSidebar(false);
 
   return (
-    <Router>
-      <div className="relative flex app-container bg-gradient-main-secondary-light-mode dark:bg-gradient-main-secondary-main">
-        <div className="absolute top-0 left-0 w-full h-full bg-noise-texture bg-repeat bg-[length:100px_100px] 
-          opacity-30 
-          dark:opacity-10 dark:brightness-150 dark:contrast-150"></div>
-        {/* Sidebar */}
-        {isSidebarOpen && <Sidebar closeSidebar={closeSidebar} language={language} />}
-        {/* To top button */}
-        <ToTop />
-        {/* App content */}
-        <div className="flex w-full overflow-x-hidden">
-            <div className="flex-1 transition-all duration-300 ease-in-out">
-              {/* Header */}
-              <header className="w-full max-w-[2000px] mx-auto">
-                <Header toggleMenu={toggleMenu} menuSrc={menuSrc} colorModeSrc={colorModeSrc} toggleColorMode={handleToggleColorMode} toggleLanguage={handleToggleLanguage} language={language} />
-              </header>
-              {/* Main content */}
-              <div className={`app-main-content relative z-10 transition-all duration-300 ease-in-out ${isSidebarOpen ? 'md:ml-[250px] xl:ml-[150px] blur-3xl md:blur-0' : ''} translate-x-[${mainContentTranslate}px]`}>
-                <Routes>
-                  <Route path="/*" element={<AppRoutes language={language} />} />
-                  <Route path="/project/:projectId" element={<TemplateProject language={language} />} />
-                  <Route path="*" element={<NotFound language={language} />} />
-                </Routes>
-                <footer className="w-full max-w-[2000px] mx-auto">
-                  <Footer language={language} />
-                </footer>
+    <HelmetProvider>
+      <Router>
+        <div className="relative flex app-container bg-gradient-main-secondary-light-mode dark:bg-gradient-main-secondary-main">
+          <div className="absolute top-0 left-0 w-full h-full bg-noise-texture bg-repeat bg-[length:100px_100px] 
+            opacity-30 
+            dark:opacity-10 dark:brightness-150 dark:contrast-150"></div>
+          {/* Sidebar */}
+          {isSidebarOpen && <Sidebar closeSidebar={closeSidebar} language={language} />}
+          {/* To top button */}
+          <ToTop />
+          {/* App content */}
+          <div className="flex w-full overflow-x-hidden">
+              <div className="flex-1 transition-all duration-300 ease-in-out">
+                {/* Header */}
+                <header className="w-full max-w-[2000px] mx-auto">
+                  <Header toggleMenu={toggleMenu} menuSrc={menuSrc} colorModeSrc={colorModeSrc} toggleColorMode={handleToggleColorMode} toggleLanguage={handleToggleLanguage} language={language} />
+                </header>
+                {/* Main content */}
+                <div className={`app-main-content relative z-10 transition-all duration-300 ease-in-out ${isSidebarOpen ? 'md:ml-[250px] xl:ml-[150px] blur-3xl md:blur-0' : ''} translate-x-[${mainContentTranslate}px]`}>
+                  <Routes>
+                    <Route path="/*" element={<AppRoutes language={language} />} />
+                    <Route path="/project/:projectId" element={<TemplateProject language={language} />} />
+                    <Route path="*" element={<NotFound language={language} />} />
+                  </Routes>
+                  <footer className="w-full max-w-[2000px] mx-auto">
+                    <Footer language={language} />
+                  </footer>
+                </div>
               </div>
             </div>
-          </div>
-      </div>
-    </Router>
+        </div>
+      </Router>
+    </HelmetProvider>
   );
 };
 
