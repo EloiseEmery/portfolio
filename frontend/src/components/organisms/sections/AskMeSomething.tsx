@@ -17,7 +17,7 @@ function AskMeSomething({ language }: { language: Language }) {
     // Calculate interactive tilt based on mouse position
     const calculateTilt = () => {
         // Only apply tilt effect on md screens and larger
-        if (!chatbotRef.current || window.innerWidth < 640) return { transform: 'none' };
+        if (!chatbotRef.current || window.innerWidth < 768) return { transform: 'none' };
         
         const rect = chatbotRef.current.getBoundingClientRect();
         const centerX = rect.left + rect.width / 2;
@@ -36,19 +36,24 @@ function AskMeSomething({ language }: { language: Language }) {
     useEffect(() => {
         const handleScroll = () => {
             if (chatbotRef.current) {
-                const scrollPosition = window.pageYOffset;
-                
-                // Playful wave-like scroll effect with sine wave (no vertical translation)
-                const waveAmplitude = 10; // Adjust for more/less wobble
-                const waveFrequency = 0.005; // Adjust for different wave patterns
-                const wobbleX = Math.sin(scrollPosition * waveFrequency) * waveAmplitude;
+                // Only apply scroll effect if screen is large enough
+                if (window.innerWidth >= 500) {
+                    const scrollPosition = window.pageYOffset;
+                    const waveAmplitude = 10;
+                    const waveFrequency = 0.005;
+                    const wobbleX = Math.sin(scrollPosition * waveFrequency) * waveAmplitude;
 
-                chatbotRef.current.style.transform = `translateX(${wobbleX}px) rotate(${wobbleX * 0.1}deg)`;
+                    chatbotRef.current.style.transform = `translateX(${wobbleX}px) rotate(${wobbleX * 0.1}deg)`;
+                } else {
+                    chatbotRef.current.style.transform = 'none';
+                }
             }
         };
 
         const handleMouseMove = (e: MouseEvent) => {
-            setMousePosition({ x: e.clientX, y: e.clientY });
+            if (window.innerWidth >= 768) {
+                setMousePosition({ x: e.clientX, y: e.clientY });
+            }
         };
 
         window.addEventListener('scroll', handleScroll);

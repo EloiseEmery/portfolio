@@ -27,6 +27,15 @@ module.exports = {
         'gradient-text': 'linear-gradient(to right, #4468FD, #64FFF4)',
         'noise-texture': 'url("/src/assets/png/noise_texture.png")',
       },
+      keyframes: {
+        'slide-in': {
+          '0%': { transform: 'translateX(-100%)' },
+          '100%': { transform: 'translateX(0)' },
+        }
+      },
+      animation: {
+        'slide-in': 'slide-in 0.5s ease-out forwards',
+      }
     },
   },
   plugins: [],

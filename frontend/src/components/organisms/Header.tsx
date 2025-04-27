@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
 import LogoHeader from '../atoms/logoHeader';
 
 interface HeaderProps {
@@ -52,7 +51,7 @@ function Header({ toggleMenu, menuSrc, toggleColorMode, colorModeSrc, toggleLang
           <img src={colorModeSrc} alt="Light/Dark Mode" className="h-[18px] filter-brightness-0 invert dark:filter-none" />
         </button>
         {/* Sidebar icone Mobile */}
-        <button className="p-4 md:hidden cursor-pointer min-w-[35px] hover:opacity-70 transition-all duration-300 ease-in-out" onClick={toggleMenu}>
+        <button className="pl-4 md:hidden cursor-pointer min-w-[35px] hover:opacity-70 transition-all duration-300 ease-in-out" onClick={toggleMenu}>
           <img
             className="h-[16px] filter-brightness-0 invert dark:filter-none"
             src={menuSrc}

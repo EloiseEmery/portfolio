@@ -1,0 +1,23 @@
+# Docker volumes et certificats
+certbot/
+docker-volumes/
+
+# Environnement
+.env
+.env.*
+!.env.example
+
+# Dépendances et builds
+node_modules/
+dist/
+build/
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# OS
+.DS_Store
+Thumbs.db

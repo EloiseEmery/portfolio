@@ -10,8 +10,6 @@ Coded from scratch by Éloïse Emery, this is a modern, secure, and responsive p
 - Modern React with TypeScript and Tailwind
 
 ## 📦 Prerequisites
-- Node.js (v16+ recommended)
-- npm or yarn
 
 ## 🛠 Tech Stack
 - React
@@ -22,37 +20,6 @@ Coded from scratch by Éloïse Emery, this is a modern, secure, and responsive p
 - Docker 
 
 ## 🔧 Setup and Installation
-
-### 1. Clone the Repository
-```bash
-git clone https://github.com/yourusername/portfolio.git
-cd port/backend
-```
-
-### 2. Environment Configuration in backend
-1. Copy `.env.example` to `.env`
-2. Fill in required environment variables
-   - `OPENAI_API_KEY`: Your OpenAI API key
-   - `PORT`: Your port number for the backend to run on
-   ```bash
-   cp .env.example .env
-   ```
-
-### 3. Backend Configuration
-1. Still in the backend directory, access index.ts
-   ```bash
-   cd index.ts
-   ```
-2. Replace `3000` with your frontend port number to authorize frontend access
-   ```typescript
-   app.use(cors({
-   origin: "http://localhost:your_port_number"
-   }))
-   ```
-
-### 4. Install Dependencies and Run Development Server
-1. Simply run `./run.sh` in the root directory of the project
-2. Wait for the backend and frontend to start
 
 ### 🔒 Security Practices
 - API keys are never exposed to the frontend

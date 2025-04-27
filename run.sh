@@ -1,3 +1,6 @@
+## Start project in dev mode
+## so you can make builds faster than with Docker
+
 #!/bin/bash
 
 # Start the backend

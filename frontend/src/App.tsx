@@ -24,8 +24,6 @@ const App: React.FC = () => {
     return savedSidebarState === 'true';
   });
   const [menuSrc, setMenuSrc] = useState(isSidebarOpen ? menuSidebarOpen : menuSidebarClosed);
-  const [mainContentTranslate, setMainContentTranslate] = useState(0);
-
 
   //Setup hash change listener for scrolling
   useEffect(() => {
@@ -53,9 +51,6 @@ const App: React.FC = () => {
     
     // Save sidebar state to localStorage
     localStorage.setItem('sidebarOpen', newSidebarState.toString());
-    
-    // Manage main content translation
-    // setMainContentTranslate(newSidebarState && window.innerWidth <= 768 ? -300 : 0);
   };
 
   const toggleMenu = () => manageSidebar();
@@ -80,7 +75,7 @@ const App: React.FC = () => {
                   <Header toggleMenu={toggleMenu} menuSrc={menuSrc} colorModeSrc={colorModeSrc} toggleColorMode={handleToggleColorMode} toggleLanguage={handleToggleLanguage} language={language} />
                 </header>
                 {/* Main content */}
-                <div className={`app-main-content relative z-10 transition-all duration-300 ease-in-out ${isSidebarOpen ? 'md:ml-[250px] xl:ml-[150px] blur-3xl md:blur-0' : ''} translate-x-[${mainContentTranslate}px]`}>
+                <div className={`app-main-content relative z-10 transition-all duration-300 ease-in-out ${isSidebarOpen ? 'md:translate-x-0 md:ml-[250px] xl:ml-[150px]'  : ''}`}>
                   <Routes>
                     <Route path="/*" element={<AppRoutes language={language} />} />
                     <Route path="/project/:projectId" element={<TemplateProject language={language} />} />
