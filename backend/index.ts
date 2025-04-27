@@ -5,6 +5,7 @@ const nodeFetch = require('node-fetch');
 const fs = require('fs');
 const path = require('path');
 const rateLimit = require('express-rate-limit');
+const helmet = require('helmet');
 
 // Define OpenAI API response interface
 interface OpenAIResponse {
@@ -25,6 +26,31 @@ dotenv.config();
 const app = express();
 app.use(express.json());
 
+// Configure security headers with Helmet
+app.use(helmet({
+  contentSecurityPolicy: {
+    directives: {
+      defaultSrc: ["'self'"],
+      connectSrc: ["'self'", "https://api.openai.com"],
+      scriptSrc: ["'self'"],
+      styleSrc: ["'self'", "'unsafe-inline'"],
+      imgSrc: ["'self'", "data:", "https:"],
+      fontSrc: ["'self'", "https:", "data:"],
+    },
+  },
+  crossOriginEmbedderPolicy: true,
+  crossOriginOpenerPolicy: true,
+  crossOriginResourcePolicy: { policy: "same-site" },
+  dnsPrefetchControl: true,
+  frameguard: { action: "deny" },
+  hidePoweredBy: true,
+  hsts: { maxAge: 31536000, includeSubDomains: true },
+  ieNoOpen: true,
+  noSniff: true,
+  referrerPolicy: { policy: "strict-origin-when-cross-origin" },
+  xssFilter: true,
+}));
+
 // Autorize frontend access
 app.use(cors({
   origin: "http://localhost:3000"
@@ -34,7 +60,7 @@ app.use(cors({
 // Prevent too many requests and token abuse
 const limiter = rateLimit({
   windowMs: 30 * 24 * 60 * 60 * 1000, // 1 month in milliseconds
-  max: 275,
+  max: 150,
   message: "Too many requests, please try again later."
 });
 app.use(limiter);
