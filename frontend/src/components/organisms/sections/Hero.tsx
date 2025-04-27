@@ -82,7 +82,7 @@ function Hero({ language }: { language: Language }) {
     <div className="relative">
       {/* Hero Images paralaxe */}
       <div className="absolute right-[-100px] md:right-0 top-0 z-0 opacity-70">
-        <div className="flex relative">
+        <div className="relative hidden md:flex">
           <img 
             src={layer1Light} 
             alt="Layer 1" 
