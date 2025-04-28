@@ -24,13 +24,15 @@ const App: React.FC = () => {
     return savedSidebarState === 'true';
   });
   const [menuSrc, setMenuSrc] = useState(isSidebarOpen ? menuSidebarOpen : menuSidebarClosed);
+  const [scrollPosition, setScrollPosition] = useState(0);
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
 
   //Setup hash change listener for scrolling
   useEffect(() => {
     const cleanup = setupHashChangeListener();
     return cleanup;
   }, []);
-  
+
   // Manage color mode
   const handleToggleColorMode = () => {
     const newColorMode = toggleColorMode(colorModeSrc);
@@ -43,9 +45,36 @@ const App: React.FC = () => {
     setLanguage(newLanguage);
   };
 
+  // Handle sidebar when size of window resize
+  useEffect(() => {
+    const handleResize = () => {
+      const wasMobile = isMobile;
+      const mobile = window.innerWidth < 768;
+      setIsMobile(mobile);
+      
+      // Fermer seulement si on passe de desktop à mobile
+      if (mobile && !wasMobile && isSidebarOpen) {
+        manageSidebar(false);
+      } else if (!mobile && isSidebarOpen) {
+        // Reset la position sauvegardée quand on passe en desktop
+        setScrollPosition(0);
+      }
+    };
+
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, [isSidebarOpen, isMobile]);
+  
+
   // Manage sidebar
   const manageSidebar = (forceState?: boolean) => {
     const newSidebarState = forceState !== undefined ? forceState : !isSidebarOpen;
+    
+    if (newSidebarState && isMobile) { 
+      // Sauvegarder la position seulement en mobile
+      setScrollPosition(window.scrollY);
+    }
+    
     setIsSidebarOpen(newSidebarState);
     setMenuSrc(newSidebarState ? menuSidebarOpen : menuSidebarClosed);
     
@@ -68,14 +97,14 @@ const App: React.FC = () => {
           {/* To top button */}
           <ToTop />
           {/* App content */}
-          <div className="flex w-full overflow-x-hidden">
+          <div className={`flex w-full overflow-x-hidden ${isSidebarOpen ? 'max-md:h-screen max-md:overflow-hidden' : ''}`} style={{ height: isSidebarOpen && isMobile ? '100vh' : 'auto' }}>
               <div className="flex-1 transition-all duration-300 ease-in-out">
                 {/* Header */}
                 <header className="w-full max-w-[2000px] mx-auto">
                   <Header toggleMenu={toggleMenu} menuSrc={menuSrc} colorModeSrc={colorModeSrc} toggleColorMode={handleToggleColorMode} toggleLanguage={handleToggleLanguage} language={language} />
                 </header>
                 {/* Main content */}
-                <div className={`app-main-content relative z-10 transition-all duration-300 ease-in-out ${isSidebarOpen ? 'md:translate-x-0 md:ml-[250px] xl:ml-[150px]'  : ''}`}>
+                <div className={`app-main-content relative z-10 transition-all duration-300 ease-in-out ${isSidebarOpen ? 'md:translate-x-0 md:ml-[250px] xl:ml-[150px]  '  : ''}`}>
                   <Routes>
                     <Route path="/*" element={<AppRoutes language={language} />} />
                     <Route path="/project/:projectId" element={<TemplateProject language={language} />} />

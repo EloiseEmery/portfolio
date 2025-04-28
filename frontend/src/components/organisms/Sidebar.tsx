@@ -5,6 +5,11 @@ import iconeGithub from '../../assets/png/github.png';
 import { Language, getTranslation } from '../../utils/translations';
 import projectData from '../../datas/datasProjects.json';
 import { handleAnchorLinkNavigation } from '../../utils/navigation';
+import layer1 from '../../assets/png/layer1.png';
+import layer1Light from '../../assets/png/layer1_light.png';
+import layer2Light from '../../assets/png/layer2_light.png';
+import layer2 from '../../assets/png/layer2.png';
+import layer3 from '../../assets/png/layer3.png';
 
 interface SidebarProps {
   closeSidebar: () => void;
@@ -58,11 +63,36 @@ const Sidebar: React.FC<SidebarProps> = ({ closeSidebar, language }) => {
   }, [closeSidebar, previousWindowWidth]);
 
   return (
-    <div className="z-50 sidebar fixed pt-[50px] md:pt-0 left-0 w-full md:w-[300px] h-full overflow-y-auto bg-[#bbc2cf] dark:bg-[#18202D] md:bg-transparent dark:md:bg-transparent">
-      <div className="flex flex-col font-sans text-xl md:text-sm font-medium text-colorBlack dark:text-colorWhite space-y-8 px-4 md:px-10 pt-[75px] md:pt-[150px]">
+    <div className="z-50 sidebar fixed md:pt-0 left-0 w-full md:w-[300px] h-full overflow-y-auto bg-[#bbc2cf] dark:bg-[#18202D] md:bg-transparent dark:md:bg-transparent overflow-x-hidden">
+      {/* decorative img for sidebar mobile */}
+      <div className="relative opacity-50 md:hidden -z-10">
+        <img 
+          src={layer1Light} 
+          alt="Layer 1" 
+          className="top-[220px] left-40 absolute object-contain w-[400px] max-w-[450px] max-h-[350px] dark:hidden" 
+        />
+        <img 
+          src={layer1} 
+          alt="Layer 1" 
+          className="top-[220px] left-40 absolute object-contain w-[400px] max-w-[450px] max-h-[350px] hidden dark:block" 
+        />
+        <img 
+          src={layer2Light} 
+          alt="Layer 2" 
+          className="top-[350px] left-10 absolute object-contain w-[450px] max-w-[340px] max-h-[270px] dark:hidden opacity-30 sm:opacity-70" 
+        />
+        <img 
+          src={layer2} 
+          alt="Layer 2" 
+          className="top-[350px] left-10 absolute object-contain w-[450px] max-w-[340px] max-h-[270px] hidden dark:block" 
+        />
+        <img src={layer3} alt="Layer 3" className="absolute object-contain -ml-[600px] mt-[100px] w-[130px] max-w-[130px] max-h-[130px] filter-brightness-0 invert dark:filter-none opacity-50 dark:opacity-70 sm:opacity-100" id="layer3" />
+      </div>  
+      {/* Sidebar content */}
+      <div className="container-sidebar relative z-10 flex flex-col font-sans text-xl md:text-sm font-medium text-colorBlack dark:text-colorWhite space-y-8 px-4 md:px-10 pt-[100px] md:pt-[150px]">
         <a href="/#ask-me-something" onClick={handleLinkClick('#ask-me-something')} className="cursor-pointer transition-all duration-300 ease-in-out leading-[1.2] dark:hover:text-colorQuaternary hover:text-colorTertiary md:transform-none animate-[slide-in_ease-out_250ms] md:animate-none">{sidebarLink1}</a>
         <a href="/#my-skillset" onClick={handleLinkClick('#my-skillset')} className="cursor-pointer transition-all duration-300 ease-in-out whitespace-nowrap dark:hover:text-colorQuaternary hover:text-colorTertiary md:transform-none animate-[slide-in_ease-out_300ms] md:animate-none">{sidebarLink2}</a>
-        <div className="animate-[slide-in_ease-out_350ms]  md:animate-none">
+        <div className="animate-[slide-in_ease-out_350ms] md:animate-none">
           <a 
             href="/#my-projects" 
             onClick={handleLinkClick('#my-projects')} 
@@ -93,7 +123,7 @@ const Sidebar: React.FC<SidebarProps> = ({ closeSidebar, language }) => {
           </div>
         </div>
         <a href="/#get-in-touch" onClick={handleLinkClick('#get-in-touch')} className="cursor-pointer hover:text-colorTertiary dark:hover:text-colorQuaternary transition-all duration-300 ease-in-out whitespace-nowrap md:transform-none animate-[slide-in_ease-out_400ms] md:animate-none">{sidebarLink4}</a>
-        <div className="flex gap-4 t-10 md:transform-none animate-[slide-in_ease-out_500ms] md:animate-none">
+        <div className="flex gap-4 md:transform-none animate-[slide-in_ease-out_500ms] md:animate-none">
           <a href="https://github.com/eloiseemery" target="_blank" rel="noopener noreferrer" className="cursor-pointer">
             <img src={iconeGithub} alt="Github" className=" max-w-[25px] md:max-w-[20px] brightness-0 invert(1) dark:filter-none hover:scale-110 transition-all duration-300 ease-in-out" />
           </a>
