@@ -77,7 +77,7 @@ const OPENAI_API_KEY = process.env.OPENAI_API_KEY;
 if (!OPENAI_API_KEY) throw new Error("OPENAI_API_KEY manquante dans .env");
 
 // Get chatbot text from file
-const CHATBOT_TEXT = fs.readFileSync(path.join(__dirname, "chatbotText.txt"), "utf8");
+const CHATBOT_TEXT = fs.readFileSync(path.join(__dirname, "../chatbotText.txt"), "utf8");
 
 // Handle chat request
 app.post("/api/chat", async (req: any, res: any) => {

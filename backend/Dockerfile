@@ -6,6 +6,7 @@ WORKDIR /app
 
 # Copy package files
 COPY package*.json ./
+COPY tsconfig.json ./
 
 # Install dependencies
 RUN npm install
@@ -13,8 +14,14 @@ RUN npm install
 # Copy project files
 COPY . .
 
+# Build TypeScript
+RUN npm run build
+
+# Copy chatbotText.txt to dist directory
+RUN cp chatbotText.txt dist/
+
 # Expose port 3001
 EXPOSE 3001
 
 # Start the application
-CMD ["node", "index.js"]
+CMD ["npm", "start"]
