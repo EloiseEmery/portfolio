@@ -58,11 +58,11 @@ const Sidebar: React.FC<SidebarProps> = ({ closeSidebar, language }) => {
   }, [closeSidebar, previousWindowWidth]);
 
   return (
-    <div className="z-50 sidebar fixed pt-[75px] md:pt-0 left-0 w-full md:w-[300px] h-full overflow-y-auto bg-[#bbc2cf] dark:bg-[#18202D] md:bg-transparent dark:md:bg-transparent">
+    <div className="z-50 sidebar fixed pt-[50px] md:pt-0 left-0 w-full md:w-[300px] h-full overflow-y-auto bg-[#bbc2cf] dark:bg-[#18202D] md:bg-transparent dark:md:bg-transparent">
       <div className="flex flex-col font-sans text-xl md:text-sm font-medium text-colorBlack dark:text-colorWhite space-y-8 px-4 md:px-10 pt-[75px] md:pt-[150px]">
-        <a href="/#ask-me-something" onClick={handleLinkClick('#ask-me-something')} className="cursor-pointer transition-all duration-300 ease-in-out leading-[1.2] dark:hover:text-colorQuaternary hover:text-colorTertiary md:transform-none animate-[slide-in_0.3s_ease-out] delay-[100ms] md:animate-none">{sidebarLink1}</a>
-        <a href="/#my-skillset" onClick={handleLinkClick('#my-skillset')} className="cursor-pointer transition-all duration-300 ease-in-out whitespace-nowrap dark:hover:text-colorQuaternary hover:text-colorTertiary md:transform-none animate-[slide-in_0.3s_ease-out] delay-[200ms] md:animate-none">{sidebarLink2}</a>
-        <div className="animate-[slide-in_0.3s_ease-out]  md:animate-none">
+        <a href="/#ask-me-something" onClick={handleLinkClick('#ask-me-something')} className="cursor-pointer transition-all duration-300 ease-in-out leading-[1.2] dark:hover:text-colorQuaternary hover:text-colorTertiary md:transform-none animate-[slide-in_ease-out_250ms] md:animate-none">{sidebarLink1}</a>
+        <a href="/#my-skillset" onClick={handleLinkClick('#my-skillset')} className="cursor-pointer transition-all duration-300 ease-in-out whitespace-nowrap dark:hover:text-colorQuaternary hover:text-colorTertiary md:transform-none animate-[slide-in_ease-out_300ms] md:animate-none">{sidebarLink2}</a>
+        <div className="animate-[slide-in_ease-out_350ms]  md:animate-none">
           <a 
             href="/#my-projects" 
             onClick={handleLinkClick('#my-projects')} 
@@ -85,15 +85,15 @@ const Sidebar: React.FC<SidebarProps> = ({ closeSidebar, language }) => {
                     }, 250);
                   }
                 }}
-                className={`block text-base text-colorBlack/80 dark:text-colorWhite/80 md:text-xs hover:text-colorTertiary dark:hover:text-colorQuaternary transition-all duration-300 ease-in-out relative pl-4 before:content-['•'] before:absolute before:left-0 before:text-colorTertiary dark:before:text-colorQuaternary md:transform-none animate-[slide-in_0.3s_ease-out] md:animate-none`}
+                className={`block text-base text-colorBlack/80 dark:text-colorWhite/80 md:text-xs hover:text-colorTertiary dark:hover:text-colorQuaternary transition-all duration-300 ease-in-out relative pl-4 before:content-['•'] before:absolute before:left-0 before:text-colorTertiary dark:before:text-colorQuaternary md:transform-none md:animate-none`}
               >
                 {project.title}
               </a>
             ))}
           </div>
         </div>
-        <a href="/#get-in-touch" onClick={handleLinkClick('#get-in-touch')} className="cursor-pointer hover:text-colorTertiary dark:hover:text-colorQuaternary transition-all duration-300 ease-in-out whitespace-nowrap md:transform-none animate-[slide-in_0.3s_ease-out] delay-[800ms] md:animate-none">{sidebarLink4}</a>
-        <div className="flex gap-4 t-10 md:transform-none animate-[slide-in_0.3s_ease-out] delay-[900ms] md:animate-none">
+        <a href="/#get-in-touch" onClick={handleLinkClick('#get-in-touch')} className="cursor-pointer hover:text-colorTertiary dark:hover:text-colorQuaternary transition-all duration-300 ease-in-out whitespace-nowrap md:transform-none animate-[slide-in_ease-out_400ms] md:animate-none">{sidebarLink4}</a>
+        <div className="flex gap-4 t-10 md:transform-none animate-[slide-in_ease-out_500ms] md:animate-none">
           <a href="https://github.com/eloiseemery" target="_blank" rel="noopener noreferrer" className="cursor-pointer">
             <img src={iconeGithub} alt="Github" className=" max-w-[25px] md:max-w-[20px] brightness-0 invert(1) dark:filter-none hover:scale-110 transition-all duration-300 ease-in-out" />
           </a>
