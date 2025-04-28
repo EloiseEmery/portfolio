@@ -65,11 +65,11 @@ const Sidebar: React.FC<SidebarProps> = ({ closeSidebar, language }) => {
   return (
     <div className="z-50 sidebar fixed md:pt-0 left-0 w-full md:w-[300px] h-full overflow-y-auto bg-[#bbc2cf] dark:bg-[#18202D] md:bg-transparent dark:md:bg-transparent overflow-x-hidden">
       {/* decorative img for sidebar mobile */}
-      <div className="relative opacity-50 md:hidden -z-10">
+      <div className="relative md:hidden -z-10">
         <img 
           src={layer1Light} 
           alt="Layer 1" 
-          className="top-[220px] left-40 absolute object-contain w-[400px] max-w-[450px] max-h-[350px] dark:hidden" 
+          className="top-[220px]  left-40 absolute object-contain w-[400px] max-w-[450px] max-h-[350px] dark:hidden" 
         />
         <img 
           src={layer1} 
@@ -79,12 +79,12 @@ const Sidebar: React.FC<SidebarProps> = ({ closeSidebar, language }) => {
         <img 
           src={layer2Light} 
           alt="Layer 2" 
-          className="top-[350px] left-10 absolute object-contain w-[450px] max-w-[340px] max-h-[270px] dark:hidden opacity-30 sm:opacity-70" 
+          className="top-[350px] opacity-50 left-10 absolute object-contain w-[450px] max-w-[340px] max-h-[270px]" 
         />
         <img 
           src={layer2} 
           alt="Layer 2" 
-          className="top-[350px] left-10 absolute object-contain w-[450px] max-w-[340px] max-h-[270px] hidden dark:block" 
+          className="top-[350px] opacity-50 left-10 absolute object-contain w-[450px] max-w-[340px] max-h-[270px] hidden dark:block" 
         />
         <img src={layer3} alt="Layer 3" className="absolute object-contain -ml-[600px] mt-[100px] w-[130px] max-w-[130px] max-h-[130px] filter-brightness-0 invert dark:filter-none opacity-50 dark:opacity-70 sm:opacity-100" id="layer3" />
       </div>  

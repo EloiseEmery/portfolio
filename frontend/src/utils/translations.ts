@@ -62,7 +62,7 @@ const translations = {
   // Hero
   heroTitle: {
     en: "Full stack web developer",
-    fr: "Développeuse web full stack"
+    fr: "Développeuse web Full stack"
   },
   heroParagraph: {
     en: "Hello, I'm Éloïse Emery, a full stack web developer from Montreal, Canada.",
