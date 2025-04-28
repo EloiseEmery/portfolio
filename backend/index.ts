@@ -19,8 +19,8 @@ interface OpenAIResponse {
   };
 }
 
-// Load environment variables
-dotenv.config();
+// Load environment variables from root .env
+dotenv.config({ path: path.join(__dirname, '../.env') });
 
 // Initialize Express app
 const app = express();
@@ -53,8 +53,14 @@ app.use(helmet({
 
 // Autorize frontend access
 app.use(cors({
-  origin: ["http://localhost:8080"],
-  credentials: true
+  origin: [
+    "http://localhost:8080",
+    "https://eloemery.com",
+    "https://www.eloemery.com"
+  ],
+  credentials: true,
+  methods: ['GET', 'POST'],
+  allowedHeaders: ['Content-Type', 'Authorization']
 }));
 
 // Apply rate limiting 
