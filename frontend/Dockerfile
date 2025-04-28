@@ -1,5 +1,5 @@
-# Use Node.js Alpine
-FROM node:20-alpine
+# Build stage
+FROM node:20-alpine as builder
 
 # Set working directory
 WORKDIR /app
@@ -8,7 +8,7 @@ WORKDIR /app
 COPY package*.json ./
 
 # Install dependencies
-RUN npm install
+RUN npm ci --only=production
 
 # Copy project files
 COPY . .
@@ -16,8 +16,16 @@ COPY . .
 # Build the app
 RUN npm run build
 
-# Install serve to run the application
+# Production stage
+FROM node:20-alpine
+
+WORKDIR /app
+
+# Install serve
 RUN npm install -g serve
+
+# Copy built assets from builder stage
+COPY --from=builder /app/build ./build
 
 # Expose port 3000
 EXPOSE 3000
