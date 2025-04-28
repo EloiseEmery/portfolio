@@ -52,13 +52,13 @@ var fs = require('fs');
 var path = require('path');
 var rateLimit = require('express-rate-limit');
 // Load environment variables
-dotenv.config();
+dotenv.config({ path: path.join(__dirname, '../.env') });
 // Initialize Express app
 var app = express();
 app.use(express.json());
 // Autorize frontend access
 app.use(cors({
-    origin: "http://localhost:3000"
+    origin: "http://localhost:8080"
 }));
 // Apply rate limiting 
 // Prevent too many requests and token abuse
