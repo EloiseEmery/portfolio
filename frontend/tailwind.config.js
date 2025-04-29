@@ -23,7 +23,7 @@ module.exports = {
       },
       backgroundImage: {
         'gradient-main-secondary-main': 'linear-gradient(to bottom, #010106, #001430, #010106)',
-        'gradient-main-secondary-light-mode': 'linear-gradient(to bottom, #DAE1FD, #FFFFFF, #DAE1FD)',
+        'gradient-main-secondary-light-mode': 'linear-gradient(to bottom, #4468FD20, #FFFFFF, #4468FD20)',
         'gradient-text': 'linear-gradient(to right, #4468FD, #64FFF4)',
         'noise-texture': 'url("/src/assets/png/noise_texture.png")',
       },

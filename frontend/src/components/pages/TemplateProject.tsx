@@ -10,6 +10,7 @@ import project2 from '../../assets/projects/project2.png';
 import project3 from '../../assets/projects/project3.png';
 import project4 from '../../assets/projects/project4.png';
 import project5 from '../../assets/projects/project5.png';
+import { motion } from 'framer-motion';
 
 const projectImages = {
     'portfolio': project1,
@@ -43,6 +44,10 @@ interface ProjectDataItem {
         en: string;
     };
     files?: string[];
+    keyStep?: {
+        fr: string[];
+        en: string[];
+    };
 }
 
 const TemplateProject: React.FC<TemplateProjectProps> = ({ language }) => {
@@ -115,8 +120,85 @@ const TemplateProject: React.FC<TemplateProjectProps> = ({ language }) => {
         />;
     };
 
+    const renderKeyStep = () => {
+        if (project?.keyStep && project.keyStep[language]) {
+            return (
+                <div className="mt-12 text-colorMain dark:text-colorWhite overflow-x-hidden">
+                    <div className="relative">
+                        <motion.div 
+                            className="absolute left-8 top-0 w-0.5 bg-gradient-to-b from-indigo-200 via-purple-300 to-pink-200 dark:from-colorTertiary dark:via-colorQuaternary dark:to-colorTertiary opacity-60"
+                            initial={{ height: 0 }}
+                            whileInView={{ height: "100%" }}
+                            viewport={{ once: true }}
+                            transition={{ duration: 2.5, ease: "easeInOut" }}
+                            style={{ originY: 0 }}
+                        ></motion.div>
+                        <div className="space-y-10">
+                            {project.keyStep[language].map((step, index) => (
+                                <motion.div
+                                    key={index}
+                                    className="flex items-start gap-6 relative"
+                                    initial={{ opacity: 0, y: 50 }}
+                                    whileInView={{ 
+                                        opacity: 1, 
+                                        y: 0,
+                                        transition: {
+                                            duration: 0.8,
+                                            delay: index * 0.2,
+                                            ease: [0.22, 1, 0.36, 1]
+                                        }
+                                    }}
+                                    viewport={{ once: true, margin: "-100px" }}
+                                >
+                                    <motion.div
+                                        className="w-16 h-16 rounded-full bg-gradient-to-br from-indigo-100 to-purple-50 dark:from-gray-900 dark:to-gray-800 flex items-center justify-center shadow-lg dark:shadow-indigo-900/30 relative z-10"
+                                        whileHover={{ scale: 1.1 }}
+                                        whileInView={{
+                                            rotate: [0, -15, 0],
+                                            transition: {
+                                                duration: 1.2,
+                                                delay: index * 0.2 + 0.3,
+                                                ease: "easeOut"
+                                            }
+                                        }}
+                                        viewport={{ once: true, margin: "-100px" }}
+                                    >
+                                        <span className="text-lg font-medium bg-gradient-to-br from-indigo-600 to-purple-600 dark:from-indigo-300 dark:to-white bg-clip-text text-transparent">
+                                            {index + 1}
+                                        </span>
+                                    </motion.div>
+                                    <motion.div
+                                        className="flex-1 bg-gradient-to-br from-white to-gray-50 dark:from-gray-900 dark:to-gray-800 rounded-2xl p-6 shadow-md dark:shadow-lg dark:shadow-purple-900/10"
+                                        whileHover={{ 
+                                            scale: 1.02,
+                                            boxShadow: "0 8px 30px rgba(0,0,0,0.12)"
+                                        }}
+                                        whileInView={{
+                                            x: [50, 0],
+                                            transition: {
+                                                duration: 1,
+                                                delay: index * 0.2 + 0.2,
+                                                ease: "easeOut"
+                                            }
+                                        }}
+                                        viewport={{ once: true, margin: "-100px" }}
+                                    >
+                                        <div className="font-figtree text-[14px] leading-6 dark:text-gray-200">
+                                            {step}
+                                        </div>
+                                    </motion.div>
+                                </motion.div>
+                            ))}
+                        </div>
+                    </div>
+                </div>
+            );
+        }
+        return null;
+    };
+
     return (
-        <div className="lg:flex px-4 md:px-10 xl:px-[150px] 2xl:px-[200px] py-[100px] 2xl:pt-[200px]">
+        <div className="lg:flex px-4 md:px-10 xl:px-[150px] 2xl:px-[200px] py-[100px] 2xl:pt-[150px]">
             <SEO 
                 title={`${projectTitle} | Éloïse Emery`}
                 description={projectDescription}
@@ -185,8 +267,8 @@ const TemplateProject: React.FC<TemplateProjectProps> = ({ language }) => {
                                         <path d="M38.288 10.297l1.414 1.415-14.99 14.99-1.414-1.414z"></path>
                                         <path d="M40 20h-2v-8h-8v-2h10z"></path>
                                         <path d="M35 38H15c-1.7 0-3-1.3-3-3V15c0-1.7 1.3-3 3-3h11v2H15c-.6 0-1 .4-1 1v20c0 .6.4 1 1 1h20c.6 0 1-.4 1-1V24h2v11c0 1.7-1.3 3-3 3z"></path>
-                                    </g>
-                                </svg>
+                                </g>
+                            </svg>
                             }
                             />
                         )}
@@ -225,6 +307,7 @@ const TemplateProject: React.FC<TemplateProjectProps> = ({ language }) => {
                     </div>
                 </div>
                 {renderFilesSection()}
+                {renderKeyStep()}
             </div>
         </div>
     );

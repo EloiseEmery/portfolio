@@ -6,6 +6,7 @@ const fs = require('fs');
 const path = require('path');
 const rateLimit = require('express-rate-limit');
 const helmet = require('helmet');
+import { Request } from 'express';
 
 // Define OpenAI API response interface
 interface OpenAIResponse {
@@ -19,11 +20,12 @@ interface OpenAIResponse {
   };
 }
 
-// Load environment variables from root .env
-dotenv.config({ path: path.join(__dirname, '../.env') });
+// Load environment variables from .env
+dotenv.config();
 
 // Initialize Express app
 const app = express();
+app.set('trust proxy', 'loopback'); // Trust only local proxy (nginx)
 app.use(express.json());
 
 // Configure security headers with Helmet
@@ -55,6 +57,8 @@ app.use(helmet({
 app.use(cors({
   origin: [
     "http://localhost:8080",
+    "http://eloiseemery.com",
+    "http://www.eloiseemery.com",
     "https://eloemery.com",
     "https://www.eloemery.com"
   ],
@@ -68,7 +72,12 @@ app.use(cors({
 const limiter = rateLimit({
   windowMs: 30 * 24 * 60 * 60 * 1000, // 1 month in milliseconds
   max: 150,
-  message: "Too many requests, please try again later."
+  message: "Too many requests, please try again later.",
+  trustProxy: false, // Don't trust X-Forwarded-For header
+  keyGenerator: (req: Request) => {
+    // Use the real IP from nginx
+    return req.ip || req.socket.remoteAddress || 'unknown';
+  }
 });
 app.use(limiter);
 
@@ -165,7 +174,7 @@ app.post("/api/chat", async (req: any, res: any) => {
 // Start server
 const PORT = process.env.PORT || 3001;
 app.listen(PORT, () => {
-  console.log(`Backend lancé sur http://localhost:${PORT}`);
+  console.log(`Backend lancé sur le port ${PORT}`);
 });
 
 module.exports = app;

@@ -63,11 +63,11 @@ function MySkillset({ language }: { language: Language }) {
                 <p>{skill4}</p>
                 <p>Shopify</p>
                 <p>TypeScript</p>
-                <p>API REST</p>
-                <p>JIRA</p>
                 <p>Bootstrap</p>
                 <p>Angular</p>
                 <p>Laravel</p>
+                <p>API REST</p>
+                <p>JIRA</p>
             </div>
             <div className="mt-3 flex justify-end">
                 <Link 

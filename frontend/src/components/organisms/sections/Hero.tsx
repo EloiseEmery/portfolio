@@ -86,31 +86,31 @@ function Hero({ language }: { language: Language }) {
           <img 
             src={layer1Light} 
             alt="Layer 1" 
-            className="absolute object-contain -ml-[500px] w-[450px] -mt-[50px] max-w-[450px] max-h-[350px] dark:hidden" 
+            className="absolute object-contain -ml-[450px] w-[450px] -mt-[50px] max-w-[450px] max-h-[350px] dark:hidden" 
             id="layer1Light" 
           />
           <img 
             src={layer1} 
             alt="Layer 1" 
-            className="absolute object-contain -ml-[500px] w-[450px] -mt-[50px] max-w-[450px] max-h-[350px] hidden dark:block" 
+            className="absolute object-contain -ml-[450px] w-[450px] -mt-[50px] max-w-[450px] max-h-[350px] hidden dark:block" 
             id="layer1" 
           />
           <img 
             src={layer2Light} 
             alt="Layer 2" 
-            className="absolute object-contain -ml-[500px] w-[450px] max-w-[340px] max-h-[270px] dark:hidden opacity-30 sm:opacity-70" 
+            className="absolute object-contain -ml-[470px] w-[450px] max-w-[340px] max-h-[270px] dark:hidden opacity-30 sm:opacity-70" 
             id="layer2Light" 
           />
           <img 
             src={layer2} 
             alt="Layer 2" 
-            className="absolute object-contain -ml-[500px] w-[450px] max-w-[340px] max-h-[270px] hidden dark:block" 
+            className="absolute object-contain -ml-[470px] w-[450px] max-w-[340px] max-h-[270px] hidden dark:block" 
             id="layer2" 
           />
           <img src={layer3} alt="Layer 3" className="absolute object-contain -ml-[600px] mt-[100px] w-[130px] max-w-[130px] max-h-[130px] filter-brightness-0 invert dark:filter-none opacity-50 dark:opacity-70 sm:opacity-100" id="layer3" />
         </div>
       </div>
-      <div className="absolute top-[50px] -right-[50px] md:right-8 md:top-0 z-0 opacity-30 sm:opacity- filter-brightness-0 invert dark:filter-none" id="layer4">
+      <div className="absolute top-[50px] -right-[0px] md:right-8 md:top-0 z-0 opacity-30 sm:opacity- filter-brightness-0 invert dark:filter-none" id="layer4">
         <img src={layer4} alt="Paralaxe Element" className="w-full max-h-[350px]" />
       </div>
       {/* Hero Texts */}

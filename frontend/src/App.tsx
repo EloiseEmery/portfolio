@@ -14,6 +14,7 @@ import { Language } from './utils/translations';
 import { setupHashChangeListener } from './utils/navigation';
 import { getInitialColorMode, toggleColorMode, getInitialLanguage, toggleLanguage } from './utils/appSettings';
 import AppRoutes from './routes';
+import PageTransition from './components/atoms/PageTransition';
 
 const App: React.FC = () => {
   const [colorModeSrc, setColorModeSrc] = useState(getInitialColorMode());
@@ -105,11 +106,13 @@ const App: React.FC = () => {
                 </header>
                 {/* Main content */}
                 <div className={`app-main-content relative z-10 transition-all duration-300 ease-in-out ${isSidebarOpen ? 'md:translate-x-0 md:ml-[250px] xl:ml-[150px]  '  : ''}`}>
-                  <Routes>
-                    <Route path="/*" element={<AppRoutes language={language} />} />
-                    <Route path="/project/:projectId" element={<TemplateProject language={language} />} />
-                    <Route path="*" element={<NotFound language={language} />} />
-                  </Routes>
+                  <PageTransition>
+                    <Routes>
+                      <Route path="/*" element={<AppRoutes language={language} />} />
+                      <Route path="/project/:projectId" element={<TemplateProject language={language} />} />
+                      <Route path="*" element={<NotFound language={language} />} />
+                    </Routes>
+                  </PageTransition>
                   <footer className="w-full max-w-[2000px] mx-auto">
                     <Footer language={language} />
                   </footer>
