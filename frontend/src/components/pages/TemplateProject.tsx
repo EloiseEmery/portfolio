@@ -123,7 +123,7 @@ const TemplateProject: React.FC<TemplateProjectProps> = ({ language }) => {
     const renderKeyStep = () => {
         if (project?.keyStep && project.keyStep[language]) {
             return (
-                <div className="mt-12 text-colorMain dark:text-colorWhite overflow-x-hidden">
+                <div className="mt-12 text-colorMain dark:text-colorWhite overflow-hidden">
                     <div className="relative">
                         <motion.div 
                             className="absolute left-8 top-0 w-0.5 bg-gradient-to-b from-indigo-200 via-purple-300 to-pink-200 dark:from-colorTertiary dark:via-colorQuaternary dark:to-colorTertiary opacity-60"
@@ -168,7 +168,7 @@ const TemplateProject: React.FC<TemplateProjectProps> = ({ language }) => {
                                         </span>
                                     </motion.div>
                                     <motion.div
-                                        className="flex-1 bg-gradient-to-br from-white to-gray-50 dark:from-gray-900 dark:to-gray-800 rounded-2xl p-6 shadow-md dark:shadow-lg dark:shadow-purple-900/10"
+                                        className="flex-1 bg-gradient-to-br mr-4 from-indigo-100/50 to-purple-50/50 dark:from-gray-900/50 dark:to-gray-800/50 rounded-2xl p-6 shadow-md dark:shadow-lg dark:shadow-purple-900/10"
                                         whileHover={{ 
                                             scale: 1.02,
                                             boxShadow: "0 8px 30px rgba(0,0,0,0.12)"

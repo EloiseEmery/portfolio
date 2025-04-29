@@ -9,7 +9,7 @@
             "highlights": {
                 "fr": [
                     "Design responsive, moderne et accessible",
-                    "Support du mode sombre et du mode clair",
+                    "Support des modes clair et sombre",
                     "Traductions multilingues",
                     "Interactions avec l'IA",
                     "Conteneurisation via Docker"
@@ -18,7 +18,8 @@
                     "Responsive, modern, and accessible design",
                     "AI interactions", 
                     "Dark and light mode support",
-                    "Multilingual translations"
+                    "Multilingual translations",
+                    "Docker containerization"
                 ]
             },
             "intro": {

@@ -1,6 +1,7 @@
 import { useRef, useEffect, useState } from 'react';
 import Chatbot from '../../molecules/Chatbot';
 import { getTranslation, Language } from '../../../utils/translations';
+import { motion } from 'framer-motion';
 
 function AskMeSomething({ language }: { language: Language }) {
     // Translations
@@ -70,7 +71,7 @@ function AskMeSomething({ language }: { language: Language }) {
             <div className="lg:w-[50%]">
                 {/* Mobile text */}
                 <div className="block lg:hidden pb-10">
-                    <h2 className="font-sans font-medium text-2xl sm:text-3xl leading-[1.2]  bg-gradient-to-r from-colorTertiary to-colorMain/80 dark:from-colorWhite/90 dark:to-colorWhite/90 bg-clip-text text-transparent">{title}</h2>
+                    <h2 className="font-sans font-medium text-2xl sm:text-3xl leading-[1.2] bg-gradient-to-r from-colorTertiary to-colorMain/80 dark:from-colorWhite/90 dark:to-colorWhite/90 bg-clip-text text-transparent">{title}</h2>
                     <p className="text-colorMain dark:text-colorWhite font-figtree text-base mt-6 pb-8">{paragraph}</p>
                 </div>
                 <div className="relative opacity-80 hover:opacity-100">
@@ -86,39 +87,80 @@ function AskMeSomething({ language }: { language: Language }) {
                             language={language}
                         />
                     </div>
-                    {/* Lien télécharger CV */}
-                    {/* <div className="mt-6">
-                        <Link 
-                            linkText={linkLabel} 
-                            linkUrl="" 
-                            blank={true}
-                            icon={<svg
-                                height="20px"
-                                width="20px"
-                                viewBox="0 0 50 50"
-                                xmlns="http://www.w3.org/2000/svg"
-                                fill="currentColor"
-                                className="w-5 h-5 text-current dark:group-hover:text-colorMain group-hover:text-colorWhite"
-                            >
-                                <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
-                                <g id="SVGRepo_tracerCarrier" strokeLinecap="round" strokeLinejoin="round"></g>
-                                <g id="SVGRepo_iconCarrier">
-                                    <path fill="" d="M11,32.996c-0.553,0-1,0.448-1,1v6.133c0,0.552,0.447,1,1,1h28c0.553,0,1-0.448,1-1v-6.133 c0-0.552-0.447-1-1-1s-1,0.448-1,1v5.133H12v-5.133C12,33.444,11.553,32.996,11,32.996z"></path>
-                                    <path fill="" d="M25,9.129c-0.553,0-1,0.448-1,1v21.51l-6.343-6.127c-0.395-0.384-1.03-0.373-1.413,0.024 c-0.384,0.397-0.373,1.03,0.024,1.414l8.023,7.751c0.001,0.001,0.001,0.001,0.002,0.002l0.012,0.011 c0.037,0.036,0.084,0.051,0.124,0.08c0.062,0.045,0.12,0.095,0.192,0.124c0.121,0.05,0.249,0.076,0.378,0.076 s0.257-0.027,0.378-0.076c0.067-0.027,0.12-0.074,0.178-0.115c0.046-0.031,0.098-0.05,0.139-0.09l8.036-7.765 c0.396-0.384,0.407-1.017,0.023-1.414c-0.384-0.397-1.017-0.408-1.414-0.024L26,31.639v-21.51C26,9.577,25.553,9.129,25,9.129z"></path>
-                                </g>
-                            </svg>
-                            }
-                        />
-                    </div> */}
                 </div>
             </div>
             {/* Desktop text */}
-            <div className="relative hidden lg:block sm:pl-[50px] lg:w-[50%] lg:pl-[100px] 2xl:pl-[175px]">
-                <div className="max-w-[550px]">
-                    <h2 className="font-sans font-medium text-3xl leading-[1.2] bg-gradient-to-r from-colorTertiary to-colorMain/80 dark:from-colorWhite/90 dark:to-colorWhite/90 bg-clip-text text-transparent">{title}</h2>
-                    <p className="text-colorMain dark:text-colorWhite font-figtree text-base mt-6 pb-8">{paragraph}</p>
-                </div>
-            </div>
+            <motion.div 
+                className="relative hidden lg:block sm:pl-[50px] lg:w-[50%] lg:pl-[100px] 2xl:pl-[175px]"
+                initial={{ opacity: 0, y: 100 }}
+                whileInView={{ 
+                    opacity: 1, 
+                    y: 0,
+                    transition: {
+                        type: "spring",
+                        duration: 1.8,
+                        bounce: 0.2
+                    }
+                }}
+                viewport={{ once: true, margin: "-100px" }}
+            >
+                <motion.div 
+                    className="max-w-[500px]"
+                    variants={{
+                        hidden: { opacity: 0, y: 100 },
+                        visible: { 
+                            opacity: 1, 
+                            y: 0,
+                            transition: {
+                                type: "spring",
+                                duration: 2,
+                                bounce: 0.2,
+                                delay: 0.3
+                            }
+                        }
+                    }}
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{ once: true, margin: "-100px" }}
+                >
+                    <motion.h2 
+                        className="font-sans font-medium text-3xl leading-[1.2] bg-gradient-to-r from-colorTertiary to-colorMain/80 dark:from-colorWhite/90 dark:to-colorWhite/90 bg-clip-text text-transparent"
+                        variants={{
+                            hidden: { opacity: 0, y: 50 },
+                            visible: { 
+                                opacity: 1, 
+                                y: 0,
+                                transition: {
+                                    type: "spring",
+                                    duration: 1.8,
+                                    bounce: 0.2,
+                                    delay: 0.4
+                                }
+                            }
+                        }}
+                    >
+                        {title}
+                    </motion.h2>
+                    <motion.p 
+                        className="text-colorMain dark:text-colorWhite font-figtree text-base mt-6 pb-8"
+                        variants={{
+                            hidden: { opacity: 0, y: 50 },
+                            visible: { 
+                                opacity: 1, 
+                                y: 0,
+                                transition: {
+                                    type: "spring",
+                                    duration: 1.8,
+                                    bounce: 0.2,
+                                    delay: 0.6
+                                }
+                            }
+                        }}
+                    >
+                        {paragraph}
+                    </motion.p>
+                </motion.div>
+            </motion.div>
         </div>
     );
 }

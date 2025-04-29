@@ -7,6 +7,7 @@ import layer2 from '../../../assets/png/layer2.png';
 import layer3 from '../../../assets/png/layer3.png';
 import { getTranslation, Language } from '../../../utils/translations';
 import { useEffect } from 'react';
+import { motion } from 'framer-motion';
 import '../../../index.css';
 
 function Hero({ language }: { language: Language }) {
@@ -17,71 +18,71 @@ function Hero({ language }: { language: Language }) {
   const buttonLabel = getTranslation('heroButton', language);
 
   // Handle paralax effect
-  useEffect(() => {
-    const handleScroll = () => {
-      const scrollPosition = window.scrollY;
-      const layer4 = document.getElementById('layer4');
-      const layer1 = document.getElementById('layer1');
-      const layer2 = document.getElementById('layer2');
-      const layer3 = document.getElementById('layer3');
-      const layer1Light = document.getElementById('layer1Light');
-      const layer2Light = document.getElementById('layer2Light');
+  // useEffect(() => {
+  //   const handleScroll = () => {
+  //     const scrollPosition = window.scrollY;
+  //     const layer4 = document.getElementById('layer4');
+  //     const layer1 = document.getElementById('layer1');
+  //     const layer2 = document.getElementById('layer2');
+  //     const layer3 = document.getElementById('layer3');
+  //     const layer1Light = document.getElementById('layer1Light');
+  //     const layer2Light = document.getElementById('layer2Light');
 
-      if (layer1) {
-        const maxTranslateY = 190;
-        const maxScaleDown = 0.95; 
-        const translateY = Math.min(scrollPosition * 0.6, maxTranslateY);
-        const scaleDown = Math.max(1 - (scrollPosition * 0.002), maxScaleDown); 
-        layer1.style.transform = `translateY(${translateY}px) scale(${scaleDown})`;
-      }
-      if (layer1Light) {
-        const maxTranslateY = 190;
-        const maxScaleDown = 0.95; 
-        const translateY = Math.min(scrollPosition * 0.6, maxTranslateY);
-        const scaleDown = Math.max(1 - (scrollPosition * 0.002), maxScaleDown); 
-        layer1Light.style.transform = `translateY(${translateY}px) scale(${scaleDown})`;
-      }
-      if (layer2) {
-        const maxTranslateY = 130;
-        const maxScaleDown = 0.75; 
-        const translateY = Math.min(scrollPosition * 0.5, maxTranslateY);
-        const scaleDown = Math.max(1 - (scrollPosition * 0.002), maxScaleDown); 
-        layer2.style.transform = `translateY(${translateY}px) scale(${scaleDown})`;
-      }
-      if (layer2Light) {
-        const maxTranslateY = 120;
-        const maxScaleDown = 0.75; 
-        const translateY = Math.min(scrollPosition * 0.5, maxTranslateY);
-        const scaleDown = Math.max(1 - (scrollPosition * 0.002), maxScaleDown); 
-        layer2Light.style.transform = `translateY(${translateY}px) scale(${scaleDown})`;
-      }
-      if (layer3) {
-        const maxTranslateY = 50;
-        const maxScaleDown = 0.9; 
-        const translateY = Math.min(scrollPosition * 0.4, maxTranslateY);
-        const scaleDown = Math.max(1 - (scrollPosition * 0.002), maxScaleDown); 
-        layer3.style.transform = `translateY(${translateY}px) scale(${scaleDown})`;
-      }
-      if (layer4) {
-        const maxTranslateY = 75;
-        const maxScaleDown = 0.80; 
-        const translateY = Math.min(scrollPosition * 0.4, maxTranslateY);
-        const scaleDown = Math.max(1 - (scrollPosition * 0.0015), maxScaleDown); 
-        layer4.style.transform = `translateY(${translateY}px) scale(${scaleDown})`;
-      }
-    };
+  //     if (layer1) {
+  //       const maxTranslateY = 190;
+  //       const maxScaleDown = 0.95; 
+  //       const translateY = Math.min(scrollPosition * 0.6, maxTranslateY);
+  //       const scaleDown = Math.max(1 - (scrollPosition * 0.002), maxScaleDown); 
+  //       layer1.style.transform = `translateY(${translateY}px) scale(${scaleDown})`;
+  //     }
+  //     if (layer1Light) {
+  //       const maxTranslateY = 190;
+  //       const maxScaleDown = 0.95; 
+  //       const translateY = Math.min(scrollPosition * 0.6, maxTranslateY);
+  //       const scaleDown = Math.max(1 - (scrollPosition * 0.002), maxScaleDown); 
+  //       layer1Light.style.transform = `translateY(${translateY}px) scale(${scaleDown})`;
+  //     }
+  //     if (layer2) {
+  //       const maxTranslateY = 130;
+  //       const maxScaleDown = 0.75; 
+  //       const translateY = Math.min(scrollPosition * 0.5, maxTranslateY);
+  //       const scaleDown = Math.max(1 - (scrollPosition * 0.002), maxScaleDown); 
+  //       layer2.style.transform = `translateY(${translateY}px) scale(${scaleDown})`;
+  //     }
+  //     if (layer2Light) {
+  //       const maxTranslateY = 120;
+  //       const maxScaleDown = 0.75; 
+  //       const translateY = Math.min(scrollPosition * 0.5, maxTranslateY);
+  //       const scaleDown = Math.max(1 - (scrollPosition * 0.002), maxScaleDown); 
+  //       layer2Light.style.transform = `translateY(${translateY}px) scale(${scaleDown})`;
+  //     }
+  //     if (layer3) {
+  //       const maxTranslateY =150;
+  //       const maxScaleDown = 0.9; 
+  //       const translateY = Math.min(scrollPosition * 0.4, maxTranslateY);
+  //       const scaleDown = Math.max(1 - (scrollPosition * 0.002), maxScaleDown); 
+  //       layer3.style.transform = `translateY(${translateY}px) scale(${scaleDown})`;
+  //     }
+  //     if (layer4) {
+  //       const maxTranslateY = 75;
+  //       const maxScaleDown = 0.80; 
+  //       const translateY = Math.min(scrollPosition * 0.4, maxTranslateY);
+  //       const scaleDown = Math.max(1 - (scrollPosition * 0.0015), maxScaleDown); 
+  //       layer4.style.transform = `translateY(${translateY}px) scale(${scaleDown})`;
+  //     }
+  //   };
 
-    window.addEventListener('scroll', handleScroll);
+  //   window.addEventListener('scroll', handleScroll);
 
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, []);
+  //   return () => {
+  //     window.removeEventListener('scroll', handleScroll);
+  //   };
+  // }, []);
 
   return (
     <div className="relative">
       {/* Hero Images paralaxe */}
-      <div className="absolute right-[-100px] md:right-0 top-0 z-0 opacity-70">
+      {/* <div className="absolute right-[-100px] md:right-0 top-0 z-0 opacity-70">
         <div className="relative hidden md:flex">
           <img 
             src={layer1Light} 
@@ -109,22 +110,64 @@ function Hero({ language }: { language: Language }) {
           />
           <img src={layer3} alt="Layer 3" className="absolute object-contain -ml-[600px] mt-[100px] w-[130px] max-w-[130px] max-h-[130px] filter-brightness-0 invert dark:filter-none opacity-50 dark:opacity-70 sm:opacity-100" id="layer3" />
         </div>
-      </div>
-      <div className="absolute top-[50px] -right-[0px] md:right-8 md:top-0 z-0 opacity-30 sm:opacity- filter-brightness-0 invert dark:filter-none" id="layer4">
+      </div> */}
+      {/* <div className="absolute top-[50px] -right-[0px] md:right-8 md:top-0 z-0 opacity-30 sm:opacity- filter-brightness-0 invert dark:filter-none" id="layer4">
         <img src={layer4} alt="Paralaxe Element" className="w-full max-h-[350px]" />
-      </div>
+      </div> */}
       {/* Hero Texts */}
       <div className="-mt-10">
-        <h1 className="text-shadow shadow-red-3 relative z-10 font-sans text-4xl md:text-5xl bg-gradient-to-r from-colorTertiary to-colorMain/80 dark:from-colorWhite dark:to-colorWhite bg-clip-text text-transparent leading-[1.2] ">{h1Text}</h1>
-        <p className="relative z-10 text-colorMain dark:text-colorWhite font-figtree mt-6 pb-8 text-lg">{pText}</p>
-        <Button
-          children={buttonLabel}
-          className="relative z-10 glow-on-hover bg-colorTertiary after:bg-colorTertiary hover:bg-colorMain hover:after:bg-colorMain hover:text-colorWhite dark:bg-colorQuaternary dark:after:bg-colorQuaternary dark:hover:bg-colorMain dark:hover:after:bg-colorMain dark:hover:text-colorWhite"
-          href="https://www.linkedin.com/in/eloise-emery/"
-          aria-label="See my LinkedIn profile"
-          blank={true}
-          type="primary"
-          icon={
+        <motion.h1
+          className="text-shadow shadow-red-3 relative z-10 font-sans text-4xl md:text-5xl bg-gradient-to-r from-colorTertiary to-colorMain/80 dark:from-colorWhite dark:to-colorWhite bg-clip-text text-transparent leading-[1.2]"
+          initial={{ 
+            opacity: 0,
+            y: 50
+          }}
+          animate={{ 
+            opacity: 1,
+            y: 0
+          }}
+          transition={{
+            duration: 0.8,
+            ease: "easeOut"
+          }}
+        >
+          {h1Text}
+        </motion.h1>
+        <motion.p 
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+          className="relative z-10 text-colorMain dark:text-colorWhite font-figtree mt-6 pb-8 text-lg"
+        >
+          {pText}
+        </motion.p>
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ 
+            opacity: 1, 
+            y: [0, -6, 0],
+            transition: {
+              y: {
+                repeat: Infinity,
+                duration: 3,
+                ease: [0.4, 0, 0.2, 1],
+                delay: 1
+              },
+              opacity: {
+                duration: 0.6,
+                delay: 0.4
+              }
+            }
+          }}
+        >
+          <Button
+            children={buttonLabel}
+            className="relative z-10 glow-on-hover bg-colorTertiary after:bg-colorTertiary hover:bg-colorMain hover:after:bg-colorMain hover:text-colorWhite dark:bg-colorQuaternary dark:after:bg-colorQuaternary dark:hover:bg-colorMain dark:hover:after:bg-colorMain dark:hover:text-colorWhite"
+            href="https://www.linkedin.com/in/eloise-emery/"
+            aria-label="See my LinkedIn profile"
+            blank={true}
+            type="primary"
+            icon={
               <svg
                   fill="currentColor"
                   viewBox="0 0 50 50"
@@ -141,6 +184,7 @@ function Hero({ language }: { language: Language }) {
               </svg>
           }
         />
+        </motion.div>
       </div>
     </div>
   );

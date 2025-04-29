@@ -65,7 +65,7 @@ const Sidebar: React.FC<SidebarProps> = ({ closeSidebar, language }) => {
   return (
     <div className="z-50 sidebar fixed md:pt-0 left-0 w-full md:w-[300px] h-full overflow-y-auto bg-[#bbc2cf] dark:bg-[#18202D] md:bg-transparent dark:md:bg-transparent overflow-x-hidden">
       {/* decorative img for sidebar mobile */}
-      <div className="relative md:hidden -z-10">
+      {/* <div className="relative md:hidden -z-10">
         <img 
           src={layer1Light} 
           alt="Layer 1" 
@@ -87,12 +87,12 @@ const Sidebar: React.FC<SidebarProps> = ({ closeSidebar, language }) => {
           className="top-[350px] opacity-50 left-10 absolute object-contain w-[450px] max-w-[340px] max-h-[270px] hidden dark:block" 
         />
         <img src={layer3} alt="Layer 3" className="absolute object-contain -ml-[600px] mt-[100px] w-[130px] max-w-[130px] max-h-[130px] filter-brightness-0 invert dark:filter-none opacity-50 dark:opacity-70 sm:opacity-100" id="layer3" />
-      </div>  
+      </div>   */}
       {/* Sidebar content */}
       <div className="container-sidebar relative z-10 flex flex-col font-sans text-xl md:text-sm font-medium text-colorBlack dark:text-colorWhite space-y-8 px-4 md:px-10 pt-[100px] md:pt-[150px]">
-        <a href="/#ask-me-something" onClick={handleLinkClick('#ask-me-something')} className="cursor-pointer transition-all duration-300 ease-in-out leading-[1.2] dark:hover:text-colorQuaternary hover:text-colorTertiary md:transform-none animate-[slide-in_ease-out_250ms] md:animate-none">{sidebarLink1}</a>
-        <a href="/#my-skillset" onClick={handleLinkClick('#my-skillset')} className="cursor-pointer transition-all duration-300 ease-in-out whitespace-nowrap dark:hover:text-colorQuaternary hover:text-colorTertiary md:transform-none animate-[slide-in_ease-out_300ms] md:animate-none">{sidebarLink2}</a>
-        <div className="animate-[slide-in_ease-out_350ms] md:animate-none">
+        <a href="/#ask-me-something" onClick={handleLinkClick('#ask-me-something')} className="cursor-pointer transition-all duration-300 ease-in-out leading-[1.2] dark:hover:text-colorQuaternary hover:text-colorTertiary md:transform-none animate-[slide-in_ease-out_250ms]">{sidebarLink1}</a>
+        <a href="/#my-skillset" onClick={handleLinkClick('#my-skillset')} className="cursor-pointer transition-all duration-300 ease-in-out whitespace-nowrap dark:hover:text-colorQuaternary hover:text-colorTertiary md:transform-none animate-[slide-in_ease-out_300ms]">{sidebarLink2}</a>
+        <div className="animate-[slide-in_ease-out_350ms]">
           <a 
             href="/#my-projects" 
             onClick={handleLinkClick('#my-projects')} 
@@ -115,15 +115,15 @@ const Sidebar: React.FC<SidebarProps> = ({ closeSidebar, language }) => {
                     }, 250);
                   }
                 }}
-                className={`block text-base text-colorBlack/80 dark:text-colorWhite/80 md:text-xs hover:text-colorTertiary dark:hover:text-colorQuaternary transition-all duration-300 ease-in-out relative pl-4 before:content-['•'] before:absolute before:left-0 before:text-colorTertiary dark:before:text-colorQuaternary md:transform-none md:animate-none`}
+                className={`block text-base text-colorBlack/80 dark:text-colorWhite/80 md:text-xs hover:text-colorTertiary dark:hover:text-colorQuaternary transition-all duration-300 ease-in-out relative pl-4 before:content-['•'] before:absolute before:left-0 before:text-colorTertiary dark:before:text-colorQuaternary md:transform-none`}
               >
                 {project.title}
               </a>
             ))}
           </div>
         </div>
-        <a href="/#get-in-touch" onClick={handleLinkClick('#get-in-touch')} className="cursor-pointer hover:text-colorTertiary dark:hover:text-colorQuaternary transition-all duration-300 ease-in-out whitespace-nowrap md:transform-none animate-[slide-in_ease-out_400ms] md:animate-none">{sidebarLink4}</a>
-        <div className="flex gap-4 md:transform-none animate-[slide-in_ease-out_500ms] md:animate-none">
+        <a href="/#get-in-touch" onClick={handleLinkClick('#get-in-touch')} className="cursor-pointer hover:text-colorTertiary dark:hover:text-colorQuaternary transition-all duration-300 ease-in-out whitespace-nowrap md:transform-none animate-[slide-in_ease-out_400ms]">{sidebarLink4}</a>
+        <div className="flex gap-4 md:transform-none animate-[slide-in_ease-out_500ms]">
           <a href="https://github.com/eloiseemery" target="_blank" rel="noopener noreferrer" className="cursor-pointer">
             <img src={iconeGithub} alt="Github" className=" max-w-[25px] md:max-w-[20px] brightness-0 invert(1) dark:filter-none hover:scale-110 transition-all duration-300 ease-in-out" />
           </a>
