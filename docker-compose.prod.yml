@@ -4,11 +4,11 @@ services:
       context: ./frontend
       dockerfile: Dockerfile
       args:
-        - REACT_APP_API_URL=https://eloemery.com/api
+        - REACT_APP_API_URL=https://eloemery.com
     restart: unless-stopped
     environment:
       - NODE_ENV=production
-      - REACT_APP_API_URL=https://eloemery.com/api
+      - REACT_APP_API_URL=https://eloemery.com
       - DOMAIN_NAME=https://eloemery.com
     networks:
       - app-network

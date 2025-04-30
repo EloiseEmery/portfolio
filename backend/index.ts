@@ -91,7 +91,7 @@ if (!OPENAI_API_KEY) throw new Error("OPENAI_API_KEY manquante dans .env");
 const CHATBOT_TEXT = fs.readFileSync(path.join(__dirname, "../chatbotText.txt"), "utf8");
 
 // Handle chat request
-app.post("/chat", async (req: any, res: any) => {
+app.post("/api/chat", async (req: any, res: any) => {
   const { message, conversation = [] } = req.body;
 
   // Error handling

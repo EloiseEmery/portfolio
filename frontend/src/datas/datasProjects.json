@@ -56,7 +56,7 @@
             "title": "BAnQ dans ta classe",
             "descriptionKey": "projectBanqDescription", 
             "technologies": ["Figma", "Tailwind", "React", "TypeScript", "SQL", "Drupal"],
-            "websiteLink": "https://danstaclasse.banq.yulcom.ca/",
+            "websiteLink": "",
             "highlights": {
                 "fr": [
                     "Plateforme éducative interactive",
