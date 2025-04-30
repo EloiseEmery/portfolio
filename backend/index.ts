@@ -70,13 +70,15 @@ app.use(cors({
 // Apply rate limiting 
 // Prevent too many requests and token abuse
 const limiter = rateLimit({
-  windowMs: 30 * 24 * 60 * 60 * 1000, // 1 month in milliseconds
-  max: 150,
+  windowMs: 24 * 60 * 60 * 1000, // 24 hours in milliseconds
+  max: 150, // limit each IP to 150 requests per windowMs
   message: "Too many requests, please try again later.",
-  trustProxy: false, // Don't trust X-Forwarded-For header
+  standardHeaders: true,
+  legacyHeaders: false,
+  trustProxy: true, // Trust X-Forwarded-For from nginx
   keyGenerator: (req: Request) => {
-    // Use the real IP from nginx
-    return req.ip || req.socket.remoteAddress || 'unknown';
+    // Use X-Forwarded-For from nginx since we trust it
+    return req.headers['x-forwarded-for'] as string || req.ip;
   }
 });
 app.use(limiter);
@@ -89,7 +91,7 @@ if (!OPENAI_API_KEY) throw new Error("OPENAI_API_KEY manquante dans .env");
 const CHATBOT_TEXT = fs.readFileSync(path.join(__dirname, "../chatbotText.txt"), "utf8");
 
 // Handle chat request
-app.post("/api/chat", async (req: any, res: any) => {
+app.post("/chat", async (req: any, res: any) => {
   const { message, conversation = [] } = req.body;
 
   // Error handling
