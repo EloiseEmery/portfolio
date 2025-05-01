@@ -1,4 +1,5 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 
 interface ButtonProps {
   children: React.ReactNode;
@@ -10,6 +11,7 @@ interface ButtonProps {
   onClick?: (event?: React.MouseEvent<HTMLButtonElement>) => void;
   handleSubmit?: (endpoint: string) => Promise<void>;
   endpoint?: string;
+  animate?: boolean;
 }
 
 const Button: React.FC<ButtonProps> = ({ 
@@ -21,7 +23,8 @@ const Button: React.FC<ButtonProps> = ({
   icon, 
   onClick,
   handleSubmit, 
-  endpoint 
+  endpoint,
+  animate = false
 }) => {
   const baseStyle = 'max-w-fit py-3 px-6 rounded-lg text-[13px] font-semibold tracking-wider whitespace-nowrap flex items-center justify-center transition-all duration-300 ease-in-out';
   const primaryStyle = 'dark:bg-colorQuaternary/80 dark:text-colorMain dark:hover:bg-colorQuaternary bg-colorTertiary/80 hover:bg-colorTertiary text-colorWhite';
@@ -30,39 +33,101 @@ const Button: React.FC<ButtonProps> = ({
   const buttonStyle = `${baseStyle} ${type === 'primary' ? primaryStyle : secondaryStyle}`;
 
   const handleClick = async (event?: React.MouseEvent<HTMLButtonElement>) => {
-    // Prevent default if event is passed
     if (event) {
       event.preventDefault();
       event.stopPropagation();
     }
-
-    // Call custom onClick if provided
     if (onClick) {
       onClick(event);
     }
-
-    // Handle submit if provided
     if (handleSubmit && endpoint) {
       await handleSubmit(endpoint);
     }
   };
 
+  const ButtonContent = () => (
+    <>
+      {children}
+      {icon && <span className="ml-2">{icon}</span>}
+    </>
+  );
+
   if (href) {
+    if (animate) {
+      return (
+        <motion.a
+          href={href}
+          target={blank ? '_blank' : undefined}
+          rel={blank ? 'noopener noreferrer' : undefined}
+          className={`mt-2 ${buttonStyle} ${className || ''}`}
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ 
+            opacity: 1, 
+            y: [0, -30, 0],
+            transition: {
+              y: {
+                repeat: Infinity,
+                duration: 2,
+                ease: "easeInOut",
+                delay: 0.5
+              },
+              opacity: {
+                duration: 0.6,
+                delay: 0.4
+              }
+            }
+          }}
+        >
+          <ButtonContent />
+        </motion.a>
+      );
+    }
     return (
-      <a href={href} className={`${buttonStyle} ${className}`} target={blank ? '_blank' : '_self'}>
-        {children}
-        {icon && <span className="ml-2">{icon}</span>}
+      <a
+        href={href}
+        target={blank ? '_blank' : undefined}
+        rel={blank ? 'noopener noreferrer' : undefined}
+        className={`${buttonStyle} ${className || ''}`}
+      >
+        <ButtonContent />
       </a>
     );
   }
 
+  if (animate) {
+    return (
+      <motion.button
+        onClick={handleClick}
+        className={`${buttonStyle} ${className || ''}`}
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ 
+          opacity: 1, 
+          y: [0, -12, 0],
+          transition: {
+            y: {
+              repeat: Infinity,
+              duration: 2,
+              ease: "easeInOut",
+              delay: 0.5
+            },
+            opacity: {
+              duration: 0.6,
+              delay: 0.4
+            }
+          }
+        }}
+      >
+        <ButtonContent />
+      </motion.button>
+    );
+  }
+
   return (
-    <button 
-      className={`${buttonStyle} ${className}`} 
+    <button
       onClick={handleClick}
+      className={`${buttonStyle} ${className || ''}`}
     >
-      {children}
-      {icon && <span className="ml-2">{icon}</span>}
+      <ButtonContent />
     </button>
   );
 };

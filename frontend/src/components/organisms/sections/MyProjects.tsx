@@ -7,6 +7,7 @@ import project3 from '../../../assets/projects/project3.png';
 import project4 from '../../../assets/projects/project4.png';
 import project5 from '../../../assets/projects/project5.png';
 import { getTranslation, Language } from '../../../utils/translations';
+import { motion } from 'framer-motion';
 
 function MyProjects({ language }: { language: Language }) {
     // Translations
@@ -57,10 +58,45 @@ function MyProjects({ language }: { language: Language }) {
         <div className="relative"> 
             {/* Top section */}
             <div className="lg:flex z-10 relative">
-                <div className="sm:pr-[50px] lg:w-[55%] flex">
+                <motion.div 
+                    className="sm:pr-[50px] w-full 2xl:w-[50%] flex"
+                    variants={{
+                        hidden: { opacity: 0, y: 100 },
+                        visible: { 
+                            opacity: 1, 
+                            y: 0,
+                            transition: {
+                                type: "spring",
+                                duration: 2,
+                                bounce: 0.2,
+                                delay: 0.3
+                            }
+                        }
+                    }}
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{ once: true, margin: "-100px" }}
+                >
                     <div>
                         <div className="flex">
-                            <h2 className="font-sans font-medium text-2xl sm:text-3xl leading-[1.2] pr-6  bg-gradient-to-r dark:from-colorWhite/90 dark:to-colorWhite/90 from-colorTertiary to-colorMain/80 bg-clip-text text-transparent">{title}</h2>
+                            <motion.h2 
+                                className="font-sans font-medium text-2xl leading-[1.2] pr-6 bg-gradient-to-r dark:from-colorWhite/90 dark:to-colorWhite/90 from-colorTertiary to-colorMain/80 bg-clip-text text-transparent"
+                                variants={{
+                                    hidden: { opacity: 0, y: 50 },
+                                    visible: { 
+                                        opacity: 1, 
+                                        y: 0,
+                                        transition: {
+                                            type: "spring",
+                                            duration: 1.8,
+                                            bounce: 0.2,
+                                            delay: 0.4
+                                        }
+                                    }
+                                }}
+                            >
+                                {title}
+                            </motion.h2>
                             {/* Link desktop */}
                             <Link
                                 linkText={getTranslation('myProjectsButton', language)}
@@ -86,16 +122,33 @@ function MyProjects({ language }: { language: Language }) {
                         }
                         />
                         </div>
-                        <p className="dark:text-colorWhite text-colorMain font-figtree text-base mt-6 pb-1 ">{paragraph}</p>
+                        <motion.p 
+                            className="dark:text-colorWhite text-colorMain font-figtree text-[15px] lg:text-base mt-6 pb-1"
+                            variants={{
+                                hidden: { opacity: 0, y: 50 },
+                                visible: { 
+                                    opacity: 1, 
+                                    y: 0,
+                                    transition: {
+                                        type: "spring",
+                                        duration: 1.8,
+                                        bounce: 0.2,
+                                        delay: 0.6
+                                    }
+                                }
+                            }}
+                        >
+                            {paragraph}
+                        </motion.p>
                     </div>
-                </div>
+                </motion.div>
             </div>
             {/* Bottom section */}
             <div className="lg:flex z-10 relative pb-6 md:pb-0">
                 {/* Projects Image */}
                 <div className="lg:w-[50%] pt-6 dark:text-colorWhite text-colorMain flex">
                     <div className="rounded-lg overflow-hidden w-full">
-                        <div className="h-[285px] sm:h-[400px]">
+                        <div className="h-[150px] sm:h-[350px] lg:h-[400px]">
                             <img src={hoveredProject !== null ? projectImages[projects.findIndex(project => project.id === hoveredProject)] : project1} alt="" className="w-full h-full object-cover" />
                         </div>
                     </div>

@@ -12,6 +12,7 @@ import sql from '../../../assets/logos-skills/sql.png';
 import js from '../../../assets/logos-skills/js.png';
 import { getTranslation, Language } from '../../../utils/translations';
 import Link from '../../atoms/Link';
+import { motion } from 'framer-motion';
 
 function MySkillset({ language }: { language: Language }) {
     // Translations
@@ -25,10 +26,62 @@ function MySkillset({ language }: { language: Language }) {
     
     return (
         <div className="relative">
-            <div className="relative">
-                <h2 className="mx-auto text-center w-[350px] font-sans font-medium text-2xl sm:text-3xl leading-[1.2]  bg-gradient-to-r dark:from-colorWhite/90 dark:to-colorWhite/90 from-colorTertiary to-colorMain/80 bg-clip-text text-transparent">{title}</h2>
-                <p className="text-center dark:text-colorWhite text-colorMain font-figtree text-base mt-6 pb-2 max-w-[700px] md:mx-auto">{paragraph}</p>
-            </div>
+            <motion.div 
+                className="relative"
+                variants={{
+                    hidden: { opacity: 0, y: 100 },
+                    visible: { 
+                        opacity: 1, 
+                        y: 0,
+                        transition: {
+                            type: "spring",
+                            duration: 2,
+                            bounce: 0.2,
+                            delay: 0.3
+                        }
+                    }
+                }}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, margin: "-100px" }}
+            >
+                <motion.h2 
+                    className="mx-auto text-center w-[350px] font-sans font-medium text-2xl leading-[1.2] bg-gradient-to-r dark:from-colorWhite/90 dark:to-colorWhite/90 from-colorTertiary to-colorMain/80 bg-clip-text text-transparent"
+                    variants={{
+                        hidden: { opacity: 0, y: 50 },
+                        visible: { 
+                            opacity: 1, 
+                            y: 0,
+                            transition: {
+                                type: "spring",
+                                duration: 1.8,
+                                bounce: 0.2,
+                                delay: 0.4
+                            }
+                        }
+                    }}
+                >
+                    {title}
+                </motion.h2>
+                <motion.p 
+                    className="text-center dark:text-colorWhite text-colorMain font-figtree text-[15px] lg:text-base mt-6 pb-2 max-w-[750px] md:mx-auto"
+                    variants={{
+                        hidden: { opacity: 0, y: 50 },
+                        visible: { 
+                            opacity: 1, 
+                            y: 0,
+                            transition: {
+                                type: "spring",
+                                duration: 1.8,
+                                bounce: 0.2,
+                                delay: 0.6
+                            }
+                        }
+                    }}
+                >
+                    {paragraph}
+                </motion.p>
+            </motion.div>
             {/* Skillset grid // Can add different images depends on color mode */}
             <div className="mr-[25px] md:mr-0 flex overflow-x-auto space-x-4 py-4 md:grid md:grid-cols-4 lg:grid-cols-6 gap-y-8 mt-6">
                 {[

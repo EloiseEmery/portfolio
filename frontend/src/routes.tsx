@@ -34,7 +34,7 @@ const AppRoutes: React.FC<RoutesProps> = ({ language }) => {
           </Helmet>
           {/* Page home */}
           <main className="px-4 md:px-10 xl:px-[150px] 2xl:px-[200px] max-w-[2000px] mx-auto">
-            <section id="hero" className="py-[250px]">
+            <section id="hero" className="py-[250px] md:pb-[200px]">
               <Hero language={language} />
             </section>
             <section id="ask-me-something" className="py-[70px] md:py-[150px]">

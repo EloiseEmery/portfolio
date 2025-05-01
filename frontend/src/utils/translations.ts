@@ -117,8 +117,8 @@ const translations = {
     fr: 'Frontend ou Backend, tu préfères quoi ?'
   },
   chatbotQuestion3: {
-    en: 'Tell me about Éloïse',
-    fr: 'Parle moi d\'Éloïse'
+    en: 'Tell me about your background',
+    fr: 'Parle moi de ton parcours' 
   },
 
   // My skillset
@@ -127,8 +127,8 @@ const translations = {
     fr: "Mes compétences"
   },
   mySkillsetParagraph: {
-    en: "With a robust foundation in programming and graphic design, I have effectively harmonized my technical expertise with my creative sensibilities. My skillset includes a wide range of technologies and frameworks.",
-    fr: "Grâce à mes formations en  programmation et en design graphique, j'ai su créer une belle synergie entre mes compétences techniques et ma sensibilité personnelle. Mes compétences comprennent une large gamme de technologies et frameworks."
+    en: "With a robust foundation in programming and graphic design, I have effectively harmonized my technical expertise with my creative sensibilities. My skillset includes a wide range of technologies:",
+    fr: "Grâce à mes formations en  programmation et en design graphique, j'ai su créer une belle synergie entre mes compétences techniques et ma sensibilité personnelle. Mes compétences comprennent une large gamme de technologies:"
   },
   mySkillsetLink: {
     en: "See all my skills on my LinkedIn",
@@ -215,8 +215,8 @@ const translations = {
     fr: "Visiter le site web"
   },
   projectDocuments: {
-    en: "Project documents",
-    fr: "Documents du projet"
+    en: "Project document(s)",
+    fr: "Document(s) du projet"
   }
 
   // Project 1 : Éloïse Emery Portfolio

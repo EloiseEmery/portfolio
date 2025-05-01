@@ -8,6 +8,12 @@ export const openaiApiKey = process.env.OPENAI_API_KEY;
 // Handle initial color mode
 export const getInitialColorMode = () => {
   const savedColorMode = localStorage.getItem('colorMode');
+  if (!savedColorMode) {
+    // Set dark mode as default for first visit
+    document.documentElement.classList.add('dark');
+    localStorage.setItem('colorMode', 'dark');
+    return darkMode;
+  }
   const isDarkMode = savedColorMode === 'dark';
   return isDarkMode ? lightMode : darkMode;
 };

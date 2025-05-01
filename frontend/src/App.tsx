@@ -101,7 +101,7 @@ const App: React.FC = () => {
           <div className={`flex w-full overflow-x-hidden ${isSidebarOpen ? 'max-md:h-screen max-md:overflow-hidden' : ''}`} style={{ height: isSidebarOpen && isMobile ? '100vh' : 'auto' }}>
               <div className="flex-1 transition-all duration-300 ease-in-out">
                 {/* Header */}
-                <header className="w-full max-w-[2000px] mx-auto">
+                <header className="w-full mx-auto">
                   <Header toggleMenu={toggleMenu} menuSrc={menuSrc} colorModeSrc={colorModeSrc} toggleColorMode={handleToggleColorMode} toggleLanguage={handleToggleLanguage} language={language} />
                 </header>
                 {/* Main content */}

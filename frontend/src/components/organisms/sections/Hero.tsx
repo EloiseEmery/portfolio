@@ -17,68 +17,6 @@ function Hero({ language }: { language: Language }) {
   const pText = getTranslation('heroParagraph', language);
   const buttonLabel = getTranslation('heroButton', language);
 
-  // Handle paralax effect
-  // useEffect(() => {
-  //   const handleScroll = () => {
-  //     const scrollPosition = window.scrollY;
-  //     const layer4 = document.getElementById('layer4');
-  //     const layer1 = document.getElementById('layer1');
-  //     const layer2 = document.getElementById('layer2');
-  //     const layer3 = document.getElementById('layer3');
-  //     const layer1Light = document.getElementById('layer1Light');
-  //     const layer2Light = document.getElementById('layer2Light');
-
-  //     if (layer1) {
-  //       const maxTranslateY = 190;
-  //       const maxScaleDown = 0.95; 
-  //       const translateY = Math.min(scrollPosition * 0.6, maxTranslateY);
-  //       const scaleDown = Math.max(1 - (scrollPosition * 0.002), maxScaleDown); 
-  //       layer1.style.transform = `translateY(${translateY}px) scale(${scaleDown})`;
-  //     }
-  //     if (layer1Light) {
-  //       const maxTranslateY = 190;
-  //       const maxScaleDown = 0.95; 
-  //       const translateY = Math.min(scrollPosition * 0.6, maxTranslateY);
-  //       const scaleDown = Math.max(1 - (scrollPosition * 0.002), maxScaleDown); 
-  //       layer1Light.style.transform = `translateY(${translateY}px) scale(${scaleDown})`;
-  //     }
-  //     if (layer2) {
-  //       const maxTranslateY = 130;
-  //       const maxScaleDown = 0.75; 
-  //       const translateY = Math.min(scrollPosition * 0.5, maxTranslateY);
-  //       const scaleDown = Math.max(1 - (scrollPosition * 0.002), maxScaleDown); 
-  //       layer2.style.transform = `translateY(${translateY}px) scale(${scaleDown})`;
-  //     }
-  //     if (layer2Light) {
-  //       const maxTranslateY = 120;
-  //       const maxScaleDown = 0.75; 
-  //       const translateY = Math.min(scrollPosition * 0.5, maxTranslateY);
-  //       const scaleDown = Math.max(1 - (scrollPosition * 0.002), maxScaleDown); 
-  //       layer2Light.style.transform = `translateY(${translateY}px) scale(${scaleDown})`;
-  //     }
-  //     if (layer3) {
-  //       const maxTranslateY =150;
-  //       const maxScaleDown = 0.9; 
-  //       const translateY = Math.min(scrollPosition * 0.4, maxTranslateY);
-  //       const scaleDown = Math.max(1 - (scrollPosition * 0.002), maxScaleDown); 
-  //       layer3.style.transform = `translateY(${translateY}px) scale(${scaleDown})`;
-  //     }
-  //     if (layer4) {
-  //       const maxTranslateY = 75;
-  //       const maxScaleDown = 0.80; 
-  //       const translateY = Math.min(scrollPosition * 0.4, maxTranslateY);
-  //       const scaleDown = Math.max(1 - (scrollPosition * 0.0015), maxScaleDown); 
-  //       layer4.style.transform = `translateY(${translateY}px) scale(${scaleDown})`;
-  //     }
-  //   };
-
-  //   window.addEventListener('scroll', handleScroll);
-
-  //   return () => {
-  //     window.removeEventListener('scroll', handleScroll);
-  //   };
-  // }, []);
-
   return (
     <div className="relative">
       {/* Hero Images paralaxe */}
@@ -141,50 +79,31 @@ function Hero({ language }: { language: Language }) {
         >
           {pText}
         </motion.p>
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ 
-            opacity: 1, 
-            y: [0, -6, 0],
-            transition: {
-              y: {
-                repeat: Infinity,
-                duration: 3,
-                ease: [0.4, 0, 0.2, 1],
-                delay: 1
-              },
-              opacity: {
-                duration: 0.6,
-                delay: 0.4
-              }
-            }
-          }}
-        >
-          <Button
-            children={buttonLabel}
-            className="relative z-10 glow-on-hover bg-colorTertiary after:bg-colorTertiary hover:bg-colorMain hover:after:bg-colorMain hover:text-colorWhite dark:bg-colorQuaternary dark:after:bg-colorQuaternary dark:hover:bg-colorMain dark:hover:after:bg-colorMain dark:hover:text-colorWhite"
-            href="https://www.linkedin.com/in/eloise-emery/"
-            aria-label="See my LinkedIn profile"
-            blank={true}
-            type="primary"
-            icon={
-              <svg
-                  fill="currentColor"
-                  viewBox="0 0 50 50"
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="w-5 h-5 text-current group-hover:text-colorWhite dark:group-hover:text-colorMain"
-              >
-                  <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
-                  <g id="SVGRepo_tracerCarrier" strokeLinecap="round" strokeLinejoin="round"></g>
-                  <g id="SVGRepo_iconCarrier">
-                      <path d="M38.288 10.297l1.414 1.415-14.99 14.99-1.414-1.414z"></path>
-                      <path d="M40 20h-2v-8h-8v-2h10z"></path>
-                      <path d="M35 38H15c-1.7 0-3-1.3-3-3V15c0-1.7 1.3-3 3-3h11v2H15c-.6 0-1 .4-1 1v20c0 .6.4 1 1 1h20c.6 0 1-.4 1-1V24h2v11c0 1.7-1.3 3-3 3z"></path>
-                  </g>
-              </svg>
-          }
-        />
-        </motion.div>
+        <Button
+          children={buttonLabel}
+          className="relative z-10 glow-on-hover bg-colorTertiary after:bg-colorTertiary hover:bg-colorMain hover:after:bg-colorMain hover:text-colorWhite dark:bg-colorQuaternary dark:after:bg-colorQuaternary dark:hover:bg-colorMain dark:hover:after:bg-colorMain dark:hover:text-colorWhite"
+          href="https://www.linkedin.com/in/eloise-emery/"
+          aria-label="See my LinkedIn profile"
+          blank={true}
+          type="primary"
+          animate={true}
+          icon={
+            <svg
+                fill="currentColor"
+                viewBox="0 0 50 50"
+                xmlns="http://www.w3.org/2000/svg"
+                className="w-5 h-5 text-current group-hover:text-colorWhite dark:group-hover:text-colorMain"
+            >
+                <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
+                <g id="SVGRepo_tracerCarrier" strokeLinecap="round" strokeLinejoin="round"></g>
+                <g id="SVGRepo_iconCarrier">
+                    <path d="M38.288 10.297l1.414 1.415-14.99 14.99-1.414-1.414z"></path>
+                    <path d="M40 20h-2v-8h-8v-2h10z"></path>
+                    <path d="M35 38H15c-1.7 0-3-1.3-3-3V15c0-1.7 1.3-3 3-3h11v2H15c-.6 0-1 .4-1 1v20c0 .6.4 1 1 1h20c.6 0 1-.4 1-1V24h2v11c0 1.7-1.3 3-3 3z"></path>
+                </g>
+            </svg>
+        }
+      />
       </div>
     </div>
   );

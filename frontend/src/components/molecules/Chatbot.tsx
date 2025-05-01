@@ -152,9 +152,9 @@ function Chatbot({ language }: { language: Language })  {
                     e.preventDefault();
                     if (input.trim()) sendMessage(input);
                 }}
-                className="relative bg-[#bfc4d4] dark:bg-darkBlue p-4 rounded-2xl dark:bg-[#31465d] border dark:border-colorWhite/30  border-colorMain/15"
+                className="relative bg-[#bfc4d46f] dark:bg-darkBlue p-4 rounded-2xl dark:bg-[#31465d82] border dark:border-colorWhite/30  border-colorMain/15"
             >
-            <div className="opacity-80 absolute right-0 -top-[60px] filter-brightness-0 invert dark:filter-none">
+            <div className="opacity-80 absolute right-0 -top-[40px] filter-brightness-0 invert dark:filter-none">
                 <img src={chatLogos} alt="tech logo" className='h-[25px]'/>
             </div>
                 <div className="">

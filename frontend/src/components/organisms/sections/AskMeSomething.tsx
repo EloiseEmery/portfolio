@@ -67,15 +67,15 @@ function AskMeSomething({ language }: { language: Language }) {
     }, []);
 
     return (
-        <div className="lg:flex">
+        <div className="lg:flex -mt-20 md:-mt-0">
             <div className="lg:w-[50%]">
                 {/* Mobile text */}
                 <div className="block lg:hidden pb-10">
-                    <h2 className="font-sans font-medium text-2xl sm:text-3xl leading-[1.2] bg-gradient-to-r from-colorTertiary to-colorMain/80 dark:from-colorWhite/90 dark:to-colorWhite/90 bg-clip-text text-transparent">{title}</h2>
-                    <p className="text-colorMain dark:text-colorWhite font-figtree text-base mt-6 pb-8">{paragraph}</p>
+                    <h2 className="font-sans font-medium text-2xl leading-[1.2] bg-gradient-to-r from-colorTertiary to-colorMain/80 dark:from-colorWhite/90 dark:to-colorWhite/90 bg-clip-text text-transparent">{title}</h2>
+                    <p className="text-colorMain dark:text-colorWhite font-figtree text-[15px] mt-6 pb-8">{paragraph}</p>
                 </div>
                 <div className="relative opacity-80 hover:opacity-100">
-                    <div className="absolute -top-6 -right-10 md:-right-6 w-full h-[300px] border border-colorQuinaryLight dark:border-colorQuinary/50 z-0"></div>
+                    {/* <div className="absolute -top-6 -right-10 md:-right-6 w-full h-[300px] border border-colorQuinaryLight dark:border-colorQuinary/50 z-0"></div> */}
                     <div 
                         ref={chatbotRef}
                         className="relative z-10 transition-all duration-200 ease-out"
@@ -124,7 +124,7 @@ function AskMeSomething({ language }: { language: Language }) {
                     viewport={{ once: true, margin: "-100px" }}
                 >
                     <motion.h2 
-                        className="font-sans font-medium text-3xl leading-[1.2] bg-gradient-to-r from-colorTertiary to-colorMain/80 dark:from-colorWhite/90 dark:to-colorWhite/90 bg-clip-text text-transparent"
+                        className="font-sans font-medium text-2xl leading-[1.2] bg-gradient-to-r from-colorTertiary to-colorMain/80 dark:from-colorWhite/90 dark:to-colorWhite/90 bg-clip-text text-transparent"
                         variants={{
                             hidden: { opacity: 0, y: 50 },
                             visible: { 

@@ -24,7 +24,8 @@ function Header({ toggleMenu, menuSrc, toggleColorMode, colorModeSrc, toggleLang
   }, []);
 
   return (
-    <div className={`fixed top-0 z-50 w-full flex items-center justify-between px-4 md:px-10 transition-all duration-300 ease-in-out ${isScrolled ? 'h-[50px] shadow-md backdrop-blur-md bg-gradient-to-bl from-[#e6eaf1] to-[#bbc2cf] sm:from-[#e6eaf195] sm:to-[#bbc2cf95] dark:from-[#171d28] dark:to-[#18202D] sm:dark:from-[#171d2890] sm:dark:to-[#18202D90]' : 'h-[80px]' }`}>
+    <div className={`fixed top-0 z-50 pt-2 w-full px-4 md:px-10 transition-all duration-300 ease-in-out ${isScrolled ? 'h-[50px] pt-0 shadow-md backdrop-blur-md bg-gradient-to-bl from-[#e6eaf1] to-[#bbc2cf] sm:from-[#e6eaf195] sm:to-[#bbc2cf95] dark:from-[#171d28] dark:to-[#18202D] sm:dark:from-[#171d2890] sm:dark:to-[#18202D90]' : 'h-[80px]' }`}>
+     <div className="mx-auto flex items-center justify-between">
       {/* Left section header */}
       <div className="flex items-center gap-8">
         {/* Logo */}
@@ -45,7 +46,7 @@ function Header({ toggleMenu, menuSrc, toggleColorMode, colorModeSrc, toggleLang
           toggleLanguage();
         }}>{language === 'fr' ? 'EN' : 'FR'}</button>
         {/* Color mode */}
-        <button className="p-4 cursor-pointer hover:opacity-70 transition-all duration-300 ease-in-out" onClick={() => {
+        <button className="px-4 md:pr-0 cursor-pointer hover:opacity-70 transition-all duration-300 ease-in-out" onClick={() => {
           toggleColorMode();
         }}>
           <img src={colorModeSrc} alt="Light/Dark Mode" className="h-[18px] filter-brightness-0 invert dark:filter-none" />
@@ -59,6 +60,7 @@ function Header({ toggleMenu, menuSrc, toggleColorMode, colorModeSrc, toggleLang
           />
         </button>
       </div>
+     </div>
     </div>
   );
 }
