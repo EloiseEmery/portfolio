@@ -61,8 +61,8 @@ const translations = {
 
   // Hero
   heroTitle: {
-    en: "Full stack web developer",
-    fr: "Développeuse web Full stack"
+    en: "Full Stack Web Developer",
+    fr: "Développeuse web full stack"
   },
   heroParagraph: {
     en: "Hello, I'm Éloïse Emery, a full stack web developer from Montreal, Canada.",
@@ -79,8 +79,8 @@ const translations = {
     fr: "Posez-moi une question"  
   },
   askMeParagraph: {
-    en: "As an introvert at heart, I’ve delegated all social interactions to my personal chatbot. Programmed to represent me and answer any questions you may have about myself, my work, or even the technical details of the project, it runs on OpenAI's API and never needs a coffee break!",
-    fr: "Ayant l’âme d’une introvertie, j’ai confié la gestion des interactions sociales à mon chatbot personnel. Programmé pour me représenter et pour répondre à toutes vos questions sur moi, mon travail, ou même les dessous techniques du projet, il carbure à l’API d’OpenAI et ne demande jamais de pause-café !"
+    en: "As an introvert at heart, I’ve delegated all social interactions to my personal chatbot. Programmed to represent me and answer any questions you may have about myself or my work, it runs on OpenAI's API and never needs a coffee break!",
+    fr: "Ayant l’âme d’une introvertie, j’ai confié la gestion des interactions sociales à mon chatbot personnel. Programmé pour me représenter et pour répondre à toutes vos questions sur moi ou mon travail, il carbure à l’API d’OpenAI et ne demande jamais de pause-café !"
   },
   askMeLink: {
     en: "Download my full resume",

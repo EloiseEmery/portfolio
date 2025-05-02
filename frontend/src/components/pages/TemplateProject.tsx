@@ -39,7 +39,7 @@ interface ProjectDataItem {
         fr: string;
         en: string;
     };
-    descriptionMain: {
+    descriptionMain?: {
         fr: string;
         en: string;
     };
@@ -133,7 +133,7 @@ const TemplateProject: React.FC<TemplateProjectProps> = ({ language }) => {
                             transition={{ duration: 2.5, ease: "easeInOut" }}
                             style={{ originY: 0 }}
                         ></motion.div>
-                        <div className="space-y-10">
+                        <div className="space-y-4">
                             {project.keyStep[language].map((step, index) => (
                                 <motion.div
                                     key={index}
@@ -278,7 +278,7 @@ const TemplateProject: React.FC<TemplateProjectProps> = ({ language }) => {
             </div>
             <div className="pt-6 lg:pt-0 lg:w-1/2 overflow-y-auto lg:max-h-[525px]">
                 <h1 className="text-2xl md:text-4xl font-sans font-medium dark:text-colorWhite/80 bg-gradient-to-r from-colorTertiary to-colorMain/80 bg-clip-text text-transparent">{project.title}</h1>
-                <div className="pb-10 font-figtree text-base leading-7 text-colorMain dark:text-colorWhite mt-6">
+                <div className="mb-6 font-figtree text-base leading-7 text-colorMain dark:text-colorWhite mt-6">
                     {project.intro[language]}
                 </div>
                 <div className="font-figtree text-colorMain dark:text-colorWhite">
