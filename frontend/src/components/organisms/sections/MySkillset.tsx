@@ -35,9 +35,9 @@ function MySkillset({ language }: { language: Language }) {
                         y: 0,
                         transition: {
                             type: "spring",
-                            duration: 2,
+                            duration: 0.6,
                             bounce: 0.2,
-                            delay: 0.3
+                            delay: 0
                         }
                     }
                 }}
@@ -54,9 +54,9 @@ function MySkillset({ language }: { language: Language }) {
                             y: 0,
                             transition: {
                                 type: "spring",
-                                duration: 1.8,
-                                bounce: 0.2,
-                                delay: 0.4
+                                duration: 0.3,
+                                bounce: 0.1,
+                                delay: 0.1
                             }
                         }
                     }}
@@ -72,9 +72,9 @@ function MySkillset({ language }: { language: Language }) {
                             y: 0,
                             transition: {
                                 type: "spring",
-                                duration: 1.8,
+                                duration: 0.5,
                                 bounce: 0.2,
-                                delay: 0.6
+                                delay: 0.24
                             }
                         }
                     }}

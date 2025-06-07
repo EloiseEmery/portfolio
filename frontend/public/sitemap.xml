@@ -1,68 +1,71 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+        http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
   <url>
     <loc>https://eloiseemery.com/</loc>
-    <lastmod>2025-04-26</lastmod>
-    <changefreq>monthly</changefreq>
+    <lastmod>2025-06-07T13:10:18-04:00</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://eloiseemery.com/#hero</loc>
-    <lastmod>2025-04-26</lastmod>
+    <lastmod>2025-06-07T13:10:18-04:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://eloiseemery.com/#ask-me-something</loc>
-    <lastmod>2025-04-26</lastmod>
-    <changefreq>monthly</changefreq>
+    <lastmod>2025-06-07T13:10:18-04:00</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://eloiseemery.com/#my-skillset</loc>
-    <lastmod>2025-04-26</lastmod>
+    <lastmod>2025-06-07T13:10:18-04:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://eloiseemery.com/#my-projects</loc>
-    <lastmod>2025-04-26</lastmod>
-    <changefreq>monthly</changefreq>
+    <lastmod>2025-06-07T13:10:18-04:00</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://eloiseemery.com/#get-in-touch</loc>
-    <lastmod>2025-04-26</lastmod>
+    <lastmod>2025-06-07T13:10:18-04:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://eloiseemery.com/project/portfolio</loc>
-    <lastmod>2025-04-26</lastmod>
-    <changefreq>monthly</changefreq>
+    <lastmod>2025-06-07T13:10:18-04:00</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://eloiseemery.com/project/banq</loc>
-    <lastmod>2025-04-26</lastmod>
+    <lastmod>2025-06-07T13:10:18-04:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://eloiseemery.com/project/sqi</loc>
-    <lastmod>2025-04-26</lastmod>
+    <lastmod>2025-06-07T13:10:18-04:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://eloiseemery.com/project/stampee</loc>
-    <lastmod>2025-04-26</lastmod>
+    <lastmod>2025-06-07T13:10:18-04:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://eloiseemery.com/project/21-game</loc>
-    <lastmod>2025-04-26</lastmod>
+    <lastmod>2025-06-07T13:10:18-04:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>

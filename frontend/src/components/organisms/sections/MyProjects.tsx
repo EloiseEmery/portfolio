@@ -67,9 +67,9 @@ function MyProjects({ language }: { language: Language }) {
                             y: 0,
                             transition: {
                                 type: "spring",
-                                duration: 2,
+                                duration: 0.6,
                                 bounce: 0.2,
-                                delay: 0.3
+                                delay: 0
                             }
                         }
                     }}
@@ -88,9 +88,9 @@ function MyProjects({ language }: { language: Language }) {
                                         y: 0,
                                         transition: {
                                             type: "spring",
-                                            duration: 1.8,
+                                            duration: 0.5,
                                             bounce: 0.2,
-                                            delay: 0.4
+                                            delay: 0.2
                                         }
                                     }
                                 }}
@@ -131,9 +131,9 @@ function MyProjects({ language }: { language: Language }) {
                                     y: 0,
                                     transition: {
                                         type: "spring",
-                                        duration: 1.8,
+                                        duration: 0.5,
                                         bounce: 0.2,
-                                        delay: 0.6
+                                        delay: 0.4
                                     }
                                 }
                             }}

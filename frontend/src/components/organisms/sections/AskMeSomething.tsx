@@ -75,7 +75,6 @@ function AskMeSomething({ language }: { language: Language }) {
                     <p className="text-colorMain dark:text-colorWhite font-figtree text-[15px] mt-6 pb-8">{paragraph}</p>
                 </div>
                 <div className="relative opacity-80 hover:opacity-100">
-                    {/* <div className="absolute -top-6 -right-10 md:-right-6 w-full h-[300px] border border-colorQuinaryLight dark:border-colorQuinary/50 z-0"></div> */}
                     <div 
                         ref={chatbotRef}
                         className="relative z-10 transition-all duration-200 ease-out"
@@ -98,7 +97,7 @@ function AskMeSomething({ language }: { language: Language }) {
                     y: 0,
                     transition: {
                         type: "spring",
-                        duration: 1.8,
+                        duration: 0.6,
                         bounce: 0.2
                     }
                 }}
@@ -113,9 +112,9 @@ function AskMeSomething({ language }: { language: Language }) {
                             y: 0,
                             transition: {
                                 type: "spring",
-                                duration: 2,
+                                duration: 0.5,
                                 bounce: 0.2,
-                                delay: 0.3
+                                delay: 0.2
                             }
                         }
                     }}
@@ -132,9 +131,9 @@ function AskMeSomething({ language }: { language: Language }) {
                                 y: 0,
                                 transition: {
                                     type: "spring",
-                                    duration: 1.8,
+                                    duration: 0.5,
                                     bounce: 0.2,
-                                    delay: 0.4
+                                    delay: 0.3
                                 }
                             }
                         }}
@@ -150,9 +149,9 @@ function AskMeSomething({ language }: { language: Language }) {
                                 y: 0,
                                 transition: {
                                     type: "spring",
-                                    duration: 1.8,
+                                    duration: 0.5,
                                     bounce: 0.2,
-                                    delay: 0.6
+                                    delay: 0.4
                                 }
                             }
                         }}
