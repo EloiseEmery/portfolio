@@ -50,9 +50,9 @@
             }
         },
         {
-            "id": "banq",
-            "title": "BAnQ dans ta classe",
-            "descriptionKey": "projectBanqDescription", 
+            "id": "educative-platform",
+            "title": "EduPlatform",
+            "descriptionKey": "projectEducativePlatformDescription", 
             "technologies": ["Figma", "Tailwind", "React", "TypeScript", "SQL", "Drupal"],
             "websiteLink": "",
             "highlights": {
@@ -70,14 +70,13 @@
                 ]
             },
             "intro": {
-                "fr": "Ce projet de refonte consistait à unifier 3 plateformes éducatives en une seule plateforme. Il fallait également concevoir un Espace Enseignant avec gestion de comptes utilisateurs. Il a été réalisé dans le cadre de mon emploi chez Yulcom technologies pour le client Bibliothèque et Archives nationales du Québec entre 2024 et 2025.",
-                "en": "This redesign project aimed to unify three educational platforms into a single platform, including the development of a Teacher Space with user account management. The project was completed during my employment at Yulcom technologies for the Bibliothèque et Archives nationales du Québec client between 2024 and 2025."
+                "fr": "Ce projet de refonte consistait à unifier 3 plateformes éducatives en une seule plateforme. Il fallait également concevoir un Espace Enseignant avec gestion de comptes utilisateurs. Il a été réalisé dans le cadre de mon emploi chez <a href=\"https://yulcom-technologies.com\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-colorMain hover:text-colorTertiary dark:text-colorWhite dark:hover:text-colorQuaternary underline\">Yulcom Technologies</a> pour un client du Québec entre 2024 et 2025.",
+                "en": "This redesign project aimed to unify three educational platforms into a single platform, including the development of a Teacher Space with user account management. The project was completed during my employment at <a href=\"https://yulcom-technologies.com\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-colorMain hover:text-colorTertiary dark:text-colorWhite dark:hover:text-colorQuaternary underline\">Yulcom Technologies</a> for a client in Quebec between 2024 and 2025."
             },
             "descriptionMain": {
                 "fr": "La plateforme permet de découvrir des objets culturels et des événements historiques du Québec en classe. J'ai participé à toutes les phases du projet et j'ai eu à prendre des positions de leadership, de l'analyse initiale à la mise en œuvre technique. J'ai commencé par analyser l'appel d'offre et la documentation fournie par le client, puis j'ai identifié les utilisateurs et leurs besoins. J'ai étudié les plateformes existantes pour proposer une solution d'unification des trois plateformes. J'ai rédigé et mis en page des rapports d'analyse avec Adobe Creative Suite. J'ai conçu le modèle de base de données et la nouvelle structure du site (cartographie, arborescence), identifié les gabarits et fonctionnalités à développer, puis réalisé les maquettes UX et le prototype UI sur Figma, en intégrant les retours du client à chaque étape. J'ai également défini les users stories, participé à la gestion du projet sur JIRA, collaboré avec les développeurs pour résoudre certains problèmes, et contribué au développement frontend avec TypeScript et Tailwind CSS, en utilisant Git et Bitbucket pour la gestion du code. Le backend du projet a été développé avec Drupal.",
                 "en": "The platform allows discovering cultural objects and historical events from Quebec in the classroom. I participated in all project phases, taking leadership positions from initial analysis to technical implementation. I began by analyzing the client's call for proposals and documentation, then identified users and their needs. I studied existing platforms to propose a solution to unify the three platforms. I wrote and laid out analysis reports using Adobe Creative Suite. I designed the database model and the new site structure (mapping, tree structure), identified templates and features to develop, and created UX mockups and UI prototypes in Figma, integrating client feedback at each stage. I also defined user stories, participated in project management on JIRA, collaborated with developers to resolve certain issues, and contributed to frontend development using TypeScript and Tailwind CSS, utilizing Git and Bitbucket for code management. The project backend was developed with Drupal."
-            },
-            "files": ["structure_banqdanstaclasse.pdf"]
+            }
         },
         {
             "id": "sqi",
@@ -100,8 +99,8 @@
                 ]
             },
             "intro": {
-                "fr": "Ce projet de refonte consistait à moderniser un site web gouvernemental et son outil de repérage d'immeubles. Il a été réalisé dans le cadre de mon emploi chez Yulcom technologies pour le client Société québécoise des infrastructures (SQI) entre 2023 et 2024.",
-                "en": "This redesign project aimed to modernize a government website and its building location tool. The project was completed during my employment at Yulcom technologies for the Société québécoise des infrastructures (SQI) client between 2023 and 2024."
+                "fr": "Ce projet de refonte consistait à moderniser un site web gouvernemental et son outil de repérage d'immeubles. Il a été réalisé dans le cadre de mon emploi chez <a href=\"https://yulcom-technologies.com\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-colorMain hover:text-colorTertiary dark:text-colorWhite dark:hover:text-colorQuaternary underline\">Yulcom Technologies</a> pour le client Société québécoise des infrastructures (SQI) entre 2023 et 2024.",
+                "en": "This redesign project aimed to modernize a government website and its building location tool. The project was completed during my employment at <a href=\"https://yulcom-technologies.com\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-colorMain hover:text-colorTertiary dark:text-colorWhite dark:hover:text-colorQuaternary underline\">Yulcom Technologies</a> for the Société québécoise des infrastructures (SQI) client between 2023 and 2024."
             },
             "descriptionMain": {
                 "fr": "J'ai eu à concevoir des maquettes UX et UI sur Adobe XD, ainsi qu'un prototype incluant le nouvel outil de repérage d'immeubles. Le visuel devait respecter <a href=\"https://design.quebec.ca/design\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-colorMain hover:text-colorTertiary dark:text-colorWhite dark:hover:text-colorQuaternary underline\">un système de design</a>  précis fournit par le gouvernement du Québec ainsi qu'une arborescence fournie par le client. Développé en PHP avec TYPO3, le site utilise HTML, CSS et JavaScript pour le front-end. Le contenu est stocké dans une base de données MySQL. J'ai également eu à concevoir un guide utilisateur pour le client afin qu'il puisse modifier les contenus facilement dans TYPO3. Consultez le avant/après du site ci-dessous ainsi que le prototype final. ",

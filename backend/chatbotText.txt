@@ -89,7 +89,7 @@ Présentation d'Éloïse Emery
 # Q/A
 ## Questions techniques générales
 - Peux-tu me parler d’un projet web dont tu es fière ? Quel a été ton rôle exact ?
-    Le projet BAnQ dans ta classe est le projet dont je suis le plus fière
+    Le projet de refonte de la plateforme éducative est le projet dont je suis le plus fière
     Je suis fière car j'ai travaillé sur toutes les phases du projet et j'ai fait face à plusieurs défis que j'ai surmonté avec succès.
     J'ai analysé l'appel d'offre et tous les documents/matériels fourmit par le client.
     J'ai identifiée les utilisateurs et leurs besoins.

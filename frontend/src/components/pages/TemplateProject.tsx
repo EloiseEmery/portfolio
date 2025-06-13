@@ -14,7 +14,7 @@ import { motion } from 'framer-motion';
 
 const projectImages = {
     'portfolio': project1,
-    'banq': project2,
+    'educative-platform': project2,
     'sqi': project3,
     'stampee': project4,
     '21 game': project5
@@ -114,6 +114,13 @@ const TemplateProject: React.FC<TemplateProjectProps> = ({ language }) => {
 
     // Render project description with HTML support
     const renderDescriptionWithHTML = (description: string) => {
+        return <div 
+            className="font-figtree text-[15px] leading-7" 
+            dangerouslySetInnerHTML={{ __html: description }} 
+        />;
+    };
+
+    const renderIntroWithHTML = (description: string) => {
         return <div 
             className="font-figtree text-[15px] leading-7" 
             dangerouslySetInnerHTML={{ __html: description }} 
@@ -279,7 +286,7 @@ const TemplateProject: React.FC<TemplateProjectProps> = ({ language }) => {
             <div className="pt-6 lg:pt-0 lg:w-1/2 overflow-y-auto lg:max-h-[525px]">
                 <h1 className="text-2xl md:text-4xl font-sans font-medium dark:text-colorWhite/80 bg-gradient-to-r from-colorTertiary to-colorMain/80 bg-clip-text text-transparent">{project.title}</h1>
                 <div className="mb-6 font-figtree text-base leading-7 text-colorMain dark:text-colorWhite mt-6">
-                    {project.intro[language]}
+                    {renderIntroWithHTML(project.intro[language])}
                 </div>
                 <div className="font-figtree text-colorMain dark:text-colorWhite">
                     <div className="mb-8">

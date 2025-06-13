@@ -218,12 +218,6 @@ const translations = {
     en: "Project document(s)",
     fr: "Document(s) du projet"
   }
-
-  // Project 1 : Éloïse Emery Portfolio
-  // Project 2 : BAnQ dans ta classe
-  // Project 3 : Société Québécoise des Infrastructures
-  // Project 4 : 21 game
-  // Project 5 : Stampee
 };
 
 // Define a type for translation keys

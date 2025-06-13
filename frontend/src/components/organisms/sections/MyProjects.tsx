@@ -32,8 +32,8 @@ function MyProjects({ language }: { language: Language }) {
             tags: ["UI/UX", "React", "Tailwind", "OpenAI", "Docker"]
         },
         {
-            id: "banq",
-            title: "BAnQ dans ta classe",
+            id: "educative-platform",
+            title: "Plateforme éducative",
             tags: ["UI/UX", tagsRedesign, "React", "Tailwind"]
         },
         {
