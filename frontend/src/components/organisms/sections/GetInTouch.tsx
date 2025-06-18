@@ -23,7 +23,7 @@ function GetInTouch({ language }: { language: Language }) {
                         children={button}
                         aria-label={button}
                         className="relative z-10 group"
-                        href="mailto:eloise@eloiseemery.com"
+                        href="mailto:eloise.emery@hotmail.com"
                         blank={true}
                         type="secondary"
                         animate={true}

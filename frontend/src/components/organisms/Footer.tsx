@@ -61,7 +61,7 @@ function Footer({ language }: { language: Language }) {
                     {footerLinkHover2}
                   </span>
                 </a>
-                <a href="mailto:eloise.emery@gmail.com" target="_blank" rel="noopener noreferrer" className="relative group">
+                <a href="mailto:eloise.emery@hotmail.com" target="_blank" rel="noopener noreferrer" className="relative group">
                   <div className="cursor-pointer border-2 border-colorMain/10 dark:border-colorWhite/10 rounded-full p-2 hover:border-colorTertiary/50 dark:hover:border-colorQuaternary/70 transition-all duration-300 ease-in-out ">
                     <img src={iconeEmail} alt="Email" className="max-w-[22px] opacity-70 brightness-0 invert(1) dark:filter-none" />
                   </div>

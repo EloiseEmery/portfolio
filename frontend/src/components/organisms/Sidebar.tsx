@@ -130,7 +130,7 @@ const Sidebar: React.FC<SidebarProps> = ({ closeSidebar, language }) => {
           <a href="https://www.linkedin.com/in/eloise-emery/" target="_blank" rel="noopener noreferrer" className="cursor-pointer">
             <img src={iconeLinkedIn} alt="LinkedIn" className="opacity-95 max-w-[25px] md:max-w-[20px] brightness-0 invert(1) dark:filter-none hover:scale-110 transition-all duration-300 ease-in-out" />
           </a>
-          <a href="mailto:" target="_blank" rel="noopener noreferrer" className="cursor-pointer">
+          <a href="mailto:eloise.emery@hotmail.com" target="_blank" rel="noopener noreferrer" className="cursor-pointer">
             <img src={iconeEmail} alt="Email" className="opacity-75 max-w-[25px] md:max-w-[20px] brightness-0 invert(1) dark:filter-none hover:scale-110 transition-all duration-300 ease-in-out" />
           </a>
         </div>
