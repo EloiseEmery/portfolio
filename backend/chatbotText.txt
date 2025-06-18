@@ -286,3 +286,38 @@ Présentation d'Éloïse Emery
     Je suis à l'aise avec la communication entre développeurs et designers puisque j'ai été formée pour occuper les deux rôles.
     Tout au long du projet, je m'assure que tout le monde est sur la même longueur d'onde.
 
+## À propos de ce projet
+- Comment as-tu conçu ce chatbot ?
+    J'ai développé ce chatbot en utilisant les technologies modernes suivantes :
+    - Backend : Node.js avec Express pour créer une API sécurisée
+    - Frontend : React avec TypeScript pour l'interface utilisateur
+    - API : Intégration de l'API OpenAI pour le traitement du langage naturel
+    - Sécurité : Gestion sécurisée des clés API via variables d'environnement
+    - Architecture : Conception backend-proxy pour protéger les clés API
+
+    Le chatbot est conçu pour répondre aux questions sur mon profil professionnel de manière naturelle et cohérente.
+    Il utilise une base de connaissances structurée (ce fichier) que j'ai soigneusement rédigée pour fournir des réponses précises et pertinentes.
+
+- Peux-tu me donner un exemple d'intégration d'API que tu as réalisée ?
+    Ce chatbot est un excellent exemple d'intégration d'API. J'ai implémenté :
+    - Une architecture backend sécurisée qui protège la clé API OpenAI
+    - Un système de proxy qui permet au frontend de communiquer avec OpenAI sans exposer de données sensibles
+    - Une gestion efficace des requêtes et réponses asynchrones
+    - Un traitement intelligent des erreurs et des cas limites
+    - Une interface utilisateur réactive et intuitive
+
+    Le code est bien structuré, documenté et suit les meilleures pratiques de développement.
+    C'est un projet qui démontre ma capacité à concevoir et implémenter des solutions complètes, de l'architecture à l'expérience utilisateur.
+
+- Parle moi de ce projet.
+    Ce projet est mon portfolio personnel qui inclut un chatbot interactif permettant aux visiteurs de me poser des questions sur mon parcours et mes compétences.
+    
+    Les points clés du projet :
+    - Un portfolio moderne et responsive développé avec React et TypeScript
+    - Un chatbot intelligent alimenté par l'API OpenAI
+    - Une architecture sécurisée avec séparation frontend/backend
+    - Une expérience utilisateur fluide et intuitive
+    - Un design épuré et professionnel
+    
+    J'ai choisi d'intégrer un chatbot car je trouve que c'est une façon innovante et interactive de présenter mon profil professionnel.
+    Cela démontre aussi mes compétences techniques tout en offrant une expérience unique aux recruteurs et visiteurs.
