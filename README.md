@@ -34,8 +34,7 @@ A modern, secure, and responsive personal portfolio website showcasing professio
 
 ### DevOps
 - Docker for containerization
-- GitHub Actions for CI/CD
-- Netlify/Vercel for hosting
+- GitHub for versioning management
 
 ## 🔧 Setup and Installation
 1. Clone the repository
@@ -57,7 +56,7 @@ A modern, secure, and responsive personal portfolio website showcasing professio
 
 3. Configure environment variables
    ```bash
-   # In backend directory
+   # In root directory
    cp .env.example .env
    # Edit .env with your configuration
    ```
@@ -69,17 +68,6 @@ A modern, secure, and responsive personal portfolio website showcasing professio
 
    # Start frontend (from frontend directory)
    npm run dev
-   ```
-
-5. Build for production
-   ```bash
-   # Build frontend
-   cd frontend
-   npm run build
-
-   # Build backend
-   cd ../backend
-   npm run build
    ```
 
 ### 🐳 Docker Setup
@@ -104,13 +92,6 @@ Required environment variables are documented in `.env.example`:
 - `NODE_ENV`: Environment (development/production)
 - `CORS_ORIGIN`: Allowed frontend origin
 - Additional variables as needed
-
-## 🤝 Contributing
-1. Fork the repository
-2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
 
 ## 📄 License
 This project is open source and licensed under the MIT License. If you publicly reuse all or part of this code, you must give credit to the author (Éloïse Emery) and include a visible link to https://eloemery.com on your website or application (for example: in the footer, About page, or credits section). See the [MIT License](LICENSE) file for details.
