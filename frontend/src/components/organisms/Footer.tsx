@@ -75,7 +75,7 @@ function Footer({ language }: { language: Language }) {
           {/* Bottom section */}
           <div className="border-t border-colorTertiary/10 dark:border-colorWhite/10 py-10">
             <div className="text-colorBlack dark:text-colorWhite font-sans text-[11px] md:flex md:justify-between">
-              <p className="mb-2 md:mb-0"> © {new Date().getFullYear()} Éloïse Emery. {footerCopyright}</p>
+              <p className="mb-2 md:mb-0"> © {new Date().getFullYear()} eloemery.com. {footerCopyright}</p>
               <p className="flex whitespace-nowrap">
                 {footerText1} 
                 <svg
