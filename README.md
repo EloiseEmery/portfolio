@@ -1,4 +1,4 @@
-e# Portfolio Éloïse Emery
+# Portfolio Éloïse Emery
 
 ## 🌟 Project Overview
 A modern, secure, and responsive personal portfolio website showcasing professional work and skills. Built from scratch by Éloïse Emery using cutting-edge web technologies and best practices in security and performance.
