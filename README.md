@@ -1,4 +1,4 @@
-# Portfolio Éloïse Emery
+e# Portfolio Éloïse Emery
 
 ## 🌟 Project Overview
 A modern, secure, and responsive personal portfolio website showcasing professional work and skills. Built from scratch by Éloïse Emery using cutting-edge web technologies and best practices in security and performance.
@@ -88,10 +88,10 @@ docker-compose up --build
 ## 📝 Environment Variables
 Required environment variables are documented in `.env.example`:
 - `OPENAI_API_KEY`: Your OpenAI API key
-- `PORT`: Backend server port
-- `NODE_ENV`: Environment (development/production)
-- `CORS_ORIGIN`: Allowed frontend origin
-- Additional variables as needed
+- `FRONTEND_PORT`: Frontend server port (default: 3000)
+- `BACKEND_PORT`: Backend server port (default: 3001)
+- `REACT_APP_API_URL`: API URL for development (default: http://localhost:3001)
+- `DOMAIN_NAME`: Domain name for development (default: http://localhost:8080)
 
 ## 📄 License
 This project is open source and licensed under the MIT License. If you publicly reuse all or part of this code, you must give credit to the author (Éloïse Emery) and include a visible link to https://eloemery.com on your website or application (for example: in the footer, About page, or credits section). See the [MIT License](LICENSE) file for details.
